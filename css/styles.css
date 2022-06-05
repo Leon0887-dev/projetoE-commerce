@@ -1,0 +1,168 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* Estilos Gerais */
+
+body {
+	font-family: "Source Sans Pro", sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+img{
+    max-width: 100%; /*Para deixar a imagem responsiva e ela se adaptar ao elemento pai*/
+}
+
+/* Mobile first - Iniciando CSS para dispositivos mobile */
+
+#top-bar {
+    background-color: #772014;
+}
+
+#top-bar p{
+    color: #fff;
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 0.5rem 2rem;
+    margin-bottom: 0;
+    letter-spacing: 0.1rem;
+}
+
+#container-nav {
+    background-color: #19180A;
+    padding: 1rem;
+}
+
+#container-nav .brand {
+    color: #fff;
+    font-size: 1.2rem;
+    letter-spacing: 0.1rem;
+    padding: 0.2rem 0;
+}
+
+#container-nav .hamburger-menu {
+    padding: 0.2rem 0.3rem;
+    font-size: 1rem;
+    line-height: 1rem;
+    color: #fff;
+    background-color: transparent;
+}
+
+#container-nav button:focus{
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 0.2rem;
+}
+
+#search {
+    background-color: #F2EDEA;
+    height: 40px;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0.3rem 1rem;
+}
+
+#search img {
+    width: 30px;
+    height: 30px;
+}
+
+#categories {
+    display: flex;
+    flex-direction: column;
+}
+
+.title-section{
+    text-align: center;
+}
+
+.title-section h2{
+    color: #868686;
+    font-size: 2rem;
+    padding: 3rem 1rem 1.5rem 1rem;
+}
+
+#container-categories-items {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0rem 0.7rem;
+}
+
+#container-categories-items .category-item {
+    /* background-color: #868686; */
+    text-align: center;
+}
+
+.categorie-img {
+    border-radius: 50%;
+    width: 80%;
+    border: 1px solid #868686;
+}
+
+.category-title {
+    color: #868686;
+    font-size: 1.7rem;
+    padding-bottom: 1rem;
+}
+
+footer {
+    height: 300px;
+    background-color: #19180A;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .social-media-title{
+    color: #fff;
+    text-align: center;
+    letter-spacing: 0.1rem;
+    font-size: 1.1rem;
+}
+
+#social-media-icons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+/* Iniciando CSS para dispositivos com largura mínima de 576px */
+@media (min-width:425px){
+
+    .categorie-img {
+        width: 70%;
+    }
+
+}
+
+/* Iniciando CSS para dispositivos com largura mínima de 576px */
+@media (min-width:576px){
+
+    #container-nav .hamburger-menu {
+        display: none;
+    }
+
+}
+
+
+/* Iniciando CSS para dispositivos com largura mínima de 769px */
+@media (min-width:769px){
+
+}
+
+/* Iniciando CSS para dispositivos com largura mínima de 1281px */
+@media (min-width:1281px){
+    
+}
