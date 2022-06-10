@@ -116,6 +116,46 @@ img{
     padding-bottom: 1rem;
 }
 
+#best-sellers {
+    display: flex;
+    flex-direction: column;
+}
+
+#best-sellers .product-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+}
+
+#best-sellers .best-sellers-item {
+    padding-bottom: 1.5rem;
+}
+
+.product-img {
+    border: 1px solid #868686;
+}
+
+.product-list-title {
+    padding-top: 1rem;
+    font-size: 1.3rem;
+    color: #868686;
+}
+
+.product-list-features {
+    font-size: 0.9rem;
+    color: #868686;
+    margin-bottom: 0;
+}
+
+.product-list-price {
+    padding-top: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #868686;
+}
+
 footer {
     height: 300px;
     background-color: #19180A;
@@ -138,7 +178,7 @@ footer .social-media-title{
     justify-content: space-around;
 }
 
-/* Iniciando CSS para dispositivos com largura mínima de 576px */
+/* Iniciando CSS para dispositivos com largura mínima de 425px */
 @media (min-width:425px){
 
     .categorie-img {
