@@ -86,9 +86,20 @@ img{
 }
 
 .title-section h2{
-    color: #868686;
-    font-size: 2rem;
+    color: #772014;
+    font-size: 1.5rem;
     padding: 3rem 1rem 1.5rem 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+
+.title-section h2::after{
+    content: "";
+    display: block;
+    background: #772014;
+    width: 5rem;
+    height: 1px;
+    margin: 0.5rem auto;
 }
 
 #container-categories-items {
@@ -100,28 +111,29 @@ img{
 }
 
 #container-categories-items .category-item {
-    /* background-color: #868686; */
     text-align: center;
 }
 
 .categorie-img {
     border-radius: 50%;
     width: 80%;
-    border: 1px solid #868686;
+    border: 1px solid #707070;
 }
 
 .category-title {
-    color: #868686;
-    font-size: 1.7rem;
-    padding-bottom: 1rem;
+    color: #707070;
+    font-size: 1.3rem;
+    padding: 0.4rem 0 1rem 0;
+    letter-spacing: 0.1rem;
 }
 
 #best-sellers {
     display: flex;
     flex-direction: column;
+    background-color: #F6F3F3;
 }
 
-#best-sellers .product-list {
+#best-sellers .product-list, #new-products .product-list {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -129,23 +141,25 @@ img{
     padding: 0;
 }
 
-#best-sellers .best-sellers-item {
-    padding-bottom: 1.5rem;
+#best-sellers .best-sellers-item, #new-products .new-products-item {
+    padding-bottom: 3rem;
 }
 
 .product-img {
-    border: 1px solid #868686;
+    border: 1px solid #707070;
 }
 
 .product-list-title {
     padding-top: 1rem;
     font-size: 1.3rem;
-    color: #868686;
+    letter-spacing: 0.05rem;
+    color: #707070;
 }
 
 .product-list-features {
     font-size: 0.9rem;
-    color: #868686;
+    color: #707070;
+    letter-spacing: 0.02rem;
     margin-bottom: 0;
 }
 
@@ -153,7 +167,26 @@ img{
     padding-top: 1rem;
     font-size: 1.2rem;
     font-weight: bold;
-    color: #868686;
+    letter-spacing: 0.2rem;
+    color: #707070;
+}
+
+.add-button {
+    background-color: #772014;
+    padding: 0.8rem 2rem;
+    color: #fff;
+    font-size: 0.8rem;
+    letter-spacing: 0.2rem;
+    transition: all 0.2s ease-in 0.1s;
+}
+
+.add-button:hover {
+    background-color: #AF4319;
+}
+
+#new-products {
+    display: flex;
+    flex-direction: column;
 }
 
 footer {
