@@ -224,6 +224,14 @@ img{
     outline: #772014 solid 0.1rem;
 }
 
+#whatsApp{
+    width: 60px;
+    position: fixed;
+    left: 1rem;
+    bottom: 2rem;
+    z-index: 10;
+}
+
 footer {
     height: 300px;
     background-color: #19180A;
