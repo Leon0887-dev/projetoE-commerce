@@ -171,7 +171,7 @@ img{
     color: #707070;
 }
 
-.add-button {
+.add-button, #signup-news form button {
     background-color: #772014;
     padding: 0.8rem 2rem;
     color: #fff;
@@ -180,13 +180,48 @@ img{
     transition: all 0.2s ease-in 0.1s;
 }
 
-.add-button:hover {
+.add-button:hover, #signup-news form button:hover {
     background-color: #AF4319;
 }
 
 #new-products {
     display: flex;
     flex-direction: column;
+}
+
+#signup-news {
+    background-color: #F6F3F3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 6rem 0;
+}
+
+#signup-news form {
+    display: flex;
+    flex-direction: column;
+}
+
+#signup-news form label {
+    font-size: 1.2rem;
+    letter-spacing: 0.1rem;
+    color: #707070;
+    padding-bottom: 1rem;
+}
+
+#signup-news form input {
+    height: 2.5rem;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    font-size: 0.9rem;
+    letter-spacing: 0.1rem;
+    border-bottom: 0.1rem solid #707070;
+}
+#signup-news form input:focus {
+    color: #707070;
+    border: none;
+    outline: #772014 solid 0.1rem;
 }
 
 footer {
