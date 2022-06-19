@@ -12,11 +12,10 @@
 </head>
 <body>
     <header>
-        <div id="top-bar">
+        <div id="top-bar" class="col-12">
             <p>Utilize o cupom CAFEHOUSE e ganhe 5% OFF na primeira compra</p>
         </div>
-        <nav id="container-nav" class="navbar navbar-expand-sm navbar-dark">
-            <a class="brand" href="./index.html">CAFÉ HOUSE</a>      
+        <nav class="container-nav navbar navbar-expand-sm navbar-dark col-3">          
             <button class="hamburger-menu" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -29,6 +28,9 @@
                   <a class="nav-link" href="#">Sobre Nós</a>
                 </li>
                 <li class="nav-item">
+                  <a class="nav-link" href="#">Blog</a>
+                </li>
+                <li class="nav-item">
                   <a class="nav-link">Contato</a>
                 </li>
                 <li class="nav-item">
@@ -36,8 +38,16 @@
                 </li>
               </ul>
             </div>
-        </nav>
-        <section id="search">
+          </nav>
+          <div id="brand" class="container-nav col-6">
+            <a href="./index.html">CAFÉ HOUSE</a> 
+          </div>
+          <div id="basket" class="container-nav col-3">
+            <a href="">
+              <img src="./img/basket.svg" alt="Minha sacola">
+            </a>        
+          </div>
+        <section id="search" class="col-12">
           <img class="col-2" src="./img/search.svg" alt="Pesquisa">
         </section>
     </header>

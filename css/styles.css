@@ -25,6 +25,12 @@ img{
 
 /* Mobile first - Iniciando CSS para dispositivos mobile */
 
+header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
 #top-bar {
     background-color: #772014;
 }
@@ -38,29 +44,42 @@ img{
     letter-spacing: 0.1rem;
 }
 
-#container-nav {
+.container-nav {
     background-color: #19180A;
-    padding: 1rem;
+    padding: 1rem 0;
 }
 
-#container-nav .brand {
-    color: #fff;
-    font-size: 1.2rem;
-    letter-spacing: 0.1rem;
-    padding: 0.2rem 0;
-}
-
-#container-nav .hamburger-menu {
-    padding: 0.2rem 0.3rem;
+.hamburger-menu {
+    padding: 0.2rem 1rem;
     font-size: 1rem;
     line-height: 1rem;
     color: #fff;
     background-color: transparent;
 }
 
-#container-nav button:focus{
+.container-nav button:focus{
     border: 1px solid rgba(255,255,255,0.3);
     border-radius: 0.2rem;
+}
+
+.nav-item {
+    padding: 1rem 0 0 1rem;
+    font-size: 0.9rem;
+}
+
+#brand {
+    text-align: center;
+}
+
+#brand a{
+    color: #fff;
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
+}
+
+#basket {
+    text-align: end;
+    padding-right: 1rem;
 }
 
 #search {
@@ -71,9 +90,8 @@ img{
     padding: 0.3rem 1rem;
 }
 
-#search img {
-    width: 30px;
-    height: 30px;
+#search img, #basket img {
+    width: 25px;
 }
 
 #categories {
@@ -259,6 +277,11 @@ footer .social-media-title{
 
     .categorie-img {
         width: 70%;
+    }
+
+    .nav-item {
+        font-size: 1rem;
+        letter-spacing: 0.1rem;
     }
 
 }
