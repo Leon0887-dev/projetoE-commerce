@@ -270,6 +270,7 @@ footer .social-media-title{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    align-items: center;
 }
 
 /* Iniciando CSS para dispositivos com largura mínima de 425px */
