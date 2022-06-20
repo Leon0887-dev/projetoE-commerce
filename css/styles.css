@@ -82,15 +82,35 @@ header {
     padding-right: 1rem;
 }
 
-#search {
+#searchbar {
     background-color: #F2EDEA;
-    height: 40px;
     display: flex;
-    justify-content: flex-end;
     padding: 0.3rem 1rem;
 }
 
-#search img, #basket img {
+#searchbar form {
+    display: flex;
+}
+
+#searchbar form input {
+    height: 2.5rem;
+    padding: 0.5rem;
+    font-size: 0.9rem;
+    letter-spacing: 0.1rem;
+    background-color: #F2EDEA;
+}
+
+#searchbar form input:focus {
+    border-bottom: 0.1rem solid #707070;
+    color: #707070;
+    outline: none;
+}
+
+#searchbar form button {
+    text-align: end;
+}
+
+#searchbar img, #basket img {
     width: 25px;
 }
 
