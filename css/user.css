@@ -18,6 +18,7 @@ main{
     border-radius: 10px;
     padding: 10px;
     align-items: center;
+    margin-bottom: 3px;
 }
 .list-item a{
     text-decoration: none;
