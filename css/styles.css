@@ -25,8 +25,18 @@ img{
 
 /* Mobile first - Iniciando CSS para dispositivos mobile */
 
+header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: fixed;
+    z-index: 30;
+}
+
 #top-bar {
     background-color: #772014;
+    display: none;
 }
 
 #top-bar p{
@@ -38,42 +48,83 @@ img{
     letter-spacing: 0.1rem;
 }
 
-#container-nav {
+.container-nav {
     background-color: #19180A;
-    padding: 1rem;
+    padding: 1rem 0;
 }
 
-#container-nav .brand {
+.nav-item {
+    font-size: 0.9rem;
+}
+
+.nav-link:hover {
     color: #fff;
-    font-size: 1.2rem;
+}
+
+#brand {
+    text-align: center;
+}
+
+#brand a{
+    color: #fff;
+    font-size: 1.5rem;
     letter-spacing: 0.1rem;
-    padding: 0.2rem 0;
 }
 
-#container-nav .hamburger-menu {
-    padding: 0.2rem 0.3rem;
-    font-size: 1rem;
-    line-height: 1rem;
-    color: #fff;
-    background-color: transparent;
+#login {
+    display: none;
 }
 
-#container-nav button:focus{
-    border: 1px solid rgba(255,255,255,0.3);
-    border-radius: 0.2rem;
+#basket {
+    text-align: end;
+    padding-right: 1rem;
 }
 
-#search {
+#basket img {
+    width: 25px;
+    padding-top: 0.4rem;
+}
+
+#searchbar {
     background-color: #F2EDEA;
-    height: 40px;
     display: flex;
-    justify-content: flex-end;
     padding: 0.3rem 1rem;
 }
 
-#search img {
-    width: 30px;
-    height: 30px;
+#searchbar form {
+    display: flex;
+}
+
+#searchbar form input {
+    height: 2.5rem;
+    padding: 0.5rem;
+    font-size: 0.9rem;
+    letter-spacing: 0.1rem;
+    background-color: #F2EDEA;
+}
+
+#searchbar form input:focus {
+    border-bottom: 0.1rem solid #707070;
+    color: #707070;
+    outline: none;
+}
+
+#searchbar form button {
+    text-align: end;
+}
+
+#searchbar img {
+    width: 25px;
+}
+
+#carousel-mobile {
+    position: relative;
+    top: 7.4rem;
+    margin-bottom: 8rem;
+}
+
+#carousel-tablet-desktop {
+    display: none;
 }
 
 #categories {
@@ -86,9 +137,20 @@ img{
 }
 
 .title-section h2{
-    color: #868686;
-    font-size: 2rem;
+    color: #772014;
+    font-size: 1.5rem;
     padding: 3rem 1rem 1.5rem 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+
+.title-section h2::after{
+    content: "";
+    display: block;
+    background: #772014;
+    width: 5rem;
+    height: 1px;
+    margin: 0.5rem auto;
 }
 
 #container-categories-items {
@@ -100,20 +162,127 @@ img{
 }
 
 #container-categories-items .category-item {
-    /* background-color: #868686; */
     text-align: center;
 }
 
 .categorie-img {
     border-radius: 50%;
     width: 80%;
-    border: 1px solid #868686;
+    border: 1px solid #707070;
 }
 
 .category-title {
-    color: #868686;
-    font-size: 1.7rem;
+    color: #707070;
+    font-size: 1.3rem;
+    padding: 0.4rem 0 1rem 0;
+    letter-spacing: 0.1rem;
+}
+
+#best-sellers {
+    display: flex;
+    flex-direction: column;
+    background-color: #F6F3F3;
+}
+
+#best-sellers .product-list, #new-products .product-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+}
+
+#best-sellers .best-sellers-item, #new-products .new-products-item {
+    padding-bottom: 3rem;
+}
+
+.product-img {
+    border: 1px solid #707070;
+}
+
+.product-list-title {
+    padding-top: 1rem;
+    font-size: 1.3rem;
+    letter-spacing: 0.05rem;
+    color: #707070;
+}
+
+.product-list-features {
+    font-size: 0.9rem;
+    color: #707070;
+    letter-spacing: 0.02rem;
+    margin-bottom: 0;
+}
+
+.product-list-price {
+    padding-top: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 0.2rem;
+    color: #707070;
+}
+
+.add-button, #signup-news form button {
+    background-color: #772014;
+    padding: 0.8rem 2rem;
+    color: #fff;
+    font-size: 0.8rem;
+    letter-spacing: 0.2rem;
+    transition: all 0.2s ease-in 0.1s;
+}
+
+.add-button:hover, #signup-news form button:hover {
+    background-color: #AF4319;
+}
+
+#new-products {
+    display: flex;
+    flex-direction: column;
+}
+
+#signup-news {
+    background-color: #F6F3F3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 6rem 0;
+}
+
+#signup-news form {
+    display: flex;
+    flex-direction: column;
+}
+
+#signup-news form label {
+    font-size: 1.2rem;
+    letter-spacing: 0.1rem;
+    color: #707070;
     padding-bottom: 1rem;
+}
+
+#signup-news form input {
+    height: 2.5rem;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    font-size: 0.9rem;
+    letter-spacing: 0.1rem;
+    border-bottom: 0.1rem solid #707070;
+}
+#signup-news form input:focus {
+    color: #707070;
+    border: none;
+    outline: #772014 solid 0.1rem;
+}
+
+#whatsApp{
+    width: 60px;
+    position: fixed;
+    left: 1rem;
+    bottom: 2rem;
+    z-index: 10;
 }
 
 footer {
@@ -136,9 +305,10 @@ footer .social-media-title{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    align-items: center;
 }
 
-/* Iniciando CSS para dispositivos com largura mínima de 576px */
+/* Iniciando CSS para dispositivos com largura mínima de 425px */
 @media (min-width:425px){
 
     .categorie-img {
@@ -150,19 +320,88 @@ footer .social-media-title{
 /* Iniciando CSS para dispositivos com largura mínima de 576px */
 @media (min-width:576px){
 
-    #container-nav .hamburger-menu {
+}
+
+
+/* Iniciando CSS para dispositivos com largura mínima de 768px */
+@media (min-width:768px){
+
+    #top-bar {
+        display: block;
+    }
+
+    .container-nav {
+        order: 2;
+    }
+
+    #brand {
+        order: 1;
+        text-align: left;
+        padding-left: 1.4rem;
+    }
+
+    #login {
+        display: block;
+        order: 3;
+        text-align: end;
+    }
+    
+    #login img {
+        width: 29px;
+        padding-top: 0.4rem;
+    }
+
+    #basket {
+        order: 4;
+    }
+
+    #searchbar {
+        order: 5;
+    }
+    
+    .nav-item {
+        font-size: 1rem;
+        letter-spacing: 0.1rem;
+    }
+
+    #carousel-mobile {
         display: none;
+    }
+
+    #carousel-tablet-desktop {
+        display: block;
+        position: relative;
+        top: 9rem;
+        margin-bottom: 8rem;
+    }
+
+    #categories {
+        padding: 2rem 0 3rem 0;
+    }
+
+    .categorie-img {
+        width: 65%;
+    }
+
+    #best-sellers .best-sellers-item, #new-products .new-products-item {
+        padding: 0 1.5rem 3rem 1.5rem;
+    }
+
+    #best-sellers .product-list, #new-products .product-list {
+        padding: 0 1.5rem;
     }
 
 }
 
+/* Iniciando CSS para dispositivos com largura mínima de 1280px */
+@media (min-width:1280px){
 
-/* Iniciando CSS para dispositivos com largura mínima de 769px */
-@media (min-width:769px){
+    .nav-item {
+        letter-spacing: 0.2rem;
+    }
 
-}
+    .categorie-img {
+        width: 50%;
+    }
 
-/* Iniciando CSS para dispositivos com largura mínima de 1281px */
-@media (min-width:1281px){
-    
 }
