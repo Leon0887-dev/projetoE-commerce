@@ -303,7 +303,6 @@ footer .social-media-title {
 .container-geral {
     width: 500px;
     margin: 10px auto;
-    border: 1px solid blue;
     padding-left: 40px;
     padding-right: 40px;
 }
@@ -345,8 +344,6 @@ footer .social-media-title {
 
 .container-formulario {
     margin: 3px auto;
-    border: 1px solid red;
-
 }
 
 .container-checkbox {
