@@ -26,6 +26,27 @@ main{
     color: #19180A;
 }
 
+input{
+    color: #3F220F;
+    outline: none;
+    box-shadow: none;
+}
+input:focus{
+    outline: none;
+    box-shadow: none;
+    border-color: #fff;
+}
+
+label{
+    color: #8F8F8F;
+}
+
+
+/***********************************
+
+painel usuário
+
+***************************************/
 
 
 
@@ -112,8 +133,41 @@ main{
 
 
 
+/***********************************
 
+forms personal-data
+
+***************************************/
+
+.save-btn{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+
+
+/***************************************
+
+Responsividade
+****************************************/
 @media (min-width:767px){
+
+.form-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 700px;
+}
+
+.form-center > h2{
+    color: #19180A;
+    align-self: flex-start;
+    margin-bottom: 30px;
+}
+
+
 
 .active{
      background-color: #FBDADC ;
@@ -143,4 +197,10 @@ main{
  .btn-edit{
     font-size: 16px;
  }
+
+ .save-btn{
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 30px;
+}
 }
