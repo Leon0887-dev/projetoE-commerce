@@ -26,13 +26,17 @@ img{
 /* Mobile first - Iniciando CSS para dispositivos mobile */
 
 header {
+    width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    position: fixed;
+    z-index: 30;
 }
 
 #top-bar {
     background-color: #772014;
+    display: none;
 }
 
 #top-bar p{
@@ -49,22 +53,12 @@ header {
     padding: 1rem 0;
 }
 
-.hamburger-menu {
-    padding: 0.2rem 1rem;
-    font-size: 1rem;
-    line-height: 1rem;
-    color: #fff;
-    background-color: transparent;
-}
-
-.container-nav button:focus{
-    border: 1px solid rgba(255,255,255,0.3);
-    border-radius: 0.2rem;
-}
-
 .nav-item {
-    padding: 1rem 0 0 1rem;
     font-size: 0.9rem;
+}
+
+.nav-link:hover {
+    color: #fff;
 }
 
 #brand {
@@ -77,9 +71,18 @@ header {
     letter-spacing: 0.1rem;
 }
 
+#login {
+    display: none;
+}
+
 #basket {
     text-align: end;
     padding-right: 1rem;
+}
+
+#basket img {
+    width: 25px;
+    padding-top: 0.4rem;
 }
 
 #searchbar {
@@ -110,8 +113,18 @@ header {
     text-align: end;
 }
 
-#searchbar img, #basket img {
+#searchbar img {
     width: 25px;
+}
+
+#carousel-mobile {
+    position: relative;
+    top: 7.4rem;
+    margin-bottom: 8rem;
+}
+
+#carousel-tablet-desktop {
+    display: none;
 }
 
 #categories {
@@ -173,7 +186,9 @@ header {
 
 #best-sellers .product-list, #new-products .product-list {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
     text-align: center;
     padding: 0;
@@ -300,29 +315,93 @@ footer .social-media-title{
         width: 70%;
     }
 
-    .nav-item {
-        font-size: 1rem;
-        letter-spacing: 0.1rem;
-    }
-
 }
 
 /* Iniciando CSS para dispositivos com largura mínima de 576px */
 @media (min-width:576px){
 
-    #container-nav .hamburger-menu {
+}
+
+
+/* Iniciando CSS para dispositivos com largura mínima de 768px */
+@media (min-width:768px){
+
+    #top-bar {
+        display: block;
+    }
+
+    .container-nav {
+        order: 2;
+    }
+
+    #brand {
+        order: 1;
+        text-align: left;
+        padding-left: 1.4rem;
+    }
+
+    #login {
+        display: block;
+        order: 3;
+        text-align: end;
+    }
+    
+    #login img {
+        width: 29px;
+        padding-top: 0.4rem;
+    }
+
+    #basket {
+        order: 4;
+    }
+
+    #searchbar {
+        order: 5;
+    }
+    
+    .nav-item {
+        font-size: 1rem;
+        letter-spacing: 0.1rem;
+    }
+
+    #carousel-mobile {
         display: none;
+    }
+
+    #carousel-tablet-desktop {
+        display: block;
+        position: relative;
+        top: 9rem;
+        margin-bottom: 8rem;
+    }
+
+    #categories {
+        padding: 2rem 0 3rem 0;
+    }
+
+    .categorie-img {
+        width: 65%;
+    }
+
+    #best-sellers .best-sellers-item, #new-products .new-products-item {
+        padding: 0 1.5rem 3rem 1.5rem;
+    }
+
+    #best-sellers .product-list, #new-products .product-list {
+        padding: 0 1.5rem;
     }
 
 }
 
+/* Iniciando CSS para dispositivos com largura mínima de 1280px */
+@media (min-width:1280px){
 
-/* Iniciando CSS para dispositivos com largura mínima de 769px */
-@media (min-width:769px){
+    .nav-item {
+        letter-spacing: 0.2rem;
+    }
 
-}
+    .categorie-img {
+        width: 50%;
+    }
 
-/* Iniciando CSS para dispositivos com largura mínima de 1281px */
-@media (min-width:1281px){
-    
 }
