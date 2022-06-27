@@ -1,6 +1,6 @@
 
 
-main{
+main,.section-forms{
     margin: 40px 0
 }
 
@@ -144,6 +144,39 @@ forms personal-data
     justify-content: center;
     margin-top: 30px;
 }
+
+
+
+/***********************************
+
+forms changePassword
+
+***************************************/
+
+
+.password-info > h6{
+    color: #19180A;
+    font-weight: 700;
+}
+
+.password-info > P{
+    color: #8F8F8F;
+}
+
+.password-info > P span{
+    display: inline-block;
+    color: #CF0E0E ;
+    font-size: 18px;
+    font-weight: 700;
+    margin-right: 10px;
+}
+
+
+
+
+
+
+
 
 
 
