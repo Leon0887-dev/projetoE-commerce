@@ -116,6 +116,17 @@ img{
     padding-bottom: 1rem;
 }
 
+#about .addtocar{
+    color: #fff;
+    background-color: #19180A;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
 footer {
     height: 300px;
     background-color: #19180A;
