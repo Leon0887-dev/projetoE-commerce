@@ -41,83 +41,84 @@
           <img class="col-2" src="../img/search.svg" alt="Pesquisa">
         </section>
     </header>
-    <section class="container-md">
-          <h2>Editar endereço de entrega</h2>
-            <form action="POST">
-                <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="checked" checked>
-                    <label for="checked" class="form-check-label">Selecionar como endereço de entrega principal</label>
-                </div>
+    <section class="section-forms">
+          <div class="container-md form-center">
+            <h2>Editar endereço de entrega</h2>
+              <form action="POST" class="row" >
+                  <div class="form-check col-md-12 mb-3 ms-3">
+                      <input type="checkbox" class="form-check-input" id="checked" checked>
+                      <label for="checked" class="form-check-label">Selecionar como endereço de entrega principal</label>
+                  </div>
 
-                <div class="form-floating col">
-                    <input type="text" class="form-control" id="adress-name" placeholder="minha casa">
-                    <label for="adress-name">Nome do endereço</label>
-                </div>
+                  <div class="form-floating col-md-12 mb-3">
+                      <input type="text" class="form-control" id="adress-name" placeholder="minha casa">
+                      <label for="adress-name" class="ps-4" >Nome do endereço</label>
+                  </div>
 
-                <div class="form-floating col">
-                    <select name="countries" class="form-select" id="selectd">
-                        <option value="Brazil" selected> Brasil</option>
-                    </select>
-                    <label for="selected">País</label>
+                  <div class="form-floating col-md-7 mb-3 d-flex">
+            
+                    <input type="text" class="form-control" id="adress-cep" placeholder="55533-123">
+                    <label for="adress-cep" class="ps-4">CEP</label>
+         
+                  </div>
+                  <div class="col-md-4 align-self-center mb-3 ms-2">
+                      <a href="#" class="link-edit">Não sei meu CEP</a>
+                  </div>
+                  
 
-                </div>
+               <div class="form-floating col-md-12 mb-3">
+                <input type="text" class="form-control" id="adress" placeholder="rua joao de maia">
+                <label for="adress" class="ps-4">Endereço(rua,avenida,quadra,lote)</label>
+               </div>
+                
+               <div class="form-floating col-md-8 mb-3">
+                <input type="text" class="form-control" id="adress-number" placeholder="rua joao de maia">
+                <label for="adress-number" class="ps-4">Informe o número</label>
+               </div>
+                  
+               <div class="form-floating col-md-4 mb-3">
+                      <select name="countries" class="form-select" id="selectd">
+                          <option value="Brazil" selected> Brasil</option>
+                      </select>
+                      <label for="selected" class="ps-4">País</label>
+               </div>
 
-                <div class="form-floating col">
-                    
-                     <input type="text" class="form-control" id="adress-cep" placeholder="55533-123">
-                     <label for="adress-cep">CEP</label>
-                    
-                    <div>
-                        <a href="#">Não sei meu CEP</a>
-                    </div>
-                </div>
+                  
 
-                <div class="form-floating col">
-                    <input type="text" class="form-control" id="adress" placeholder="rua joao de maia">
-                    <label for="adress">Endereço(rua,avenida,quadra,lote)</label>
-                </div>
+                  <div class="form-floating col-md-12 mb-3">
+                      <input type="text" class="form-control" id="adress-complement" placeholder="número da casa">
+                      <label for="adress-complement" class="ps-4">Complemento</label>
+                  </div>
 
-                <div class="form-floating col">
-                    <input type="text" class="form-control" id="adress-number" placeholder="rua joao de maia">
-                    <label for="adress-number">Informe o número(digite -- caso não tenha)</label>
-                </div>
+                  <div class="form-floating mb-3">
+                      <input type="text" class="form-control" id="adress-district" placeholder="casa caiada">
+                      <label for="adress-district" class="ps-4">Bairro</label>
+                  </div>
 
-                <div class="form-floating col">
-                    <input type="text" class="form-control" id="adress-complement" placeholder="número da casa">
-                    <label for="adress-complement">Complemento</label>
-                </div>
+                  <div class="form-floating mb-3">
+                      <input type="text" class="form-control" id="adress-city" placeholder="paulista">
+                      <label for="adress-city" class="ps-4">Cidade</label>
+                  </div>
 
-                <div class="form-floating col">
-                    <input type="text" class="form-control" id="adress-district" placeholder="casa caiada">
-                    <label for="adress-district">Bairro</label>
-                </div>
+                  <div class="form-floating mb-3">
+                      <input type="text" class="form-control" id="adress-state" placeholder="pernambuco">
+                      <label for="adress-state" class="ps-4">Estado</label>
+                  </div>
+                  <div class="form-check mb-3 ms-3">
+                      <input type="checkbox" class="form-check-input" id="checked" >
+                      <label for="checked" class="form-check-label">Utilizar destinatário diferente do cadastro</label>
+                  </div>
 
-                <div class="form-floating col">
-                    <input type="text" class="form-control" id="adress-city" placeholder="paulista">
-                    <label for="adress-city">Cidade</label>
-                </div>
-
-                <div class="form-floating col">
-                    <input type="text" class="form-control" id="adress-state" placeholder="pernambuco">
-                    <label for="adress-state">Estado</label>
-                </div>
-
-                <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="checked" >
-                    <label for="checked" class="form-check-label">Utilizar destinatário diferente do cadastro</label>
-                </div>
-
-                <div class="form-floating col">
-                    <input type="text" class="form-control" id="adress-recipient" placeholder="josé maria">
-                    <label for="adress-recipient">Destinatário</label>
-                </div>
-
-                <div>
-                    <input type="button" class="btn btn-primary" value="Salvar alterações">
-                </div>
-
-            </form>
-        </div>
+                  <div class="form-floating mb-3">
+                      <input type="text" class="form-control" id="adress-recipient" placeholder="josé maria">
+                      <label for="adress-recipient" class="ps-4">Destinatário</label>
+                  </div>
+                  <div class="save-btn">
+                      <input type="button" class="btn-edit" value="Salvar alterações">
+                  </div>
+              </form>
+          </div>
+        
 
     </section>
     <footer>
