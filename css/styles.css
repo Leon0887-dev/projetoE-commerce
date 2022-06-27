@@ -76,46 +76,6 @@ img{
     height: 30px;
 }
 
-#categories {
-    display: flex;
-    flex-direction: column;
-}
-
-.title-section{
-    text-align: center;
-}
-
-.title-section h2{
-    color: #868686;
-    font-size: 2rem;
-    padding: 3rem 1rem 1.5rem 1rem;
-}
-
-#container-categories-items {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 0rem 0.7rem;
-}
-
-#container-categories-items .category-item {
-    /* background-color: #868686; */
-    text-align: center;
-}
-
-.categorie-img {
-    border-radius: 50%;
-    width: 80%;
-    border: 1px solid #868686;
-}
-
-.category-title {
-    color: #868686;
-    font-size: 1.7rem;
-    padding-bottom: 1rem;
-}
-
 #about .addtocar{
     color: #fff;
     background-color: #19180A;
