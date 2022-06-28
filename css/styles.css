@@ -127,9 +127,7 @@ header {
     text-align: end;
 }
 
-#searchbar img {}
-#searchbar img,
-#basket img {
+#searchbar img {
     width: 25px;
 }
 
@@ -165,7 +163,6 @@ header {
     margin-bottom: 5%;
 }
 
-#delivery{}
 .title-section {
     text-align: center;
 }
