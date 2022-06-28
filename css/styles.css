@@ -449,6 +449,10 @@ footer .social-media-title{
         letter-spacing: 0.2rem;
     }
 
+}
+/* Iniciando CSS para dispositivos com largura mínima de 769px */
+@media (min-width:767px){
+
     .categorie-img {
         width: 50%;
     }

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/user.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro">
+    <title>Café House</title>
+ </head>
+ <body>
+    <header>
+        <div id="top-bar">
+            <p>Utilize o cupom CAFEHOUSE e ganhe 5% OFF na primeira compra</p>
+        </div>
+        <nav id="container-nav" class="navbar navbar-expand-sm navbar-dark">
+            <a class="brand" href="./index.html">CAFÉ HOUSE</a>      
+            <button class="hamburger-menu" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Produtos</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Sobre Nós</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link">Contato</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link">Login</a>
+                </li>
+              </ul>
+            </div>
+        </nav>
+        <section id="search">
+          <img class="col-2" src="../img/search.svg" alt="Pesquisa">
+        </section>
+    </header>
+    <main>
+       <div class="container-md form-center">
+            <h2>Meus Dados</h2>
+           <form action="POST" class="row">
+            <div class="form-floating col mb-3">
+                <input type="email" class="form-control" id="myEmail" placeholder="jose.silva@email.com">
+                <label for="myEmail" class="ps-4">E-mail</label>
+            </div>
+
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="fullName" placeholder="jose da siva">
+                <label for="fullName" class="ps-4">Nome completo</label>
+            </div>
+
+            <div class="form-floating  mb-3">
+                <input type="text" class="form-control" id="myCpf" placeholder="123.456.789-1011">
+                <label for="myCpf" class="ps-4">CPF</label>
+            </div>
+
+            <div class="form-floating col-md-6 mb-3">
+              <input type="text" class="form-control" id="
+              indemnification" placeholder="837">
+              <label for="
+              indemnification" class="ps-4">RG</label>
+          </div>
+
+          <div class="form-floating col-md-6 mb-3">
+            <input type="date" class="form-control" id="birthDate" placeholder="dd/mm/aaa">
+            <label for="birthDate" class="ps-4">Data de nascimento</label>
+        </div>
+
+            <div class="form-floating col-md-6 mb-3">
+                <input type="text" class="form-control" id="fone" placeholder="(11) 3333-5555">
+                <label for="fone" class="ps-4">Telefone</label>
+            </div>
+
+            
+
+
+            <div class="form-floating col-md-6 mb-3">
+                <input type="text" class="form-control " id="foneCel"  placeholder="(81) 99797-4444">
+                <label for="fone" class="ps-4">Telefone celular</label>
+            </div>
+
+            
+            <div class="form-floating mb-3">
+                <select class="form-select" name="genre" id="selectd-genre">
+                    <option selected value="1"></option>
+                    <option  value="2">Feminino</option>
+                    <option  value="3">Masculino</option>
+                </select>
+                <label for="selectd-genre" class="ps-4">Gênero</label>
+            </div>
+
+            <div class="form-check col-md mt-3 ps-5">
+              <input type="checkbox" class="form-check-input" id="checked" checked>
+              <label for="checked" class="form-check-label">Desejo receber e-mails promocionais</label>
+            </div>
+
+            <div class="save-btn">
+              <input type="submit" value="Salvar alterações" class="btn-edit">
+            </div>
+
+
+          </form>
+       </div>
+
+    </main>
+    <footer>
+        <h5 class="social-media-title col-5">Redes sociais</h5>
+        <div id="social-media-icons" class="col-5">
+          <img src="../img/facebook.svg" alt="Facebook">
+          <img src="../img/instagram.svg" alt="Instagram">
+          <img src="../img/youtube.svg" alt="Youtube">
+        </div>
+      </footer>
+
+
+    <!-- Script JS Bootstrap | Manter código próximo ao fechamento do body -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+ </body>
+
+</html>
