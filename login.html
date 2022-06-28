@@ -7,11 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-  <link rel="stylesheet" href="./css/login.css">
+  <link rel="stylesheet" href="./css/styles.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro">
   <title>Login</title>
 </head>
-
 <body>
   <header>
     <div id="top-bar" class="col-12">
@@ -66,29 +65,28 @@
       </form>
     </section>
   </header>
-  <section>
-    <main class="container">
-      <h2>Login</h2>
-      <form action="">
-        <div class="input-field">
-          <input type="text" name="username" id="username" placeholder="Digite seu e-mail">
-          <div class="underline"></div>
-        </div>
-        <div class="input-field">
-          <input type="password" name="password" id="password" placeholder="Digite sua senha">
-          <div class="underline"></div>
-        </div>
-        <input type="submit" value="Continue">
-        <a href="./cadastro.html">Não tem cadastro?</a>
-      </form>
+    <main id="container-main-login">
+      <section id="container-form-login">
+        <h2>Login</h2>
+        <form action="">
+          <div class="input-field-login">
+            <input type="text" name="username" id="username" placeholder="Digite seu e-mail">
+            <div class="underline"></div>
+          </div>
+          <div class="input-field-login">
+            <input type="password" name="password" id="password" placeholder="Digite sua senha">
+            <div class="underline"></div>
+          </div>
+          <input type="submit" value="Entrar">
+          <a href="./cadastro.html">Não tem cadastro? <br>Crie uma conta.</a>
+        </form>
+      </section>
       <section id="whatsApp">
         <a href="https://api.whatsapp.com/send?phone=5511999999999" target="_blank">
           <img src="./img/whatsapp-icon-seeklogo.com.svg" alt="WhatsApp">
         </a>
       </section>
     </main>
-
-  </section>
   <footer>
     <h5 class="social-media-title col-5">Redes sociais</h5>
     <div id="social-media-icons" class="col-5 col-md-2 col-xl-1">
@@ -110,5 +108,5 @@
     integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
   </script>
 
-
+</body>
 </html>
