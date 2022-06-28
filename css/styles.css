@@ -125,14 +125,31 @@ header {
 
 #carousel-tablet-desktop {
     display: none;
+
 }
 
-#categories {
-    display: flex;
-    flex-direction: column;
+#identification .product-name{
+    text-align: center;
+    margin-top: 2%;
+    margin-bottom: 2%;
 }
 
-.title-section{
+#search img {
+    width: 30px;
+    height: 30px;
+}
+
+#product-picture{
+    text-align: center;
+}
+
+#about .price{
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+#delivery{
     text-align: center;
 }
 
@@ -153,12 +170,27 @@ header {
     margin: 0.5rem auto;
 }
 
-#container-categories-items {
+#about #shipping{
+    margin: 1px solid grey;
+}
+
+#about .addtocar{
+    color: #fff;
+    background-color: #19180A;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 0rem 0.7rem;
+    justify-content: center;
+    width: 60%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-left: 20%;
+    margin-right: 20%;
+}    
+
+#about .description{
+    text-align: center;
+    margin-top: 10%;
+    background-color:#F2EDEA;
 }
 
 #container-categories-items .category-item {
@@ -261,6 +293,23 @@ header {
     letter-spacing: 0.1rem;
     color: #707070;
     padding-bottom: 1rem;
+}
+
+#about .description2{
+    text-align: justify;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+#about .content{
+    text-align: center;
+    background-color: #F2EDEA;
+}
+
+#about .content2{
+    text-align: justify;
+    margin-left: 2%;
+    margin-right: 2%;
 }
 
 #signup-news form input {
