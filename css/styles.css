@@ -8,19 +8,20 @@
 /* Estilos Gerais */
 
 body {
-	font-family: "Source Sans Pro", sans-serif;
+    font-family: "Source Sans Pro", sans-serif;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
-ul{
+ul {
     list-style: none;
 }
 
-img{
-    max-width: 100%; /*Para deixar a imagem responsiva e ela se adaptar ao elemento pai*/
+img {
+    max-width: 100%;
+    /*Para deixar a imagem responsiva e ela se adaptar ao elemento pai*/
 }
 
 /* Mobile first - Iniciando CSS para dispositivos mobile */
@@ -35,7 +36,7 @@ header {
     background-color: #772014;
 }
 
-#top-bar p{
+#top-bar p {
     color: #fff;
     font-size: 0.8rem;
     text-align: center;
@@ -414,21 +415,86 @@ footer {
     align-items: center;
 }
 
-footer .social-media-title{
+footer .social-media-title {
     color: #fff;
     text-align: center;
     letter-spacing: 0.1rem;
     font-size: 1.1rem;
 }
 
-#social-media-icons{
+#social-media-icons {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    align-items: center;
 }
 
-/* Iniciando CSS para dispositivos com largura mínima de 576px */
-@media (min-width:425px){
+.container-geral {
+    width: 500px;
+    margin: 10px auto;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+@media (max-width:768px) {
+    .container-geral {
+        width: 100%;
+    }
+}
+
+.container-geral .form-title {
+    font-size: 1.75rem;
+}
+
+.container-geral .form-description {
+    font-size: 10px;
+}
+
+.container-input {
+    width: 100%;
+
+}
+
+.container-input,
+.container-input div {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.container-input input {
+    color: #666666;
+    text-align: left;
+    border: 1px solid #ccc;
+    color: #333;
+    border-radius: 10px;
+    width: 100%;
+    padding: 10px 15px;
+}
+
+.container-formulario {
+    margin: 3px auto;
+}
+
+.container-checkbox {
+    font-size: 11px;
+    text-align: left;
+    margin: 0px 10px;
+
+}
+
+.container-button {
+    background-color: black;
+    color: white;
+    width: 140px;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 16px;
+    margin: 30px auto;
+    display: block;
+}
+
+/* Iniciando CSS para dispositivos com largura mínima de 425px */
+@media (min-width:425px) {
 
     .categorie-img {
         width: 70%;
@@ -438,7 +504,7 @@ footer .social-media-title{
 }
 
 /* Iniciando CSS para dispositivos com largura mínima de 576px */
-@media (min-width:576px){
+@media (min-width:576px) {
 
     #container-nav .hamburger-menu {
         display: none;
@@ -446,9 +512,7 @@ footer .social-media-title{
 }
 
 /* Iniciando CSS para dispositivos com largura mínima de 769px */
-@media (min-width:769px){
-
-}
+@media (min-width:769px) {}
 
 /* Iniciando CSS para dispositivos com largura mínima de 1281px */
 @media (min-width:1281px){
