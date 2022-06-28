@@ -11,6 +11,7 @@
 
 body {
 	font-family: "Source Sans Pro", sans-serif;
+    padding-top: 156px;
 }
 
 a{
@@ -33,6 +34,7 @@ header {
     flex-direction: row;
     flex-wrap: wrap;
     position: fixed;
+    top:0;
     z-index: 30;
 }
 
