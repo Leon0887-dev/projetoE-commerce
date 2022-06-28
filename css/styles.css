@@ -912,7 +912,7 @@ footer .social-media-title{
 
 /* CSS user */
 
-#main-user, #main-myRequests, #main-address, #main-changePassword {
+#main-user, #main-myRequests, #main-address, #main-changePassword, #main-personalData {
     padding: 10rem 0 3rem 0;
 }
 
@@ -1190,7 +1190,7 @@ label{
 
     /* CSS painel usuario */
 
-    #main-user, #main-myRequests, #main-address, #main-changePassword {
+    #main-user, #main-myRequests, #main-address, #main-changePassword, #main-personalData {
         padding: 13rem 0 3rem 0;
     }
 
