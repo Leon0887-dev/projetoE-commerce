@@ -324,7 +324,7 @@ footer .social-media-title{
 
 /* Fim CSS home */
 
-/* CSS Login */
+/* CSS login */
 
 #container-main-login {
     background: linear-gradient(45deg,  #772014, #3F220F, #0C0B0B);
@@ -429,13 +429,78 @@ footer .social-media-title{
     background: linear-gradient(45deg,  #0C0B0B, #3F220F, #772014);
 }
 
-
 #container-form-login form a {
     text-align: center;
     margin-top: 1rem;
 }
 
-/* Fim CSS Login */
+/* Fim CSS login */
+
+/* CSS cadastro */
+
+#container-signup {
+    display: flex;
+    justify-content: center;
+    padding: 7rem 0 4rem 0;
+}
+
+#container-general-signup {
+    padding: 2rem;
+}
+
+.form-description {
+    font-size: 0.9rem;
+    color: #707070;
+    font-style: italic;
+}
+
+.container-input {
+    width: 100%;
+
+}
+
+.container-input,
+.container-input div {
+    text-align: left;
+    margin-bottom: 20px;
+    color: #707070;
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+}
+
+.container-input input {
+    color: #666666;
+    text-align: left;
+    border: 1px solid #ccc;
+    color: #333;
+    border-radius: 10px;
+    width: 100%;
+    padding: 10px 15px;
+}
+
+.container-formulario {
+    margin: 3px auto;
+}
+
+.container-checkbox {
+    font-size: 0.9rem;
+    text-align: left;
+    margin: 10px 1px;
+
+}
+
+.container-button {
+    width: 100%;
+    background-color: #772014;
+    padding: 0.8rem 2rem;
+    color: #fff;
+    font-size: 0.8rem;
+    letter-spacing: 0.2rem;
+    transition: all 0.2s ease-in 0.1s;
+    margin-top: 2rem;
+}
+
+/* Fim CSS cadastro */
 
 /* Iniciando CSS para dispositivos com largura mínima de 425px */
 @media (min-width:425px){
@@ -529,7 +594,7 @@ footer .social-media-title{
 
     /* Fim CSS home */
 
-    /* CSS Login */
+    /* CSS login */
 
     #container-main-login {
         padding: 15rem 0 5rem 0;
@@ -539,8 +604,19 @@ footer .social-media-title{
         width: 380px;
     }
 
-    /* Fim CSS Login */
+    /* Fim CSS login */
 
+    /* CSS cadastro */
+
+    #container-signup {
+        padding: 12rem 0 5rem 0;
+    }
+
+    #container-general-signup {
+        width: 480px;
+    }
+
+    /* Fim CSS cadastro */
 
 }
 
