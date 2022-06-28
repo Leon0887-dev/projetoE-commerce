@@ -502,6 +502,126 @@ footer .social-media-title{
 
 /* Fim CSS cadastro */
 
+/* CSS produto */
+#identification {
+    padding: 11rem 2rem 2rem 2rem;
+}
+
+#identification .product-name{
+    text-align: center;
+    padding-bottom: 1rem;
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
+    color: #707070;
+}
+
+#identification h6{
+    padding-bottom: 0.05rem;
+    font-size: 0.9rem;
+    letter-spacing: 0.1rem;
+    color: #707070;
+}
+
+#product-picture{
+    text-align: center;
+    padding: 0 2rem;
+}
+
+#about {
+    padding: 1rem 2rem 3rem;
+}
+
+#about .price{
+    text-align: center;
+    padding: 1rem;
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    color: #707070;
+}
+
+#about .price-options {
+    text-align: center;
+    padding-bottom: 1rem;
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    color: #707070;
+}
+
+#delivery{
+    margin: 1rem 0 2rem 0;
+    padding: 1rem 0.05rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F6F3F3;
+}
+
+#delivery label {
+    font-size: 0.9rem;
+    letter-spacing: 0.1rem;
+    color: #707070;
+}
+
+#delivery input {
+    height: 2.5rem;
+    padding: 0.5rem;
+    margin-left: 1rem;
+    font-size: 0.9rem;
+    letter-spacing: 0.1rem;
+    border-bottom: 0.1rem solid #707070;
+}
+
+#about .addtocar{
+    color: #fff;
+    background-color: #19180A;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 60%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-left: 20%;
+    margin-right: 20%;
+}    
+
+#about .description{
+    padding: 1rem;
+    text-align: center;
+    margin-top: 10%;
+    background-color:#F6F3F3;
+    letter-spacing: 0.1rem;
+    color: #707070;
+    margin-top: 3rem;
+}
+
+#about .description2{
+    text-align: justify;
+    margin-left: 2%;
+    margin-right: 2%;
+    letter-spacing: 0.1rem;
+    color: #707070;
+}
+
+#about .content{
+    padding: 1rem;
+    text-align: center;
+    background-color: #F6F3F3;
+    letter-spacing: 0.1rem;
+    color: #707070;
+    margin-top: 3rem;
+}
+
+#about .content2{
+    text-align: justify;
+    margin-left: 2%;
+    margin-right: 2%;
+    letter-spacing: 0.1rem;
+    color: #707070;
+}
+
+/* Fim CSS produto */
+
 /* Iniciando CSS para dispositivos com largura mínima de 425px */
 @media (min-width:425px){
 
@@ -609,7 +729,7 @@ footer .social-media-title{
     /* CSS cadastro */
 
     #container-signup {
-        padding: 12rem 0 5rem 0;
+        padding: 10rem 0 5rem 0;
     }
 
     #container-general-signup {
