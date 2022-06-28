@@ -8,19 +8,20 @@
 /* Estilos Gerais */
 
 body {
-	font-family: "Source Sans Pro", sans-serif;
+    font-family: "Source Sans Pro", sans-serif;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
-ul{
+ul {
     list-style: none;
 }
 
-img{
-    max-width: 100%; /*Para deixar a imagem responsiva e ela se adaptar ao elemento pai*/
+img {
+    max-width: 100%;
+    /*Para deixar a imagem responsiva e ela se adaptar ao elemento pai*/
 }
 
 /* Mobile first - Iniciando CSS para dispositivos mobile */
@@ -39,7 +40,7 @@ header {
     display: none;
 }
 
-#top-bar p{
+#top-bar p {
     color: #fff;
     font-size: 0.8rem;
     text-align: center;
@@ -51,6 +52,19 @@ header {
 .container-nav {
     background-color: #19180A;
     padding: 1rem 0;
+}
+
+.hamburger-menu {
+    padding: 0.2rem 1rem;
+    font-size: 1rem;
+    line-height: 1rem;
+    color: #fff;
+    background-color: transparent;
+}
+
+.container-nav button:focus {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 0.2rem;
 }
 
 .nav-item {
@@ -65,7 +79,7 @@ header {
     text-align: center;
 }
 
-#brand a{
+#brand a {
     color: #fff;
     font-size: 1.5rem;
     letter-spacing: 0.1rem;
@@ -113,7 +127,9 @@ header {
     text-align: end;
 }
 
-#searchbar img {
+#searchbar img {}
+#searchbar img,
+#basket img {
     width: 25px;
 }
 
@@ -149,11 +165,12 @@ header {
     margin-bottom: 5%;
 }
 
-#delivery{
+#delivery{}
+.title-section {
     text-align: center;
 }
 
-.title-section h2{
+.title-section h2 {
     color: #772014;
     font-size: 1.5rem;
     padding: 3rem 1rem 1.5rem 1rem;
@@ -161,7 +178,7 @@ header {
     letter-spacing: 0.1rem;
 }
 
-.title-section h2::after{
+.title-section h2::after {
     content: "";
     display: block;
     background: #772014;
@@ -216,7 +233,8 @@ header {
     background-color: #F6F3F3;
 }
 
-#best-sellers .product-list, #new-products .product-list {
+#best-sellers .product-list,
+#new-products .product-list {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -226,7 +244,8 @@ header {
     padding: 0;
 }
 
-#best-sellers .best-sellers-item, #new-products .new-products-item {
+#best-sellers .best-sellers-item,
+#new-products .new-products-item {
     padding-bottom: 3rem;
 }
 
@@ -256,7 +275,8 @@ header {
     color: #707070;
 }
 
-.add-button, #signup-news form button {
+.add-button,
+#signup-news form button {
     background-color: #772014;
     padding: 0.8rem 2rem;
     color: #fff;
@@ -265,7 +285,8 @@ header {
     transition: all 0.2s ease-in 0.1s;
 }
 
-.add-button:hover, #signup-news form button:hover {
+.add-button:hover,
+#signup-news form button:hover {
     background-color: #AF4319;
 }
 
@@ -320,13 +341,14 @@ header {
     letter-spacing: 0.1rem;
     border-bottom: 0.1rem solid #707070;
 }
+
 #signup-news form input:focus {
     color: #707070;
     border: none;
     outline: #772014 solid 0.1rem;
 }
 
-#whatsApp{
+#whatsApp {
     width: 60px;
     position: fixed;
     left: 1rem;
@@ -343,31 +365,101 @@ footer {
     align-items: center;
 }
 
-footer .social-media-title{
+footer .social-media-title {
     color: #fff;
     text-align: center;
     letter-spacing: 0.1rem;
     font-size: 1.1rem;
 }
 
-#social-media-icons{
+#social-media-icons {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
 }
 
+.container-geral {
+    width: 500px;
+    margin: 10px auto;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+@media (max-width:768px) {
+    .container-geral {
+        width: 100%;
+    }
+}
+
+.container-geral .form-title {
+    font-size: 1.75rem;
+}
+
+.container-geral .form-description {
+    font-size: 10px;
+}
+
+.container-input {
+    width: 100%;
+
+}
+
+.container-input,
+.container-input div {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.container-input input {
+    color: #666666;
+    text-align: left;
+    border: 1px solid #ccc;
+    color: #333;
+    border-radius: 10px;
+    width: 100%;
+    padding: 10px 15px;
+}
+
+.container-formulario {
+    margin: 3px auto;
+}
+
+.container-checkbox {
+    font-size: 11px;
+    text-align: left;
+    margin: 0px 10px;
+
+}
+
+.container-button {
+    background-color: black;
+    color: white;
+    width: 140px;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 16px;
+    margin: 30px auto;
+    display: block;
+}
+
 /* Iniciando CSS para dispositivos com largura mínima de 425px */
-@media (min-width:425px){
+@media (min-width:425px) {
 
     .categorie-img {
         width: 70%;
     }
 
+    .nav-item {
+        font-size: 1rem;
+        letter-spacing: 0.1rem;
+    }
+
+
 }
 
 /* Iniciando CSS para dispositivos com largura mínima de 576px */
-@media (min-width:576px){
+@media (min-width:576px) {
 
 }
 
@@ -456,5 +548,30 @@ footer .social-media-title{
     .categorie-img {
         width: 50%;
     }
+}
+/* Iniciando CSS para dispositivos com largura mínima de 769px */
+@media (min-width:769px) {}
+
+/* Iniciando CSS para dispositivos com largura mínima de 1281px */
+@media (min-width:1281px) {
+
+    .container-button {
+        background-color: black;
+        color: white;
+        width: 140px;
+        height: 40px;
+        border-radius: 10px;
+        font-size: 16px;
+        margin-bottom: 20px;
+        margin-top: 20px;
+        margin: 30px 160px;
+    }
+
+    .container-checkbox {
+        font-size: 12px;
+        text-align: left;
+
+    }
+
 
 }
