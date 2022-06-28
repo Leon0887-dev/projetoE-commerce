@@ -287,10 +287,11 @@ label {
 
 .cards-icons {
     display: flex;
-    width: 70px;
+    width: 100%;
     height: 20px;
     margin: 20px 0px;
     display: flex;
+    justify-content: space-around;
 }
 
 
@@ -393,7 +394,7 @@ label {
     font-size: 14px;
 }
 .total {
-    /* display: flex; */
+    display: flex;
     border-top: 1px solid grey;
     padding-top: 10px;
     font-size: 14px;
@@ -455,6 +456,7 @@ footer .social-media-title{
     #main {
         width: 100%;
         flex-direction: row;
+        
     }
    
     
