@@ -7,10 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-  <link href="img/cafe-favicon.jpg" sizes="32x32" rel="shortcut icon" />
   <link rel="stylesheet" href="./css/styles.css">
+  <!-- <link rel="stylesheet" href="./css/user.css"> -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro">
-  <title>Café House - Produto</title>
+  <title>Café House</title>
 </head>
 
 <body>
@@ -67,32 +67,86 @@
       </form>
     </section>
   </header>
-  <main>
-    <div id="identification">
-      <h1 class="product-name">Café House extra forte moído - 500g</h1>
-      <h6>Marca: Café House</h6>
-      <h6>Modelo: Moído 500g</h6>
-      <h6>Código: CFHM500G </h6>
-    </div>
-    <section id="product-picture">
-      <img class="coffee" src="./img/produto500g.jpeg" alt="">
+  <main id="main-address">
+
+    <section class="section-forms">
+      <div class="container-md form-center">
+        <h2>Editar endereço de entrega</h2>
+        <form action="POST" class="row">
+          <div class="form-check col-md-12 mb-3 ms-3">
+            <input type="checkbox" class="form-check-input" id="checked" checked>
+            <label for="checked" class="form-check-label">Selecionar como endereço de entrega principal</label>
+          </div>
+
+          <div class="form-floating col-md-12 mb-3">
+            <input type="text" class="form-control" id="adress-name" placeholder="minha casa">
+            <label for="adress-name" class="ps-4">Nome do endereço</label>
+          </div>
+
+          <div class="form-floating col-md-7 mb-3 d-flex">
+
+            <input type="text" class="form-control" id="adress-cep" placeholder="55533-123">
+            <label for="adress-cep" class="ps-4">CEP</label>
+
+          </div>
+          <div class="col-md-4 align-self-center mb-3 ms-2">
+            <a href="#" class="link-edit">Não sei meu CEP</a>
+          </div>
+
+
+          <div class="form-floating col-md-12 mb-3">
+            <input type="text" class="form-control" id="adress" placeholder="rua joao de maia">
+            <label for="adress" class="ps-4">Endereço(rua,avenida,quadra,lote)</label>
+          </div>
+
+          <div class="form-floating col-md-8 mb-3">
+            <input type="text" class="form-control" id="adress-number" placeholder="rua joao de maia">
+            <label for="adress-number" class="ps-4">Informe o número</label>
+          </div>
+
+          <div class="form-floating col-md-4 mb-3">
+            <select name="countries" class="form-select" id="selectd">
+              <option value="Brazil" selected> Brasil</option>
+            </select>
+            <label for="selected" class="ps-4">País</label>
+          </div>
+
+
+
+          <div class="form-floating col-md-12 mb-3">
+            <input type="text" class="form-control" id="adress-complement" placeholder="número da casa">
+            <label for="adress-complement" class="ps-4">Complemento</label>
+          </div>
+
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="adress-district" placeholder="casa caiada">
+            <label for="adress-district" class="ps-4">Bairro</label>
+          </div>
+
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="adress-city" placeholder="paulista">
+            <label for="adress-city" class="ps-4">Cidade</label>
+          </div>
+
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="adress-state" placeholder="pernambuco">
+            <label for="adress-state" class="ps-4">Estado</label>
+          </div>
+          <div class="form-check mb-3 ms-3">
+            <input type="checkbox" class="form-check-input" id="checked">
+            <label for="checked" class="form-check-label">Utilizar destinatário diferente do cadastro</label>
+          </div>
+
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="adress-recipient" placeholder="josé maria">
+            <label for="adress-recipient" class="ps-4">Destinatário</label>
+          </div>
+          <div class="save-btn">
+            <input type="button" class="btn-edit" value="Salvar alterações">
+          </div>
+        </form>
+      </div>
     </section>
-    <div id="about">
-      <h1 class="price">R$29,90</h1>
-      <h6 class="price-options">10x 2,99 sem juros</h6>
-      <form id="delivery" action="">
-        <label for="shipping">Calcular frete</label>
-        <input type="number" name="shipping" id="shipping" placeholder="00000-000">
-      </form>
-      <a href="./checkout.html">
-        <button type="button" class="add-button col-12">Adicionar à sacola</button>
-      </a>
-      <h4 class="description">Descrição</h4>
-      <p class="description2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet suscipit perspiciatis
-        provident voluptas quod, accusamus odit beatae libero ipsum sequi, iure, quos saepe. </p>
-      <h4 class="content">Conteúdo</h4>
-      <p class="content2">1 embalagem de 500g de Café House extraforte moído </p>
-    </div>
     <section id="whatsApp">
       <a href="https://api.whatsapp.com/send?phone=5511999999999" target="_blank">
         <img src="./img/whatsapp-icon-seeklogo.com.svg" alt="WhatsApp">
@@ -113,6 +167,8 @@
       </a>
     </div>
   </footer>
+
+
   <!-- Script JS Bootstrap | Manter código próximo ao fechamento do body -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
