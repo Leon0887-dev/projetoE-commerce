@@ -93,49 +93,6 @@ header {
     padding: 0.3rem 1rem;
 }
 
-#identification .product-name{
-    text-align: center;
-    margin-top: 2%;
-    margin-bottom: 2%;
-}
-
-#search img {
-    width: 30px;
-    height: 30px;
-}
-
-#product-picture{
-    text-align: center;
-}
-
-#about .price{
-    text-align: center;
-    margin-top: 5%;
-    margin-bottom: 5%;
-}
-
-#delivery{
-    text-align: center;
-}
-
-#about .addtocar{
-    color: #fff;
-    background-color: #19180A;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding: 10px;
-    width: 400px;
-    height: 50px;
-    margin: auto;
-}    
-
-#about .description{
-    text-align: center;
-    margin-top: 10%;
-    background-color:#F2EDEA;
-}
-
 #searchbar form {
     display: flex;
 }
@@ -615,19 +572,6 @@ footer .social-media-title{
     border-bottom: 0.1rem solid #707070;
 }
 
-#about .addtocar{
-    color: #fff;
-    background-color: #19180A;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 60%;
-    margin-top: 2%;
-    margin-bottom: 2%;
-    margin-left: 20%;
-    margin-right: 20%;
-}    
-
 #about .description{
     padding: 1rem;
     text-align: center;
@@ -986,19 +930,8 @@ footer .social-media-title{
     color: #19180A;
 }
 
-input{
-    color: #3F220F;
-    outline: none;
-    box-shadow: none;
-}
-input:focus{
-    outline: none;
-    box-shadow: none;
-    border-color: #fff;
-}
-
 label{
-    color: #8F8F8F;
+    color: #707070;
 }
 
 /* Fim CSS user */
@@ -1321,6 +1254,5 @@ label{
     }
 
     /* Fim CSS checkout */
-
 
 }
