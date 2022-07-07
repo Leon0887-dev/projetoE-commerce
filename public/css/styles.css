@@ -229,7 +229,7 @@ footer .social-media-title{
     background-color: #F6F3F3;
 }
 
-#best-sellers .product-list, #new-products .product-list {
+#best-sellers .product-list, #new-products .product-list, #product-listing-section .product-list {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -239,12 +239,15 @@ footer .social-media-title{
     padding: 0;
 }
 
-#best-sellers .best-sellers-item, #new-products .new-products-item {
+#best-sellers .best-sellers-item, #new-products .new-products-item, #product-listing-section .product-listing-item {
     padding-bottom: 3rem;
 }
 
 .product-img {
     border: 1px solid #707070;
+    min-height: 352px;
+    display: flex;
+    align-items: center;
 }
 
 .product-list-title {
@@ -282,7 +285,7 @@ footer .social-media-title{
     background-color: #AF4319;
 }
 
-#new-products {
+#new-products, #product-listing-section {
     display: flex;
     flex-direction: column;
 }
@@ -323,6 +326,27 @@ footer .social-media-title{
 }
 
 /* Fim CSS home */
+
+/* CSS listagem de produto */
+
+#filter-bar-mobile {
+    padding: 11rem 2rem 0rem 2rem;
+}
+
+#filter-bar-tablet-desktop {
+    display: none;
+}
+
+#filter-bar-mobile .btn-filter-mobile {
+    padding: 0.5rem 1rem;
+    border: 1px solid #772014;
+    font-size: 0.9rem;
+    letter-spacing: 0.1rem;
+    color: #772014;
+    background-color: #fff;
+}
+
+/* Fim CSS listagem de produto */
 
 /* CSS login */
 
@@ -1134,11 +1158,49 @@ label{
         padding: 0 1.5rem 3rem 1.5rem;
     }
 
-    #best-sellers .product-list, #new-products .product-list {
+    #best-sellers .product-list, #new-products .product-list, #product-listing-section .product-list {
         padding: 0 1.5rem;
     }
 
+    .product-img {
+        min-height: 310px;
+    }
+
     /* Fim CSS home */
+    
+    /* CSS listagem de produto */
+
+    #filter-bar-mobile {
+        display: none;
+    }
+
+    #filter-bar-tablet-desktop {
+        display: flex;
+        justify-content: space-between;
+        padding: 13rem 3rem 0rem 3rem;
+        font-size: 0.9rem;
+        letter-spacing: 0.1rem;
+    }
+    
+    #product-listing-section .product-listing-item {
+        padding: 0 1.5rem 5rem 1.5rem;
+    }
+
+    #filter-category, #filter-brand {
+        width: 8rem;
+        letter-spacing: 0.1rem;
+        color: #707070;
+        padding-left: 1rem;
+    }
+
+    #filter-order {
+        width: 9rem;
+        letter-spacing: 0.1rem;
+        color: #707070;
+        padding-left: 1rem;
+    }
+
+    /* Fim CSS listagem de produto */
 
     /* CSS login */
 
@@ -1238,6 +1300,10 @@ label{
 
     .categorie-img {
         width: 50%;
+    }
+
+    .product-img {
+        min-height: 260px;
     }
 
     /* Fim CSS home */

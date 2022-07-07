@@ -24,12 +24,11 @@ app.use(express.json());
 //url encoded serve para a gente converter a carga da requisição em um formato que o json aceite
 app.use(express.urlencoded({extended:false}));
 
-app.use("/produto",productRoute);
+app.use("/produtos",productRoute);
 app.use("/carrinho",checkoutRoute);
 app.use("/login",loginRoute);
 app.use("/areaDoCliente",userPanelRoute);
 app.use("/criarConta",userRegisterRoute);
-
 app.use("/",indexRoute);
 
 app.listen(port, ()=>{
