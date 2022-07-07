@@ -9,7 +9,7 @@
     <div>
       <h1>1.DADOS PESSOAIS</h1>
       <h4> FAÇA SEU LOGIN</h4>
-      <form action="./login.html" method="" class="container-input">
+      <form action="./login.html" method="" class="container-input-form">
         <div class="container-input">
           <label for="email-id">E-mail</label>
           <input type="email" name="email" id="email-id" />
@@ -85,15 +85,21 @@
     </div>
     <h3>PRODUTOS</h3>
     <div class="product">
-      <img src="./img/grao_cafe.jpg" alt="Café em grãos">
-      <h2>Café em grãos DH - 1Kg</h2>
-      <h2>R$49,90</h2>
+     <div>
+        <!-- <img src="../../public/img/img_produto.jpg" alt="Café em grãos"> -->
+     </div>
+     <div class="product-checkout-final">
+      <h2 >Café em grãos DH - 1Kg</h2>
+     </div>
+     <div class="product-checkout-preco" >
+      <h2 >R$49,90</h2>
+     </div>
     </div>
     <div class="cupons">
       <label for="cupons">Vales-presentes, troca ou cupons de desconto</label>
       <input type="text" name="cupons" id="cupons" />
     </div>
-    <form action="" class="pagamento">
+    <form action="" class="sub-pay">
       <div class="sub">
         <h3> SUBTOTAL</h3>
         <h4 class="end">R$49,90</h4>
@@ -112,7 +118,7 @@
       </div>
     </form>
     <div class="finalizar">
-      <button type="submit" class="e-senha">FINALIZAR COMPRA</button>
+      <button type="submit" class="e-senha">Finalizar compra</button>
     </div>
   </section>
 

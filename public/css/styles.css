@@ -616,20 +616,21 @@ footer .social-media-title{
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: 14px;
+    /* font-size: 14px; */
     justify-content: center;
     padding-top: 10rem;
 }
 
 #container-signup-checkout {
-    height: 500px;
+    height: 550px;
     width: 400px;
     background-color: #F2EDEA;
     display: flex;
-    justify-content:space-evenly;
-    padding: 5rem 5rem;
+    /* justify-content:space-evenly; */
+    padding: 3rem 5rem;
     flex-direction: column;
     align-items:stretch;
+    align-items: center;
     margin-bottom: 2rem;
 }
 
@@ -644,40 +645,27 @@ footer .social-media-title{
     font-size: 12px;
     margin-bottom: 10px;
 }
+.container-input input {
+    padding: 10px 15px;
+    margin: 5px 0px;
+    border-radius: 4px;
+    border: 1px solid grey;
+}
 
-#container-signup-checkout form {
+.container-input-form {
     display: flex;
     flex-direction:column;
     align-items:center;
     width: 100%;
     color: #707070;
 }
-#container-signup-checkout form input {
-    width: 100%;
-    height: 30px;
-    padding: 0 10px;
-    margin: 5px 0;
-    border-radius: 4px;
-    border: 1px solid grey;
-}
 
-#container-signup-checkout form label {
-    color: #707070;
-    font-weight: 600;
-    cursor: pointer;
-}
-
-#dadosPessoais h5{
-    color:#772014;
-    font-size: 10px;
-    margin-bottom: 10px;
-}
 .e-senha{
     color:#772014;
     font-size: 11px;
-    margin-bottom: 12px;
+    margin-bottom: 20px;
 }
-.login-checkout {
+.login-chekout {
     background:#772014;
     color: #fff;
     margin-bottom: 40px;
@@ -698,13 +686,14 @@ footer .social-media-title{
 }
 
 #container-payment {
-    height: 700px;
+    height: 800px;
     width: 400px;
     background-color: #F2EDEA;
     display: flex;
-    justify-content:space-evenly;
-    padding: 5rem 5rem;
+    /* justify-content:space-evenly; */
+    padding: 3rem 5rem;
     flex-direction: column;
+    align-items: stretch;
     margin-bottom: 2rem;
 }
 
@@ -712,16 +701,16 @@ footer .social-media-title{
     color:#772014;
     font-size: 12px;
     margin-bottom: 10px;
-    padding: auto;
-    margin: 15px 0px;
+    /* padding: auto; */
+    /* margin: 15px 0px; */
 }
 
 #container-payment h2{
     color: #868686;
     font-size: 20px;
     margin-bottom: 20px;
-    padding: auto;
-    margin: 20px 0px;
+    /* padding: auto; */
+    /* margin: 20px 0px; */
 }
 
 .payment form {
@@ -730,11 +719,11 @@ footer .social-media-title{
 
 .card-name {
     margin: 20px 0px;
-    padding: 5px;
+    /* padding: 5px; */
 }
 
 .card-name input {
-    padding: 5px;
+    padding: 10px 15px;
     margin: 5px 0px;
     border-radius: 4px;
     border: 1px solid grey;
@@ -745,37 +734,45 @@ footer .social-media-title{
 }
 
 .card-number input{
-    display: flex;
-    align-items:flex-start;
+    /* display: flex; */
+    /* align-items:flex-start; */
     width: 100%;
     color: #707070;
-    padding: 5px;
+    padding: 10px 15px;
     margin: 5px 0px;
     border-radius: 4px;
     border: 1px solid grey;
+    
 }
 
 .card-validity {
-    margin: 10px 5px;
+    margin: 20px 0px;
 }
 
 .card-validity input{
     border-radius: 4px;
+    padding: 10px 15px;
     border: 1px solid grey;
+    margin: 5px 0px;
 }
     
+
+.card-code {
+    margin: 20px 0px;
+}
 .card-code input{
-    width: 30%;
-    height: 30%;
-    align-items: flex-end;
-    padding: 5px;
-    margin: 5px 5px;
+    width: 50%;
+    /* height: 30%; */
+    /* align-items: flex-end; */
+    padding: 10px 15px;
+    /* margin: 5px 5px; */
     border-radius: 4px;
     border: 1px solid grey;
+    margin: 5px 0px;
 }
 
 .portion-number input{
-    padding: 5px;
+    padding: 10px 15px;
     width: 50%;
     margin: 5px 0px;
     border-radius: 4px;
@@ -783,34 +780,44 @@ footer .social-media-title{
 }
 
 .cards-icons {
-    display: flex;
+    /* display: flex; */
     width: 100%;
     height: 20px;
-    margin: 20px 0px;
+    margin: 30px 0px;
     display: flex;
     justify-content: space-around;
 }
+
+.outhers {
+    display: flex;
+    justify-content: space-between;
+}
+
 
 #container-checkout {
     height: 800px;
     width: 400px;
     background-color: #F2EDEA;
     display: flex;
-    justify-content:space-evenly;
-    padding: 4rem 4rem;
+    padding: 3rem 5rem;
     flex-direction: column;
     margin-bottom: 3rem;
+}
+.product {
+    display: flex;
+    justify-content: space-between;
 }
 
 .product h2 {
     display: flex;
-    font-size: 14px;
+    font-size: 16px;
+    margin-bottom: 40px;
 }
 
-.product img{
+/* .product img{
     width: 40%;
     height: 40%;
-}
+} */
 
 #container-checkout h1{
     color: #868686;
@@ -821,19 +828,18 @@ footer .social-media-title{
 #container-checkout h3{
     color:#772014;
     font-size: 15px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     align-items: flex-start;
     flex-direction: row;
 }
 
-.pagamento {
+.sub-pay {
     flex-direction: row;
 }
 
 .cupons input{
-    align-items: center;
-    padding: 5px 5px;
-    width: 100%;
+    padding: 10px 15px;
+    margin: 5px 0px;
     border-radius: 4px;
     border: 1px solid grey;
 }
