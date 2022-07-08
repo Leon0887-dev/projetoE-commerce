@@ -795,7 +795,7 @@ footer .social-media-title{
 
 
 #container-checkout {
-    height: 800px;
+    height: 670px;
     width: 400px;
     background-color: #F2EDEA;
     display: flex;
@@ -803,15 +803,24 @@ footer .social-media-title{
     flex-direction: column;
     margin-bottom: 3rem;
 }
+
+.container-prod {
+    margin-bottom: 30px;
+    
+}
 .product {
     display: flex;
     justify-content: space-between;
+    border-bottom: 1px solid grey;
+    margin-bottom: 20px;
 }
+
+
 
 .product h2 {
     display: flex;
     font-size: 16px;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
 /* .product img{
@@ -828,25 +837,34 @@ footer .social-media-title{
 #container-checkout h3{
     color:#772014;
     font-size: 15px;
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
     align-items: flex-start;
     flex-direction: row;
 }
 
 .sub-pay {
     flex-direction: row;
+    
 }
+
 
 .cupons input{
     padding: 10px 15px;
     margin: 5px 0px;
     border-radius: 4px;
     border: 1px solid grey;
+    margin-bottom: 30px;
 }
 
 .finalizar {
     padding-top: 15px;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    display: flex;
+    margin: 20px;
 }
+
 
 .finalizar button {
     background:#772014;
@@ -857,12 +875,16 @@ footer .social-media-title{
     align-content: center;
     align-items: center;
     cursor: pointer;
-    font-size: 15px;   
+    font-size: 15px;
+    justify-content: center;   
 }
 
 .sub {
     align-items: flex-end;
     padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
 }
 
 .sub h4, h3{
@@ -878,12 +900,18 @@ footer .social-media-title{
     border-top: 1px solid grey;
     padding-top: 10px;
     font-size: 14px; 
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
 }
 
 .desconto {
     border-top: 1px solid grey;
     padding-top: 10px;
     font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
 }
 
 .desconto h3, h4 {
@@ -895,6 +923,9 @@ footer .social-media-title{
     border-top: 1px solid grey;
     padding-top: 10px;
     font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
 }
 
 .total h2 {
