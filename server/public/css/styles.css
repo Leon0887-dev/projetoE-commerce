@@ -511,7 +511,7 @@ footer .social-media-title{
     letter-spacing: 0.1rem;
 }
 
-.container-input input {
+.container-input input, select {
     color: #666666;
     text-align: left;
     border: 1px solid #ccc;
@@ -1057,6 +1057,7 @@ label{
     justify-content: center;
     margin-top: 30px;
 }
+
 
 /* Fim CSS forms personal-data */
 
