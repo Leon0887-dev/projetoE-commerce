@@ -1062,6 +1062,11 @@ label{
 
 /* CSS forms changePassword */
 
+.form-center h2{
+    margin-bottom: 30px;
+    
+}
+
 .password-info > h6{
     color: #19180A;
     font-weight: 700;
