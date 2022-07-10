@@ -944,6 +944,7 @@ footer .social-media-title{
 
 #main-user, #main-myRequests, #main-address, #main-changePassword, #main-personalData {
     padding: 10rem 0 3rem 0;
+    padding-top: 156px;
 }
 
 .section-forms{
@@ -1100,9 +1101,6 @@ label{
 
     /* CSS header */
 
-    body{
-        padding-top: 156px;
-    }
     #top-bar {
         display: block;
     }
