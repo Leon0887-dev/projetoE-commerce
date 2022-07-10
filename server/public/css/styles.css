@@ -231,7 +231,7 @@ footer .social-media-title{
     background-color: #F6F3F3;
 }
 
-#best-sellers .product-list, #new-products .product-list {
+#best-sellers .product-list, #new-products .product-list, #product-listing-section .product-list {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -241,12 +241,15 @@ footer .social-media-title{
     padding: 0;
 }
 
-#best-sellers .best-sellers-item, #new-products .new-products-item {
+#best-sellers .best-sellers-item, #new-products .new-products-item, #product-listing-section .product-listing-item {
     padding-bottom: 3rem;
 }
 
 .product-img {
     border: 1px solid #707070;
+    min-height: 352px;
+    display: flex;
+    align-items: center;
 }
 
 .product-list-title {
@@ -284,7 +287,7 @@ footer .social-media-title{
     background-color: #AF4319;
 }
 
-#new-products {
+#new-products, #product-listing-section {
     display: flex;
     flex-direction: column;
 }
@@ -325,6 +328,27 @@ footer .social-media-title{
 }
 
 /* Fim CSS home */
+
+/* CSS listagem de produto */
+
+#filter-bar-mobile {
+    padding: 11rem 2rem 0rem 2rem;
+}
+
+#filter-bar-tablet-desktop {
+    display: none;
+}
+
+#filter-bar-mobile .btn-filter-mobile {
+    padding: 0.5rem 1rem;
+    border: 1px solid #772014;
+    font-size: 0.9rem;
+    letter-spacing: 0.1rem;
+    color: #772014;
+    background-color: #fff;
+}
+
+/* Fim CSS listagem de produto */
 
 /* CSS login */
 
@@ -448,6 +472,7 @@ footer .social-media-title{
 
 #container-general-signup {
     padding: 2rem;
+    width: 100%;
 }
 
 .form-description {
@@ -458,7 +483,6 @@ footer .social-media-title{
 
 .container-input {
     width: 100%;
-
 }
 
 .container-input,
@@ -574,19 +598,6 @@ footer .social-media-title{
     border-bottom: 0.1rem solid #707070;
 }
 
-#about .addtocar{
-    color: #fff;
-    background-color: #19180A;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 60%;
-    margin-top: 2%;
-    margin-bottom: 2%;
-    margin-left: 20%;
-    margin-right: 20%;
-}    
-
 #about .description{
     padding: 1rem;
     text-align: center;
@@ -623,6 +634,445 @@ footer .social-media-title{
 }
 
 /* Fim CSS produto */
+
+/* CSS checkout */
+
+#main-checkout{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 14px;
+    justify-content: center;
+    padding-top: 10rem;
+}
+
+#container-signup-checkout {
+    height: 500px;
+    width: 400px;
+    background-color: #F2EDEA;
+    display: flex;
+    justify-content:space-evenly;
+    padding: 5rem 5rem;
+    flex-direction: column;
+    align-items:stretch;
+    margin-bottom: 2rem;
+}
+
+#container-signup-checkout h1{
+    color: #868686;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+#container-signup-checkout h4{
+    color:#772014;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+#container-signup-checkout form {
+    display: flex;
+    flex-direction:column;
+    align-items:center;
+    width: 100%;
+    color: #707070;
+}
+#container-signup-checkout form input {
+    width: 100%;
+    height: 30px;
+    padding: 0 10px;
+    margin: 5px 0;
+    border-radius: 4px;
+    border: 1px solid grey;
+}
+
+#container-signup-checkout form label {
+    color: #707070;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#dadosPessoais h5{
+    color:#772014;
+    font-size: 10px;
+    margin-bottom: 10px;
+}
+.e-senha{
+    color:#772014;
+    font-size: 11px;
+    margin-bottom: 12px;
+}
+.login-checkout {
+    background:#772014;
+    color: #fff;
+    margin-bottom: 40px;
+    width: 100%;
+    height: 30px;
+    align-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.register {
+    width: 100%;
+    height: 30px;
+    background: #772014;
+    color: #fff;
+    margin-bottom: 40px;
+    cursor: pointer;
+}
+
+#container-payment {
+    height: 700px;
+    width: 400px;
+    background-color: #F2EDEA;
+    display: flex;
+    justify-content:space-evenly;
+    padding: 5rem 5rem;
+    flex-direction: column;
+    margin-bottom: 2rem;
+}
+
+#container-payment h5{
+    color:#772014;
+    font-size: 12px;
+    margin-bottom: 10px;
+    padding: auto;
+    margin: 15px 0px;
+}
+
+#container-payment h2{
+    color: #868686;
+    font-size: 20px;
+    margin-bottom: 20px;
+    padding: auto;
+    margin: 20px 0px;
+}
+
+.payment form {
+    padding:10px 10px;
+}
+
+.card-name {
+    margin: 20px 0px;
+    padding: 5px;
+}
+
+.card-name input {
+    padding: 5px;
+    margin: 5px 0px;
+    border-radius: 4px;
+    border: 1px solid grey;
+}
+
+.card-number {
+    margin: 20px 0px;
+}
+
+.card-number input{
+    display: flex;
+    align-items:flex-start;
+    width: 100%;
+    color: #707070;
+    padding: 5px;
+    margin: 5px 0px;
+    border-radius: 4px;
+    border: 1px solid grey;
+}
+
+.card-validity {
+    margin: 10px 5px;
+}
+
+.card-validity input{
+    border-radius: 4px;
+    border: 1px solid grey;
+}
+    
+.card-code input{
+    width: 30%;
+    height: 30%;
+    align-items: flex-end;
+    padding: 5px;
+    margin: 5px 5px;
+    border-radius: 4px;
+    border: 1px solid grey;
+}
+
+.portion-number input{
+    padding: 5px;
+    width: 50%;
+    margin: 5px 0px;
+    border-radius: 4px;
+    border: 1px solid grey;
+}
+
+.cards-icons {
+    display: flex;
+    width: 100%;
+    height: 20px;
+    margin: 20px 0px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#container-checkout {
+    height: 800px;
+    width: 400px;
+    background-color: #F2EDEA;
+    display: flex;
+    justify-content:space-evenly;
+    padding: 4rem 4rem;
+    flex-direction: column;
+    margin-bottom: 3rem;
+}
+
+.product h2 {
+    display: flex;
+    font-size: 14px;
+}
+
+.product img{
+    width: 40%;
+    height: 40%;
+}
+
+#container-checkout h1{
+    color: #868686;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+#container-checkout h3{
+    color:#772014;
+    font-size: 15px;
+    margin-bottom: 20px;
+    align-items: flex-start;
+    flex-direction: row;
+}
+
+.pagamento {
+    flex-direction: row;
+}
+
+.cupons input{
+    align-items: center;
+    padding: 5px 5px;
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid grey;
+}
+
+.finalizar {
+    padding-top: 15px;
+}
+
+.finalizar button {
+    background:#772014;
+    color: #fff;
+    margin-bottom: 40px;
+    width: 150px;
+    height: 40px;
+    align-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 15px;   
+}
+
+.sub {
+    align-items: flex-end;
+    padding-top: 10px;
+}
+
+.sub h4, h3{
+    align-items: flex-end;
+    font-size: 14px;    
+}
+
+.frete h4 {
+    font-size: 14px;
+}
+
+.frete  {
+    border-top: 1px solid grey;
+    padding-top: 10px;
+    font-size: 14px; 
+}
+
+.desconto {
+    border-top: 1px solid grey;
+    padding-top: 10px;
+    font-size: 14px;
+}
+
+.desconto h3, h4 {
+    font-size: 14px;
+}
+
+.total {
+    display: flex;
+    border-top: 1px solid grey;
+    padding-top: 10px;
+    font-size: 14px;
+}
+
+.total h2 {
+    font-size: 18px ;
+}
+
+/* Fim CSS checkout */
+
+/* CSS user */
+
+#main-user, #main-myRequests, #main-address, #main-changePassword, #main-personalData {
+    padding: 10rem 0 3rem 0;
+}
+
+.section-forms{
+    margin: 40px 0;
+}
+
+.btn-edit{
+    background-color: #AF4319;
+    padding: 7px;
+    border-radius: 10px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.btn-edit:hover{
+    background-color:#af4319e1;
+    color: #fff;
+}
+
+.link-edit{
+    color: #AF4319;
+    text-decoration: underline;
+}
+
+.link-edit:hover{
+    color: #19180A;
+}
+
+label{
+    color: #707070;
+}
+
+/* Fim CSS user */
+
+/* CSS painel usuário */
+
+.panel-options-screen{
+    display: flex;
+    flex-direction: column-reverse;
+}
+.user-options--list{
+    padding: 0;
+}
+
+.list-item{
+    display: flex;
+    border-radius: 10px;
+    padding: 10px;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.list-item:hover{
+    background-color: #FBDADC;
+}
+
+.list-item a{
+    text-decoration: none;
+    color: #8F8F8F;
+    margin-left: 10px;
+    font-size: 1.1rem;  
+}
+
+.list-link a{
+    color: #19180A;
+    font-size: 18px;
+}
+
+.user-list-products, .user-personal-data{
+    margin-bottom: 30px;
+}
+
+.titles-cards{
+    background-color:#3F220F ;
+}
+.titles-cards >h3{
+    color: #fff;
+}
+.personal-data--info > h6{
+    color: #19180A;
+    
+}
+.personal-data--info >p{
+    color: #bca6a8;
+    font-size: 14px;
+}
+
+.personal-data--btn{
+    display: flex;
+    justify-content: center;
+
+}
+
+.list-products--info  p{
+    color: #19180A;
+    text-align: center;
+    font-size: 18px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.link-edit{
+    color: #AF4319;
+    text-decoration: underline;
+}
+
+.link-edit:hover{
+    color: #19180A;
+}
+
+.list-products--info > .link-edit{
+    display: flex;
+    justify-content: center;
+}
+
+/* Fim CSS painel usuário */
+
+/* CSS forms personal-data */
+
+.save-btn{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+/* Fim CSS forms personal-data */
+
+/* CSS forms changePassword */
+
+.password-info > h6{
+    color: #19180A;
+    font-weight: 700;
+}
+
+.password-info > P{
+    color: #8F8F8F;
+}
+
+.password-info > P span{
+    display: inline-block;
+    color: #CF0E0E ;
+    font-size: 18px;
+    font-weight: 700;
+    margin-right: 10px;
+}
 
 /* Iniciando CSS para dispositivos com largura mínima de 425px */
 @media (min-width:425px){
@@ -710,11 +1160,49 @@ footer .social-media-title{
         padding: 0 1.5rem 3rem 1.5rem;
     }
 
-    #best-sellers .product-list, #new-products .product-list {
+    #best-sellers .product-list, #new-products .product-list, #product-listing-section .product-list {
         padding: 0 1.5rem;
     }
 
+    .product-img {
+        min-height: 310px;
+    }
+
     /* Fim CSS home */
+    
+    /* CSS listagem de produto */
+
+    #filter-bar-mobile {
+        display: none;
+    }
+
+    #filter-bar-tablet-desktop {
+        display: flex;
+        justify-content: space-between;
+        padding: 13rem 3rem 0rem 3rem;
+        font-size: 0.9rem;
+        letter-spacing: 0.1rem;
+    }
+    
+    #product-listing-section .product-listing-item {
+        padding: 0 1.5rem 5rem 1.5rem;
+    }
+
+    #filter-category, #filter-brand {
+        width: 8rem;
+        letter-spacing: 0.1rem;
+        color: #707070;
+        padding-left: 1rem;
+    }
+
+    #filter-order {
+        width: 9rem;
+        letter-spacing: 0.1rem;
+        color: #707070;
+        padding-left: 1rem;
+    }
+
+    /* Fim CSS listagem de produto */
 
     /* CSS login */
 
@@ -740,6 +1228,63 @@ footer .social-media-title{
 
     /* Fim CSS cadastro */
 
+    /* CSS painel usuario */
+
+    #main-user, #main-myRequests, #main-address, #main-changePassword, #main-personalData {
+        padding: 13rem 0 3rem 0;
+    }
+
+    .form-center{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 700px;
+    }
+    
+    .form-center > h2{
+        color: #19180A;
+        align-self: flex-start;
+        margin-bottom: 30px;
+    }
+    
+    .active{
+         background-color: #FBDADC ;
+    }
+    
+    .list-link a{
+        font-size: 20px;
+    }
+    
+     .user-options--screen{
+        display:block
+     }
+    
+     .panel-options-screen{
+        flex-direction: row;
+     }
+    
+     .list-item a{
+        font-size: 1rem;
+     }
+    
+     .personal-data--btn{
+        margin-top: 10px;
+        justify-content: flex-start;
+     }
+    
+     .btn-edit{
+        font-size: 16px;
+     }
+    
+     .save-btn{
+        display: flex;
+        justify-content: flex-start;
+        margin-top: 30px;
+    }
+
+    /* Fim CSS painel usuario */
+
 }
 
 /* Iniciando CSS para dispositivos com largura mínima de 1280px */
@@ -759,6 +1304,23 @@ footer .social-media-title{
         width: 50%;
     }
 
+    .product-img {
+        min-height: 260px;
+    }
+
     /* Fim CSS home */
+
+    /* CSS checkout */
+
+    #main-checkout {
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: flex-start;
+        padding-top: 12rem;
+    }
+
+    /* Fim CSS checkout */
 
 }

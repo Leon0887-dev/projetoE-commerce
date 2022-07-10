@@ -1,0 +1,119 @@
+<%- include("./partials/head")%>
+<%- include("./partials/header")%>
+
+<main id="main-checkout">
+  <div class="title-section col-12">
+    <h2>Falta pouco para finalizar seu pedido</h2>
+  </div>
+  <section id="container-signup-checkout">
+    <div>
+      <h1>1.DADOS PESSOAIS</h1>
+      <h4> FAÇA SEU LOGIN</h4>
+      <form action="./login.html" method="" class="container-input">
+        <div class="container-input">
+          <label for="email-id">E-mail</label>
+          <input type="email" name="email" id="email-id" />
+        </div>
+        <div class="container-input">
+          <label for="password-id">Senha</label>
+          <input type="password" name="password" id="password-id" />
+        </div>
+      </form>
+      <div>
+        <button type="submit" class="e-senha">Esqueci minha senha</button>
+      </div>
+      <div>
+        <button type="submit" class="login-chekout">Entrar</button>
+      </div>
+      <div>
+        <h4> CRIAR UMA NOVA CONTA</h4>
+        <!-- <a href="cadastro.html" class="register" >Cadastre-se</a> -->
+        <button type="submit" href="cadastro.html" class="register">Cadastre-se</button>
+      </div>
+    </div>
+  </section>
+  <section id="container-payment">
+
+    <div class="payment">
+      <h2>2.FORMA DE PAGAMENTO</h2>
+      <h5>Aguardando conclusão do primeiro passo</h5>
+      <form action="/payment" method="get">
+        <div>
+          <input id="cartao" type="radio" name="pagamento" value="cartao" />
+          <label for="cartao">Cartão de Credito</label>
+        </div>
+        <div class="card-number">
+          <label for="card-number">Número do cartão</label>
+          <input type="text" name="card-number" id="card-number" />
+        </div>
+        <div class="card-code">
+          <label for="security-code">Código de segurança</label>
+          <input type="number" name="security-code" id="security-code" />
+        </div>
+        <div class="card-validity">
+          <label for="security-code">Validade</label>
+          <input type="month" name="security-code" id="security-code" />
+        </div>
+        <div class="card-name">
+          <label for="card-name">Nome do cartão</label>
+          <input type="text" name="card-name" id="card-name" />
+        </div>
+        <div class="portion-number">
+          <label for="card-number">Número de parcelas</label>
+          <input type="" name="card-number" id="card-number" />
+        </div>
+        <div class="cards-icons">
+          <img src="./img/mastercard.png" alt="mastercard">
+          <img src="./img/elo 1.png" alt="elo">
+          <img src="./img/visa.png" alt="visa">
+          <img src="./img/bandeira amex png.png" alt="amex">
+
+        </div>
+        <div class=" outhers">
+          <input id="pagseguro" type="radio" name="pagamento" value="pagseguro" />
+          <label for="pagseguro">PagSeguro</label>
+          <input id="boleto" type="radio" name="pagamento" value="boleto" />
+          <label for="boleto">Boleto</label>
+          <input id="pix" type="radio" name="pagamento" value="pix" />
+          <label for="pix">PIX</label>
+        </div>
+      </form>
+  </section>
+  <section id="container-checkout">
+    <div>
+      <h1>3.CONCLUIR PEDIDO</h2>
+    </div>
+    <h3>PRODUTOS</h3>
+    <div class="product">
+      <img src="./img/grao_cafe.jpg" alt="Café em grãos">
+      <h2>Café em grãos DH - 1Kg</h2>
+      <h2>R$49,90</h2>
+    </div>
+    <div class="cupons">
+      <label for="cupons">Vales-presentes, troca ou cupons de desconto</label>
+      <input type="text" name="cupons" id="cupons" />
+    </div>
+    <form action="" class="pagamento">
+      <div class="sub">
+        <h3> SUBTOTAL</h3>
+        <h4 class="end">R$49,90</h4>
+      </div>
+      <div class="frete">
+        <h3>FRETE</h3>
+        <h4>R$0,00</h4>
+      </div>
+      <div class="desconto">
+        <h3>DESCONTO</h3>
+        <h4>R$0,00</h4>
+      </div>
+      <div class="total">
+        <h2>TOTAL</h2>
+        <h2>R$49,90</h2>
+      </div>
+    </form>
+    <div class="finalizar">
+      <button type="submit" class="e-senha">FINALIZAR COMPRA</button>
+    </div>
+  </section>
+
+<%- include("./partials/footer")%>
