@@ -11,7 +11,7 @@
 
 body {
 	font-family: "Source Sans Pro", sans-serif;
-    padding-top: 156px;
+    
 }
 
 a{
@@ -25,6 +25,23 @@ ul{
 img{
     max-width: 100%; /*Para deixar a imagem responsiva e ela se adaptar ao elemento pai*/
 }
+
+.btn-edit-forms{
+    background-color: #AF4319;
+    padding: 10px 15px;
+    border-radius: 10px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.btn-edit-forms:hover{
+    background-color:#af4319e1;
+    color: #fff;
+}
+
+
+
 
 /* CSS header */
 
@@ -933,19 +950,6 @@ footer .social-media-title{
     margin: 40px 0;
 }
 
-.btn-edit{
-    background-color: #AF4319;
-    padding: 7px;
-    border-radius: 10px;
-    color: #fff;
-    text-decoration: none;
-    font-size: 15px;
-}
-
-.btn-edit:hover{
-    background-color:#af4319e1;
-    color: #fff;
-}
 
 .link-edit{
     color: #AF4319;
@@ -1095,6 +1099,10 @@ label{
 @media (min-width:768px){
 
     /* CSS header */
+
+    body{
+        padding-top: 156px;
+    }
     #top-bar {
         display: block;
     }
