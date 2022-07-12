@@ -400,7 +400,7 @@ footer .social-media-title {
     position: relative;
 }
 
-#container-form-login h2::before {
+/* #container-form-login h2::before {
     content: '';
     position: absolute;
     height: 4px;
@@ -409,7 +409,7 @@ footer .social-media-title {
     left: 0px;
     border-radius: 8px;
     background: linear-gradient(45deg, #772014, #3F220F, #0C0B0B);
-}
+} */
 
 #container-form-login form {
     display: flex;
