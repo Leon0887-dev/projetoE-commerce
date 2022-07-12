@@ -10,20 +10,39 @@
 /* Estilos Gerais */
 
 body {
-	font-family: "Source Sans Pro", sans-serif;
+    font-family: "Source Sans Pro", sans-serif;
+
 }
 
-a{
+a {
     text-decoration: none;
 }
 
-ul{
+ul {
     list-style: none;
 }
 
-img{
-    max-width: 100%; /*Para deixar a imagem responsiva e ela se adaptar ao elemento pai*/
+img {
+    max-width: 100%;
+    /*Para deixar a imagem responsiva e ela se adaptar ao elemento pai*/
 }
+
+.btn-edit-forms {
+    background-color: #AF4319;
+    padding: 10px 15px;
+    border-radius: 10px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.btn-edit-forms:hover {
+    background-color: #af4319e1;
+    color: #fff;
+}
+
+
+
 
 /* CSS header */
 
@@ -33,6 +52,7 @@ header {
     flex-direction: row;
     flex-wrap: wrap;
     position: fixed;
+    top: 0;
     z-index: 30;
 }
 
@@ -41,7 +61,7 @@ header {
     display: none;
 }
 
-#top-bar p{
+#top-bar p {
     color: #fff;
     font-size: 0.8rem;
     text-align: center;
@@ -67,7 +87,7 @@ header {
     text-align: center;
 }
 
-#brand a{
+#brand a {
     color: #fff;
     font-size: 1.5rem;
     letter-spacing: 0.1rem;
@@ -132,14 +152,14 @@ footer {
     align-items: center;
 }
 
-footer .social-media-title{
+footer .social-media-title {
     color: #fff;
     text-align: center;
     letter-spacing: 0.1rem;
     font-size: 1.1rem;
 }
 
-#social-media-icons{
+#social-media-icons {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -150,7 +170,7 @@ footer .social-media-title{
 
 /* CSS botão WhatsApp */
 
-#whatsApp{
+#whatsApp {
     width: 60px;
     position: fixed;
     left: 1rem;
@@ -177,11 +197,11 @@ footer .social-media-title{
     flex-direction: column;
 }
 
-.title-section{
+.title-section {
     text-align: center;
 }
 
-.title-section h2{
+.title-section h2 {
     color: #772014;
     font-size: 1.5rem;
     padding: 3rem 1rem 1.5rem 1rem;
@@ -189,7 +209,7 @@ footer .social-media-title{
     letter-spacing: 0.1rem;
 }
 
-.title-section h2::after{
+.title-section h2::after {
     content: "";
     display: block;
     background: #772014;
@@ -229,7 +249,9 @@ footer .social-media-title{
     background-color: #F6F3F3;
 }
 
-#best-sellers .product-list, #new-products .product-list {
+#best-sellers .product-list,
+#new-products .product-list,
+#product-listing-section .product-list {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -239,12 +261,17 @@ footer .social-media-title{
     padding: 0;
 }
 
-#best-sellers .best-sellers-item, #new-products .new-products-item {
+#best-sellers .best-sellers-item,
+#new-products .new-products-item,
+#product-listing-section .product-listing-item {
     padding-bottom: 3rem;
 }
 
 .product-img {
     border: 1px solid #707070;
+    min-height: 352px;
+    display: flex;
+    align-items: center;
 }
 
 .product-list-title {
@@ -269,7 +296,8 @@ footer .social-media-title{
     color: #707070;
 }
 
-.add-button, #signup-news form button {
+.add-button,
+#signup-news form button {
     background-color: #772014;
     padding: 0.8rem 2rem;
     color: #fff;
@@ -278,11 +306,13 @@ footer .social-media-title{
     transition: all 0.2s ease-in 0.1s;
 }
 
-.add-button:hover, #signup-news form button:hover {
+.add-button:hover,
+#signup-news form button:hover {
     background-color: #AF4319;
 }
 
-#new-products {
+#new-products,
+#product-listing-section {
     display: flex;
     flex-direction: column;
 }
@@ -316,6 +346,7 @@ footer .social-media-title{
     letter-spacing: 0.1rem;
     border-bottom: 0.1rem solid #707070;
 }
+
 #signup-news form input:focus {
     color: #707070;
     border: none;
@@ -324,10 +355,31 @@ footer .social-media-title{
 
 /* Fim CSS home */
 
+/* CSS listagem de produto */
+
+#filter-bar-mobile {
+    padding: 11rem 2rem 0rem 2rem;
+}
+
+#filter-bar-tablet-desktop {
+    display: none;
+}
+
+#filter-bar-mobile .btn-filter-mobile {
+    padding: 0.5rem 1rem;
+    border: 1px solid #772014;
+    font-size: 0.9rem;
+    letter-spacing: 0.1rem;
+    color: #772014;
+    background-color: #fff;
+}
+
+/* Fim CSS listagem de produto */
+
 /* CSS login */
 
 #container-main-login {
-    background: linear-gradient(45deg,  #772014, #3F220F, #0C0B0B);
+    background: linear-gradient(45deg, #772014, #3F220F, #0C0B0B);
     display: flex;
     justify-content: center;
     padding: 12rem 0 4rem 0;
@@ -356,7 +408,7 @@ footer .social-media-title{
     bottom: 4px;
     left: 0px;
     border-radius: 8px;
-    background: linear-gradient(45deg,  #772014, #3F220F, #0C0B0B);
+    background: linear-gradient(45deg, #772014, #3F220F, #0C0B0B);
 }
 
 #container-form-login form {
@@ -389,13 +441,13 @@ footer .social-media-title{
     width: 100%;
     bottom: -5px;
     left: 0;
-    background: linear-gradient(45deg,  #772014, #3F220F, #0C0B0B);
+    background: linear-gradient(45deg, #772014, #3F220F, #0C0B0B);
     transform: scaleX(0);
     transition: all .3s ease-in-out;
     transform-origin: left;
 }
 
-.input-field-login input:focus ~ .underline::after {
+.input-field-login input:focus~.underline::after {
     transform: scaleX(1);
 }
 
@@ -415,7 +467,7 @@ footer .social-media-title{
     margin-top: 2rem;
     padding: 0.4rem;
     width: 100%;
-    background: linear-gradient(45deg,  #772014, #3F220F, #0C0B0B);
+    background: linear-gradient(45deg, #772014, #3F220F, #0C0B0B);
     cursor: pointer;
     color: white;
     font-size: 0.9rem;
@@ -426,7 +478,7 @@ footer .social-media-title{
 
 #container-form-login form input[type="submit"]:hover {
     letter-spacing: 0.5px;
-    background: linear-gradient(45deg,  #0C0B0B, #3F220F, #772014);
+    background: linear-gradient(45deg, #0C0B0B, #3F220F, #772014);
 }
 
 #container-form-login form a {
@@ -468,7 +520,8 @@ footer .social-media-title{
     letter-spacing: 0.1rem;
 }
 
-.container-input input {
+.container-input input,
+select {
     color: #666666;
     text-align: left;
     border: 1px solid #ccc;
@@ -502,12 +555,120 @@ footer .social-media-title{
 
 /* Fim CSS cadastro */
 
+/* CSS administrator login */
+
+#container-main-administrator {
+    background: #772014;
+    display: flex;
+    justify-content: center;
+    padding: 12rem 0 4rem 0;
+}
+
+#container-form-administrator {
+    background-color: white;
+    width: 280px;
+    padding: 2rem;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+
+#container-form-administrator h2 {
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+#container-form-administrator h2::before {
+    content: '';
+    position: absolute;
+    height: 4px;
+    width: 25px;
+    bottom: 4px;
+    left: 0px;
+    border-radius: 8px;
+    background: #772014;
+}
+
+#container-form-administrator form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-field-administrator {
+    position: relative;
+}
+
+.input-field-administrator login:first-child {
+    margin-bottom: 1.5rem;
+}
+
+.input-field-administrator .underline::before {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.input-field-administrator .underline::after {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+    background: #772014;
+    transform: scaleX(0);
+    transition: all .3s ease-in-out;
+    transform-origin: left;
+}
+
+.input-field-administrator input:focus~.underline::after {
+    transform: scaleX(1);
+}
+
+.input-field-administrator input {
+    outline: none;
+    font-size: 0.9rem;
+    letter-spacing: 0.1rem;
+    color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+}
+
+.input-field-administrator input::placeholder {
+    color: #707070;
+}
+
+#container-form-administrator form input[type="submit"] {
+    margin-top: 2rem;
+    padding: 0.4rem;
+    width: 100%;
+    background: #772014;
+    cursor: pointer;
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 300;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+#container-form-administrator form input[type="submit"]:hover {
+    letter-spacing: 0.5px;
+    background: #772014;
+}
+
+/* Fim CSS administrator login */
+
+
 /* CSS produto */
 #identification {
     padding: 11rem 2rem 2rem 2rem;
 }
 
-#identification .product-name{
+#identification .product-name {
     text-align: center;
     padding-bottom: 1rem;
     font-size: 1.5rem;
@@ -515,14 +676,14 @@ footer .social-media-title{
     color: #707070;
 }
 
-#identification h6{
+#identification h6 {
     padding-bottom: 0.05rem;
     font-size: 0.9rem;
     letter-spacing: 0.1rem;
     color: #707070;
 }
 
-#product-picture{
+#product-picture {
     text-align: center;
     padding: 0 2rem;
 }
@@ -531,7 +692,7 @@ footer .social-media-title{
     padding: 1rem 2rem 3rem;
 }
 
-#about .price{
+#about .price {
     text-align: center;
     padding: 1rem;
     font-size: 2rem;
@@ -548,7 +709,7 @@ footer .social-media-title{
     color: #707070;
 }
 
-#delivery{
+#delivery {
     margin: 1rem 0 2rem 0;
     padding: 1rem 0.05rem;
     display: flex;
@@ -572,17 +733,17 @@ footer .social-media-title{
     border-bottom: 0.1rem solid #707070;
 }
 
-#about .description{
+#about .description {
     padding: 1rem;
     text-align: center;
     margin-top: 10%;
-    background-color:#F6F3F3;
+    background-color: #F6F3F3;
     letter-spacing: 0.1rem;
     color: #707070;
     margin-top: 3rem;
 }
 
-#about .description2{
+#about .description2 {
     text-align: justify;
     margin-left: 2%;
     margin-right: 2%;
@@ -590,7 +751,7 @@ footer .social-media-title{
     color: #707070;
 }
 
-#about .content{
+#about .content {
     padding: 1rem;
     text-align: center;
     background-color: #F6F3F3;
@@ -599,7 +760,7 @@ footer .social-media-title{
     margin-top: 3rem;
 }
 
-#about .content2{
+#about .content2 {
     text-align: justify;
     margin-left: 2%;
     margin-right: 2%;
@@ -611,12 +772,11 @@ footer .social-media-title{
 
 /* CSS checkout */
 
-#main-checkout{
+#main-checkout {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* font-size: 14px; */
     justify-content: center;
     padding-top: 10rem;
 }
@@ -626,7 +786,6 @@ footer .social-media-title{
     width: 400px;
     background-color: #F2EDEA;
     display: flex;
-    /* justify-content:space-evenly; */
     padding: 3rem 5rem;
     flex-direction: column;
     align-items:stretch;
@@ -634,16 +793,17 @@ footer .social-media-title{
     margin-bottom: 2rem;
 }
 
-#container-signup-checkout h1{
+#container-signup-checkout h1 {
     color: #868686;
     font-size: 20px;
     margin-bottom: 20px;
 }
 
-#container-signup-checkout h4{
-    color:#772014;
-    font-size: 12px;
+#container-signup-checkout h4 {
+    color: #772014;
+    font-size: 15px;
     margin-bottom: 10px;
+    
 }
 .container-input input {
     padding: 10px 15px;
@@ -654,8 +814,8 @@ footer .social-media-title{
 
 .container-input-form {
     display: flex;
-    flex-direction:column;
-    align-items:center;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
     color: #707070;
 }
@@ -674,15 +834,21 @@ footer .social-media-title{
     align-content: center;
     align-items: center;
     cursor: pointer;
+    text-decoration: none;
+    font-size: 15px;
 }
 
 .register {
-    width: 100%;
-    height: 30px;
-    background: #772014;
+    background:#772014;
     color: #fff;
     margin-bottom: 40px;
+    width: 100%;
+    height: 30px;
+    align-content: center;
+    align-items: center;
     cursor: pointer;
+    text-decoration: none;
+    font-size: 15px;
 }
 
 #container-payment {
@@ -690,36 +856,30 @@ footer .social-media-title{
     width: 400px;
     background-color: #F2EDEA;
     display: flex;
-    /* justify-content:space-evenly; */
     padding: 3rem 5rem;
     flex-direction: column;
     align-items: stretch;
     margin-bottom: 2rem;
 }
 
-#container-payment h5{
-    color:#772014;
+#container-payment h5 {
+    color: #772014;
     font-size: 12px;
     margin-bottom: 10px;
-    /* padding: auto; */
-    /* margin: 15px 0px; */
 }
 
-#container-payment h2{
+#container-payment h2 {
     color: #868686;
     font-size: 20px;
     margin-bottom: 20px;
-    /* padding: auto; */
-    /* margin: 20px 0px; */
 }
 
 .payment form {
-    padding:10px 10px;
+    padding: 10px 10px;
 }
 
 .card-name {
     margin: 20px 0px;
-    /* padding: 5px; */
 }
 
 .card-name input {
@@ -734,8 +894,6 @@ footer .social-media-title{
 }
 
 .card-number input{
-    /* display: flex; */
-    /* align-items:flex-start; */
     width: 100%;
     color: #707070;
     padding: 10px 15px;
@@ -749,7 +907,7 @@ footer .social-media-title{
     margin: 20px 0px;
 }
 
-.card-validity input{
+.card-validity input {
     border-radius: 4px;
     padding: 10px 15px;
     border: 1px solid grey;
@@ -762,10 +920,7 @@ footer .social-media-title{
 }
 .card-code input{
     width: 50%;
-    /* height: 30%; */
-    /* align-items: flex-end; */
     padding: 10px 15px;
-    /* margin: 5px 5px; */
     border-radius: 4px;
     border: 1px solid grey;
     margin: 5px 0px;
@@ -780,7 +935,6 @@ footer .social-media-title{
 }
 
 .cards-icons {
-    /* display: flex; */
     width: 100%;
     height: 20px;
     margin: 30px 0px;
@@ -815,29 +969,22 @@ footer .social-media-title{
     margin-bottom: 20px;
 }
 
-
-
 .product h2 {
     display: flex;
     font-size: 16px;
     margin-bottom: 30px;
 }
 
-/* .product img{
-    width: 40%;
-    height: 40%;
-} */
 
-#container-checkout h1{
+#container-checkout h1 {
     color: #868686;
     font-size: 20px;
     margin-bottom: 20px;
 }
 
-#container-checkout h3{
-    color:#772014;
+#container-checkout h3 {
+    color: #772014;
     font-size: 15px;
-    /* margin-bottom: 30px; */
     align-items: flex-start;
     flex-direction: row;
 }
@@ -870,13 +1017,13 @@ footer .social-media-title{
     background:#772014;
     color: #fff;
     margin-bottom: 40px;
-    width: 150px;
-    height: 40px;
+    width: 100%;
+    height: 30px;
     align-content: center;
     align-items: center;
     cursor: pointer;
-    font-size: 15px;
-    justify-content: center;   
+    text-decoration: none;
+    font-size: 15px;  
 }
 
 .sub {
@@ -887,16 +1034,17 @@ footer .social-media-title{
     margin-bottom: 10px;
 }
 
-.sub h4, h3{
+.sub h4,
+h3 {
     align-items: flex-end;
-    font-size: 14px;    
+    font-size: 14px;
 }
 
 .frete h4 {
     font-size: 14px;
 }
 
-.frete  {
+.frete {
     border-top: 1px solid grey;
     padding-top: 10px;
     font-size: 14px; 
@@ -914,7 +1062,8 @@ footer .social-media-title{
     margin-bottom: 10px;
 }
 
-.desconto h3, h4 {
+.desconto h3,
+h4 {
     font-size: 14px;
 }
 
@@ -929,45 +1078,37 @@ footer .social-media-title{
 }
 
 .total h2 {
-    font-size: 18px ;
+    font-size: 18px;
 }
 
 /* Fim CSS checkout */
 
 /* CSS user */
 
-#main-user, #main-myRequests, #main-address, #main-changePassword, #main-personalData {
+#main-user,
+#main-myRequests,
+#main-address,
+#main-changePassword,
+#main-personalData {
     padding: 10rem 0 3rem 0;
+    padding-top: 156px;
 }
 
-.section-forms{
+.section-forms {
     margin: 40px 0;
 }
 
-.btn-edit{
-    background-color: #AF4319;
-    padding: 7px;
-    border-radius: 10px;
-    color: #fff;
-    text-decoration: none;
-    font-size: 15px;
-}
 
-.btn-edit:hover{
-    background-color:#af4319e1;
-    color: #fff;
-}
-
-.link-edit{
+.link-edit {
     color: #AF4319;
     text-decoration: underline;
 }
 
-.link-edit:hover{
+.link-edit:hover {
     color: #19180A;
 }
 
-label{
+label {
     color: #707070;
 }
 
@@ -975,15 +1116,16 @@ label{
 
 /* CSS painel usuário */
 
-.panel-options-screen{
+.panel-options-screen {
     display: flex;
     flex-direction: column-reverse;
 }
-.user-options--list{
+
+.user-options--list {
     padding: 0;
 }
 
-.list-item{
+.list-item {
     display: flex;
     border-radius: 10px;
     padding: 10px;
@@ -991,48 +1133,52 @@ label{
     margin-bottom: 10px;
 }
 
-.list-item:hover{
+.list-item:hover {
     background-color: #FBDADC;
 }
 
-.list-item a{
+.list-item a {
     text-decoration: none;
     color: #8F8F8F;
     margin-left: 10px;
-    font-size: 1.1rem;  
+    font-size: 1.1rem;
 }
 
-.list-link a{
+.list-link a {
     color: #19180A;
     font-size: 18px;
 }
 
-.user-list-products, .user-personal-data{
+.user-list-products,
+.user-personal-data {
     margin-bottom: 30px;
 }
 
-.titles-cards{
-    background-color:#3F220F ;
+.titles-cards {
+    background-color: #3F220F;
 }
-.titles-cards >h3{
+
+.titles-cards>h3 {
     color: #fff;
 }
-.personal-data--info > h6{
+
+.personal-data--info>h6 {
     color: #19180A;
-    
+
 }
-.personal-data--info >p{
+
+.personal-data--info>p {
     color: #bca6a8;
     font-size: 14px;
 }
 
-.personal-data--btn{
+.personal-data--btn {
     display: flex;
     justify-content: center;
 
 }
 
-.list-products--info  p{
+.list-products--info p {
     color: #19180A;
     text-align: center;
     font-size: 18px;
@@ -1040,72 +1186,82 @@ label{
     margin-bottom: 50px;
 }
 
-.link-edit{
+.link-edit {
     color: #AF4319;
     text-decoration: underline;
 }
 
-.link-edit:hover{
+.link-edit:hover {
     color: #19180A;
 }
 
-.list-products--info > .link-edit{
+.list-products--info>.link-edit {
     display: flex;
     justify-content: center;
+}
+
+.card-title {
+    font-size: 1.4rem;
 }
 
 /* Fim CSS painel usuário */
 
 /* CSS forms personal-data */
 
-.save-btn{
+.save-btn {
     display: flex;
     justify-content: center;
     margin-top: 30px;
 }
 
+
 /* Fim CSS forms personal-data */
 
 /* CSS forms changePassword */
 
-.password-info > h6{
+.form-center h2 {
+    margin-bottom: 30px;
+
+}
+
+.password-info>h6 {
     color: #19180A;
     font-weight: 700;
 }
 
-.password-info > P{
+.password-info>P {
     color: #8F8F8F;
 }
 
-.password-info > P span{
+.password-info>P span {
     display: inline-block;
-    color: #CF0E0E ;
+    color: #CF0E0E;
     font-size: 18px;
     font-weight: 700;
     margin-right: 10px;
 }
 
 /* Iniciando CSS para dispositivos com largura mínima de 425px */
-@media (min-width:425px){
+@media (min-width:425px) {
 
     /* CSS home */
     .categorie-img {
         width: 70%;
     }
+
     /* Fim CSS home */
 
 }
 
 /* Iniciando CSS para dispositivos com largura mínima de 576px */
-@media (min-width:576px){
-
-}
+@media (min-width:576px) {}
 
 
 /* Iniciando CSS para dispositivos com largura mínima de 768px */
-@media (min-width:768px){
+@media (min-width:768px) {
 
     /* CSS header */
+
     #top-bar {
         display: block;
     }
@@ -1125,7 +1281,7 @@ label{
         order: 3;
         text-align: end;
     }
-    
+
     #login img {
         width: 29px;
         padding-top: 0.4rem;
@@ -1138,7 +1294,7 @@ label{
     #searchbar {
         order: 5;
     }
-    
+
     .nav-item {
         font-size: 1rem;
         letter-spacing: 0.1rem;
@@ -1167,15 +1323,57 @@ label{
         width: 65%;
     }
 
-    #best-sellers .best-sellers-item, #new-products .new-products-item {
+    #best-sellers .best-sellers-item,
+    #new-products .new-products-item {
         padding: 0 1.5rem 3rem 1.5rem;
     }
 
-    #best-sellers .product-list, #new-products .product-list {
+    #best-sellers .product-list,
+    #new-products .product-list,
+    #product-listing-section .product-list {
         padding: 0 1.5rem;
     }
 
+    .product-img {
+        min-height: 310px;
+    }
+
     /* Fim CSS home */
+
+    /* CSS listagem de produto */
+
+    #filter-bar-mobile {
+        display: none;
+    }
+
+    #filter-bar-tablet-desktop {
+        display: flex;
+        justify-content: space-between;
+        padding: 13rem 3rem 0rem 3rem;
+        font-size: 0.9rem;
+        letter-spacing: 0.1rem;
+    }
+
+    #product-listing-section .product-listing-item {
+        padding: 0 1.5rem 5rem 1.5rem;
+    }
+
+    #filter-category,
+    #filter-brand {
+        width: 8rem;
+        letter-spacing: 0.1rem;
+        color: #707070;
+        padding-left: 1rem;
+    }
+
+    #filter-order {
+        width: 9rem;
+        letter-spacing: 0.1rem;
+        color: #707070;
+        padding-left: 1rem;
+    }
+
+    /* Fim CSS listagem de produto */
 
     /* CSS login */
 
@@ -1188,6 +1386,18 @@ label{
     }
 
     /* Fim CSS login */
+
+    /* CSS Administrator login */
+
+    #container-main-administrator {
+        padding: 15rem 0 5rem 0;
+    }
+
+    #container-form-administrator {
+        width: 380px;
+    }
+
+    /* Fim CSS administrator login */
 
     /* CSS cadastro */
 
@@ -1203,57 +1413,65 @@ label{
 
     /* CSS painel usuario */
 
-    #main-user, #main-myRequests, #main-address, #main-changePassword, #main-personalData {
+    #main-user,
+    #main-myRequests,
+    #main-address,
+    #main-changePassword,
+    #main-personalData {
         padding: 13rem 0 3rem 0;
     }
 
-    .form-center{
+    .form-center {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         max-width: 700px;
     }
-    
-    .form-center > h2{
+
+    .form-center>h2 {
         color: #19180A;
         align-self: flex-start;
         margin-bottom: 30px;
     }
-    
-    .active{
-         background-color: #FBDADC ;
+
+    .active {
+        background-color: #FBDADC;
     }
-    
-    .list-link a{
+
+    .list-link a {
         font-size: 20px;
     }
-    
-     .user-options--screen{
-        display:block
-     }
-    
-     .panel-options-screen{
+
+    .user-options--screen {
+        display: block
+    }
+
+    .panel-options-screen {
         flex-direction: row;
-     }
-    
-     .list-item a{
+    }
+
+    .list-item a {
         font-size: 1rem;
-     }
-    
-     .personal-data--btn{
+    }
+
+    .personal-data--btn {
         margin-top: 10px;
         justify-content: flex-start;
-     }
-    
-     .btn-edit{
+    }
+
+    .btn-edit {
         font-size: 16px;
-     }
-    
-     .save-btn{
+    }
+
+    .save-btn {
         display: flex;
         justify-content: flex-start;
         margin-top: 30px;
+    }
+
+    .card-title {
+        font-size: 1.7rem;
     }
 
     /* Fim CSS painel usuario */
@@ -1261,7 +1479,7 @@ label{
 }
 
 /* Iniciando CSS para dispositivos com largura mínima de 1280px */
-@media (min-width:1280px){
+@media (min-width:1280px) {
 
     /* CSS header */
 
@@ -1275,6 +1493,10 @@ label{
 
     .categorie-img {
         width: 50%;
+    }
+
+    .product-img {
+        min-height: 260px;
     }
 
     /* Fim CSS home */
