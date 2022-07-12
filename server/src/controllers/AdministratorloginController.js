@@ -1,6 +1,6 @@
 const administratorloginController = {
     index: (req, res) => {
-        return res.render("administradorlogin", { title: "Administrador Login" });
+        return res.render("administratorlogin", { title: "Administrador Login" });
     }
 };
 
