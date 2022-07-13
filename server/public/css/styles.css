@@ -379,7 +379,7 @@ footer .social-media-title {
 /* CSS login */
 
 #container-main-login {
-    background: linear-gradient(45deg, #fffff, #fffff, #fffff);
+    background: white;
     display: flex;
     justify-content: center;
     padding: 12rem 0 4rem 0;
