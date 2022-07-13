@@ -1,0 +1,93 @@
+<%- include("./partials/head")%>
+<%- include("./partials/header")%>
+<main id="main-address">
+
+  <section class="section-forms">
+    <div class="container-md form-center">
+      <h2>Editar endereço de entrega</h2>
+      <form action="POST" class="row">
+        <div class="form-check col-md-12 mb-3 ms-3">
+          <input type="checkbox" class="form-check-input" id="checked" checked>
+          <label for="checked" class="form-check-label">Selecionar como endereço de entrega principal</label>
+        </div>
+
+        <div class="container-input col-md-12">
+          <label for="adress-name">Nome do endereço*</label>
+          <input type="text"  id="adress-name" placeholder="minha casa">
+        </div>
+
+        <div class="container-input col-md-7">
+
+          <label for="adress-cep">CEP*</label>
+          <input type="text"  id="adress-cep" placeholder="55533-123">
+          
+
+        </div>
+        <div class="col-md-4 align-self-center mb-3 ms-2">
+          <a href="#" class="link-edit">Não sei meu CEP</a>
+        </div>
+
+
+        <div class="container-input col-md-12 ">
+          <label for="adress">Endereço(rua,avenida,quadra,lote)*</label>
+          <input type="text"  id="adress" placeholder="rua joao de maia">
+          
+        </div>
+
+        <div class="container-input col-md-8 ">
+          <label for="adress-number">Informe o número</label>
+          <input type="text" id="adress-number" placeholder="">
+          
+        </div>
+
+        <div class="container-input col-md-12 ">
+          <label for="selected">País</label>
+          <select name="countries"  id="selectd">
+            <option value="Brazil" selected> Brasil</option>
+          </select>
+          
+        </div>
+
+
+
+        <div class="container-input col-md-12 mb-3">
+          <label for="adress-complement" >Complemento</label>
+          <input type="text"  id="adress-complement" placeholder="número da casa">
+          
+        </div>
+
+        <div class="container-input ">
+          <label for="adress-district">Bairro</label>
+          <input type="text"  id="adress-district" placeholder="casa caiada">
+          
+        </div>
+
+        <div class="container-input ">
+          <label for="adress-city" >Cidade</label>
+          <input type="text"  id="adress-city" placeholder="paulista">
+          
+        </div>
+
+        <div class="container-input">
+          <label for="adress-state">Estado</label>
+          <input type="text" class="form-control" id="adress-state" placeholder="pernambuco">
+          
+        </div>
+        <div class="form-check mb-3 ms-3">
+          <input type="checkbox" class="form-check-input" id="checked">
+          <label for="checked" class="form-check-label">Utilizar destinatário diferente do cadastro</label>
+        </div>
+
+        <div class="container-input">
+          <label for="adress-recipient">Destinatário</label>
+          <input type="text"  id="adress-recipient" placeholder="">
+          
+        </div>
+        <div class="save-btn">
+          <input type="button" class="btn-edit-forms" value="Salvar alterações">
+        </div>
+      </form>
+    </div>
+  </section>
+
+<%- include("./partials/footer")%>

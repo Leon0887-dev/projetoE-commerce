@@ -1,0 +1,31 @@
+<%- include("./partials/head")%>
+<%- include("./partials/header")%>
+
+<main>
+  <div id="identification">
+    <h1 class="product-name">Café House extra forte moído - 500g</h1>
+    <h6>Marca: Café House</h6>
+    <h6>Modelo: Moído 500g</h6>
+    <h6>Código: CFHM500G </h6>
+  </div>
+  <section id="product-picture">
+    <img class="coffee" src="/img/produto500g.jpeg" alt="">
+  </section>
+  <div id="about">
+    <h1 class="price">R$29,90</h1>
+    <h6 class="price-options">10x 2,99 sem juros</h6>
+    <form id="delivery" action="">
+      <label for="shipping">Calcular frete</label>
+      <input type="number" name="shipping" id="shipping" placeholder="00000-000">
+    </form>
+    <a href="/carrinho">
+      <button type="button" class="add-button col-12">Adicionar à sacola</button>
+    </a>
+    <h4 class="description">Descrição</h4>
+    <p class="description2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet suscipit perspiciatis
+      provident voluptas quod, accusamus odit beatae libero ipsum sequi, iure, quos saepe. </p>
+    <h4 class="content">Conteúdo</h4>
+    <p class="content2">1 embalagem de 500g de Café House extraforte moído </p>
+  </div>
+
+<%- include("./partials/footer")%>
