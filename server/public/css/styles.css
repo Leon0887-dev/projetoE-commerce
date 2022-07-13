@@ -409,8 +409,8 @@ footer .social-media-title {
     left: 0px;
     border-radius: 8px;
     background: linear-gradient(45deg, #772014, #3F220F, #0C0B0B);
-} */
-
+}
+ */
 #container-form-login form {
     display: flex;
     flex-direction: column;
@@ -1503,6 +1503,27 @@ label {
 
     /* CSS checkout */
 
+    /* CSS Product*/
+
+    .productconfig{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: baseline;
+        justify-content: center;
+    }
+
+    .productconfig .column1product{
+        display: block;
+    }
+
+    .productconfig .column2product{
+        display: block;
+        width: 50%;
+    }
+
+    /* Fim CSS product */
+
     #main-checkout {
         width: 100%;
         flex-direction: row;
@@ -1513,5 +1534,6 @@ label {
     }
 
     /* Fim CSS checkout */
+
 
 }
