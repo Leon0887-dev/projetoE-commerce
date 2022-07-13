@@ -12,6 +12,7 @@ const administratorloginRoute = require("./src/routes/administratorloginRoute");
 const userPanelRoute = require("./src/routes/userPanelRoute");
 const userRegisterRoute = require("./src/routes/userRegisterRoute");
 
+
 // Configurando pasta estática para acesso externo (onde ficam as imagens e css)
 app.use(express.static(__dirname + "/public"));
 // Configurando a view engine para ejs
@@ -26,7 +27,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 app.use("/produtos", productRoute);
-app.use("/carrinho", checkoutRoute);
+app.use("/checkout", checkoutRoute);
 app.use("/login", loginRoute);
 app.use("/administradorlogin", administratorloginRoute);
 app.use("/areaDoCliente", userPanelRoute);
