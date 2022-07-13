@@ -1311,6 +1311,27 @@ label{
 
     /* CSS checkout */
 
+    /* CSS Product*/
+
+    .productconfig{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: baseline;
+        justify-content: center;
+    }
+
+    .productconfig .column1product{
+        display: block;
+    }
+
+    .productconfig .column2product{
+        display: block;
+        width: 50%;
+    }
+
+    /* Fim CSS product */
+
     #main-checkout {
         width: 100%;
         flex-direction: row;
