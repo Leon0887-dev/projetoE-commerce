@@ -379,7 +379,7 @@ footer .social-media-title {
 /* CSS login */
 
 #container-main-login {
-    background: linear-gradient(45deg, #772014, #3F220F, #0C0B0B);
+    background: white;
     display: flex;
     justify-content: center;
     padding: 12rem 0 4rem 0;
@@ -400,7 +400,7 @@ footer .social-media-title {
     position: relative;
 }
 
-#container-form-login h2::before {
+/* #container-form-login h2::before {
     content: '';
     position: absolute;
     height: 4px;
@@ -409,7 +409,7 @@ footer .social-media-title {
     left: 0px;
     border-radius: 8px;
 }
-
+ */
 #container-form-login form {
     display: flex;
     flex-direction: column;
@@ -1382,6 +1382,27 @@ label {
 
     /* CSS checkout */
 
+    /* CSS Product*/
+
+    .productconfig{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: baseline;
+        justify-content: center;
+    }
+
+    .productconfig .column1product{
+        display: block;
+    }
+
+    .productconfig .column2product{
+        display: block;
+        width: 50%;
+    }
+
+    /* Fim CSS product */
+
     #main-checkout {
         width: 100%;
         flex-direction: row;
@@ -1392,5 +1413,6 @@ label {
     }
 
     /* Fim CSS checkout */
+
 
 }
