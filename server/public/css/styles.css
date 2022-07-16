@@ -1124,7 +1124,7 @@ label {
 
 .panel-options-screen {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
 }
 
 .user-options--list {
