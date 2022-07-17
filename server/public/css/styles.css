@@ -1131,6 +1131,40 @@ label {
     padding: 0;
 }
 
+.img-user{
+   margin-bottom: 30px;
+}
+
+.img-user .img{
+    width: 100px;
+    height: 100px;
+    margin-bottom: 15px;
+}
+
+.img{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+
+
+.img-user-login{
+    margin-top: 30px;
+}
+
+
+.img-user-login a,
+.img a{
+    color: #19180A;
+}
+
+.img-user-login a:hover,
+.img a:hover{
+    text-decoration: underline;
+}
 .list-item {
     display: flex;
     border-radius: 10px;
