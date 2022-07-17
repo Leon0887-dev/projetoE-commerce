@@ -41,6 +41,29 @@ img {
     color: #fff;
 }
 
+.btn-edit{
+    align-self: center;
+}
+
+/*  se alguem nao gostar do laranja pode usar essa class com cor difenrete   */
+.color-opcinal-btn{
+    background-color: #772014;
+}
+
+.btn-edit-login{
+    background-color: #772014;
+    border-radius: 10px;
+    width: 250px;
+    padding: 10px 0px;
+    color: #fff;
+    font-size: 17px;
+    margin-top: 2rem;
+}
+
+.btn-edit-login:hover{
+    background-color: #7a362d;
+}
+
 
 
 
@@ -463,7 +486,8 @@ footer .social-media-title {
     color: #707070;
 }
 
-#container-form-login form input[type="submit"] {
+ /*
+ #container-form-login form input[type="submit"] {
     margin-top: 2rem;
     padding: 0.4rem;
     width: 100%;
@@ -475,7 +499,7 @@ footer .social-media-title {
     border-radius: 4px;
     transition: all 0.3s ease;
 }
-
+*/
 #container-form-login form input[type="submit"]:hover {
     letter-spacing: 0.5px;
     background: linear-gradient(45deg, #0C0B0B, #3F220F, #772014);
