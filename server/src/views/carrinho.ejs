@@ -1,28 +1,28 @@
 <%- include("./partials/head")%>
 <%- include("./partials/header")%>
+<main id = "main-car" >
+<div class="bg-light">
+    <div class="content-car">
+        <section class="add-car">
+            <input type="text" id="nomeDoItem" placeholder="Novo item...">
+            <button type ="btn" class="btn-edit-forms">Adicionar</button>
+        </section>
 
-<aside>
-    <div class = "cart--area">
-        <div class = "menu-closer">
-            <span class = "material-icons">close</span>
+        <section class="car-list">
+            <!-- Aqui ficam os itens -->
+
+        </section>
+        <a href = "checkout.ejs">
+        <div class ="button">
+        <button href = "checkout.ejs" type="submit" class = "btn-edit-forms" >Finalizar Compras</button>
+        </a>
         </div>
-        <h1>Produtos Escolhidos</h1>
-        <div class = "cart"></div>
-        <div class = "cart-details">
-            <div class = "cart--totalitem subtotal">
-                <span>Subtotal</span>
-                <span> R$ --</span>
-            </div>
-            <div class = "cart--totalitem desconto">
-                <span>Desconto (-10%)</span>
-                <span> R$  --</span>
-            </div>
-            <div class = "cart--finalizar">Finalizar a compra</div>
-        </div>
+    </div>      
     </div>
-</aside>
-
-
+</div>
+</main>
+    <!-- <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <script src="js/script.js"></script> -->
 
 
 <%- include("./partials/footer")%>

@@ -11,6 +11,8 @@ const loginRoute = require("./src/routes/loginRoute");
 const administratorloginRoute = require("./src/routes/administratorloginRoute");
 const userPanelRoute = require("./src/routes/userPanelRoute");
 const userRegisterRoute = require("./src/routes/userRegisterRoute");
+const carrinhoRoute = require ("./src/routes/carrinhoRoute");
+
 
 
 // Configurando pasta estática para acesso externo (onde ficam as imagens e css)
@@ -33,6 +35,7 @@ app.use("/administradorlogin", administratorloginRoute);
 app.use("/areaDoCliente", userPanelRoute);
 app.use("/criarConta", userRegisterRoute);
 app.use("/", indexRoute);
+app.use("/carrinho", carrinhoRoute);
 
 app.listen(port, () => {
     console.log(`Estamos rodando na porta ${port}`)
