@@ -1010,19 +1010,19 @@ select {
 
 /* Início CSS administrador produto */
 
-#admin-products-1 .admin-products-title{
+#admin-products-1{
     color: #707070;
-    margin: 10px 0;
+    padding: 30px;
+    text-align: center;
 }
 
 .admin-products-add{
     color: #707070;
-    margin: 10px 0;
+    margin: 10px;
 }
 
 #admin-products-list table {
-    width: 100%;
-    font-size: 1rem;
+    width: 100%;;
 }
 
 #admin-products-list td, #admin-products-list th{
