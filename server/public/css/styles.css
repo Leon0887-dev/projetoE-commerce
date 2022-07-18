@@ -1008,6 +1008,44 @@ select {
 
 /* Fim CSS administrator login */
 
+/* Início CSS administrador produto */
+
+#admin-products-1 .admin-products-title{
+    color: #707070;
+    margin: 10px 0;
+}
+
+.admin-products-add{
+    color: #707070;
+    margin: 10px 0;
+}
+
+#admin-products-list table {
+    width: 100%;
+    font-size: 1rem;
+}
+
+#admin-products-list td, #admin-products-list th{
+    padding: 10px 5px;
+}
+
+#adim-products-list tr {
+    background-color: #e7a388e1;
+}
+
+#admin-products-list tr:nth-child(even){
+    background-color: #da683b;
+}
+
+#admin-products-list tbody tr:hover{
+    background-color: #7abee0ee;
+}
+
+#admin-products-list .admin-products-actions a{
+    text-decoration: none;
+}
+
+/* Fim CSS administrador produto */
 
 /* CSS produto */
 #identification {

@@ -1,8 +1,59 @@
 <%- include("./partials/head")%>
 <%- include("./partials/header")%>
 
-    <main id="main-adminproducts">
+    <main id="main-admin-products">
+        <div id="admin-products-1">
+            <p>Painel do Administrador</p>
+        </div>
+        <h3 class="admin-products-add">Adicionar Produto</h3>
 
-    
+        <h3 class="admin-products-add">Lista de Produtos</h3>
+            <div id="admin-products-list">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Produto</th>
+                            <th>Código</th>
+                            <th>Quantidade</th>
+                            <th>Tipo</th>
+                            <th>Peso</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Café House</td>
+                            <td>CH500G</td>
+                            <td>10</td>
+                            <td>Café moído torrado</td>
+                            <td>500 g</td>
+                            <td class="admin-products-actions">
+                                <a href="admin-product-delete">Excluir</a>
+                                <a href="admin-product-edit">Editar</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Café House</td>
+                            <td>CH500G</td>
+                            <td>10</td>
+                            <td>Café moído torrado</td>
+                            <td>500 g</td>
+                            <td class="admin-products-actions">
+                                <a href="admin-product-delete">Excluir</a>
+                                <a href="admin-product-edit">Editar</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Café House</td>
+                            <td>CH500G</td>
+                            <td>10</td>
+                            <td>Café moído torrado</td>
+                            <td>500 g</td>
+                            <td class="admin-products-actions">
+                                <a href="admin-product-delete">Excluir</a>
+                                <a href="admin-product-edit">Editar</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
 <%- include("./partials/footer")%>
