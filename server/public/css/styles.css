@@ -1214,12 +1214,14 @@ select {
     color: #fff;
     margin-bottom: 40px;
     width: 100%;
-    height: 30px;
+    height: 40px;
     align-content: center;
     align-items: center;
     cursor: pointer;
     text-decoration: none;
     font-size: 15px;
+    border-radius: 10px;
+    letter-spacing: 0.1rem;
 }
 
 .register {
@@ -1227,12 +1229,14 @@ select {
     color: #fff;
     margin-bottom: 40px;
     width: 100%;
-    height: 30px;
+    height: 40px;
     align-content: center;
     align-items: center;
     cursor: pointer;
     text-decoration: none;
     font-size: 15px;
+    border-radius: 10px;
+    letter-spacing: 0.1rem;
 }
 
 #container-payment {
@@ -1248,7 +1252,7 @@ select {
 
 #container-payment h5 {
     color: #772014;
-    font-size: 12px;
+    font-size: 14px;
     margin-bottom: 10px;
 }
 
@@ -1402,12 +1406,14 @@ select {
     color: #fff;
     margin-bottom: 40px;
     width: 100%;
-    height: 30px;
+    height: 40px;
     align-content: center;
     align-items: center;
     cursor: pointer;
     text-decoration: none;
     font-size: 15px;  
+    border-radius: 10px;
+    letter-spacing: 0.1rem;
 }
 
 .sub {
