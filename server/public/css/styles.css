@@ -1000,15 +1000,17 @@ select {
 
 /* Início CSS administrador produto */
 
-#admin-products-1{
+.admin-products-title{
     color: #707070;
-    padding: 30px;
+    padding: 150px 0 0 0;
     text-align: center;
 }
 
+
 .admin-products-add{
     color: #707070;
-    margin: 10px;
+    padding: 20px 0;
+    text-align: center;
 }
 
 #admin-products-add-1{

@@ -38,7 +38,7 @@ app.use("/criarConta", userRegisterRoute);
 app.use("/", indexRoute);
 app.use("/carrinho", carrinhoRoute);
 app.use("/contato", contactRoute);
-app.use("/administratorproducts", administratorproductsRoute);
+app.use("/administradorprodutos", administratorproductsRoute);
 
 app.listen(port, () => {
     console.log(`Estamos rodando na porta ${port}`)
