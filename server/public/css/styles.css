@@ -34,7 +34,10 @@ img {
     color: #fff;
     text-decoration: none;
     font-size: 15px;
-    margin: 15px 5px;
+}
+
+.btnadminlogin {
+    margin: 10px 5px;
 }
 
 .btn-edit-forms:hover {
@@ -42,16 +45,16 @@ img {
     color: #fff;
 }
 
-.btn-edit{
+.btn-edit {
     align-self: center;
 }
 
 /*  se alguem nao gostar do laranja pode usar essa class com cor difenrete   */
-.color-opcinal-btn{
+.color-opcinal-btn {
     background-color: #772014;
 }
 
-.btn-edit-login{
+.btn-edit-login {
     background-color: #772014;
     border-radius: 10px;
     width: 250px;
@@ -61,7 +64,7 @@ img {
     margin-top: 2rem;
 }
 
-.btn-edit-login:hover{
+.btn-edit-login:hover {
     background-color: #7a362d;
 }
 
@@ -482,7 +485,7 @@ footer .social-media-title {
     color: #707070;
 }
 
- /*
+/*
  #container-form-login form input[type="submit"] {
     margin-top: 2rem;
     padding: 0.4rem;
@@ -510,8 +513,7 @@ footer .social-media-title {
 
 /* inicio CSS carrinho de compras */
 
- .content-car
-{
+.content-car {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -526,8 +528,7 @@ footer .social-media-title {
     height: 100px;
 }
 
-input[id="nomeDoItem"]
-{
+input[id="nomeDoItem"] {
     outline: none;
     border: none;
     height: 50px;
@@ -536,42 +537,37 @@ input[id="nomeDoItem"]
     transition: .5s ease-in-out;
 }
 
-input[id="nomeDoItem"]:focus
-{
+input[id="nomeDoItem"]:focus {
     transform: scale(1.05) translateX(-5px);
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.17);
 }
 
-input[type="checkbox"]
-{
+input[type="checkbox"] {
     margin: 0 20px;
 }
 
-ion-icon
-{
+ion-icon {
     transform: scale(1.5);
     color: rgba(0, 0, 0, 0.7);
 }
 
-#nomeDoItem
-{
+#nomeDoItem {
     grid-area: input;
 }
 
-#adc-btn
-{
+#adc-btn {
     grid-area: btn;
 }
 
 div.button {
-    
+
     display: flex;
     align-items: center;
     justify-content: center;
-    
+
 }
 
-input[id="sbtAdd"]{
+input[id="sbtAdd"] {
     background-color: #772014;
     padding: 0.8rem 2rem;
     color: #fff;
@@ -580,7 +576,7 @@ input[id="sbtAdd"]{
     transition: all 0.2s ease-in 0.1s;
     cursor: pointer;
     border-radius: 0;
-    
+
 }
 
 
@@ -608,56 +604,47 @@ input[id="sbtAdd"]{
 }
 
 /* configurações das tags pais carrinho de compras */
-#bg-light
-{
+#bg-light {
     background-color: #ddd;
 }
 
-.bg-white
-{
+.bg-white {
     background-color: white;
 }
 
-.bg-yellow
-{
+.bg-yellow {
     background: white;
 }
 
-.d-flex
-{
+.d-flex {
     display: flex;
 }
 
-.flex-column
-{
+.flex-column {
     flex-direction: column;
 }
 
-.d-grid
-{
+.d-grid {
     display: grid;
 }
 
-.d-block
-{
+.d-block {
     display: block;
 }
 
-.y-center
-{
+.y-center {
     justify-content: center;
 }
 
-.x-center
-{
+.x-center {
     align-items: center;
 }
 
-.center
-{
+.center {
     align-items: center;
     justify-content: center;
 }
+
 .main {
     width: 100%;
     padding: 15rem 0 5rem 0;
@@ -668,8 +655,7 @@ input[id="sbtAdd"]{
     align-items: center;
 }
 
-.adc-btn
-{
+.adc-btn {
     height: 50px;
     border: none;
     outline: none;
@@ -681,28 +667,24 @@ input[id="sbtAdd"]{
     transition: .3s ease-in-out;
 }
 
-.adc-btn:hover
-{
+.adc-btn:hover {
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
     transform: scale(1.05) translateX(5px);
 }
 
-.adc-btn:active
-{
+.adc-btn:active {
     box-shadow: inset 0px 0px 20px rgba(0, 0, 0, 0.07);
     transform: scale(1);
     transition: .1s;
 }
 
-.card
-{
+.card {
     width: 50%;
     min-height: 300px;
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
 }
 
-.linha
-{
+.linha {
     width: 90%;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
@@ -712,8 +694,7 @@ input[id="sbtAdd"]{
     transition: .3s ease-in-out;
 }
 
-.linha-checked
-{
+.linha-checked {
     width: 90%;
     box-shadow: 0px 0px 20px -15px rgba(0, 0, 0, 0.5);
     margin-bottom: 20px;
@@ -723,27 +704,23 @@ input[id="sbtAdd"]{
     transition: .3s ease-in-out;
 }
 
-.linha:hover
-{
-    animation: breath 3s ease-in-out  infinite;
+.linha:hover {
+    animation: breath 3s ease-in-out infinite;
 }
 
-.label
-{
+.label {
     justify-content: start;
     width: 80%;
     word-wrap: break-word;
 }
 
-.label label
-{
+.label label {
     display: block;
     width: 100%;
     padding: 20px 30px;
 }
 
-.btnExcluir
-{
+.btnExcluir {
     border: none;
     background-color: transparent;
     padding: 20px;
@@ -752,88 +729,72 @@ input[id="sbtAdd"]{
 
 
 
-@keyframes breath
-{
-    0%
-    {
+@keyframes breath {
+    0% {
         transform: rotate(0deg) scale(1);
     }
 
-    25%
-    {
+    25% {
         transform: rotate(.5deg) scale(1.01);
     }
 
-    50%
-    {
+    50% {
         transform: rotate(0deg) scale(1);
     }
 
-    75%
-    {
+    75% {
         transform: rotate(-.5deg) scale(1.01);
     }
 
-    100%
-    {
+    100% {
         transform: rotate(0deg) scale(1);
     }
 }
 
-.itens
-{
+.itens {
     padding: 30px;
 }
 
-@media(max-width: 929px)
-{
-    .card
-    {
+@media(max-width: 929px) {
+    .card {
         width: 70%;
     }
 }
 
-@media(max-width: 689px)
-{
-    .head
-    {
-        grid-template: "input" "btn";
+@media(max-width: 689px) {
+    .head {
+        grid-template: "input""btn";
         row-gap: 10px;
     }
 }
 
-@media(max-width: 549px)
-{
-    .card
-    {
+@media(max-width: 549px) {
+    .card {
         width: 100%;
         min-height: 100vh;
     }
 
-    .head
-    {
+    .head {
         position: fixed;
         z-index: 1;
     }
 
-    .itens
-    {
+    .itens {
         margin-top: 170px;
     }
 
-    .btn:hover
-    {
+    .btn:hover {
         transform: scale(1) translateX(0px);
         box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
     }
 
-    .btn:active
-    {
+    .btn:active {
         transform: scale(.98);
         box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.0);
     }
-} */
+}
 
+*/
 /* Fim CSS carrinho de compras */
 
 /* CSS cadastro */
@@ -1000,18 +961,18 @@ select {
 
 /* Início CSS administrador produto */
 
-#admin-products-1{
+#admin-products-1 {
     color: #707070;
     padding: 30px;
     text-align: center;
 }
 
-.admin-products-add{
+.admin-products-add {
     color: #707070;
     margin: 10px;
 }
 
-#admin-products-add-1{
+#admin-products-add-1 {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -1021,10 +982,12 @@ select {
 }
 
 #admin-products-list table {
-    width: 100%;;
+    width: 100%;
+    ;
 }
 
-#admin-products-list td, #admin-products-list th{
+#admin-products-list td,
+#admin-products-list th {
     padding: 10px 5px;
 }
 
@@ -1032,15 +995,15 @@ select {
     background-color: #e7a388e1;
 }
 
-#admin-products-list tr:nth-child(even){
+#admin-products-list tr:nth-child(even) {
     background-color: #da683b;
 }
 
-#admin-products-list tbody tr:hover{
+#admin-products-list tbody tr:hover {
     background-color: #7abee0ee;
 }
 
-#admin-products-list .admin-products-actions a{
+#admin-products-list .admin-products-actions a {
     text-decoration: none;
 }
 
@@ -1415,7 +1378,7 @@ select {
     cursor: pointer;
     text-decoration: none;
     font-size: 15px;
-    font-size: 15px;  
+    font-size: 15px;
     border-radius: 10px;
     letter-spacing: 0.1rem;
 }
@@ -1525,17 +1488,17 @@ label {
     padding: 0;
 }
 
-.img-user{
-   margin-bottom: 30px;
+.img-user {
+    margin-bottom: 30px;
 }
 
-.img-user .img{
+.img-user .img {
     width: 100px;
     height: 100px;
     margin-bottom: 15px;
 }
 
-.img{
+.img {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1545,20 +1508,21 @@ label {
 
 
 
-.img-user-login{
+.img-user-login {
     margin-top: 30px;
 }
 
 
 .img-user-login a,
-.img a{
+.img a {
     color: #19180A;
 }
 
 .img-user-login a:hover,
-.img a:hover{
+.img a:hover {
     text-decoration: underline;
 }
+
 .list-item {
     display: flex;
     border-radius: 10px;
