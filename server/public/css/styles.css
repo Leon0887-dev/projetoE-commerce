@@ -891,8 +891,6 @@ select {
 
 /* Fim CSS cadastro */
 
-<<<<<<< HEAD
-=======
 /* CSS administrator login */
 
 #container-main-administrator {
@@ -1048,7 +1046,6 @@ select {
 
 /* Fim CSS administrador produto */
 
->>>>>>> 84c25ca81441f21464d652b581943ca8abf45552
 /* CSS produto */
 #identification {
     padding: 11rem 2rem 2rem 2rem;
@@ -1417,13 +1414,10 @@ select {
     align-items: center;
     cursor: pointer;
     text-decoration: none;
-<<<<<<< HEAD
     font-size: 15px;
-=======
     font-size: 15px;  
     border-radius: 10px;
     letter-spacing: 0.1rem;
->>>>>>> 84c25ca81441f21464d652b581943ca8abf45552
 }
 
 .sub {
