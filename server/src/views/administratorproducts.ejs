@@ -1,73 +1,74 @@
 <%- include("./partials/head")%>
-<%- include("./partials/header")%>
+    <%- include("./partials/header")%>
 
-    <main id="main-admin-products">
-        <div id="admin-products-1">
-            <h1>Painel do Administrador</h1>
-        </div>
-        <h2 class="admin-products-add">Adicionar Produto</h3>
-            <div>
-                <form id="admin-products-add-1">
-                    <input type="text" name="admin-product-name" id="admin-product-name" placeholder="Produto">
-                    <input type="text" name="admin-product-code" id="admin-product-code" placeholder="Código">
-                    <input type="text" name="admin-product-number" id="admin-product-number" placeholder="Quantidade">
-                    <input type="text" name="admin-product-type" id="admin-product-type" placeholder="Tipo">
-                    <input type="text" name="admin-product-weight" id="admin-product-weight" placeholder="Peso">
-                </form>
-                <a href="">
-                    <button type="button" class="btn-edit-forms">Adicionar</button>
-                  </a>
+        <main id="main-admin-products">
+            <div id="admin-products-1">
+                <h1>Painel do Administrador</h1>
             </div>
-        <h2 class="admin-products-add">Lista de Produtos</h3>
-            <div id="admin-products-list">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Produto</th>
-                            <th>Código</th>
-                            <th>Quantidade</th>
-                            <th>Tipo</th>
-                            <th>Peso</th>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Café House</td>
-                            <td>CH500G</td>
-                            <td>10</td>
-                            <td>Café moído torrado</td>
-                            <td>500 g</td>
-                            <td class="admin-products-actions">
-                                <a href="admin-product-view">Visualizar</a>
-                                <a href="admin-product-delete">Excluir</a>
-                                <a href="admin-product-edit">Editar</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Café House</td>
-                            <td>CH500G</td>
-                            <td>10</td>
-                            <td>Café moído torrado</td>
-                            <td>500 g</td>
-                            <td class="admin-products-actions">
-                                <a href="admin-product-view">Visualizar</a>
-                                <a href="admin-product-delete">Excluir</a>
-                                <a href="admin-product-edit">Editar</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Café House</td>
-                            <td>CH500G</td>
-                            <td>10</td>
-                            <td>Café moído torrado</td>
-                            <td>500 g</td>
-                            <td class="admin-products-actions">
-                                <a href="admin-product-view">Visualizar</a>
-                                <a href="admin-product-delete">Excluir</a>
-                                <a href="admin-product-edit">Editar</a>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+            <h2 class="admin-products-add">Adicionar Produto</h3>
+                <div>
+                    <form id="admin-products-add-1">
+                        <input type="text" name="admin-product-name" id="admin-product-name" placeholder="Produto">
+                        <input type="text" name="admin-product-code" id="admin-product-code" placeholder="Código">
+                        <input type="text" name="admin-product-number" id="admin-product-number"
+                            placeholder="Quantidade">
+                        <input type="text" name="admin-product-type" id="admin-product-type" placeholder="Tipo">
+                        <input type="text" name="admin-product-weight" id="admin-product-weight" placeholder="Peso">
+                    </form>
+                    <a href="">
+                        <button type="button" class="btn-edit-forms">Adicionar</button>
+                    </a>
+                </div>
+                <h2 class="admin-products-add">Lista de Produtos</h3>
+                    <div id="admin-products-list">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Produto</th>
+                                    <th>Código</th>
+                                    <th>Quantidade</th>
+                                    <th>Tipo</th>
+                                    <th>Peso</th>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Café House</td>
+                                    <td>CH500G</td>
+                                    <td>10</td>
+                                    <td>Café moído torrado</td>
+                                    <td>500 g</td>
+                                    <td class="admin-products-actions">
+                                        <a href="admin-product-view">Visualizar</a>
+                                        <a href="admin-product-delete">Excluir</a>
+                                        <a href="admin-product-edit">Editar</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Café House</td>
+                                    <td>CH500G</td>
+                                    <td>10</td>
+                                    <td>Café moído torrado</td>
+                                    <td>500 g</td>
+                                    <td class="admin-products-actions">
+                                        <a href="admin-product-view">Visualizar</a>
+                                        <a href="admin-product-delete">Excluir</a>
+                                        <a href="admin-product-edit">Editar</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Café House</td>
+                                    <td>CH500G</td>
+                                    <td>10</td>
+                                    <td>Café moído torrado</td>
+                                    <td>500 g</td>
+                                    <td class="admin-products-actions">
+                                        <a href="admin-product-view">Visualizar</a>
+                                        <a href="admin-product-delete">Excluir</a>
+                                        <a href="admin-product-edit">Editar</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
 
-<%- include("./partials/footer")%>
+                    <%- include("./partials/footer")%>
