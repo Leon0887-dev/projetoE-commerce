@@ -1021,6 +1021,15 @@ select {
     margin: 10px;
 }
 
+#admin-products-add-1{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px
+}
+
 #admin-products-list table {
     width: 100%;;
 }
