@@ -1013,6 +1013,8 @@ select {
     text-align: center;
 }
 
+
+
 #admin-products-add-1{
     display: flex;
     flex-direction: column;
@@ -1020,6 +1022,31 @@ select {
     justify-content: space-around;
     align-items: center;
     padding: 10px
+}
+
+#admin-product-name{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#admin-product-code{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#admin-product-number{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#admin-product-type{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#admin-product-weight{
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 #admin-products-list table {
