@@ -28,16 +28,17 @@ img {
 }
 
 .btn-edit-forms {
-    background-color: #AF4319;
+    background-color: #772014;
     padding: 10px 15px;
     border-radius: 10px;
     color: #fff;
     text-decoration: none;
     font-size: 15px;
+    margin: 15px 5px;
 }
 
 .btn-edit-forms:hover {
-    background-color: #af4319e1;
+    background-color: #772014;
     color: #fff;
 }
 
@@ -63,8 +64,6 @@ img {
 .btn-edit-login:hover{
     background-color: #7a362d;
 }
-
-
 
 
 /* CSS header */
@@ -444,6 +443,7 @@ footer .social-media-title {
     bottom: -5px;
     left: 0;
     background: rgba(0, 0, 0, 0.2);
+
 }
 
 .btn-edit-forms {
@@ -458,10 +458,11 @@ footer .social-media-title {
     width: 100%;
     bottom: -5px;
     left: 0;
-    background: linear-gradient(45deg, #772014, #3F220F, #0C0B0B);
-    transform: scaleX(0);
+
+    /* background: linear-gradient(45deg, #772014, #3F220F, #0C0B0B); */
+    /* transform: scaleX(0);
     transition: all .3s ease-in-out;
-    transform-origin: left;
+    transform-origin: left; */
 }
 
 .input-field-login input:focus~.underline::after {
@@ -474,6 +475,7 @@ footer .social-media-title {
     letter-spacing: 0.1rem;
     color: rgba(0, 0, 0, 0.7);
     width: 100%;
+    /* margin: 10px 5px; */
 }
 
 .input-field-login input::placeholder {
@@ -885,22 +887,12 @@ select {
     font-size: 0.9rem;
     text-align: left;
     margin: 10px 1px;
-
-}
-
-.container-button {
-    width: 100%;
-    background-color: #772014;
-    padding: 0.8rem 2rem;
-    color: #fff;
-    font-size: 0.8rem;
-    letter-spacing: 0.2rem;
-    transition: all 0.2s ease-in 0.1s;
-    margin-top: 2rem;
 }
 
 /* Fim CSS cadastro */
 
+<<<<<<< HEAD
+=======
 /* CSS administrator login */
 
 #container-main-administrator {
@@ -1056,6 +1048,7 @@ select {
 
 /* Fim CSS administrador produto */
 
+>>>>>>> 84c25ca81441f21464d652b581943ca8abf45552
 /* CSS produto */
 #identification {
     padding: 11rem 2rem 2rem 2rem;
@@ -1181,7 +1174,7 @@ select {
     display: flex;
     padding: 3rem 5rem;
     flex-direction: column;
-    align-items:stretch;
+    align-items: stretch;
     align-items: center;
     margin-bottom: 2rem;
 }
@@ -1196,8 +1189,9 @@ select {
     color: #772014;
     font-size: 15px;
     margin-bottom: 10px;
-    
+
 }
+
 .container-input input {
     padding: 10px 15px;
     margin: 5px 0px;
@@ -1213,35 +1207,40 @@ select {
     color: #707070;
 }
 
-.e-senha{
-    color:#772014;
+.e-senha {
+    color: #772014;
     font-size: 11px;
     margin-bottom: 20px;
 }
+
 .login-chekout {
-    background:#772014;
+    background: #772014;
     color: #fff;
     margin-bottom: 40px;
     width: 100%;
-    height: 30px;
+    height: 40px;
     align-content: center;
     align-items: center;
     cursor: pointer;
     text-decoration: none;
     font-size: 15px;
+    border-radius: 10px;
+    letter-spacing: 0.1rem;
 }
 
 .register {
-    background:#772014;
+    background: #772014;
     color: #fff;
     margin-bottom: 40px;
     width: 100%;
-    height: 30px;
+    height: 40px;
     align-content: center;
     align-items: center;
     cursor: pointer;
     text-decoration: none;
     font-size: 15px;
+    border-radius: 10px;
+    letter-spacing: 0.1rem;
 }
 
 #container-payment {
@@ -1257,7 +1256,7 @@ select {
 
 #container-payment h5 {
     color: #772014;
-    font-size: 12px;
+    font-size: 14px;
     margin-bottom: 10px;
 }
 
@@ -1286,14 +1285,14 @@ select {
     margin: 20px 0px;
 }
 
-.card-number input{
+.card-number input {
     width: 100%;
     color: #707070;
     padding: 10px 15px;
     margin: 5px 0px;
     border-radius: 4px;
     border: 1px solid grey;
-    
+
 }
 
 .card-validity {
@@ -1306,12 +1305,13 @@ select {
     border: 1px solid grey;
     margin: 5px 0px;
 }
-    
+
 
 .card-code {
     margin: 20px 0px;
 }
-.card-code input{
+
+.card-code input {
     width: 50%;
     padding: 10px 15px;
     border-radius: 4px;
@@ -1319,7 +1319,7 @@ select {
     margin: 5px 0px;
 }
 
-.portion-number input{
+.portion-number input {
     padding: 10px 15px;
     width: 50%;
     margin: 5px 0px;
@@ -1353,8 +1353,9 @@ select {
 
 .container-prod {
     margin-bottom: 30px;
-    
+
 }
+
 .product {
     display: flex;
     justify-content: space-between;
@@ -1384,11 +1385,11 @@ select {
 
 .sub-pay {
     flex-direction: row;
-    
+
 }
 
 
-.cupons input{
+.cupons input {
     padding: 10px 15px;
     margin: 5px 0px;
     border-radius: 4px;
@@ -1407,16 +1408,22 @@ select {
 
 
 .finalizar button {
-    background:#772014;
+    background: #772014;
     color: #fff;
     margin-bottom: 40px;
     width: 100%;
-    height: 30px;
+    height: 40px;
     align-content: center;
     align-items: center;
     cursor: pointer;
     text-decoration: none;
+<<<<<<< HEAD
+    font-size: 15px;
+=======
     font-size: 15px;  
+    border-radius: 10px;
+    letter-spacing: 0.1rem;
+>>>>>>> 84c25ca81441f21464d652b581943ca8abf45552
 }
 
 .sub {
@@ -1440,7 +1447,7 @@ h3 {
 .frete {
     border-top: 1px solid grey;
     padding-top: 10px;
-    font-size: 14px; 
+    font-size: 14px;
     display: flex;
     justify-content: space-between;
     margin-bottom: 10px;
@@ -1820,18 +1827,6 @@ label {
 
     /* Fim CSS login */
 
-    /* CSS Administrator login */
-
-    #container-main-administrator {
-        padding: 15rem 0 5rem 0;
-    }
-
-    #container-form-administrator {
-        width: 380px;
-    }
-
-    /* Fim CSS administrator login */
-
     /* CSS cadastro */
 
     #container-signup {
@@ -1939,7 +1934,7 @@ label {
 
     /* CSS Product*/
 
-    .productconfig{
+    .productconfig {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -1947,11 +1942,11 @@ label {
         justify-content: center;
     }
 
-    .productconfig .column1product{
+    .productconfig .column1product {
         display: block;
     }
 
-    .productconfig .column2product{
+    .productconfig .column2product {
         display: block;
         width: 50%;
     }
@@ -1968,6 +1963,4 @@ label {
     }
 
     /* Fim CSS checkout */
-
-
 }
