@@ -41,6 +41,29 @@ img {
     color: #fff;
 }
 
+.btn-edit{
+    align-self: center;
+}
+
+/*  se alguem nao gostar do laranja pode usar essa class com cor difenrete   */
+.color-opcinal-btn{
+    background-color: #772014;
+}
+
+.btn-edit-login{
+    background-color: #772014;
+    border-radius: 10px;
+    width: 250px;
+    padding: 10px 0px;
+    color: #fff;
+    font-size: 17px;
+    margin-top: 2rem;
+}
+
+.btn-edit-login:hover{
+    background-color: #7a362d;
+}
+
 
 
 
@@ -457,7 +480,8 @@ footer .social-media-title {
     color: #707070;
 }
 
-#container-form-login form input[type="submit"] {
+ /*
+ #container-form-login form input[type="submit"] {
     margin-top: 2rem;
     padding: 0.4rem;
     width: 100%;
@@ -469,7 +493,7 @@ footer .social-media-title {
     border-radius: 4px;
     transition: all 0.3s ease;
 }
-
+*/
 #container-form-login form input[type="submit"]:hover {
     letter-spacing: 0.5px;
     background: linear-gradient(45deg, #0C0B0B, #3F220F, #772014);
@@ -1405,6 +1429,12 @@ h4 {
 
 /* Fim CSS checkout */
 
+/* CSS contact */
+
+
+
+/* Fim CSS contact */
+
 /* CSS user */
 
 #main-user,
@@ -1440,13 +1470,47 @@ label {
 
 .panel-options-screen {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
 }
 
 .user-options--list {
     padding: 0;
 }
 
+.img-user{
+   margin-bottom: 30px;
+}
+
+.img-user .img{
+    width: 100px;
+    height: 100px;
+    margin-bottom: 15px;
+}
+
+.img{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+
+
+.img-user-login{
+    margin-top: 30px;
+}
+
+
+.img-user-login a,
+.img a{
+    color: #19180A;
+}
+
+.img-user-login a:hover,
+.img a:hover{
+    text-decoration: underline;
+}
 .list-item {
     display: flex;
     border-radius: 10px;
