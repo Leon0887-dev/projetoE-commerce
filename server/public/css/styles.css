@@ -1000,6 +1000,13 @@ select {
 
 /* Início CSS administrador produto */
 
+#admin-products-bgc{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
 .admin-products-title{
     color: #707070;
     padding: 150px 0 0 0;
@@ -1014,7 +1021,6 @@ select {
 }
 
 
-
 #admin-products-add-1{
     display: flex;
     flex-direction: column;
@@ -1024,30 +1030,12 @@ select {
     padding: 10px
 }
 
-#admin-product-name{
-    padding-top: 5px;
-    padding-bottom: 5px;
+#admin-products-add-1 input{
+    border: 1px solid #0C0B0B;
+    margin-bottom: 15px;
+    padding: 5px;
 }
 
-#admin-product-code{
-    padding-top: 5px;
-    padding-bottom: 5px;
-}
-
-#admin-product-number{
-    padding-top: 5px;
-    padding-bottom: 5px;
-}
-
-#admin-product-type{
-    padding-top: 5px;
-    padding-bottom: 5px;
-}
-
-#admin-product-weight{
-    padding-top: 5px;
-    padding-bottom: 5px;
-}
 
 #admin-products-list table {
     width: 100%;;
