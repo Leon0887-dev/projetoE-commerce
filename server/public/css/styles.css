@@ -891,6 +891,155 @@ select {
 
 /* Fim CSS cadastro */
 
+<<<<<<< HEAD
+=======
+/* CSS administrator login */
+
+#container-main-administrator {
+    background: #772014;
+    display: flex;
+    justify-content: center;
+    padding: 12rem 0 4rem 0;
+}
+
+#container-form-administrator {
+    background-color: white;
+    width: 280px;
+    padding: 2rem;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+
+#container-form-administrator h2 {
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+#container-form-administrator h2::before {
+    content: '';
+    position: absolute;
+    height: 4px;
+    width: 25px;
+    bottom: 4px;
+    left: 0px;
+    border-radius: 8px;
+    background: #772014;
+}
+
+#container-form-administrator form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-field-administrator {
+    position: relative;
+}
+
+.input-field-administrator login:first-child {
+    margin-bottom: 1.5rem;
+}
+
+.input-field-administrator .underline::before {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.input-field-administrator .underline::after {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+    background: #772014;
+    transform: scaleX(0);
+    transition: all .3s ease-in-out;
+    transform-origin: left;
+}
+
+.input-field-administrator input:focus~.underline::after {
+    transform: scaleX(1);
+}
+
+.input-field-administrator input {
+    outline: none;
+    font-size: 0.9rem;
+    letter-spacing: 0.1rem;
+    color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+}
+
+.input-field-administrator input::placeholder {
+    color: #707070;
+}
+
+#container-form-administrator form input[type="submit"] {
+    margin-top: 2rem;
+    padding: 0.4rem;
+    width: 100%;
+    background: #772014;
+    cursor: pointer;
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 300;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+#container-form-administrator form input[type="submit"]:hover {
+    letter-spacing: 0.5px;
+    background: #772014;
+}
+
+/* Fim CSS administrator login */
+
+/* Início CSS administrador produto */
+
+#admin-products-1{
+    color: #707070;
+    padding: 30px;
+    text-align: center;
+}
+
+.admin-products-add{
+    color: #707070;
+    margin: 10px;
+}
+
+#admin-products-list table {
+    width: 100%;;
+}
+
+#admin-products-list td, #admin-products-list th{
+    padding: 10px 5px;
+}
+
+#adim-products-list tr {
+    background-color: #e7a388e1;
+}
+
+#admin-products-list tr:nth-child(even){
+    background-color: #da683b;
+}
+
+#admin-products-list tbody tr:hover{
+    background-color: #7abee0ee;
+}
+
+#admin-products-list .admin-products-actions a{
+    text-decoration: none;
+}
+
+/* Fim CSS administrador produto */
+
+>>>>>>> 84c25ca81441f21464d652b581943ca8abf45552
 /* CSS produto */
 #identification {
     padding: 11rem 2rem 2rem 2rem;
@@ -1060,12 +1209,14 @@ select {
     color: #fff;
     margin-bottom: 40px;
     width: 100%;
-    height: 30px;
+    height: 40px;
     align-content: center;
     align-items: center;
     cursor: pointer;
     text-decoration: none;
     font-size: 15px;
+    border-radius: 10px;
+    letter-spacing: 0.1rem;
 }
 
 .register {
@@ -1073,12 +1224,14 @@ select {
     color: #fff;
     margin-bottom: 40px;
     width: 100%;
-    height: 30px;
+    height: 40px;
     align-content: center;
     align-items: center;
     cursor: pointer;
     text-decoration: none;
     font-size: 15px;
+    border-radius: 10px;
+    letter-spacing: 0.1rem;
 }
 
 #container-payment {
@@ -1094,7 +1247,7 @@ select {
 
 #container-payment h5 {
     color: #772014;
-    font-size: 12px;
+    font-size: 14px;
     margin-bottom: 10px;
 }
 
@@ -1250,12 +1403,18 @@ select {
     color: #fff;
     margin-bottom: 40px;
     width: 100%;
-    height: 30px;
+    height: 40px;
     align-content: center;
     align-items: center;
     cursor: pointer;
     text-decoration: none;
+<<<<<<< HEAD
     font-size: 15px;
+=======
+    font-size: 15px;  
+    border-radius: 10px;
+    letter-spacing: 0.1rem;
+>>>>>>> 84c25ca81441f21464d652b581943ca8abf45552
 }
 
 .sub {
