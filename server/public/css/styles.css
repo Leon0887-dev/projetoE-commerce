@@ -28,20 +28,19 @@ img {
 }
 
 .btn-edit-forms {
-    background-color: #AF4319;
+    background-color: #772014;
     padding: 10px 15px;
     border-radius: 10px;
     color: #fff;
     text-decoration: none;
     font-size: 15px;
+    margin: 15px 5px;
 }
 
 .btn-edit-forms:hover {
-    background-color: #af4319e1;
+    background-color: #772014;
     color: #fff;
 }
-
-
 
 
 /* CSS header */
@@ -400,16 +399,6 @@ footer .social-media-title {
     position: relative;
 }
 
-/* #container-form-login h2::before {
-    content: '';
-    position: absolute;
-    height: 4px;
-    width: 25px;
-    bottom: 4px;
-    left: 0px;
-    border-radius: 8px;
-}
- */
 #container-form-login form {
     display: flex;
     flex-direction: column;
@@ -431,6 +420,7 @@ footer .social-media-title {
     bottom: -5px;
     left: 0;
     background: rgba(0, 0, 0, 0.2);
+
 }
 
 .input-field-login .underline::after {
@@ -440,10 +430,11 @@ footer .social-media-title {
     width: 100%;
     bottom: -5px;
     left: 0;
-    background: linear-gradient(45deg, #772014, #3F220F, #0C0B0B);
-    transform: scaleX(0);
+
+    /* background: linear-gradient(45deg, #772014, #3F220F, #0C0B0B); */
+    /* transform: scaleX(0);
     transition: all .3s ease-in-out;
-    transform-origin: left;
+    transform-origin: left; */
 }
 
 .input-field-login input:focus~.underline::after {
@@ -456,6 +447,7 @@ footer .social-media-title {
     letter-spacing: 0.1rem;
     color: rgba(0, 0, 0, 0.7);
     width: 100%;
+    /* margin: 10px 5px; */
 }
 
 .input-field-login input::placeholder {
@@ -541,7 +533,7 @@ select {
 
 }
 
-.container-button {
+/* .container-button {
     width: 100%;
     background-color: #772014;
     padding: 0.8rem 2rem;
@@ -550,7 +542,7 @@ select {
     letter-spacing: 0.2rem;
     transition: all 0.2s ease-in 0.1s;
     margin-top: 2rem;
-}
+} */
 
 /* Fim CSS cadastro */
 
@@ -679,7 +671,7 @@ select {
     display: flex;
     padding: 3rem 5rem;
     flex-direction: column;
-    align-items:stretch;
+    align-items: stretch;
     align-items: center;
     margin-bottom: 2rem;
 }
@@ -694,8 +686,9 @@ select {
     color: #772014;
     font-size: 15px;
     margin-bottom: 10px;
-    
+
 }
+
 .container-input input {
     padding: 10px 15px;
     margin: 5px 0px;
@@ -711,13 +704,14 @@ select {
     color: #707070;
 }
 
-.e-senha{
-    color:#772014;
+.e-senha {
+    color: #772014;
     font-size: 11px;
     margin-bottom: 20px;
 }
+
 .login-chekout {
-    background:#772014;
+    background: #772014;
     color: #fff;
     margin-bottom: 40px;
     width: 100%;
@@ -730,7 +724,7 @@ select {
 }
 
 .register {
-    background:#772014;
+    background: #772014;
     color: #fff;
     margin-bottom: 40px;
     width: 100%;
@@ -784,14 +778,14 @@ select {
     margin: 20px 0px;
 }
 
-.card-number input{
+.card-number input {
     width: 100%;
     color: #707070;
     padding: 10px 15px;
     margin: 5px 0px;
     border-radius: 4px;
     border: 1px solid grey;
-    
+
 }
 
 .card-validity {
@@ -804,12 +798,13 @@ select {
     border: 1px solid grey;
     margin: 5px 0px;
 }
-    
+
 
 .card-code {
     margin: 20px 0px;
 }
-.card-code input{
+
+.card-code input {
     width: 50%;
     padding: 10px 15px;
     border-radius: 4px;
@@ -817,7 +812,7 @@ select {
     margin: 5px 0px;
 }
 
-.portion-number input{
+.portion-number input {
     padding: 10px 15px;
     width: 50%;
     margin: 5px 0px;
@@ -851,8 +846,9 @@ select {
 
 .container-prod {
     margin-bottom: 30px;
-    
+
 }
+
 .product {
     display: flex;
     justify-content: space-between;
@@ -882,11 +878,11 @@ select {
 
 .sub-pay {
     flex-direction: row;
-    
+
 }
 
 
-.cupons input{
+.cupons input {
     padding: 10px 15px;
     margin: 5px 0px;
     border-radius: 4px;
@@ -905,7 +901,7 @@ select {
 
 
 .finalizar button {
-    background:#772014;
+    background: #772014;
     color: #fff;
     margin-bottom: 40px;
     width: 100%;
@@ -914,7 +910,7 @@ select {
     align-items: center;
     cursor: pointer;
     text-decoration: none;
-    font-size: 15px;  
+    font-size: 15px;
 }
 
 .sub {
@@ -938,7 +934,7 @@ h3 {
 .frete {
     border-top: 1px solid grey;
     padding-top: 10px;
-    font-size: 14px; 
+    font-size: 14px;
     display: flex;
     justify-content: space-between;
     margin-bottom: 10px;
@@ -1390,7 +1386,7 @@ label {
 
     /* CSS Product*/
 
-    .productconfig{
+    .productconfig {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -1398,11 +1394,11 @@ label {
         justify-content: center;
     }
 
-    .productconfig .column1product{
+    .productconfig .column1product {
         display: block;
     }
 
-    .productconfig .column2product{
+    .productconfig .column2product {
         display: block;
         width: 50%;
     }
@@ -1419,6 +1415,4 @@ label {
     }
 
     /* Fim CSS checkout */
-
-
 }

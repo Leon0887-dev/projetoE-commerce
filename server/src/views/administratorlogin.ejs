@@ -6,17 +6,15 @@
         <h2>Login Admin</h2>
         <form action="">
           <div class="input-field-login">
-            <input type="text" name="username" id="username" placeholder="Digite usuario ou seu e-mail">
+            <input type="email" name="username" id="username" placeholder="Digite seu e-mail" required>
             <div class="underline"></div>
           </div>
           <div class="input-field-login">
-            <input type="password" name="password" id="password" placeholder="Digite sua senha">
+            <input type="password" name="password" id="password" placeholder="Digite sua senha" required>
             <div class="underline"></div>
           </div>
-          <input type="submit" value="Acessar">
+          <button type="submit" class="btn-edit-forms">Enviar</button>
         </form>
       </section>
 
       <%- include("./partials/footer")%>
-
-        <%- include("./partials/footer")%>
