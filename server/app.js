@@ -41,5 +41,5 @@ app.use("/contato", contactRoute);
 app.use("/administradorprodutos", administratorproductsRoute);
 
 app.listen(port, () => {
-    console.log(`Estamos rodando na porta ${port}`)
+    console.log(`Estamos rodando na porta ${port}: http://localhost:3000/ `)
 })
