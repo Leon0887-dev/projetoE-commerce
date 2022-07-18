@@ -9,8 +9,11 @@ const productRoute = require("./src/routes/productRoute");
 const checkoutRoute = require("./src/routes/checkoutRoute");
 const loginRoute = require("./src/routes/loginRoute");
 const administratorloginRoute = require("./src/routes/administratorloginRoute");
+const administratorproductsRoute = require("./src.routes/administratorproductsRoute")
 const userPanelRoute = require("./src/routes/userPanelRoute");
 const userRegisterRoute = require("./src/routes/userRegisterRoute");
+const carrinhoRoute = require ("./src/routes/carrinhoRoute");
+
 const contactRoute = require("./src/routes/contactRoute");
 
 
@@ -34,7 +37,9 @@ app.use("/administradorlogin", administratorloginRoute);
 app.use("/areaDoCliente", userPanelRoute);
 app.use("/criarConta", userRegisterRoute);
 app.use("/", indexRoute);
+app.use("/carrinho", carrinhoRoute);
 app.use("/contato", contactRoute);
+app.use("/administradorprodutos", administratorproductsRoute);
 
 app.listen(port, () => {
     console.log(`Estamos rodando na porta ${port}`)

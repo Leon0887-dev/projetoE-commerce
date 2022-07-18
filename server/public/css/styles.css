@@ -42,6 +42,29 @@ img {
     color: #fff;
 }
 
+.btn-edit{
+    align-self: center;
+}
+
+/*  se alguem nao gostar do laranja pode usar essa class com cor difenrete   */
+.color-opcinal-btn{
+    background-color: #772014;
+}
+
+.btn-edit-login{
+    background-color: #772014;
+    border-radius: 10px;
+    width: 250px;
+    padding: 10px 0px;
+    color: #fff;
+    font-size: 17px;
+    margin-top: 2rem;
+}
+
+.btn-edit-login:hover{
+    background-color: #7a362d;
+}
+
 
 /* CSS header */
 
@@ -423,6 +446,11 @@ footer .social-media-title {
 
 }
 
+.btn-edit-forms {
+    margin-top: 40px;
+
+}
+
 .input-field-login .underline::after {
     content: '';
     position: absolute;
@@ -454,6 +482,108 @@ footer .social-media-title {
     color: #707070;
 }
 
+ /*
+ #container-form-login form input[type="submit"] {
+    margin-top: 2rem;
+    padding: 0.4rem;
+    width: 100%;
+    background: linear-gradient(45deg, #772014, #3F220F, #0C0B0B);
+    cursor: pointer;
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 300;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+*/
+#container-form-login form input[type="submit"]:hover {
+    letter-spacing: 0.5px;
+    background: linear-gradient(45deg, #0C0B0B, #3F220F, #772014);
+}
+
+#container-form-login form a {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+/* Fim CSS login */
+
+/* inicio CSS carrinho de compras */
+
+ .content-car
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.add-car {
+    margin-bottom: 30px;
+}
+
+.car-list {
+    height: 100px;
+}
+
+input[id="nomeDoItem"]
+{
+    outline: none;
+    border: none;
+    height: 50px;
+    padding-left: 30px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    transition: .5s ease-in-out;
+}
+
+input[id="nomeDoItem"]:focus
+{
+    transform: scale(1.05) translateX(-5px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.17);
+}
+
+input[type="checkbox"]
+{
+    margin: 0 20px;
+}
+
+ion-icon
+{
+    transform: scale(1.5);
+    color: rgba(0, 0, 0, 0.7);
+}
+
+#nomeDoItem
+{
+    grid-area: input;
+}
+
+#adc-btn
+{
+    grid-area: btn;
+}
+
+div.button {
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+input[id="sbtAdd"]{
+    background-color: #772014;
+    padding: 0.8rem 2rem;
+    color: #fff;
+    font-size: 0.8rem;
+    letter-spacing: 0.2rem;
+    transition: all 0.2s ease-in 0.1s;
+    cursor: pointer;
+    border-radius: 0;
+    
+}
+
+
 #container-form-login form input[type="submit"] {
     margin-top: 2rem;
     padding: 0.4rem;
@@ -477,7 +607,234 @@ footer .social-media-title {
     margin-top: 1rem;
 }
 
-/* Fim CSS login */
+/* configurações das tags pais carrinho de compras */
+#bg-light
+{
+    background-color: #ddd;
+}
+
+.bg-white
+{
+    background-color: white;
+}
+
+.bg-yellow
+{
+    background: white;
+}
+
+.d-flex
+{
+    display: flex;
+}
+
+.flex-column
+{
+    flex-direction: column;
+}
+
+.d-grid
+{
+    display: grid;
+}
+
+.d-block
+{
+    display: block;
+}
+
+.y-center
+{
+    justify-content: center;
+}
+
+.x-center
+{
+    align-items: center;
+}
+
+.center
+{
+    align-items: center;
+    justify-content: center;
+}
+.main {
+    width: 100%;
+    padding: 15rem 0 5rem 0;
+    display: grid;
+    grid-template: "input btn";
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1), inset 0px 50px 30px rgba(255, 255, 255, 0.1);
+    column-gap: 10px;
+    align-items: center;
+}
+
+.adc-btn
+{
+    height: 50px;
+    border: none;
+    outline: none;
+    background-color: #772014;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    color: white;
+    letter-spacing: 0.2rem;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+.adc-btn:hover
+{
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+    transform: scale(1.05) translateX(5px);
+}
+
+.adc-btn:active
+{
+    box-shadow: inset 0px 0px 20px rgba(0, 0, 0, 0.07);
+    transform: scale(1);
+    transition: .1s;
+}
+
+.card
+{
+    width: 50%;
+    min-height: 300px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.linha
+{
+    width: 90%;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: .3s ease-in-out;
+}
+
+.linha-checked
+{
+    width: 90%;
+    box-shadow: 0px 0px 20px -15px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: .3s ease-in-out;
+}
+
+.linha:hover
+{
+    animation: breath 3s ease-in-out  infinite;
+}
+
+.label
+{
+    justify-content: start;
+    width: 80%;
+    word-wrap: break-word;
+}
+
+.label label
+{
+    display: block;
+    width: 100%;
+    padding: 20px 30px;
+}
+
+.btnExcluir
+{
+    border: none;
+    background-color: transparent;
+    padding: 20px;
+    outline: none;
+}
+
+
+
+@keyframes breath
+{
+    0%
+    {
+        transform: rotate(0deg) scale(1);
+    }
+
+    25%
+    {
+        transform: rotate(.5deg) scale(1.01);
+    }
+
+    50%
+    {
+        transform: rotate(0deg) scale(1);
+    }
+
+    75%
+    {
+        transform: rotate(-.5deg) scale(1.01);
+    }
+
+    100%
+    {
+        transform: rotate(0deg) scale(1);
+    }
+}
+
+.itens
+{
+    padding: 30px;
+}
+
+@media(max-width: 929px)
+{
+    .card
+    {
+        width: 70%;
+    }
+}
+
+@media(max-width: 689px)
+{
+    .head
+    {
+        grid-template: "input" "btn";
+        row-gap: 10px;
+    }
+}
+
+@media(max-width: 549px)
+{
+    .card
+    {
+        width: 100%;
+        min-height: 100vh;
+    }
+
+    .head
+    {
+        position: fixed;
+        z-index: 1;
+    }
+
+    .itens
+    {
+        margin-top: 170px;
+    }
+
+    .btn:hover
+    {
+        transform: scale(1) translateX(0px);
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .btn:active
+    {
+        transform: scale(.98);
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.0);
+    }
+} */
+
+/* Fim CSS carrinho de compras */
 
 /* CSS cadastro */
 
@@ -999,13 +1356,47 @@ label {
 
 .panel-options-screen {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
 }
 
 .user-options--list {
     padding: 0;
 }
 
+.img-user{
+   margin-bottom: 30px;
+}
+
+.img-user .img{
+    width: 100px;
+    height: 100px;
+    margin-bottom: 15px;
+}
+
+.img{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+
+
+.img-user-login{
+    margin-top: 30px;
+}
+
+
+.img-user-login a,
+.img a{
+    color: #19180A;
+}
+
+.img-user-login a:hover,
+.img a:hover{
+    text-decoration: underline;
+}
 .list-item {
     display: flex;
     border-radius: 10px;
@@ -1286,7 +1677,8 @@ label {
     #main-myRequests,
     #main-address,
     #main-changePassword,
-    #main-personalData {
+    #main-personalData,
+    #main-car {
         padding: 13rem 0 3rem 0;
     }
 
