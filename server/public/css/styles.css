@@ -694,12 +694,7 @@ input[id="sbtAdd"]{
     transition: .1s;
 }
 
-.card
-{
-    width: 50%;
-    min-height: 300px;
-    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
-}
+
 
 .linha
 {
@@ -787,10 +782,7 @@ input[id="sbtAdd"]{
 
 @media(max-width: 929px)
 {
-    .card
-    {
-        width: 70%;
-    }
+   
 }
 
 @media(max-width: 689px)
