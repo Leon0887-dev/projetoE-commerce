@@ -29,42 +29,36 @@ img {
 
 .btn-edit-forms {
     background-color: #772014;
-    padding: 10px 15px;
+    padding: 10px 20px;
     border-radius: 10px;
     color: #fff;
-    text-decoration: none;
-    font-size: 15px;
-    margin: 15px 5px;
-}
-
-.btn-edit-forms:hover {
-    background-color: #772014;
-    color: #fff;
+    font-size: 0.8rem;
+    letter-spacing: 0.2rem;
+    transition: all 0.2s ease-in 0.1s;
 }
 
 .btn-edit{
     align-self: center;
 }
 
-/*  se alguem nao gostar do laranja pode usar essa class com cor difenrete   */
-.color-opcinal-btn{
-    background-color: #772014;
-}
-
 .btn-edit-login{
     background-color: #772014;
     border-radius: 10px;
-    width: 250px;
-    padding: 10px 0px;
+    padding: 10px 80px;
+    margin-top: 40px;
     color: #fff;
-    font-size: 17px;
-    margin-top: 2rem;
+    font-size: 0.8rem;
+    letter-spacing: 0.2rem;
+    transition: all 0.2s ease-in 0.1s;
 }
 
-.btn-edit-login:hover{
-    background-color: #7a362d;
+.btn-edit-forms:hover, .btn-edit-login:hover {
+    background-color: #AF4319;
 }
 
+.underline-hover:hover {
+    text-decoration: underline;    
+}
 
 /* CSS header */
 
@@ -234,6 +228,23 @@ footer .social-media-title {
     margin: 0.5rem auto;
 }
 
+.title-section-login h2 {
+    color: #772014;
+    font-size: 1.5rem;
+    padding: 3rem 1rem 1.5rem 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+
+.title-section-login h2::after {
+    content: "";
+    display: block;
+    background: #772014;
+    width: 3rem;
+    height: 1px;
+    margin: 0.5rem auto;
+}
+
 #container-categories-items {
     display: flex;
     flex-direction: row;
@@ -312,21 +323,6 @@ footer .social-media-title {
     color: #707070;
 }
 
-.add-button,
-#signup-news form button {
-    background-color: #772014;
-    padding: 0.8rem 2rem;
-    color: #fff;
-    font-size: 0.8rem;
-    letter-spacing: 0.2rem;
-    transition: all 0.2s ease-in 0.1s;
-}
-
-.add-button:hover,
-#signup-news form button:hover {
-    background-color: #AF4319;
-}
-
 #new-products,
 #product-listing-section {
     display: flex;
@@ -398,22 +394,18 @@ footer .social-media-title {
     background: white;
     display: flex;
     justify-content: center;
-    padding: 12rem 0 4rem 0;
+    padding: 10rem 0 4rem 0;
 }
 
 #container-form-login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     background-color: white;
-    width: 280px;
-    padding: 2rem;
+    width: 90%;
+    padding: 0 2rem 2rem 2rem;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
-}
-
-#container-form-login h2 {
-    font-weight: 600;
-    letter-spacing: 0.1rem;
-    margin-bottom: 2rem;
-    position: relative;
 }
 
 #container-form-login form {
@@ -426,7 +418,7 @@ footer .social-media-title {
 }
 
 .input-field-login:first-child {
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
 }
 
 .input-field-login .underline::before {
@@ -437,12 +429,6 @@ footer .social-media-title {
     bottom: -5px;
     left: 0;
     background: rgba(0, 0, 0, 0.2);
-
-}
-
-.btn-edit-forms {
-    margin-top: 40px;
-
 }
 
 .input-field-login .underline::after {
@@ -452,11 +438,10 @@ footer .social-media-title {
     width: 100%;
     bottom: -5px;
     left: 0;
-
-    /* background: linear-gradient(45deg, #772014, #3F220F, #0C0B0B); */
-    /* transform: scaleX(0);
+    background: linear-gradient(45deg, #772014, #3F220F, #0C0B0B);
+    transform: scaleX(0);
     transition: all .3s ease-in-out;
-    transform-origin: left; */
+    transform-origin: left;
 }
 
 .input-field-login input:focus~.underline::after {
@@ -498,6 +483,13 @@ footer .social-media-title {
 #container-form-login form a {
     text-align: center;
     margin-top: 1rem;
+}
+
+.container-do-register{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
 }
 
 /* Fim CSS login */
@@ -574,9 +566,7 @@ input[id="sbtAdd"]{
     transition: all 0.2s ease-in 0.1s;
     cursor: pointer;
     border-radius: 0;
-    
 }
-
 
 #container-form-login form input[type="submit"] {
     margin-top: 2rem;
@@ -601,246 +591,20 @@ input[id="sbtAdd"]{
     margin-top: 1rem;
 }
 
-/* configurações das tags pais carrinho de compras */
-#bg-light
-{
-    background-color: #ddd;
-}
-
-.bg-white
-{
-    background-color: white;
-}
-
-.bg-yellow
-{
-    background: white;
-}
-
-.d-flex
-{
-    display: flex;
-}
-
-.flex-column
-{
-    flex-direction: column;
-}
-
-.d-grid
-{
-    display: grid;
-}
-
-.d-block
-{
-    display: block;
-}
-
-.y-center
-{
-    justify-content: center;
-}
-
-.x-center
-{
-    align-items: center;
-}
-
-.center
-{
-    align-items: center;
-    justify-content: center;
-}
-.main {
-    width: 100%;
-    padding: 15rem 0 5rem 0;
-    display: grid;
-    grid-template: "input btn";
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1), inset 0px 50px 30px rgba(255, 255, 255, 0.1);
-    column-gap: 10px;
-    align-items: center;
-}
-
-.adc-btn
-{
-    height: 50px;
-    border: none;
-    outline: none;
-    background-color: #772014;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-    color: white;
-    letter-spacing: 0.2rem;
-    cursor: pointer;
-    transition: .3s ease-in-out;
-}
-
-.adc-btn:hover
-{
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
-    transform: scale(1.05) translateX(5px);
-}
-
-.adc-btn:active
-{
-    box-shadow: inset 0px 0px 20px rgba(0, 0, 0, 0.07);
-    transform: scale(1);
-    transition: .1s;
-}
-
-.card
-{
-    width: 50%;
-    min-height: 300px;
-    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
-}
-
-.linha
-{
-    width: 90%;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    transition: .3s ease-in-out;
-}
-
-.linha-checked
-{
-    width: 90%;
-    box-shadow: 0px 0px 20px -15px rgba(0, 0, 0, 0.5);
-    margin-bottom: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    transition: .3s ease-in-out;
-}
-
-.linha:hover
-{
-    animation: breath 3s ease-in-out  infinite;
-}
-
-.label
-{
-    justify-content: start;
-    width: 80%;
-    word-wrap: break-word;
-}
-
-.label label
-{
-    display: block;
-    width: 100%;
-    padding: 20px 30px;
-}
-
-.btnExcluir
-{
-    border: none;
-    background-color: transparent;
-    padding: 20px;
-    outline: none;
-}
-
-
-
-@keyframes breath
-{
-    0%
-    {
-        transform: rotate(0deg) scale(1);
-    }
-
-    25%
-    {
-        transform: rotate(.5deg) scale(1.01);
-    }
-
-    50%
-    {
-        transform: rotate(0deg) scale(1);
-    }
-
-    75%
-    {
-        transform: rotate(-.5deg) scale(1.01);
-    }
-
-    100%
-    {
-        transform: rotate(0deg) scale(1);
-    }
-}
-
-.itens
-{
-    padding: 30px;
-}
-
-@media(max-width: 929px)
-{
-    .card
-    {
-        width: 70%;
-    }
-}
-
-@media(max-width: 689px)
-{
-    .head
-    {
-        grid-template: "input" "btn";
-        row-gap: 10px;
-    }
-}
-
-@media(max-width: 549px)
-{
-    .card
-    {
-        width: 100%;
-        min-height: 100vh;
-    }
-
-    .head
-    {
-        position: fixed;
-        z-index: 1;
-    }
-
-    .itens
-    {
-        margin-top: 170px;
-    }
-
-    .btn:hover
-    {
-        transform: scale(1) translateX(0px);
-        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-    }
-
-    .btn:active
-    {
-        transform: scale(.98);
-        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.0);
-    }
-} */
-
-/* Fim CSS carrinho de compras */
-
 /* CSS cadastro */
 
 #container-signup {
     display: flex;
     justify-content: center;
-    padding: 7rem 0 4rem 0;
+    padding: 10rem 0 4rem 0;
 }
 
 #container-general-signup {
     padding: 2rem;
-    width: 100%;
+    width: 90%;
+    background-color: #fff;
+    box-shadow: 5px 5px 15px rgb(0 0 0 / 20%);
+    border-radius: 8px;
 }
 
 .form-description {
@@ -881,6 +645,19 @@ select {
     font-size: 0.9rem;
     text-align: left;
     margin: 10px 1px;
+}
+
+.container-btn-register {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.container-do-login {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 2rem 1rem 1rem 1rem;
 }
 
 /* Fim CSS cadastro */
@@ -1215,40 +992,19 @@ select {
     color: #707070;
 }
 
+.margin-bottom-0 {
+    margin-bottom: 0;
+}
+
 .e-senha {
-    color: #772014;
-    font-size: 11px;
+    width: 100%;
+    text-align: right;
     margin-bottom: 20px;
 }
 
-.login-chekout {
-    background: #772014;
-    color: #fff;
-    margin-bottom: 40px;
-    width: 100%;
-    height: 40px;
-    align-content: center;
-    align-items: center;
-    cursor: pointer;
-    text-decoration: none;
-    font-size: 15px;
-    border-radius: 10px;
-    letter-spacing: 0.1rem;
-}
-
-.register {
-    background: #772014;
-    color: #fff;
-    margin-bottom: 40px;
-    width: 100%;
-    height: 40px;
-    align-content: center;
-    align-items: center;
-    cursor: pointer;
-    text-decoration: none;
-    font-size: 15px;
-    border-radius: 10px;
-    letter-spacing: 0.1rem;
+.e-senha a{
+    color: #772014;
+    font-size: 0.9rem;
 }
 
 #container-payment {
@@ -1259,12 +1015,12 @@ select {
     padding: 3rem 5rem;
     flex-direction: column;
     align-items: stretch;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
 }
 
 #container-payment h5 {
     color: #772014;
-    font-size: 14px;
+    font-size: 15px;
     margin-bottom: 10px;
 }
 
@@ -1275,7 +1031,7 @@ select {
 }
 
 .payment form {
-    padding: 10px 10px;
+    padding: 10px 0;
 }
 
 .card-name {
@@ -1287,6 +1043,7 @@ select {
     margin: 5px 0px;
     border-radius: 4px;
     border: 1px solid grey;
+    width: 100%;
 }
 
 .card-number {
@@ -1300,7 +1057,6 @@ select {
     margin: 5px 0px;
     border-radius: 4px;
     border: 1px solid grey;
-
 }
 
 .card-validity {
@@ -1312,6 +1068,7 @@ select {
     padding: 10px 15px;
     border: 1px solid grey;
     margin: 5px 0px;
+    width: 100%;
 }
 
 
@@ -1333,6 +1090,7 @@ select {
     margin: 5px 0px;
     border-radius: 4px;
     border: 1px solid grey;
+    width: 100%;
 }
 
 .cards-icons {
@@ -1393,9 +1151,7 @@ select {
 
 .sub-pay {
     flex-direction: row;
-
 }
-
 
 .cupons input {
     padding: 10px 15px;
@@ -1403,6 +1159,7 @@ select {
     border-radius: 4px;
     border: 1px solid grey;
     margin-bottom: 30px;
+    width: 100%;
 }
 
 .finalizar {
@@ -1411,24 +1168,7 @@ select {
     align-items: center;
     justify-items: center;
     display: flex;
-    margin: 20px;
-}
-
-
-.finalizar button {
-    background: #772014;
-    color: #fff;
-    margin-bottom: 40px;
     width: 100%;
-    height: 40px;
-    align-content: center;
-    align-items: center;
-    cursor: pointer;
-    text-decoration: none;
-    font-size: 15px;
-    font-size: 15px;  
-    border-radius: 10px;
-    letter-spacing: 0.1rem;
 }
 
 .sub {
@@ -1816,7 +1556,7 @@ label {
     /* CSS login */
 
     #container-main-login {
-        padding: 15rem 0 5rem 0;
+        padding: 14rem 0 5rem 0;
     }
 
     #container-form-login {
@@ -1828,11 +1568,12 @@ label {
     /* CSS cadastro */
 
     #container-signup {
-        padding: 10rem 0 5rem 0;
+        padding: 12rem 0 5rem 0;
     }
 
     #container-general-signup {
         width: 480px;
+        padding-top: 0;
     }
 
     /* Fim CSS cadastro */
@@ -1961,4 +1702,12 @@ label {
     }
 
     /* Fim CSS checkout */
+
+    /* CSS cadastro */
+
+    #container-signup {
+        padding: 14rem 0 5rem 0;
+    }
+
+    /* Fim CSS cadastro */
 }
