@@ -29,42 +29,36 @@ img {
 
 .btn-edit-forms {
     background-color: #772014;
-    padding: 10px 15px;
+    padding: 10px 20px;
     border-radius: 10px;
     color: #fff;
-    text-decoration: none;
-    font-size: 15px;
-    margin: 15px 5px;
-}
-
-.btn-edit-forms:hover {
-    background-color: #772014;
-    color: #fff;
+    font-size: 0.8rem;
+    letter-spacing: 0.2rem;
+    transition: all 0.2s ease-in 0.1s;
 }
 
 .btn-edit{
     align-self: center;
 }
 
-/*  se alguem nao gostar do laranja pode usar essa class com cor difenrete   */
-.color-opcinal-btn{
-    background-color: #772014;
-}
-
 .btn-edit-login{
     background-color: #772014;
     border-radius: 10px;
-    width: 250px;
-    padding: 10px 0px;
+    padding: 10px 80px;
+    margin-top: 40px;
     color: #fff;
-    font-size: 17px;
-    margin-top: 2rem;
+    font-size: 0.8rem;
+    letter-spacing: 0.2rem;
+    transition: all 0.2s ease-in 0.1s;
 }
 
-.btn-edit-login:hover{
-    background-color: #7a362d;
+.btn-edit-forms:hover, .btn-edit-login:hover {
+    background-color: #AF4319;
 }
 
+.underline-hover:hover {
+    text-decoration: underline;    
+}
 
 /* CSS header */
 
@@ -166,7 +160,7 @@ header {
 /* CSS footer */
 
 footer {
-    height: 300px;
+    height: 180px;
     background-color: #19180A;
     display: flex;
     flex-direction: column;
@@ -204,14 +198,8 @@ footer .social-media-title {
 
 /* CSS home */
 
-#carousel-mobile {
-    position: relative;
-    top: 7.4rem;
-    margin-bottom: 8rem;
-}
-
-#carousel-tablet-desktop {
-    display: none;
+#carousel-home {
+    margin-top: 7.4rem;
 }
 
 #categories {
@@ -236,6 +224,23 @@ footer .social-media-title {
     display: block;
     background: #772014;
     width: 5rem;
+    height: 1px;
+    margin: 0.5rem auto;
+}
+
+.title-section-login h2 {
+    color: #772014;
+    font-size: 1.5rem;
+    padding: 3rem 1rem 1.5rem 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+
+.title-section-login h2::after {
+    content: "";
+    display: block;
+    background: #772014;
+    width: 3rem;
     height: 1px;
     margin: 0.5rem auto;
 }
@@ -318,21 +323,6 @@ footer .social-media-title {
     color: #707070;
 }
 
-.add-button,
-#signup-news form button {
-    background-color: #772014;
-    padding: 0.8rem 2rem;
-    color: #fff;
-    font-size: 0.8rem;
-    letter-spacing: 0.2rem;
-    transition: all 0.2s ease-in 0.1s;
-}
-
-.add-button:hover,
-#signup-news form button:hover {
-    background-color: #AF4319;
-}
-
 #new-products,
 #product-listing-section {
     display: flex;
@@ -404,22 +394,18 @@ footer .social-media-title {
     background: white;
     display: flex;
     justify-content: center;
-    padding: 12rem 0 4rem 0;
+    padding: 10rem 0 4rem 0;
 }
 
 #container-form-login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     background-color: white;
-    width: 280px;
-    padding: 2rem;
+    width: 90%;
+    padding: 0 2rem 2rem 2rem;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
-}
-
-#container-form-login h2 {
-    font-weight: 600;
-    letter-spacing: 0.1rem;
-    margin-bottom: 2rem;
-    position: relative;
 }
 
 #container-form-login form {
@@ -427,12 +413,16 @@ footer .social-media-title {
     flex-direction: column;
 }
 
+.container-checkon {
+    padding-top: 20px;
+}
+
 .input-field-login {
     position: relative;
 }
 
 .input-field-login:first-child {
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
 }
 
 .input-field-login .underline::before {
@@ -443,12 +433,6 @@ footer .social-media-title {
     bottom: -5px;
     left: 0;
     background: rgba(0, 0, 0, 0.2);
-
-}
-
-.btn-edit-forms {
-    margin-top: 40px;
-
 }
 
 .input-field-login .underline::after {
@@ -458,11 +442,10 @@ footer .social-media-title {
     width: 100%;
     bottom: -5px;
     left: 0;
-
-    /* background: linear-gradient(45deg, #772014, #3F220F, #0C0B0B); */
-    /* transform: scaleX(0);
+    background: linear-gradient(45deg, #772014, #3F220F, #0C0B0B);
+    transform: scaleX(0);
     transition: all .3s ease-in-out;
-    transform-origin: left; */
+    transform-origin: left;
 }
 
 .input-field-login input:focus~.underline::after {
@@ -475,27 +458,12 @@ footer .social-media-title {
     letter-spacing: 0.1rem;
     color: rgba(0, 0, 0, 0.7);
     width: 100%;
-    /* margin: 10px 5px; */
 }
 
 .input-field-login input::placeholder {
     color: #707070;
 }
-
- /*
- #container-form-login form input[type="submit"] {
-    margin-top: 2rem;
-    padding: 0.4rem;
-    width: 100%;
-    background: linear-gradient(45deg, #772014, #3F220F, #0C0B0B);
-    cursor: pointer;
-    color: white;
-    font-size: 0.9rem;
-    font-weight: 300;
-    border-radius: 4px;
-    transition: all 0.3s ease;
-}
-*/
+    
 #container-form-login form input[type="submit"]:hover {
     letter-spacing: 0.5px;
     background: linear-gradient(45deg, #0C0B0B, #3F220F, #772014);
@@ -506,12 +474,18 @@ footer .social-media-title {
     margin-top: 1rem;
 }
 
+.container-do-register {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+
 /* Fim CSS login */
 
 /* inicio CSS carrinho de compras */
 
- .content-car
-{
+ .content-car {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -526,8 +500,7 @@ footer .social-media-title {
     height: 100px;
 }
 
-input[id="nomeDoItem"]
-{
+input[id="nomeDoItem"] {
     outline: none;
     border: none;
     height: 50px;
@@ -536,54 +509,75 @@ input[id="nomeDoItem"]
     transition: .5s ease-in-out;
 }
 
-input[id="nomeDoItem"]:focus
-{
+input[id="nomeDoItem"]:focus {
     transform: scale(1.05) translateX(-5px);
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.17);
 }
 
-input[type="checkbox"]
-{
+input[type="checkbox"] {
     margin: 0 20px;
 }
 
-ion-icon
-{
+ion-icon {
     transform: scale(1.5);
     color: rgba(0, 0, 0, 0.7);
 }
 
-#nomeDoItem
-{
+#nomeDoItem {
     grid-area: input;
 }
 
-#adc-btn
-{
+#adc-btn {
     grid-area: btn;
 }
 
 div.button {
-    
     display: flex;
     align-items: center;
     justify-content: center;
-    
 }
 
-/* Fim CSS carrinho de compras */
+#continuar {
+    margin-right: 50px;
+}
+
+#container-form-login form input[type="submit"] {
+    margin-top: 2rem;
+    padding: 0.4rem;
+    width: 100%;
+    background: linear-gradient(45deg, #772014, #3F220F, #0C0B0B);
+    cursor: pointer;
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 300;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+#container-form-login form input[type="submit"]:hover {
+    letter-spacing: 0.5px;
+    background: linear-gradient(45deg, #0C0B0B, #3F220F, #772014);
+}
+
+#container-form-login form a {
+    text-align: center;
+    margin-top: 1rem;
+}
+/* fim css carrinho de compras */
 
 /* CSS cadastro */
 
-#container-signup {
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    padding: 7rem 0 4rem 0;
-}
+    padding: 10rem 0 4rem 0;
+} */
 
 #container-general-signup {
     padding: 2rem;
-    width: 100%;
+    width: 90%;
+    background-color: #fff;
+    box-shadow: 5px 5px 15px rgb(0 0 0 / 20%);
+    border-radius: 8px;
 }
 
 .form-description {
@@ -624,6 +618,19 @@ select {
     font-size: 0.9rem;
     text-align: left;
     margin: 10px 1px;
+}
+
+.container-btn-register {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.container-do-login {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 2rem 1rem 1rem 1rem;
 }
 
 /* Fim CSS cadastro */
@@ -958,40 +965,19 @@ select {
     color: #707070;
 }
 
+.margin-bottom-0 {
+    margin-bottom: 0;
+}
+
 .e-senha {
-    color: #772014;
-    font-size: 11px;
+    width: 100%;
+    text-align: right;
     margin-bottom: 20px;
 }
 
-.login-chekout {
-    background: #772014;
-    color: #fff;
-    margin-bottom: 40px;
-    width: 100%;
-    height: 40px;
-    align-content: center;
-    align-items: center;
-    cursor: pointer;
-    text-decoration: none;
-    font-size: 15px;
-    border-radius: 10px;
-    letter-spacing: 0.1rem;
-}
-
-.register {
-    background: #772014;
-    color: #fff;
-    margin-bottom: 40px;
-    width: 100%;
-    height: 40px;
-    align-content: center;
-    align-items: center;
-    cursor: pointer;
-    text-decoration: none;
-    font-size: 15px;
-    border-radius: 10px;
-    letter-spacing: 0.1rem;
+.e-senha a{
+    color: #772014;
+    font-size: 0.9rem;
 }
 
 #container-payment {
@@ -1002,12 +988,12 @@ select {
     padding: 3rem 5rem;
     flex-direction: column;
     align-items: stretch;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
 }
 
 #container-payment h5 {
     color: #772014;
-    font-size: 14px;
+    font-size: 15px;
     margin-bottom: 10px;
 }
 
@@ -1018,7 +1004,7 @@ select {
 }
 
 .payment form {
-    padding: 10px 10px;
+    padding: 10px 0;
 }
 
 .card-name {
@@ -1030,6 +1016,7 @@ select {
     margin: 5px 0px;
     border-radius: 4px;
     border: 1px solid grey;
+    width: 100%;
 }
 
 .card-number {
@@ -1043,7 +1030,6 @@ select {
     margin: 5px 0px;
     border-radius: 4px;
     border: 1px solid grey;
-
 }
 
 .card-validity {
@@ -1055,6 +1041,7 @@ select {
     padding: 10px 15px;
     border: 1px solid grey;
     margin: 5px 0px;
+    width: 100%;
 }
 
 
@@ -1076,6 +1063,7 @@ select {
     margin: 5px 0px;
     border-radius: 4px;
     border: 1px solid grey;
+    width: 100%;
 }
 
 .cards-icons {
@@ -1136,9 +1124,7 @@ select {
 
 .sub-pay {
     flex-direction: row;
-
 }
-
 
 .cupons input {
     padding: 10px 15px;
@@ -1146,6 +1132,7 @@ select {
     border-radius: 4px;
     border: 1px solid grey;
     margin-bottom: 30px;
+    width: 100%;
 }
 
 .finalizar {
@@ -1154,24 +1141,7 @@ select {
     align-items: center;
     justify-items: center;
     display: flex;
-    margin: 20px;
-}
-
-
-.finalizar button {
-    background: #772014;
-    color: #fff;
-    margin-bottom: 40px;
     width: 100%;
-    height: 40px;
-    align-content: center;
-    align-items: center;
-    cursor: pointer;
-    text-decoration: none;
-    font-size: 15px;
-    font-size: 15px;  
-    border-radius: 10px;
-    letter-spacing: 0.1rem;
 }
 
 .sub {
@@ -1492,15 +1462,8 @@ label {
 
     /* CSS home */
 
-    #carousel-mobile {
-        display: none;
-    }
-
-    #carousel-tablet-desktop {
-        display: block;
-        position: relative;
-        top: 9rem;
-        margin-bottom: 8rem;
+    #carousel-home {
+        margin-top: 9rem;
     }
 
     #categories {
@@ -1566,7 +1529,7 @@ label {
     /* CSS login */
 
     #container-main-login {
-        padding: 15rem 0 5rem 0;
+        padding: 14rem 0 5rem 0;
     }
 
     #container-form-login {
@@ -1578,11 +1541,12 @@ label {
     /* CSS cadastro */
 
     #container-signup {
-        padding: 10rem 0 5rem 0;
+        padding: 12rem 0 5rem 0;
     }
 
     #container-general-signup {
         width: 480px;
+        padding-top: 0;
     }
 
     /* Fim CSS cadastro */
@@ -1711,4 +1675,12 @@ label {
     }
 
     /* Fim CSS checkout */
+
+    /* CSS cadastro */
+
+    #container-signup {
+        padding: 14rem 0 5rem 0;
+    }
+
+    /* Fim CSS cadastro */
 }

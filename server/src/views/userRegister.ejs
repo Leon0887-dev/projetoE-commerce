@@ -7,45 +7,44 @@
 					<div class="title-section">
 						<h2>Crie sua conta</h2>
 					</div>
-					<p class="form-description">* Preenchimento obrigatório</p>
 					<form action="" method="" class="container-formulario">
 						<div class="container-input">
-							<label for="name-id">*Nome Completo </label>
+							<label for="name-id">Nome Completo </label>
 							<div>
 								<input type="text" name="name" id="name-id" />
 							</div>
 						</div>
 
 						<div class="container-input">
-							<label for="email-id">*E-mail</label>
-							<div>
-								<input type="email" name="email" id="email-id" />
-							</div>
-						</div>
-
-						<div class="container-input">
-							<label for="cpf-id">*CPF</label>
+							<label for="cpf-id">CPF</label>
 							<div>
 								<input type="number" name="cpf" id="cpf-id" />
 							</div>
 						</div>
 
 						<div class="container-input">
+							<label for="email-id">E-mail</label>
+							<div>
+								<input type="email" name="email" id="email-id" />
+							</div>
+						</div>
+
+						<!-- <div class="container-input">
 							<label for="confirm-email-id">*Confirme seu e-mail</label>
 							<div>
 								<input type="email" name="confirmEmail" id="confirm-email-id" />
 							</div>
-						</div>
+						</div> -->
 
 						<div class="container-input">
-							<label for="password-id">*Senha</label>
+							<label for="password-id">Senha</label>
 							<div>
 								<input type="password" name="password" id="password-id" />
 							</div>
 						</div>
 
 						<div class="container-input">
-							<label for="confirm-password-id">*Confirme sua senha</label>
+							<label for="confirm-password-id">Confirme sua senha</label>
 							<div>
 								<input type="password" name="confirmPassword" id="confirm-password-id" />
 							</div>
@@ -61,8 +60,13 @@
 								<label for="newsletter-id">Deseja receber notícias por e-mail?</label>
 							</div>
 						</div>
-						<button class="btn-edit-forms" type="submit">Cadastrar</button>
+						<div class="container-btn-register">
+							<button class="btn-edit-login" type="submit">Cadastrar</button>
+						</div>
 					</form>
+					<div class="container-do-login">
+						<a href="/login" class="underline-hover">Já tem conta? Faça o login.</a>
+					</div>
 				</div>
 			</section>
 

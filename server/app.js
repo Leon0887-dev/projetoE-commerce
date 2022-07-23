@@ -1,6 +1,10 @@
 const express = require('express');
 const app = express();
 const port = 3000;
+
+// Importação do pacote express-session
+const session = require('express-session');
+
 //method-override.para usar PUT, DELETE no form
 const methodOverride = require("method-override");
 
@@ -39,6 +43,13 @@ app.use("/", indexRoute);
 app.use("/carrinho", carrinhoRoute);
 app.use("/contato", contactRoute);
 app.use("/administradorprodutos", administratorproductsRoute);
+
+// configuração do express-session
+app.use(session({
+    secret: 'Café House',
+    resave: false,
+    saveUninitialized: true,
+    }));
 
 app.listen(port, () => {
     console.log(`Estamos rodando na porta ${port}: http://localhost:3000/ `)
