@@ -1400,6 +1400,41 @@ label {
     margin-right: 10px;
 }
 
+/* Fim CSS forms changePassword */
+
+/* CSS not-found */
+
+#not-found-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 11rem 1rem 2rem 1rem;
+    text-align: center;
+    color: #772014;
+    letter-spacing: 0.1rem;
+}
+
+#not-found-text h1 {
+    font-size: 1rem;
+    padding-bottom: 1rem;
+}
+
+#not-found-text h2 {
+    font-size: 1.1rem;
+}
+
+#not-found-img {
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0 2rem 0;
+}
+
+#not-found-img img {
+    width: 40%;
+}
+
+/* Fim CSS not-found */
+
 /* Iniciando CSS para dispositivos com largura mínima de 425px */
 @media (min-width:425px) {
 
@@ -1618,6 +1653,39 @@ label {
 
     /* Fim CSS painel usuario */
 
+    /* CSS not-found */
+
+    #not-found-main {
+        flex-direction: row;
+        align-items: flex-end;
+        padding: 18rem 3rem 10rem 3rem;
+    }
+
+    #not-found-text {
+        width: 60%;
+    }
+
+    #not-found-text h1 {
+        font-size: 1.1rem;
+        padding-bottom: 1.1rem;
+    }
+
+    #not-found-text h2 {
+        font-size: 1.2rem;
+        margin-bottom: 0;
+    }
+
+    #not-found-img {
+        width: 40%;
+        padding: 0;
+    }
+
+    #not-found-img img {
+        width: 42%;
+    }
+
+    /* Fim CSS not-found */
+
 }
 
 /* Iniciando CSS para dispositivos com largura mínima de 1280px */
@@ -1684,4 +1752,20 @@ label {
     }
 
     /* Fim CSS cadastro */
+
+    /* CSS not-found */
+
+    #not-found-main {
+        padding: 16rem 3rem 12rem 3rem;
+    }
+
+    #not-found-img {
+        justify-content: left;
+    }
+
+    #not-found-img img {
+        width: 32%;
+    }
+
+    /* Fim CSS not-found */
 }
