@@ -567,12 +567,13 @@ div.button {
 
 /* CSS cadastro */
 
-    /* display: flex;
+#container-register {
+    display: flex;
     justify-content: center;
     padding: 10rem 0 4rem 0;
-} */
+}
 
-#container-general-signup {
+#container-general-register {
     padding: 2rem;
     width: 90%;
     background-color: #fff;
@@ -610,7 +611,7 @@ select {
     padding: 10px 15px;
 }
 
-.container-formulario {
+.container-form-register {
     margin: 3px auto;
 }
 
@@ -1540,11 +1541,11 @@ label {
 
     /* CSS cadastro */
 
-    #container-signup {
-        padding: 12rem 0 5rem 0;
+    #container-register {
+        padding: 13rem 0 5rem 0;
     }
 
-    #container-general-signup {
+    #container-general-register {
         width: 480px;
         padding-top: 0;
     }
