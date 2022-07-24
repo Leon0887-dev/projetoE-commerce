@@ -2,8 +2,12 @@ const express = require('express');
 const app = express();
 const port = 3000;
 
+
 // Importação do pacote express-session
 const session = require('express-session');
+
+//Importação do pacote cookie-parser
+const cookieParser = require("cookie-parser");
 
 //method-override.para usar PUT, DELETE no form
 const methodOverride = require("method-override");
@@ -32,6 +36,7 @@ app.use(methodOverride("_method"));
 app.use(express.json());
 //url encoded serve para a gente converter a carga da requisição em um formato que o json aceite
 app.use(express.urlencoded({ extended: false }));
+app.use(cookieParser());
 
 app.use("/produtos", productRoute);
 app.use("/checkout", checkoutRoute);
