@@ -24,8 +24,13 @@ As tecnologias usadas foram:
 ## Desenvolvedores 💻
 
 [**Bruno Sanches**](https://github.com/BrunoSan1991)
-[**David Manente **](https://github.com/davidsmanente)
+>
+[**David Manente**](https://github.com/davidsmanente)
+>
 [**Isabela Toledo**](https://github.com/isabellactac)
+>
 [**Leon Guilherme**](https://github.com/Leon0887-dev)
+>
 [**Ligia Pretel Eimantas**](https://github.com/ligiapretel)
+>
 [**Renan Tyga**](https://github.com/RenanTyga)
