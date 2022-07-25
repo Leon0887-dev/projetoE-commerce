@@ -1,0 +1,79 @@
+<%- include("./partials/head")%>
+<%- include("./partials/header")%>
+
+<main id="main-personalData">
+  <div class="container-md form-center">
+    <h2>Meus Dados</h2>
+    <form action="POST" class="row">
+      <div class="container-input col mb-3">
+        <label for="myEmail">E-mail*</label>
+        <input type="email"  id="myEmail" placeholder="jose.silva@email.com">
+        
+      </div>
+
+      <div class="container-input mb-3">
+        <label for="fullName" >Nome completo*</label>
+        <input type="text" class="form-control" id="fullName" placeholder="jose da siva">
+        
+      </div>
+
+      <div class="container-input  mb-3">
+        <label for="myCpf">CPF</label>
+        <input type="text"  id="myCpf" placeholder="123.456.789-1011">
+        
+      </div>
+
+      <div class="container-input col-md-12">
+        <label for="
+        indemnification">RG</label>
+        <input type="text"  id="
+              indemnification" placeholder="837">
+       
+      </div>
+
+      <div class="container-input col-md-12">
+        <label for="birthDate">Data de nascimento</label>
+        <input type="date" id="birthDate" placeholder="dd/mm/aaa">
+        
+      </div>
+
+      <div class="container-input col-md-12">
+        <label for="fone" >Telefone</label>
+        <input type="text" id="fone" placeholder="(11) 3333-5555">
+       
+      </div>
+
+
+
+
+      <div class="container-input col-md-12 ">
+        <label for="fone">Telefone celular</label>
+        <input type="text"  id="foneCel" placeholder="(81) 99797-4444">
+        
+      </div>
+
+
+      <div class="container-input col-md-12">
+        <label for="selectd-genre">Gênero</label>
+        <select  name="genre" id="selectd-genre">
+          <option selected value="1"></option>
+          <option value="2">Feminino</option>
+          <option value="3">Masculino</option>
+        </select>
+        
+      </div>
+
+      <div class="form-check col-md mt-3 ps-5">
+        <input type="checkbox" class="form-check-input" id="checked" checked>
+        <label for="checked" class="form-check-label">Desejo receber e-mails promocionais</label>
+      </div>
+
+      <div class="save-btn">
+        <input type="submit" value="Salvar alterações" class="btn-edit-forms">
+      </div>
+
+
+    </form>
+  </div>
+
+<%- include("./partials/footer")%>

@@ -1,0 +1,80 @@
+<%- include("./partials/head")%>
+	<%- include("./partials/header")%>
+
+		<main>
+			<section id="container-register">
+				<div id="container-general-register">
+					<div class="title-section">
+						<h2>Crie sua conta</h2>
+					</div>
+					<form action="" method="" class="container-form-register">
+						<div class="container-input">
+							<label for="name-id">Nome</label>
+							<div>
+								<input type="text" name="name" id="name-id" />
+							</div>
+						</div>
+
+						<div class="container-input">
+							<label for="last-name-id">Sobrenome</label>
+							<div>
+								<input type="text" name="last-name" id="last-name-id" />
+							</div>
+						</div>
+
+						<div class="container-input">
+							<label for="cpf-id">CPF</label>
+							<div>
+								<input type="number" name="cpf" id="cpf-id" />
+							</div>
+						</div>
+
+						<div class="container-input">
+							<label for="email-id">E-mail</label>
+							<div>
+								<input type="email" name="email" id="email-id" />
+							</div>
+						</div>
+
+						<!-- <div class="container-input">
+							<label for="confirm-email-id">*Confirme seu e-mail</label>
+							<div>
+								<input type="email" name="confirmEmail" id="confirm-email-id" />
+							</div>
+						</div> -->
+
+						<div class="container-input">
+							<label for="password-id">Senha</label>
+							<div>
+								<input type="password" name="password" id="password-id" />
+							</div>
+						</div>
+
+						<div class="container-input">
+							<label for="confirm-password-id">Confirme sua senha</label>
+							<div>
+								<input type="password" name="confirmPassword" id="confirm-password-id" />
+							</div>
+						</div>
+
+						<div class="container-checkbox">
+							<div class="container-checkbox">
+								<input type="checkbox" name="agree" id="agree-id" required />
+								<label for="agree-id">Li e concordo com os termos</label>
+							</div>
+							<div class="container-checkbox">
+								<input type="checkbox" name="newsletter" id="newsletter-id" />
+								<label for="newsletter-id">Deseja receber notícias por e-mail?</label>
+							</div>
+						</div>
+						<div class="container-btn-register">
+							<button class="btn-edit-login" type="submit">Cadastrar</button>
+						</div>
+					</form>
+					<div class="container-do-login">
+						<a href="/login" class="underline-hover">Já tem conta? Faça o login.</a>
+					</div>
+				</div>
+			</section>
+
+			<%- include("./partials/footer")%>

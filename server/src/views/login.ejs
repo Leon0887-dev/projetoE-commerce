@@ -1,0 +1,31 @@
+<%- include("./partials/head")%>
+  <%- include("./partials/header")%>
+
+<main id="container-main-login">
+  <section id="container-form-login">
+    <div class="title-section title-section-login">
+      <h2>Login</h2>
+    </div>
+    <form action="">
+      <div class="input-field-login">
+        <input type="email" name="username" id="email" placeholder="Digite seu e-mail" required>
+        <div class="underline"></div>
+      </div>
+      <div class="input-field-login">
+        <input type="password" name="password" id="password" placeholder="Digite sua senha" required>
+        <div class="underline"></div>
+      </div>
+      <div class ="container-checkon">
+        <input type = "checkbox" name ="agree" id = "agree-id" required>
+        <label for = "agree-id">Salvar informações do login</label> 
+      </div>
+      <div class="btn-edit">
+        <button class="btn-edit-login">Entrar</button>
+      </div>
+      <div class="container-do-register">
+        <a href="/criarConta" class="underline-hover">Não tem cadastro? Crie uma conta.</a>
+      </div>
+    </form>
+  </section>
+
+      <%- include("./partials/footer")%>
