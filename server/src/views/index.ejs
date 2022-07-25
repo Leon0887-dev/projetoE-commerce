@@ -85,127 +85,80 @@
     <div class="title-section">
       <h2>Mais vendidos</h2>
     </div>
-    <ul class="product-list">
-      <li class="best-sellers-item col-10 col-md-6 col-lg-3">
-        <a href="/produtos/detalheProduto">
-          <div class="product-img">
-            <img src="/img/img_produto.jpg" alt="">
-          </div>
-          <h4 class="product-list-title">Café Geisha em grãos - 250g</h4>
-          <p class="product-list-features">Sabor: Notas Florais, mel e rapadura</p>
-          <p class="product-list-features">Torra: Média</p>
-          <p class="product-list-price">R$ 29,99</p>
-        </a>
-        <a href="">
-          <button type="button" class="btn-edit-forms col-12">Adicionar à sacola</button>
-        </a>
-      </li>
-      <li class="best-sellers-item col-10 col-md-6 col-lg-3">
-        <a href="/produtos/detalheProduto">
-          <div class="product-img">
-            <img src="/img/img_produto2.jpg" alt="">
-          </div>
-          <h4 class="product-list-title">Café Geisha em grãos - 250g</h4>
-          <p class="product-list-features">Sabor: Notas Florais, mel e rapadura</p>
-          <p class="product-list-features">Torra: Média</p>
-          <p class="product-list-price">R$ 29,99</p>
-        </a>
-        <a href="">
-          <button type="button" class="btn-edit-forms col-12">Adicionar à sacola</button>
-        </a>
-      </li>
-      <li class="best-sellers-item col-10 col-md-6 col-lg-3">
-        <a href="/produtos/detalheProduto">
-          <div class="product-img">
-            <img src="/img/img_produto3.jpg" alt="">
-          </div>
-          <h4 class="product-list-title">Café Geisha em grãos - 250g</h4>
-          <p class="product-list-features">Sabor: Notas Florais, mel e rapadura</p>
-          <p class="product-list-features">Torra: Média</p>
-          <p class="product-list-price">R$ 29,99</p>
-        </a>
-        <a href="">
-          <button type="button" class="btn-edit-forms col-12">Adicionar à sacola</button>
-        </a>
-      </li>
-      <li class="best-sellers-item col-10 col-md-6 col-lg-3">
-        <a href="/produtos/detalheProduto">
-          <div class="product-img">
-            <img src="/img/img_produto4.jpg" alt="">
-          </div>
-          <h4 class="product-list-title">Café Geisha em grãos - 250g</h4>
-          <p class="product-list-features">Sabor: Notas Florais, mel e rapadura</p>
-          <p class="product-list-features">Torra: Média</p>
-          <p class="product-list-price">R$ 29,99</p>
-        </a>
-        <a href="">
-          <button type="button" class="btn-edit-forms col-12">Adicionar à sacola</button>
-        </a>
-      </li>
-    </ul>
+    <% if(products.length>0){%>
+          
+      <ul class="product-list">
+
+        <% for(let product of products) { %>
+          
+          <% if (product.bestSeller) { %>       
+
+            <li class="best-sellers-item col-10 col-md-6 col-lg-3">
+              <a href="/produtos/detalheProduto">
+                <div class="product-img">
+                  <img src="/img/<%= product.image %>" alt="">
+                </div>
+                <h4 class="product-list-title"><%= product.title %></h4>
+                <p class="product-list-features"><%= product.flavor %></p>
+                <p class="product-list-features"><%= product.roast %></p>
+                <p class="product-list-price">RS <%= product.price %></p>
+              </a>
+              <a href="">
+                <button type="button" class="btn-edit-forms col-12">Adicionar à sacola</button>
+              </a>
+            </li>
+          
+          <% } %> <!-- Fechando if -->
+
+        <% } %> <!-- Fechando for -->
+
+      </ul>
+
+    <% }else{ %> 
+
+      <h3>Nenhum produto encontrado em "Mais Vendidos".</h3>
+
+    <% } %> 
   </section>
   <section id="new-products">
     <div class="title-section">
       <h2>Lançamentos</h2>
     </div>
-    <ul class="product-list">
-      <li class="new-products-item col-10 col-md-6 col-lg-3">
-        <a href="/produtos/detalheProduto">
-          <div class="product-img">
-            <img src="/img/img_produto5.jpg" alt="">
-          </div>
-          <h4 class="product-list-title">Café Geisha em grãos - 250g</h4>
-          <p class="product-list-features">Sabor: Notas Florais, mel e rapadura</p>
-          <p class="product-list-features">Torra: Média</p>
-          <p class="product-list-price">R$ 29,99</p>
-        </a>
-        <a href="">
-          <button type="button" class="btn-edit-forms col-12">Adicionar à sacola</button>
-        </a>
-      </li>
-      <li class="new-products-item col-10 col-md-6 col-lg-3">
-        <a href="/produtos/detalheProduto">
-          <div class="product-img">
-            <img src="/img/img_produto9.jpg" alt="">
-          </div>
-          <h4 class="product-list-title">Café Geisha em grãos - 250g</h4>
-          <p class="product-list-features">Sabor: Notas Florais, mel e rapadura</p>
-          <p class="product-list-features">Torra: Média</p>
-          <p class="product-list-price">R$ 29,99</p>
-        </a>
-        <a href="">
-          <button type="button" class="btn-edit-forms col-12">Adicionar à sacola</button>
-        </a>
-      </li>
-      <li class="new-products-item col-10 col-md-6 col-lg-3">
-        <a href="/produtos/detalheProduto">
-          <div class="product-img">
-            <img src="/img/img_produto7.jpg" alt="">
-          </div>
-          <h4 class="product-list-title">Café Geisha em grãos - 250g</h4>
-          <p class="product-list-features">Sabor: Notas Florais, mel e rapadura</p>
-          <p class="product-list-features">Torra: Média</p>
-          <p class="product-list-price">R$ 29,99</p>
-        </a>
-        <a href="">
-          <button type="button" class="btn-edit-forms col-12">Adicionar à sacola</button>
-        </a>
-      </li>
-      <li class="new-products-item col-10 col-md-6 col-lg-3">
-        <a href="/produtos/detalheProduto">
-          <div class="product-img">
-            <img src="/img/img_produto8.jpg" alt="">
-          </div>
-          <h4 class="product-list-title">Café Geisha em grãos - 250g</h4>
-          <p class="product-list-features">Sabor: Notas Florais, mel e rapadura</p>
-          <p class="product-list-features">Torra: Média</p>
-          <p class="product-list-price">R$ 29,99</p>
-        </a>
-        <a href="">
-          <button type="button" class="btn-edit-forms col-12">Adicionar à sacola</button>
-        </a>
-      </li>
-    </ul>
+    <% if(products.length>0){%>
+
+        <ul class="product-list">
+
+        <% for(let product of products) { %>
+            
+          <% if (product.newProduct) { %>  
+
+            <li class="new-products-item col-10 col-md-6 col-lg-3">
+              <a href="/produtos/detalheProduto">
+                <div class="product-img">
+                  <img src="/img/<%= product.image %>" alt="">
+                </div>
+                <h4 class="product-list-title"><%= product.title %></h4>
+                  <p class="product-list-features"><%= product.flavor %></p>
+                <p class="product-list-features"><%= product.roast %></p>
+                <p class="product-list-price">R$ <%= product.price %> </p>
+              </a>
+              <a href="">
+                <button type="button" class="btn-edit-forms col-12">Adicionar à sacola</button>
+              </a>
+            </li>
+
+          <% } %> <!-- Fechando if -->
+
+        <% } %> <!-- Fechando for -->
+        
+      </ul>
+
+    <% }else{ %> 
+
+      <h3>Nenhum produto encontrado em "Lançamentos".</h3>
+
+    <% } %> 
+
   </section>
   <section id="signup-news">
     <form action="" method="" class="col-10 col-md-6 col-xl-5">
