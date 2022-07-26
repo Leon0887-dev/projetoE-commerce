@@ -14,6 +14,9 @@ const indexController = {
     },
     about: (req,res)=>{
         return res.render("about",{title:"Sobre Nós"});
+    },
+    blog: (req,res)=>{
+        return res.render("blog",{title:"Blog"});
     }
 };
 
