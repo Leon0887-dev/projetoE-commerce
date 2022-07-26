@@ -14,7 +14,7 @@ const methodOverride = require("method-override");
 const session = require('express-session');
 const cookieParser = require("cookie-parser");
 
-const indexRoute = require("./src/routes/indexRoute");
+const mainRoute = require("./src/routes/mainRoute");
 const productRoute = require("./src/routes/productRoute");
 const checkoutRoute = require("./src/routes/checkoutRoute");
 const loginRoute = require("./src/routes/loginRoute");
@@ -46,10 +46,10 @@ app.use("/checkout", checkoutRoute);
 app.use("/login", loginRoute);
 app.use("/areaDoCliente", userPanelRoute);
 app.use("/criarConta", userRegisterRoute);
-app.use("/", indexRoute);
 app.use("/carrinho", carrinhoRoute);
 app.use("/contato", contactRoute);
 app.use("/administradorprodutos", administratorproductsRoute);
+app.use("/", mainRoute);
 
 
 app.use((req,res)=>{

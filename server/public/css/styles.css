@@ -1500,6 +1500,57 @@ label {
 
 /* Fim CSS not-found */
 
+/* CSS about */
+
+#about-company, #blog-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 8rem 2rem 2rem 2rem;
+    color: #707070;
+    letter-spacing: 0.1rem;
+}
+
+.text-about-company {
+    padding-bottom: 1rem;
+}
+
+.img-about-company {
+    padding-bottom: 2rem;
+}
+
+/* Fim CSS about */
+
+/* CSS blog */
+
+#container-cafe-news {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.cafe-news-item {
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
+    margin: 0 0.5rem 2rem 0.5rem;
+}
+
+.cafe-news-item a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cafe-news-item h3 {
+    font-size: 1.1rem;
+    color: #707070;
+    letter-spacing: 0.1rem;
+    text-align: center;
+    padding: 1rem 0.5rem;    
+}
+
+/* Fim CSS blog */
+
 /* Iniciando CSS para dispositivos com largura mínima de 425px */
 @media (min-width:425px) {
 
@@ -1751,6 +1802,41 @@ label {
 
     /* Fim CSS not-found */
 
+    /* CSS about */
+
+    #about-company, #blog-section {
+        padding: 10rem 2rem 2rem 2rem;
+    }
+
+    .img-about-company {
+        text-align: center;
+    }
+
+    /* Fim CSS about */
+
+}
+
+/* Iniciando CSS para dispositivos com largura mínima de 1024px */
+@media (min-width:1024px) {
+
+    /* CSS about */
+
+    #about-company {
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 11rem 2rem 4rem 2rem;
+    }
+
+    .text-about-company {
+        padding-right: 2rem;
+    }
+
+    .img-about-company {
+        padding-left: 2rem;
+    }
+
+    /* Fim CSS about */
+
 }
 
 /* Iniciando CSS para dispositivos com largura mínima de 1280px */
@@ -1833,4 +1919,5 @@ label {
     }
 
     /* Fim CSS not-found */
+
 }
