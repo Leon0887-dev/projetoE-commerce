@@ -570,6 +570,64 @@ div.button {
     margin-right: 50px;
     
 }
+
+.cart-total {
+    flex: 0.25;
+    margin-left: 20px;
+    padding: 20px;
+    height: 240px;
+    border: 1px solid silver;
+    border-radius: 5px;
+}
+
+.cart-total p {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    font-size: 20px;
+}
+
+.cart-total a {
+    display: block;
+    text-align: center;
+    height: 40px;
+    background-color: #772014;
+    color: white;
+    text-decoration: none; 
+}
+
+.cart-total a:hover {
+    background-color: #3F220F;
+}
+
+@media screen and (max-width: 500px){
+    .product {
+        height: 150px;
+    }
+    .product > img {
+        height: 150px;
+        width: 200px;
+    }
+    .product-name, .product-price, .product-offer {
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 900px){
+    .cart {
+        flex-direction: column
+    }
+    .cart-total {
+        margin-left: 0;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 1220px){
+    .container {
+        max-width: 95%;
+    }
+}
 /* fim css carrinho de compras */
 
 /* CSS cadastro */
