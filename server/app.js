@@ -1,15 +1,7 @@
 const express = require('express');
 const app = express();
 const port = 3000;
-
-
-// Importação do pacote express-session
-const session = require('express-session');
-
-//Importação do pacote cookie-parser
-const cookieParser = require("cookie-parser");
-
-//method-override.para usar PUT, DELETE no form
+const path = require("path");
 const methodOverride = require("method-override");
 const session = require('express-session');
 const cookieParser = require("cookie-parser");
@@ -38,12 +30,19 @@ app.use(methodOverride("_method"));
 app.use(express.json());
 //url encoded serve para a gente converter a carga da requisição em um formato que o json aceite
 app.use(express.urlencoded({ extended: false }));
-<<<<<<< HEAD
 // Inicializando cookieParser
 app.use(cookieParser());
 // configuração do express-session
+app.use(session({
+    secret: 'Café House',
+    resave: false,
+    saveUninitialized: true,
+    }));
+    
+app.use("/produtos", productRoute);
 app.use("/checkout", checkoutRoute);
 app.use("/login", loginRoute);
+app.use("/administradorlogin", administratorloginRoute);
 app.use("/areaDoCliente", userPanelRoute);
 app.use("/criarConta", userRegisterRoute);
 app.use("/carrinho", carrinhoRoute);

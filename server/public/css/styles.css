@@ -532,6 +532,7 @@ footer .social-media-title {
 
 .product-name, .product-price, .product-offer {
     margin-bottom: 20px;
+<<<<<<< HEAD
 }
 
 .product-remove {
@@ -552,6 +553,28 @@ footer .social-media-title {
     border: 1px solid #772014;
 }
 
+=======
+}
+
+.product-remove {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 25px;
+    background-color: #772014;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;  
+}
+
+.product-remove:hover {
+    background-color: white;
+    color: #772014;
+    font-weight: 600;
+    border: 1px solid #772014;
+}
+
+>>>>>>> paginaLogin
 .product-quantity > input {
     width: 40px;
     padding: 5px;
