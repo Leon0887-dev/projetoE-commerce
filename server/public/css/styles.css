@@ -301,6 +301,10 @@ footer .social-media-title {
     align-items: center;
 }
 
+.product-img:hover {
+    border: 2px solid #707070;
+}
+
 .product-list-title {
     padding-top: 1rem;
     font-size: 1.3rem;
@@ -532,7 +536,6 @@ footer .social-media-title {
 
 .product-name, .product-price, .product-offer {
     margin-bottom: 20px;
-<<<<<<< HEAD
 }
 
 .product-remove {
@@ -553,28 +556,6 @@ footer .social-media-title {
     border: 1px solid #772014;
 }
 
-=======
-}
-
-.product-remove {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    padding: 10px 25px;
-    background-color: #772014;
-    color: white;
-    cursor: pointer;
-    border-radius: 5px;  
-}
-
-.product-remove:hover {
-    background-color: white;
-    color: #772014;
-    font-weight: 600;
-    border: 1px solid #772014;
-}
-
->>>>>>> paginaLogin
 .product-quantity > input {
     width: 40px;
     padding: 5px;
@@ -1492,7 +1473,7 @@ label {
 
 /* CSS not-found */
 
-#not-found-main {
+#not-found-main, #error-page-main {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1507,7 +1488,7 @@ label {
     padding-bottom: 1rem;
 }
 
-#not-found-text h2 {
+#not-found-text, #error-page-text h2 {
     font-size: 1.1rem;
 }
 
@@ -1519,6 +1500,10 @@ label {
 
 #not-found-img img {
     width: 40%;
+}
+
+#error-page-text {
+    padding: 3rem 0 2rem 0;
 }
 
 /* Fim CSS not-found */
@@ -1822,6 +1807,11 @@ label {
     #not-found-img img {
         width: 42%;
     }
+
+    #error-page-main {
+        padding: 13rem 0 2rem 0;
+        min-height: 80vh;
+    }    
 
     /* Fim CSS not-found */
 
