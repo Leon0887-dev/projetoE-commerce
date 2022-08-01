@@ -1,28 +1,63 @@
 <%- include("./partials/head")%>
 <%- include("./partials/header")%>
-<main id = "main-car" >
-<div class="bg-light">
-    <div class="content-car">
-        <section class="add-car">
-            <input type="text" id="nomeDoItem" placeholder="Novo item...">
-            <button type ="btn" class="btn-edit-forms">Adicionar</button>
-        </section>
 
-        <section class="car-list">
-            <!-- Aqui ficam os itens -->
-
-        </section>
-        <a href = "/checkout">
+<div class = "containerCurintia">
+    <h1>Carrinho de Compras</h1>
+    <div class = "cart">
+        <div class = "products">
+            <div class = "product">
+                <img src = "/img/img_produto5.jpg">
+                <div class = "product-info">
+                    <h3 class = "product-name">Novo Produto</h3>
+                    <h2 class = "product-price">R$ 29,99</h2>
+                    <h2 class = "product-offer">50%</h2>
+                    <p class = "product-quantity">Qnt : <input value = "1" name = "">
+                    <p class = "product-remove">
+                        <span class = "remove">Remover</span>
+                    </p>
+                </div>
+            </div>
+            <div class = "product">
+                <img src = "/img/img_produto2.jpg">
+                <div class = "product-info">
+                    <h3 class = "product-name">Novo Produto</h3>
+                    <h2 class = "product-price">R$ 32,99</h2>
+                    <h2 class = "product-offer">30%</h2>
+                    <p class = "product-quantity">Qnt : <input value = "1" name = "">
+                    <p class = "product-remove">
+                        <span class = "remove">Remover</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class = "cart-total">
+            <p>
+                <span>Total das Compras</span>
+                <span>R$ 62,98</span>
+            </p>
+            <p>
+                <span>Numero de Itens</span>
+                <span>2</span>
+            </p>
+            <p>
+                <span>Valor a Pagar</span>
+                <span>R$ 62,98</span>
+            </p>
+            <!-- <a href = "#">Finalizar Compra</a> -->
+        </div>
+</div>
         <div class ="button">
-        <button type="submit" class = "btn-edit-forms" >Finalizar Compras</button>
-        </a>
+            <a href = "/produtos">
+                <button type="submit" id = "continuar" class = "btn-edit-forms" >Continuar Comprando</button>
+            </a>
+            <a href = "/checkout">
+                <button type="submit" id = "finalizar" class = "btn-edit-forms" >Finalizar Compras</button>
+            </a>
         </div>
     </div>      
     </div>
 </div>
 </main>
-    <!-- <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
-    <script src="js/script.js"></script> -->
 
 
 <%- include("./partials/footer")%>
