@@ -60,6 +60,11 @@ img {
     text-decoration: underline;    
 }
 
+.center {
+    display: flex;
+    justify-content: center;
+}
+
 /* CSS header */
 
 header {
@@ -877,21 +882,32 @@ select {
 
 /* Fim CSS administrador produto */
 
-/* CSS produto */
-#identification {
-    padding: 11rem 2rem 2rem 2rem;
+/* CSS product */
+
+#main-product{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10rem 2rem 2rem 2rem;
 }
 
 #identification .product-name {
     text-align: center;
-    padding-bottom: 1rem;
+    padding: 1.2rem 0 1rem 0;
     font-size: 1.5rem;
     letter-spacing: 0.1rem;
     color: #707070;
+    text-transform: uppercase;
+}
+
+#identification .bg-product-features {
+    background-color: #F6F3F3;
+    padding: 1.5rem;
 }
 
 #identification h6 {
-    padding-bottom: 0.05rem;
+    padding: 0.3rem;
+    margin: 0;
     font-size: 0.9rem;
     letter-spacing: 0.1rem;
     color: #707070;
@@ -899,11 +915,14 @@ select {
 
 #product-picture {
     text-align: center;
-    padding: 0 2rem;
+}
+
+.picture-border {
+    border: 1px solid #707070;
 }
 
 #about {
-    padding: 1rem 2rem 3rem;
+    padding: 1rem 0 3rem 0;
 }
 
 #about .price {
@@ -950,7 +969,7 @@ select {
 #about .description {
     padding: 1rem;
     text-align: center;
-    margin-top: 10%;
+    font-size: 0.9rem;
     background-color: #F6F3F3;
     letter-spacing: 0.1rem;
     color: #707070;
@@ -968,6 +987,7 @@ select {
 #about .content {
     padding: 1rem;
     text-align: center;
+    font-size: 0.9rem;
     background-color: #F6F3F3;
     letter-spacing: 0.1rem;
     color: #707070;
@@ -982,7 +1002,7 @@ select {
     color: #707070;
 }
 
-/* Fim CSS produto */
+/* Fim CSS product */
 
 /* CSS checkout */
 
@@ -1827,6 +1847,14 @@ label {
 
     /* Fim CSS about */
 
+    /* CSS product */
+    
+    #main-product{
+        padding-top: 12rem;
+    }
+
+    /* Fim CSS product */
+
 }
 
 /* Iniciando CSS para dispositivos com largura mínima de 1024px */
@@ -1849,6 +1877,30 @@ label {
     }
 
     /* Fim CSS about */
+
+     /* CSS Product*/
+
+    #main-product{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding-top: 13rem;
+    }
+
+    #identification .product-name {
+        padding-top: 0;
+    }
+    
+    #product-picture {
+        width: 50%;
+    }
+
+    #container-details-product{
+        width: 40%;
+    }
+    
+    /* Fim CSS product */
 
 }
 
@@ -1876,27 +1928,6 @@ label {
     /* Fim CSS home */
 
     /* CSS checkout */
-
-    /* CSS Product*/
-
-    .productconfig {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-items: baseline;
-        justify-content: center;
-    }
-
-    .productconfig .column1product {
-        display: block;
-    }
-
-    .productconfig .column2product {
-        display: block;
-        width: 50%;
-    }
-
-    /* Fim CSS product */
 
     #main-checkout {
         width: 100%;
