@@ -553,18 +553,10 @@ footer .social-media-title {
     bottom: 20px;
     right: 20px;
     padding: 10px 25px;
-    background-color: #772014;
-    color: white;
     cursor: pointer;
     border-radius: 5px;  
 }
 
-.product-remove:hover {
-    background-color: white;
-    color: #772014;
-    font-weight: 600;
-    border: 1px solid #772014;
-}
 
 .product-quantity > input {
     width: 40px;
