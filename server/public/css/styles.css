@@ -864,6 +864,10 @@ select {
     padding: 50px 0;
     overflow-x: auto;
     text-align: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 #admin-products-list .table-admin-products{
