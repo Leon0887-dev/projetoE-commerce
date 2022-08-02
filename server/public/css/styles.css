@@ -60,6 +60,11 @@ img {
     text-decoration: underline;    
 }
 
+.center {
+    display: flex;
+    justify-content: center;
+}
+
 /* CSS header */
 
 header {
@@ -277,6 +282,10 @@ footer .social-media-title {
     border: 1px solid #707070;
 }
 
+.categorie-img:hover{
+    border: 2px solid #707070;
+}
+
 .category-title {
     color: #707070;
     font-size: 1.3rem;
@@ -313,6 +322,10 @@ footer .social-media-title {
     min-height: 352px;
     display: flex;
     align-items: center;
+}
+
+.product-img:hover {
+    border: 2px solid #707070;
 }
 
 .product-list-title {
@@ -556,7 +569,6 @@ footer .social-media-title {
     cursor: pointer;
     border-radius: 5px;  
 }
-
 
 .product-quantity > input {
     width: 40px;
@@ -886,21 +898,32 @@ tr:nth-child(even){
 
 /* Fim CSS administrador produto */
 
-/* CSS produto */
-#identification {
-    padding: 11rem 2rem 2rem 2rem;
+/* CSS product */
+
+#main-product{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10rem 2rem 2rem 2rem;
 }
 
 #identification .product-name {
     text-align: center;
-    padding-bottom: 1rem;
+    padding: 1.2rem 0 1rem 0;
     font-size: 1.5rem;
     letter-spacing: 0.1rem;
     color: #707070;
+    text-transform: uppercase;
+}
+
+#identification .bg-product-features {
+    background-color: #F6F3F3;
+    padding: 1.5rem;
 }
 
 #identification h6 {
-    padding-bottom: 0.05rem;
+    padding: 0.3rem;
+    margin: 0;
     font-size: 0.9rem;
     letter-spacing: 0.1rem;
     color: #707070;
@@ -908,11 +931,14 @@ tr:nth-child(even){
 
 #product-picture {
     text-align: center;
-    padding: 0 2rem;
+}
+
+.picture-border {
+    border: 1px solid #707070;
 }
 
 #about {
-    padding: 1rem 2rem 3rem;
+    padding: 1rem 0 3rem 0;
 }
 
 #about .price {
@@ -959,7 +985,7 @@ tr:nth-child(even){
 #about .description {
     padding: 1rem;
     text-align: center;
-    margin-top: 10%;
+    font-size: 0.9rem;
     background-color: #F6F3F3;
     letter-spacing: 0.1rem;
     color: #707070;
@@ -977,6 +1003,7 @@ tr:nth-child(even){
 #about .content {
     padding: 1rem;
     text-align: center;
+    font-size: 0.9rem;
     background-color: #F6F3F3;
     letter-spacing: 0.1rem;
     color: #707070;
@@ -991,7 +1018,7 @@ tr:nth-child(even){
     color: #707070;
 }
 
-/* Fim CSS produto */
+/* Fim CSS product */
 
 /* CSS checkout */
 
@@ -1482,7 +1509,7 @@ label {
 
 /* CSS not-found */
 
-#not-found-main {
+#not-found-main, #error-page-main {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1497,7 +1524,7 @@ label {
     padding-bottom: 1rem;
 }
 
-#not-found-text h2 {
+#not-found-text, #error-page-text h2 {
     font-size: 1.1rem;
 }
 
@@ -1509,6 +1536,10 @@ label {
 
 #not-found-img img {
     width: 40%;
+}
+
+#error-page-text {
+    padding: 3rem 0 2rem 0;
 }
 
 /* Fim CSS not-found */
@@ -1815,6 +1846,11 @@ label {
         width: 42%;
     }
 
+    #error-page-main {
+        padding: 13rem 0 2rem 0;
+        min-height: 80vh;
+    }    
+
     /* Fim CSS not-found */
 
     /* CSS about */
@@ -1828,6 +1864,14 @@ label {
     }
 
     /* Fim CSS about */
+
+    /* CSS product */
+    
+    #main-product{
+        padding-top: 12rem;
+    }
+
+    /* Fim CSS product */
 
 }
 
@@ -1851,6 +1895,30 @@ label {
     }
 
     /* Fim CSS about */
+
+     /* CSS Product*/
+
+    #main-product{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding-top: 13rem;
+    }
+
+    #identification .product-name {
+        padding-top: 0;
+    }
+    
+    #product-picture {
+        width: 50%;
+    }
+
+    #container-details-product{
+        width: 40%;
+    }
+    
+    /* Fim CSS product */
 
 }
 
@@ -1878,27 +1946,6 @@ label {
     /* Fim CSS home */
 
     /* CSS checkout */
-
-    /* CSS Product*/
-
-    .productconfig {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-items: baseline;
-        justify-content: center;
-    }
-
-    .productconfig .column1product {
-        display: block;
-    }
-
-    .productconfig .column2product {
-        display: block;
-        width: 50%;
-    }
-
-    /* Fim CSS product */
 
     #main-checkout {
         width: 100%;
