@@ -47,7 +47,7 @@ app.use("/areaDoCliente", userPanelRoute);
 app.use("/criarConta", userRegisterRoute);
 app.use("/carrinho", carrinhoRoute);
 app.use("/contato", contactRoute);
-app.use("/administradorprodutos", administratorproductsRoute);
+app.use("/administrador-produtos", administratorproductsRoute);
 app.use("/", mainRoute);
 
 

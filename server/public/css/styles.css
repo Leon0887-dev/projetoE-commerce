@@ -157,6 +157,20 @@ header {
 
 /* Fim CSS header */
 
+/* CSS header Admin*/
+
+#header-admin{
+    background-color: #19180A;
+    color: white;
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
+    padding: 1rem;
+}
+
+/*Fim CSS header Admin*/
+
 /* CSS footer */
 
 footer {
@@ -539,17 +553,8 @@ footer .social-media-title {
     bottom: 20px;
     right: 20px;
     padding: 10px 25px;
-    background-color: #772014;
-    color: white;
     cursor: pointer;
     border-radius: 5px;  
-}
-
-.product-remove:hover {
-    background-color: white;
-    color: #772014;
-    font-weight: 600;
-    border: 1px solid #772014;
 }
 
 .product-quantity > input {
@@ -819,7 +824,7 @@ select {
 
 .admin-products-title{
     color: #707070;
-    padding: 150px 0 0 0;
+    padding: 120px 0 0 0;
     text-align: center;
 }
 
@@ -846,29 +851,32 @@ select {
     padding: 5px;
 }
 
-
-#admin-products-list table {
-    width: 100%;;
+#admin-products-list{
+    padding: 50px 0;
+    overflow-x: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-#admin-products-list td, #admin-products-list th{
-    padding: 10px 5px;
+#admin-products-list .table-admin-products{
+    border-collapse: collapse;
 }
 
-#adim-products-list tr {
-    background-color: #e7a388e1;
+thead{
+    background-color: #3F220F;
+    color: white;
 }
 
-#admin-products-list tr:nth-child(even){
-    background-color: #da683b;
+th, td {
+    border: 1px solid black;
+    padding: 10px;
 }
 
-#admin-products-list tbody tr:hover{
-    background-color: #7abee0ee;
-}
-
-#admin-products-list .admin-products-actions a{
-    text-decoration: none;
+tr:nth-child(even){
+    background-color: #bca6a8;
 }
 
 /* Fim CSS administrador produto */
@@ -1564,7 +1572,9 @@ label {
 }
 
 /* Iniciando CSS para dispositivos com largura mínima de 576px */
-@media (min-width:576px) {}
+@media (min-width:576px) {
+
+}
 
 
 /* Iniciando CSS para dispositivos com largura mínima de 768px */
