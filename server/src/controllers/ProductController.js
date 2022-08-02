@@ -4,7 +4,25 @@ const productsJson = path.join("database","products.json");
 
 const productController = {
     index: (req,res)=>{
-        return res.render("productListing",{title:"Produtos"});
+
+        //Armazenando chave da query string
+        const category = req.query.categoria;
+
+        // Lendo arquivo json
+        let products = fs.readFileSync(productsJson,{enconding:'utf-8'})
+        // Transformando o formato JSON em um array novamente
+        products=JSON.parse(products);
+
+        //Verificando se existe alguma categoria
+        if(category){
+            //Filtrando por categoria
+            const productResult = products.filter((product)=>product.category==category);
+
+            //Renderizando a página com os produtos da categoria
+            return res.render("productListing",{title:"Produtos", products: productResult});
+        }
+
+        return res.render("productListing",{title:"Produtos", products});
     },
     show: (req,res)=>{
 

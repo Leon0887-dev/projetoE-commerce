@@ -268,6 +268,10 @@ footer .social-media-title {
     border: 1px solid #707070;
 }
 
+.categorie-img:hover{
+    border: 2px solid #707070;
+}
+
 .category-title {
     color: #707070;
     font-size: 1.3rem;

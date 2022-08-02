@@ -42,118 +42,26 @@
             <h2>Produtos</h2>
         </div>
         <ul class="product-list">
+
+          <% products.forEach(product => { %>
+
             <li class="product-listing-item col-10 col-md-6 col-lg-3">
-              <a href="/produtos/detalheProduto">
+              <a href="/produtos/<%= product.id %>">
                 <div class="product-img">
-                  <img src="/img/img_produto.jpg" alt="">
+                  <img src="/img/<%= product.image %>" alt="">
                 </div>
-                <h4 class="product-list-title underline-hover">Café Geisha em grãos - 250g</h4>
-                <p class="product-list-features">Sabor: Notas Florais, mel e rapadura</p>
-                <p class="product-list-features">Torra: Média</p>
-                <p class="product-list-price">R$ 29,99</p>
+                <h4 class="product-list-title underline-hover"><%= product.title %></h4>
+                <p class="product-list-features"><%= product.flavor %></p>
+                <p class="product-list-features"><%= product.roast %></p>
+                <p class="product-list-price">R$ <%= product.price %></p>
               </a>
               <a href="">
                 <button type="button" class="btn-edit-forms col-12">Adicionar à sacola</button>
               </a>
             </li>
-            <li class="product-listing-item col-10 col-md-6 col-lg-3">
-              <a href="/produtos/detalheProduto">
-                <div class="product-img">
-                  <img src="/img/img_produto2.jpg" alt="">
-                </div>
-                <h4 class="product-list-title underline-hover">Café Geisha em grãos - 250g</h4>
-                <p class="product-list-features">Sabor: Notas Florais, mel e rapadura</p>
-                <p class="product-list-features">Torra: Média</p>
-                <p class="product-list-price">R$ 29,99</p>
-              </a>
-              <a href="">
-                <button type="button" class="btn-edit-forms col-12">Adicionar à sacola</button>
-              </a>
-            </li>
-            <li class="product-listing-item col-10 col-md-6 col-lg-3">
-              <a href="/produtos/detalheProduto">
-                <div class="product-img">
-                  <img src="/img/img_produto3.jpg" alt="">
-                </div>
-                <h4 class="product-list-title underline-hover">Café Geisha em grãos - 250g</h4>
-                <p class="product-list-features">Sabor: Notas Florais, mel e rapadura</p>
-                <p class="product-list-features">Torra: Média</p>
-                <p class="product-list-price">R$ 29,99</p>
-              </a>
-              <a href="">
-                <button type="button" class="btn-edit-forms col-12">Adicionar à sacola</button>
-              </a>
-            </li>
-            <li class="product-listing-item col-10 col-md-6 col-lg-3">
-              <a href="/produtos/detalheProduto">
-                <div class="product-img">
-                  <img src="/img/img_produto4.jpg" alt="">
-                </div>
-                <h4 class="product-list-title underline-hover">Café Geisha em grãos - 250g</h4>
-                <p class="product-list-features">Sabor: Notas Florais, mel e rapadura</p>
-                <p class="product-list-features">Torra: Média</p>
-                <p class="product-list-price">R$ 29,99</p>
-              </a>
-              <a href="">
-                <button type="button" class="btn-edit-forms col-12">Adicionar à sacola</button>
-              </a>
-            </li>
-            <li class="product-listing-item col-10 col-md-6 col-lg-3">
-                <a href="/produtos/detalheProduto">
-                  <div class="product-img">
-                    <img src="/img/img_produto.jpg" alt="">
-                  </div>
-                  <h4 class="product-list-title underline-hover">Café Geisha em grãos - 250g</h4>
-                  <p class="product-list-features">Sabor: Notas Florais, mel e rapadura</p>
-                  <p class="product-list-features">Torra: Média</p>
-                  <p class="product-list-price">R$ 29,99</p>
-                </a>
-                <a href="">
-                  <button type="button" class="btn-edit-forms col-12">Adicionar à sacola</button>
-                </a>
-              </li>
-              <li class="product-listing-item col-10 col-md-6 col-lg-3">
-                <a href="/produtos/detalheProduto">
-                  <div class="product-img">
-                    <img src="/img/img_produto2.jpg" alt="">
-                  </div>
-                  <h4 class="product-list-title underline-hover">Café Geisha em grãos - 250g</h4>
-                  <p class="product-list-features">Sabor: Notas Florais, mel e rapadura</p>
-                  <p class="product-list-features">Torra: Média</p>
-                  <p class="product-list-price">R$ 29,99</p>
-                </a>
-                <a href="">
-                  <button type="button" class="btn-edit-forms col-12">Adicionar à sacola</button>
-                </a>
-              </li>
-              <li class="product-listing-item col-10 col-md-6 col-lg-3">
-                <a href="/produtos/detalheProduto">
-                  <div class="product-img">
-                    <img src="/img/img_produto3.jpg" alt="">
-                  </div>
-                  <h4 class="product-list-title underline-hover">Café Geisha em grãos - 250g</h4>
-                  <p class="product-list-features">Sabor: Notas Florais, mel e rapadura</p>
-                  <p class="product-list-features">Torra: Média</p>
-                  <p class="product-list-price">R$ 29,99</p>
-                </a>
-                <a href="">
-                  <button type="button" class="btn-edit-forms col-12">Adicionar à sacola</button>
-                </a>
-              </li>
-              <li class="product-listing-item col-10 col-md-6 col-lg-3">
-                <a href="/produtos/detalheProduto">
-                  <div class="product-img">
-                    <img src="/img/img_produto4.jpg" alt="">
-                  </div>
-                  <h4 class="product-list-title underline-hover">Café Geisha em grãos - 250g</h4>
-                  <p class="product-list-features">Sabor: Notas Florais, mel e rapadura</p>
-                  <p class="product-list-features">Torra: Média</p>
-                  <p class="product-list-price">R$ 29,99</p>
-                </a>
-                <a href="">
-                  <button type="button" class="btn-edit-forms col-12">Adicionar à sacola</button>
-                </a>
-              </li>
+           
+          <% }) %>
+
           </ul>
     </section>
 
