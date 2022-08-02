@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const productsJson = path.join("database","products.json");
+const productsJson = path.join("src","data","products.json");
 
 const productController = {
     index: (req,res)=>{
