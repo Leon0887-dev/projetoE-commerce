@@ -747,6 +747,10 @@ select {
     flex-direction: column;
 }
 
+#button02 {
+    margin-top: 30px;
+}
+
 .input-field-administrator {
     position: relative;
 }
