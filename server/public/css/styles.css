@@ -60,6 +60,11 @@ img {
     text-decoration: underline;    
 }
 
+.center {
+    display: flex;
+    justify-content: center;
+}
+
 /* CSS header */
 
 header {
@@ -156,6 +161,20 @@ header {
 }
 
 /* Fim CSS header */
+
+/* CSS header Admin*/
+
+#header-admin{
+    background-color: #19180A;
+    color: white;
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
+    padding: 1rem;
+}
+
+/*Fim CSS header Admin*/
 
 /* CSS footer */
 
@@ -263,6 +282,10 @@ footer .social-media-title {
     border: 1px solid #707070;
 }
 
+.categorie-img:hover{
+    border: 2px solid #707070;
+}
+
 .category-title {
     color: #707070;
     font-size: 1.3rem;
@@ -299,6 +322,10 @@ footer .social-media-title {
     min-height: 352px;
     display: flex;
     align-items: center;
+}
+
+.product-img:hover {
+    border: 2px solid #707070;
 }
 
 .product-list-title {
@@ -539,17 +566,8 @@ footer .social-media-title {
     bottom: 20px;
     right: 20px;
     padding: 10px 25px;
-    background-color: #772014;
-    color: white;
     cursor: pointer;
     border-radius: 5px;  
-}
-
-.product-remove:hover {
-    background-color: white;
-    color: #772014;
-    font-weight: 600;
-    border: 1px solid #772014;
 }
 
 .product-quantity > input {
@@ -741,6 +759,10 @@ select {
     flex-direction: column;
 }
 
+#button02 {
+    margin-top: 30px;
+}
+
 .input-field-administrator {
     position: relative;
 }
@@ -819,7 +841,7 @@ select {
 
 .admin-products-title{
     color: #707070;
-    padding: 150px 0 0 0;
+    padding: 120px 0 0 0;
     text-align: center;
 }
 
@@ -846,48 +868,62 @@ select {
     padding: 5px;
 }
 
-
-#admin-products-list table {
-    width: 100%;;
+#admin-products-list{
+    padding: 50px 0;
+    overflow-x: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-#admin-products-list td, #admin-products-list th{
-    padding: 10px 5px;
+#admin-products-list .table-admin-products{
+    border-collapse: collapse;
 }
 
-#adim-products-list tr {
-    background-color: #e7a388e1;
+thead{
+    background-color: #3F220F;
+    color: white;
 }
 
-#admin-products-list tr:nth-child(even){
-    background-color: #da683b;
+th, td {
+    border: 1px solid black;
+    padding: 10px;
 }
 
-#admin-products-list tbody tr:hover{
-    background-color: #7abee0ee;
-}
-
-#admin-products-list .admin-products-actions a{
-    text-decoration: none;
+tr:nth-child(even){
+    background-color: #bca6a8;
 }
 
 /* Fim CSS administrador produto */
 
-/* CSS produto */
-#identification {
-    padding: 11rem 2rem 2rem 2rem;
+/* CSS product */
+
+#main-product{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10rem 2rem 2rem 2rem;
 }
 
 #identification .product-name {
     text-align: center;
-    padding-bottom: 1rem;
+    padding: 1.2rem 0 1rem 0;
     font-size: 1.5rem;
     letter-spacing: 0.1rem;
     color: #707070;
+    text-transform: uppercase;
+}
+
+#identification .bg-product-features {
+    background-color: #F6F3F3;
+    padding: 1.5rem;
 }
 
 #identification h6 {
-    padding-bottom: 0.05rem;
+    padding: 0.3rem;
+    margin: 0;
     font-size: 0.9rem;
     letter-spacing: 0.1rem;
     color: #707070;
@@ -895,11 +931,14 @@ select {
 
 #product-picture {
     text-align: center;
-    padding: 0 2rem;
+}
+
+.picture-border {
+    border: 1px solid #707070;
 }
 
 #about {
-    padding: 1rem 2rem 3rem;
+    padding: 1rem 0 3rem 0;
 }
 
 #about .price {
@@ -946,7 +985,7 @@ select {
 #about .description {
     padding: 1rem;
     text-align: center;
-    margin-top: 10%;
+    font-size: 0.9rem;
     background-color: #F6F3F3;
     letter-spacing: 0.1rem;
     color: #707070;
@@ -964,6 +1003,7 @@ select {
 #about .content {
     padding: 1rem;
     text-align: center;
+    font-size: 0.9rem;
     background-color: #F6F3F3;
     letter-spacing: 0.1rem;
     color: #707070;
@@ -978,7 +1018,7 @@ select {
     color: #707070;
 }
 
-/* Fim CSS produto */
+/* Fim CSS product */
 
 /* CSS checkout */
 
@@ -1469,7 +1509,7 @@ label {
 
 /* CSS not-found */
 
-#not-found-main {
+#not-found-main, #error-page-main {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1484,7 +1524,7 @@ label {
     padding-bottom: 1rem;
 }
 
-#not-found-text h2 {
+#not-found-text, #error-page-text h2 {
     font-size: 1.1rem;
 }
 
@@ -1496,6 +1536,10 @@ label {
 
 #not-found-img img {
     width: 40%;
+}
+
+#error-page-text {
+    padding: 3rem 0 2rem 0;
 }
 
 /* Fim CSS not-found */
@@ -1564,7 +1608,9 @@ label {
 }
 
 /* Iniciando CSS para dispositivos com largura mínima de 576px */
-@media (min-width:576px) {}
+@media (min-width:576px) {
+
+}
 
 
 /* Iniciando CSS para dispositivos com largura mínima de 768px */
@@ -1800,6 +1846,11 @@ label {
         width: 42%;
     }
 
+    #error-page-main {
+        padding: 13rem 0 2rem 0;
+        min-height: 80vh;
+    }    
+
     /* Fim CSS not-found */
 
     /* CSS about */
@@ -1813,6 +1864,14 @@ label {
     }
 
     /* Fim CSS about */
+
+    /* CSS product */
+    
+    #main-product{
+        padding-top: 12rem;
+    }
+
+    /* Fim CSS product */
 
 }
 
@@ -1836,6 +1895,30 @@ label {
     }
 
     /* Fim CSS about */
+
+     /* CSS Product*/
+
+    #main-product{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding-top: 13rem;
+    }
+
+    #identification .product-name {
+        padding-top: 0;
+    }
+    
+    #product-picture {
+        width: 50%;
+    }
+
+    #container-details-product{
+        width: 40%;
+    }
+    
+    /* Fim CSS product */
 
 }
 
@@ -1863,27 +1946,6 @@ label {
     /* Fim CSS home */
 
     /* CSS checkout */
-
-    /* CSS Product*/
-
-    .productconfig {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-items: baseline;
-        justify-content: center;
-    }
-
-    .productconfig .column1product {
-        display: block;
-    }
-
-    .productconfig .column2product {
-        display: block;
-        width: 50%;
-    }
-
-    /* Fim CSS product */
 
     #main-checkout {
         width: 100%;

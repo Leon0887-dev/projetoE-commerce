@@ -21,7 +21,7 @@ const loginController = {
     res.clearCookie("admin");
 
     const usersJson = fs.readFileSync(
-      path.join(__dirname, "..", "data", "users.json"),
+      path.join("src", "data", "users.json"),
       "utf-8"
     );
 

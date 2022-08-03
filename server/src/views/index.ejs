@@ -56,27 +56,27 @@
     </div>
     <div id="container-categories-items">
       <div class="category-item col-6 col-md-3">
-        <a href="/produtos">
+        <a href="/produtos?categoria=Grãos">
           <img class="categorie-img" src="/img/categoria_graos.jpg" alt="Grãos">
-          <h3 class="category-title">Grãos</h3>
+          <h3 class="category-title underline-hover">Grãos</h3>
         </a>
       </div>
       <div class="category-item col-6 col-md-3">
-        <a href="/produtos">
+        <a href="/produtos?categoria=Moídos">
           <img class="categorie-img" src="/img/categoria_moidos.jpg" alt="Moídos">
-          <h3 class="category-title">Moídos</h3>
+          <h3 class="category-title underline-hover">Moídos</h3>
         </a>
       </div>
       <div class="category-item col-6 col-md-3">
-        <a href="/produtos">
+        <a href="/produtos?categoria=Cápsulas">
           <img class="categorie-img" src="/img/categoria_capsulas.jpg" alt="Cápsulas">
-          <h3 class="category-title">Cápsulas</h3>
+          <h3 class="category-title underline-hover">Cápsulas</h3>
         </a>
       </div>
       <div class="category-item col-6 col-md-3">
-        <a href="/produtos">
+        <a href="/produtos?categoria=Sachês">
           <img class="categorie-img" src="/img/categoria_saches.jpg" alt="Sachês">
-          <h3 class="category-title">Sachês</h3>
+          <h3 class="category-title underline-hover">Sachês</h3>
         </a>
       </div>
     </div>
@@ -94,14 +94,14 @@
           <% if (product.bestSeller) { %>       
 
             <li class="best-sellers-item col-10 col-md-6 col-lg-3">
-              <a href="/produtos/detalheProduto">
+              <a href="/produtos/<%= product.id %> ">
                 <div class="product-img">
                   <img src="/img/<%= product.image %>" alt="">
                 </div>
-                <h4 class="product-list-title"><%= product.title %></h4>
+                <h4 class="product-list-title underline-hover"><%= product.title %></h4>
                 <p class="product-list-features"><%= product.flavor %></p>
                 <p class="product-list-features"><%= product.roast %></p>
-                <p class="product-list-price">RS <%= product.price %></p>
+                <p class="product-list-price">R$ <%= product.price %></p>
               </a>
               <a href="">
                 <button type="button" class="btn-edit-forms col-12">Adicionar à sacola</button>
@@ -133,12 +133,12 @@
           <% if (product.newProduct) { %>  
 
             <li class="new-products-item col-10 col-md-6 col-lg-3">
-              <a href="/produtos/detalheProduto">
+              <a href="/produtos/detalheProduto/<%= product.id %>">
                 <div class="product-img">
                   <img src="/img/<%= product.image %>" alt="">
                 </div>
-                <h4 class="product-list-title"><%= product.title %></h4>
-                  <p class="product-list-features"><%= product.flavor %></p>
+                <h4 class="product-list-title underline-hover"><%= product.title %></h4>
+                <p class="product-list-features"><%= product.flavor %></p>
                 <p class="product-list-features"><%= product.roast %></p>
                 <p class="product-list-price">R$ <%= product.price %> </p>
               </a>
