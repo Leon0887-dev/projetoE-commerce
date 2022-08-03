@@ -1356,7 +1356,11 @@ label {
 }
 
 .img-user{
-   margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   margin-bottom: 15px;
+
 }
 
 .img-user .img{
@@ -1372,18 +1376,11 @@ label {
 }
 
 
-
-
-
-.img-user-login{
-    margin-top: 30px;
-}
-
-
 .img-user-login a,
 .img a{
     color: #19180A;
 }
+
 
 .img-user-login a:hover,
 .img a:hover{
@@ -1788,6 +1785,24 @@ label {
 
     .panel-options-screen {
         flex-direction: row;
+    }
+
+    .img{
+        flex-direction: row;
+    }
+
+    .img-user .img{
+        width: 80px;
+        height: 80px;
+    }
+
+    .img-user-login{
+        padding: 0 10px;
+    }
+
+    .img-user-login a{
+        padding: 3px;
+        word-break: break-word;
     }
 
     .list-item a {
