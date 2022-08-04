@@ -1318,12 +1318,16 @@ h4 {
 #main-user,
 #main-myRequests,
 #main-address,
-#main-changePassword,
-#main-personalData {
+#main-changePassword
+ {
     padding: 10rem 0 3rem 0;
-    padding-top: 156px;
 }
 
+#main-personalData {
+    padding-top: 13rem;
+    margin-bottom: 3rem;
+    
+}
 .section-forms {
     margin: 40px 0;
 }
@@ -1345,6 +1349,11 @@ label {
 /* Fim CSS user */
 
 /* CSS painel usuário */
+
+
+.display-panel-user{
+    display: none;
+}
 
 .panel-options-screen {
     display: flex;
@@ -1426,6 +1435,10 @@ label {
 .personal-data--info>h6 {
     color: #19180A;
 
+}
+
+.forms-panel-user{
+    
 }
 
 .personal-data--info>p {
@@ -1752,9 +1765,14 @@ label {
     #main-myRequests,
     #main-address,
     #main-changePassword,
-    #main-personalData,
-    #main-car {
+    #main-car
+     {
         padding: 13rem 0 3rem 0;
+    }
+    
+
+    .display-panel-user{
+        display: block;
     }
 
     .form-center {
