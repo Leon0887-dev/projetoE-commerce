@@ -1,6 +1,6 @@
 const checkoutController = {
     index: (req,res)=>{
-        return res.render("checkout",{title:"Carrinho"});
+        return res.render("checkout",{title:"Checkout"});
     }
 };
 
