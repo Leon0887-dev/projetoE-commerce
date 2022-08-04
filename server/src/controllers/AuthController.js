@@ -2,12 +2,16 @@ const fs = require("fs");
 const path = require("path");
 const bcrypt = require("../helpers/bcrypt");
 
-const loginController = {
-    index: (req,res)=>{
-        return res.render("login",{title:"Login"});
-    },
+const authController = {
+  register: (req,res)=>{
+      return res.render("userRegister",{title:"Criar Conta"});
+  },
 
-    // Tela para realizar login
+  create: (req,res)=>{
+    
+  },
+
+  // Tela para realizar login
   login: (req, res) => {
     return res.render("login", {
       title: "Login",
@@ -63,9 +67,7 @@ const loginController = {
     res.clearCookie("admin");
     res.redirect("/");
   },
-
-
 };
 
 
-module.exports = loginController;
+module.exports = authController;

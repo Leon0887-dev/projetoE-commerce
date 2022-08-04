@@ -1,0 +1,244 @@
+/* ESTILOS ADMIN */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    font-family: "Source Sans Pro", sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+.btn-edit-forms {
+    background-color: #772014;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 0.8rem;
+    letter-spacing: 0.2rem;
+    transition: all 0.2s ease-in 0.1s;
+}
+
+.btn-edit{
+    align-self: center;
+}
+
+.btn-edit-login{
+    background-color: #772014;
+    border-radius: 10px;
+    padding: 10px 80px;
+    margin-top: 40px;
+    color: #fff;
+    font-size: 0.8rem;
+    letter-spacing: 0.2rem;
+    transition: all 0.2s ease-in 0.1s;
+}
+
+.btn-edit-forms:hover, .btn-edit-login:hover {
+    background-color: #AF4319;
+}
+
+.title-section {
+    text-align: center;
+}
+
+.title-section h2 {
+    color: #772014;
+    font-size: 1.5rem;
+    padding: 3rem 1rem 1.5rem 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+
+.title-section h2::after {
+    content: "";
+    display: block;
+    background: #772014;
+    width: 5rem;
+    height: 1px;
+    margin: 0.5rem auto;
+}
+
+/* CSS header Admin*/
+
+#header-admin{
+    background-color: #19180A;
+    color: white;
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
+    padding: 1rem;
+}
+
+/*Fim CSS header Admin*/
+
+/* CSS admin login */
+
+#container-main-admin {
+    background: white;
+    display: flex;
+    justify-content: center;
+    padding: 7rem 0 4rem 0;
+}
+
+#container-form-admin {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 380px;
+    background-color: white;
+    padding: 0 2rem 2rem 2rem;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+
+#container-form-admin form {
+    display: flex;
+    flex-direction: column;
+}
+
+#container-form-admin form button{
+    margin-top: 50px;
+    margin-bottom: 10px;    
+}
+
+.input-field-admin {
+    position: relative;
+}
+
+.input-field-admin:first-child {
+    margin-bottom: 2rem;
+}
+
+.input-field-admin .underline::before {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.input-field-admin .underline::after {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+    background: linear-gradient(45deg, #772014, #3F220F, #0C0B0B);
+    transform: scaleX(0);
+    transition: all .3s ease-in-out;
+    transform-origin: left;
+}
+
+.input-field-admin input:focus~.underline::after {
+    transform: scaleX(1);
+}
+
+.input-field-admin input {
+    outline: none;
+    font-size: 0.9rem;
+    letter-spacing: 0.1rem;
+    color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+}
+
+.input-field-admin input::placeholder {
+    color: #707070;
+}
+
+#container-form-admin form input[type="submit"]:hover {
+    letter-spacing: 0.5px;
+    background: linear-gradient(45deg, #0C0B0B, #3F220F, #772014);
+}
+
+#container-form-admin form a {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+/* Fim CSS admin login */
+
+/* Início CSS admin produto */
+
+#admin-products-bgc{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.admin-products-title{
+    color: #707070;
+    padding: 120px 0 0 0;
+    text-align: center;
+}
+
+
+.admin-products-add{
+    color: #707070;
+    padding: 20px 0;
+    text-align: center;
+}
+
+
+#admin-products-add-1{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px
+}
+
+#admin-products-add-1 input{
+    border: 1px solid #0C0B0B;
+    margin-bottom: 15px;
+    padding: 5px;
+}
+
+#admin-products-list{
+    padding: 50px 0;
+    overflow-x: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#admin-products-list .table-admin-products{
+    border-collapse: collapse;
+}
+
+thead{
+    background-color: #3F220F;
+    color: white;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+tr:nth-child(even){
+    background-color: #bca6a8;
+}
+
+/* Fim CSS admin produto */

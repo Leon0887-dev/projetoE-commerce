@@ -9,13 +9,10 @@ const cookieParser = require("cookie-parser");
 const mainRoute = require("./src/routes/mainRoute");
 const productRoute = require("./src/routes/productRoute");
 const checkoutRoute = require("./src/routes/checkoutRoute");
-const loginRoute = require("./src/routes/loginRoute");
-const administratorloginRoute = require("./src/routes/administratorloginRoute");
-const administratorproductsRoute = require("./src/routes/administratorproductsRoute");
+const authRoute = require("./src/routes/authRoute");
+const adminRoute = require("./src/routes/admin/adminRoute");
 const userPanelRoute = require("./src/routes/userPanelRoute");
-const userRegisterRoute = require("./src/routes/userRegisterRoute");
 const carrinhoRoute = require("./src/routes/carrinhoRoute");
-const contactRoute = require("./src/routes/contactRoute");
 
 
 // Configurando pasta estática para acesso externo (onde ficam as imagens e css)
@@ -41,13 +38,10 @@ app.use(session({
     
 app.use("/produtos", productRoute);
 app.use("/checkout", checkoutRoute);
-app.use("/login", loginRoute);
-app.use("/administradorlogin", administratorloginRoute);
 app.use("/areaDoCliente", userPanelRoute);
-app.use("/criarConta", userRegisterRoute);
 app.use("/carrinho", carrinhoRoute);
-app.use("/contato", contactRoute);
-app.use("/administrador-produtos", administratorproductsRoute);
+app.use("/admin", adminRoute);
+app.use("/", authRoute);
 app.use("/", mainRoute);
 
 
