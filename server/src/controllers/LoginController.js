@@ -28,9 +28,9 @@ const loginController = {
     const users = JSON.parse(usersJson);
 
     const { email, senha } = req.body;
-    const userAuth = users.find((user) => {
-      if (user.email === email) {
-        if (bcrypt.compareHash(senha, user.senha)) {
+    const userAuth = users.find((users) => {
+      if (users.email === email) {
+        if (bcrypt.compareHash(senha, users.senha)) {
           return true;
         }
         // O if de cima é a mesma coisa da linha abaixo
