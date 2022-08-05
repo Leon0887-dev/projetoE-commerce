@@ -20,68 +20,43 @@
                 </div>
             </div>
             <div id="admin-products-list">
-                <table class="table-admin-products">
-                    <thead>
-                        <tr>
-                            <th>Produto</th>
-                            <th>Código</th>
-                            <th>Quantidade</th>
-                            <th>Tipo</th>
-                            <th>Peso</th>
-                            <th>Ação</th>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Café House</td>
-                            <td>CH500G</td>
-                            <td>10</td>
-                            <td>Moído</td>
-                            <td>500 g</td>
-                            <td class="admin-products-actions">
-                                <a href="admin-product-view">Visualizar</a>
-                                <a href="admin-product-delete">Excluir</a>
-                                <a href="admin-product-edit">Editar</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Café House</td>
-                            <td>CH500G</td>
-                            <td>10</td>
-                            <td>Moído</td>
-                            <td>500 g</td>
-                            <td class="admin-products-actions">
-                                <a href="admin-product-view">Visualizar</a>
-                                <a href="admin-product-delete">Excluir</a>
-                                <a href="admin-product-edit">Editar</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Café House</td>
-                            <td>CH500G</td>
-                            <td>10</td>
-                            <td>Moído</td>
-                            <td>500 g</td>
-                            <td class="admin-products-actions">
-                                <a href="admin-product-view">Visualizar</a>
-                                <a href="admin-product-delete">Excluir</a>
-                                <a href="admin-product-edit">Editar</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Café House</td>
-                            <td>CH500G</td>
-                            <td>10</td>
-                            <td>Moído</td>
-                            <td>500 g</td>
-                            <td class="admin-products-actions">
-                                <a href="admin-product-view">Visualizar</a>
-                                <a href="admin-product-delete">Excluir</a>
-                                <a href="admin-product-edit">Editar</a>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+                <% if(products.length>0){ %>
+                    <table class="table-admin-products">
+                        <thead>
+                            <tr>
+                                <th>Produto</th>
+                                <th>Código</th>
+                                <th>Quantidade</th>
+                                <th>Categoria</th>
+                                <th>Status</th>
+                                <th>Ação</th>
+                        </thead>
+                        <tbody>
+                            <!-- Trazendo os produtos cadastrados -->
+                            <% for(let product of products){ %>
+                                <tr>
+                                    <td><%= product.title %></td>
+                                    <td><%= product.sku %></td>
+                                    <td><%= product.quantity %></td>
+                                    <td><%= product.category %></td>
+                                    <% if(product.active){ %>
+                                        <td>Ativo</td>
+                                    <% }else{ %>
+                                        <td>Inativo</td>
+                                    <% } %>
+                                    <td class="admin-products-actions">
+                                        <a href="/admin/produtos/<%= product.id %>">Visualizar</a>
+                                        <a href="/admin/produtos/editar/<%= product.id %>">Editar</a>
+                                        <a href="/admin/produtos/deletar<%= product.id %>">Excluir</a>
+                                    </td>
+                                </tr>
+                            <% } %>                         
+                        </tbody>
+                    </table>
+                <% }else{ %>
+                    <h2>Nenhum produto encontrado.</h2>
+                <% } %>
 
+            </div>
     </main>
 </body>

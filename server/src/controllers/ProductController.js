@@ -35,9 +35,7 @@ const productController = {
     show: (req, res) => {
 
         //Pegando o id que virá via url - GET
-        const {
-            id
-        } = req.params;
+        const {id} = req.params;
 
         // Lendo arquivo json
         let products = fs.readFileSync(productsJson, {

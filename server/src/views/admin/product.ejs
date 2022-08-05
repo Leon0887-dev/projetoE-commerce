@@ -1,0 +1,27 @@
+<%- include("./partials/head")%>
+<%- include("./partials/header")%>
+
+<body>
+    <main id="main-admin-products">
+            <h2 class="admin-products-add">Detalhe do Produto</h2>
+            <p><%= product.title %> </p>
+            <p><%= product.brand %> </p>
+            <p><%= product.flavor %> </p>
+            <p><%= product.roast %> </p>
+            <p><%= product.description %> </p>
+            <p><%= product.content %> </p>
+            <p><%= product.format %> </p>
+            <p><%= product.price %> </p>
+            <p><%= product.installment %> </p>
+            <p><%= product.sku %> </p>
+            <p><%= product.quantity %> </p>
+            <p><%= product.category %> </p>
+            <p><%= product.bestSeller %> </p>
+            <p><%= product.newProduct %> </p>
+            <p><%= product.active %> </p>
+            <img src="/img/<%= product.image %> " alt="">
+
+
+
+    </main>
+</body>

@@ -242,3 +242,22 @@ tr:nth-child(even){
 }
 
 /* Fim CSS admin produto */
+
+/* CSS admin error */
+
+#error-page-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 13rem 0 2rem 0;    
+    text-align: center;
+    color: #772014;
+    letter-spacing: 0.1rem;
+    min-height: 80vh;
+}
+
+#error-page-text h2 {
+    font-size: 1.1rem;
+}
+
+/* Fim CSS admin error */
