@@ -5,6 +5,9 @@ const path = require("path");
 const methodOverride = require("method-override");
 const session = require('express-session');
 const cookieParser = require("cookie-parser");
+const bcrypt = require('bcrypt');
+
+
 
 const mainRoute = require("./src/routes/mainRoute");
 const productRoute = require("./src/routes/productRoute");
@@ -16,7 +19,7 @@ const userPanelRoute = require("./src/routes/userPanelRoute");
 const userRegisterRoute = require("./src/routes/userRegisterRoute");
 const carrinhoRoute = require("./src/routes/carrinhoRoute");
 const contactRoute = require("./src/routes/contactRoute");
-
+const authRoute = require("./src/routes/authRoute");
 
 // Configurando pasta estática para acesso externo (onde ficam as imagens e css)
 app.use(express.static(path.join(__dirname, "public")));
@@ -32,12 +35,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 // Inicializando cookieParser
 app.use(cookieParser());
-// configuração do express-session
-app.use(session({
-    secret: 'Café House',
-    resave: false,
-    saveUninitialized: true,
-    }));
+// ! NUNCA MANDAR O SECRET PARA O GITHUB
+app.use(session({ secret: "Café House"}));
+
+
     
 app.use("/produtos", productRoute);
 app.use("/checkout", checkoutRoute);
@@ -49,7 +50,7 @@ app.use("/carrinho", carrinhoRoute);
 app.use("/contato", contactRoute);
 app.use("/administrador-produtos", administratorproductsRoute);
 app.use("/", mainRoute);
-
+app.use("/", authRoute);
 
 app.use((req,res)=>{
     return res.status(404).render("notFound", {title: "Página não encontrada"});

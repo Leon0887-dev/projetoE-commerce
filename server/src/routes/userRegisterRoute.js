@@ -4,4 +4,6 @@ const userRegisterController = require("../controllers/UserRegisterController");
 
 router.get("/",userRegisterController.index);
 
+
+
 module.exports = router;

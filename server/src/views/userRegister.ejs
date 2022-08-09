@@ -7,7 +7,7 @@
 					<div class="title-section">
 						<h2>Crie sua conta</h2>
 					</div>
-					<form action="" method="" class="container-form-register">
+					<form action="/criarConta" method="post" class="container-form-register">
 						<div class="container-input">
 							<label for="name-id">Nome</label>
 							<div>
@@ -18,14 +18,16 @@
 						<div class="container-input">
 							<label for="last-name-id">Sobrenome</label>
 							<div>
-								<input type="text" name="last-name" id="last-name-id" />
+								<input type="text" name="sobrenome" id="last-name-id" />
 							</div>
 						</div>
 
 						<div class="container-input">
-							<label for="cpf-id">CPF</label>
+							<label form ="cpf-id">CPF</label>
 							<div>
-								<input type="number" name="cpf" id="cpf-id" />
+								<input type="text" name="cpf" \
+									pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" \
+									title="Digite um CPF no formato: xxx.xxx.xxx-xx">
 							</div>
 						</div>
 
@@ -53,7 +55,7 @@
 						<div class="container-input">
 							<label for="confirm-password-id">Confirme sua senha</label>
 							<div>
-								<input type="password" name="confirmPassword" id="confirm-password-id" />
+								<input type="password" name="confirmar_senha" id="confirm-password-id" />
 							</div>
 						</div>
 

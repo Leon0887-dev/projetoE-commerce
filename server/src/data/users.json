@@ -1,5 +1,24 @@
 [
-
-    
-    
+  {
+    "id": 1,
+    "nome": "Zé",
+    "sobrenome": "Donalds",
+    "cpf": 99999999944,
+    "senha": "123",
+    "email": "ze@gmail.com",
+    "admin": true,
+    "criadoEm": "2021-09-13T00:55:49.130Z",
+    "modificadoEm": "2021-09-30T00:40:53.344Z"
+  },
+  {
+    "id": 2,
+    "nome": "Lucia",
+    "sobrenome": "Donalds",
+    "cpf": 99999999911,
+    "senha": "123",
+    "email": "lucia@gmail.com",
+    "admin": false,
+    "criadoEm": "2021-09-13T00:55:49.130Z",
+    "modificadoEm": "2021-09-30T00:40:53.344Z"
+  }
 ]
