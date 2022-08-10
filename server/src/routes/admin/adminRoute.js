@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const upload = require('../../helpers/multer');
-const authController = require("../../controllers/admin/AuthController");
+const authController = require("../../controllers/AuthController");
 const productController = require("../../controllers/admin/ProductController");
 
 router.get("/", authController.index);

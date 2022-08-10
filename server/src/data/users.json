@@ -28,4 +28,14 @@
   "admin": false,
   "criadoEm": "2022-08-10T01:06:34.520Z",
   "modificadoEm": "2022-08-10T01:06:34.520Z"
+}, {
+  "id": 4,
+  "nome": "Bruno",
+  "sobrenome": "Sanches",
+  "cpf": "121.121.121-44",
+  "senha": "123",
+  "email": "bsan.designgrafico@gmail.com",
+  "admin": false,
+  "criadoEm": "2022-08-10T02:33:04.895Z",
+  "modificadoEm": "2022-08-10T02:33:04.895Z"
 }]
