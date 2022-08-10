@@ -1,22 +1,23 @@
 <%- include("./partials/head")%>
-  <%- include("./partials/header")%>
+<%- include("./partials/header")%>
 
-    <main id="container-main-login">
-      <section id="container-form-login">
+<body>
+    <main id="container-main-admin">
+      <section id="container-form-admin">
         <div class="title-section title-section-login">
           <h2>Login Admin</h2>
         </div>
         <form action="">
-          <div class="input-field-login">
+          <div class="input-field-admin">
             <input type="email" name="username" id="username" placeholder="Digite seu e-mail" required>
             <div class="underline"></div>
           </div>
-          <div class="input-field-login">
+          <div class="input-field-admin">
             <input type="password" name="password" id="password" placeholder="Digite sua senha" required>
             <div class="underline"></div>
           </div>
-          <button type="submit" class="btn-edit-forms" id = "button02">Enviar</button>
+          <button type="submit" class="btn-edit-forms">Entrar</button>
         </form>
       </section>
-
-      <%- include("./partials/footer")%>
+    </main>
+</body>
