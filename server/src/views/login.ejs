@@ -5,6 +5,9 @@
   <section id="container-form-login">
     <div class="title-section title-section-login">
       <h2>Login</h2>
+      <% if(locals.error){ %>
+        <h2 class="error-alert"><%= error.message %></h2>
+        <% } %>
     </div>
     <form action="/login" method="post">
       <div class="input-field-login">
@@ -12,7 +15,7 @@
         <div class="underline"></div>
       </div>
       <div class="input-field-login">
-        <input type="password" name="password" id="password" placeholder="Digite sua senha" required>
+        <input type="password" name="senha" id="password" placeholder="Digite sua senha" required>
         <div class="underline"></div>
       </div>
       <div class ="container-checkon">

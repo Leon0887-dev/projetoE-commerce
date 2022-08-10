@@ -4,7 +4,7 @@ const path = require("path");
 const authController = {
     //Tela para cadastro do usuario 
     register: (req, res) => {
-        return res.render("register", {
+        return res.render("userRegister", {
             title: "criarConta",
         });
     },
@@ -20,13 +20,14 @@ const authController = {
         
         const {nome, sobrenome, cpf, email, senha, confirmar_senha} = 
         req.body;
+        console.log(nome);
         if (!nome || 
             !sobrenome || 
             !cpf || 
             !email || 
             !senha || 
             !confirmar_senha) {
-            return res.render("criarConta", {
+            return res.render("userRegister", {
                 title: "criarConta",
                 error: {
                     message: "Preencha todos os campos",
@@ -35,7 +36,7 @@ const authController = {
         }
     
         if (senha !== confirmar_senha){
-            return res.render("criarConta", {
+            return res.render("userRegister", {
                 title: "criarConta",
                 error: {
                     message: "Senhas Divergentes",
@@ -43,6 +44,7 @@ const authController = {
             });
         }
         //Objeto com dados do novo usuario
+        const newId = users[users.length -1].id +1;
         const newUser = {
             id: newId,
             nome,
@@ -52,13 +54,8 @@ const authController = {
             email,
             admin: false,
             criadoEm : new Date(),
-            midficadoEm: new Date(),
+            modificadoEm: new Date(),
         };
-        const newId = users[users.length -1].id + 1;
-        newUser.criadoEm = new Date();
-        newUser.modificadosEm = new Date();
-        newUser.admin = false;
-        newUser.id = newId;
         users.push(newUser);
         fs.writeFileSync(
             path.join(__dirname, "..", "data", "users.json"),
