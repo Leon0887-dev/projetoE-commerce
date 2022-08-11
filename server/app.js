@@ -28,14 +28,17 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 // Inicializando cookieParser
 app.use(cookieParser());
-// ! NUNCA MANDAR O SECRET PARA O GITHUB
-app.use(session({ secret: "Café House"}));
-
+// Configuração do express-session
+app.use(session({
+    secret: 'Café House',
+    resave: false,
+    saveUninitialized: true,
+    }));
 
     
 app.use("/produtos", productRoute);
 app.use("/checkout", checkoutRoute);
-app.use("/areaDoCliente", userPanelRoute);
+app.use("/area-do-cliente", userPanelRoute);
 app.use("/carrinho", carrinhoRoute);
 app.use("/admin", adminRoute);
 app.use("/", authRoute);

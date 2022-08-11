@@ -3,9 +3,9 @@ const router = express.Router();
 const userPanelController = require("../controllers/UserPanelController");
 
 router.get("/",userPanelController.index);
-router.get("/meusPedidos",userPanelController.myRequests);
-router.get("/meusEnderecos",userPanelController.myAddresses);
-router.get("/meusDados",userPanelController.myPersonalData);
-router.get("/alterarSenha",userPanelController.changePassword);
+router.get("/pedidos",userPanelController.myRequests);
+router.get("/enderecos",userPanelController.myAddresses);
+router.get("/dados",userPanelController.myPersonalData);
+router.get("/senha",userPanelController.changePassword);
 
 module.exports = router;
