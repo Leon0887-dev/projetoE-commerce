@@ -2,6 +2,8 @@ const fs = require("fs");
 const path = require("path");
 
 const productsFile = path.join(__dirname, "..","..","data","products.json");
+const imagesFolder = path.join(__dirname, "..","..","..","public","img");
+
 
 const Product = {
     findAll(){
@@ -64,6 +66,27 @@ const Product = {
         fs.writeFileSync(productsFile,JSON.stringify(products));
 
         return product;
+    },
+    delete(id){
+        const products = this.findAll();
+
+        const product = products.findIndex((product)=>product.id===parseInt(id));
+
+        if(product === -1){
+            return false
+        }
+
+        // Para apagar a imagem da pasta
+        fs.unlinkSync(imagesFolder+"/"+products[product].image)
+
+        // console.log(imagesFolder+"/"+products[product].image)
+
+        products.splice(product,1);
+
+        fs.writeFileSync(productsFile,JSON.stringify(products));
+
+        return products;
+
     }
 };
 

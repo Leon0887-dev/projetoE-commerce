@@ -74,6 +74,36 @@ const productController = {
 
 		res.send(products);
     },
+    delete:(req,res)=>{
+        const {id} = req.params;
+        //Acessando o método findById do model
+        const product = Product.findById(id);
+        //Verificando se existe algum produto, se não existir, renderiza a view error
+        if(!product){
+            return res.render("admin/error", {
+                title: "Ops!",
+                message: "Produto não encontrado."
+            });
+        }
+        return res.render("admin/productDelete", {
+            title: "Deletar Produto",
+            product
+        });
+    },
+    destroy:(req,res)=>{
+        const {id} = req.params;
+		const products = Product.delete(id);
+
+        if(!products){
+            return res.render("admin/error", {
+                title: "Ops!",
+                message: "Produto não encontrado."
+            });
+        }
+
+        res.send(products);
+
+    }
 };
 
 module.exports = productController;

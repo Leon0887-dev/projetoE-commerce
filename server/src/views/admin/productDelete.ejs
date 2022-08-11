@@ -1,0 +1,34 @@
+<%- include("./partials/head")%>
+<%- include("./partials/header")%>
+
+<body>
+    <main id="main-admin-products">
+        <% if(locals.product){ %>
+
+            <h2 class="admin-products-add">Tem certeza que desejar deletar o produto abaixo?</h2>
+            <p><%= product.title %> </p>
+            <p><%= product.brand %> </p>
+            <p><%= product.flavor %> </p>
+            <p><%= product.roast %> </p>
+            <p><%= product.description %> </p>
+            <p><%= product.content %> </p>
+            <p><%= product.format %> </p>
+            <p><%= product.price %> </p>
+            <p><%= product.installment %> </p>
+            <p><%= product.sku %> </p>
+            <p><%= product.quantity %> </p>
+            <p><%= product.category %> </p>
+            <p><%= product.bestSeller %> </p>
+            <p><%= product.newProduct %> </p>
+            <p><%= product.active %> </p>
+            <img src="/img/<%= product.image %> " alt="">
+
+            <form action="/admin/produtos/deletar/<%= product.id %>?_method=delete" method="post">
+                <a href="/admin/produtos"><button class="btn-edit-forms" type="button">Não</button></a>
+                <button class="btn-edit-forms" type="submit">Sim</button>
+            </form>
+        <% }else{ %>
+            <h2>Produto não encontrado.</h2>
+        <% } %>
+    </main>
+</body>
