@@ -5,21 +5,14 @@ const path = require("path");
 const methodOverride = require("method-override");
 const session = require('express-session');
 const cookieParser = require("cookie-parser");
-const bcrypt = require('bcrypt');
-
-
 
 const mainRoute = require("./src/routes/mainRoute");
 const productRoute = require("./src/routes/productRoute");
 const checkoutRoute = require("./src/routes/checkoutRoute");
-const loginRoute = require("./src/routes/loginRoute");
-// const administratorloginRoute = require("./src/routes/administratorloginRoute");
-// const administratorproductsRoute = require("./src/routes/administratorproductsRoute");
 const userPanelRoute = require("./src/routes/userPanelRoute");
-const userRegisterRoute = require("./src/routes/userRegisterRoute");
 const carrinhoRoute = require("./src/routes/carrinhoRoute");
-// const contactRoute = require("./src/routes/contactRoute");
 const authRoute = require("./src/routes/authRoute");
+const adminRoute = require("./src/routes/admin/adminRoute");
 
 // Configurando pasta estática para acesso externo (onde ficam as imagens e css)
 app.use(express.static(path.join(__dirname, "public")));
@@ -42,15 +35,11 @@ app.use(session({ secret: "Café House"}));
     
 app.use("/produtos", productRoute);
 app.use("/checkout", checkoutRoute);
-app.use("/login", loginRoute);
-// app.use("/administradorlogin", administratorloginRoute);
 app.use("/areaDoCliente", userPanelRoute);
-app.use("/criarConta", userRegisterRoute);
 app.use("/carrinho", carrinhoRoute);
-// app.use("/contato", contactRoute);
-// app.use("/administrador-produtos", administratorproductsRoute);
-app.use("/", mainRoute);
+app.use("/admin", adminRoute);
 app.use("/", authRoute);
+app.use("/", mainRoute);
 
 app.use((req,res)=>{
     return res.status(404).render("notFound", {title: "Página não encontrada"});

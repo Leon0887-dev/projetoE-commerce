@@ -20,7 +20,6 @@ const authController = {
         
         const {nome, sobrenome, cpf, email, senha, confirmar_senha} = 
         req.body;
-        console.log(nome);
         if (!nome || 
             !sobrenome || 
             !cpf || 
