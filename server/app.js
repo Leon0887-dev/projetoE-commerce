@@ -36,6 +36,7 @@ app.use(session({
     }));
 
     
+    
 app.use("/produtos", productRoute);
 app.use("/checkout", checkoutRoute);
 app.use("/area-do-cliente", userPanelRoute);
