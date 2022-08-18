@@ -48,4 +48,24 @@
     "admin": false,
     "criadoEm": "2022-08-11T00:50:16.948Z",
     "modificadoEm": "2022-08-11T00:50:16.948Z"
+}, {
+    "id": 6,
+    "nome": "Bruno",
+    "sobrenome": "Sanches",
+    "cpf": "111.111.111-44",
+    "senha": "$2b$10$ahilpwy3hpGmD6yTch0Wz.z7wad/S4R6qtsjK/2EgHi9L6uwajEpi",
+    "email": "bsan.designgrafico@gmail.com",
+    "admin": false,
+    "criadoEm": "2022-08-17T00:34:44.124Z",
+    "modificadoEm": "2022-08-17T00:34:44.124Z"
+}, {
+    "id": 7,
+    "nome": "carla",
+    "sobrenome": "abreu",
+    "cpf": "222.222.222-22",
+    "senha": "$2b$10$koB/4x/HM2wGavk/XegXD.2w.VWU32zxL0zTsk2IZM8JYvxK4FnqS",
+    "email": "carla@gmail.com",
+    "admin": false,
+    "criadoEm": "2022-08-17T23:04:51.265Z",
+    "modificadoEm": "2022-08-17T23:04:51.265Z"
 }]

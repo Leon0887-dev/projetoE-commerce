@@ -1,11 +1,14 @@
 const fs = require ("fs");
 const path = require("path");
+const bcrypt = require("../helpers/bcrypt");
 
 const authController = {
     //Tela para cadastro do usuario 
     register: (req, res) => {
         return res.render("userRegister", {
             title: "criarConta",
+            user: req.cookies.user,
+            admin: req.cookies.admin,
         });
     },
     //Processamento do cadastro do usuario
@@ -48,8 +51,8 @@ const authController = {
             id: newId,
             nome,
             sobrenome,
-            cpf,
-            senha,
+            cpf: bcrypt.generateHash(cpf),
+            senha: bcrypt.generateHash(senha),
             email,
             admin: false,
             criadoEm : new Date(),
@@ -60,43 +63,61 @@ const authController = {
             path.join(__dirname, "..", "data", "users.json"),
             JSON.stringify(users)
         );
-        return res.redirect("/")
+        res.redirect("/")
     },
     //Tela para realizar o login
     login: (req, res) => {
-        console.log(req.session.email)
         return res.render("login", {
-            title: "Login",
-        })
+          title: "login",
+          user: req.cookies.user,
+          admin: req.cookies.admin,
+        });
     },
     //Processamento do login
     auth: (req, res) => {
+        res.clearCookie("user");
+        res.clearCookie("admin");
+
         const usersJson = fs.readFileSync(
             path.join(__dirname, "..", "data", "users.json"),
             "utf-8"
         );
-            const users = JSON.parse(usersJson);
-            const {email, senha} = req.body;
-            const userAuth = users.find(user => {
-                if (user.email === email){
-                    if(user.senha === senha){
-                        return true;
-                    }
-                }
-            });
+        const users = JSON.parse(usersJson);
+
+        const { email, senha } = req.body;
+        const userAuth = users.find((user) => {
+          if (user.email === email) {
+            if (bcrypt.compareHash(senha, user.senha)) {
+              return true;
+            }
+            // O if de cima é a mesma coisa da linha abaixo
+            // return bcrypt.compareHash(senha, user.senha);
+          }
+        });
             if (!userAuth){
                 return res.render("login", {
-                    title: "Login",
+                    title: "login",
                     error: {
                         message: "Email ou senha inválido"
                     }
-                })
+                });
             }
+              // Filtra as chaves que o objeto irá ter
+    const user = JSON.parse(
+        JSON.stringify(userAuth, ["id", "nome", "sobrenome", "admin"])
+      );
             req.session.email = userAuth.email;
+            res.cookie("user", user);
+            res.cookie("admin", user.admin);
             res.redirect("/");
     },
     //Processamento do deslogar
-    logout: (req, res) => {},
+    logout: (req, res) => {
+        req.session.destroy();
+        res.clearCookie("user");
+        res.clearCookie("admin");
+        res.redirect("/");
+    },
 };
 
 module.exports = authController;
