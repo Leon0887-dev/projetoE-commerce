@@ -48,4 +48,14 @@
     "admin": false,
     "criadoEm": "2022-08-11T00:50:16.948Z",
     "modificadoEm": "2022-08-11T00:50:16.948Z"
+}, {
+    "id": 6,
+    "nome": "Paula",
+    "sobrenome": "Nelo",
+    "cpf": "111.111.111-11",
+    "senha": "123",
+    "email": "paula@email.com",
+    "admin": false,
+    "criadoEm": "2022-08-15T23:21:49.769Z",
+    "modificadoEm": "2022-08-15T23:21:49.769Z"
 }]

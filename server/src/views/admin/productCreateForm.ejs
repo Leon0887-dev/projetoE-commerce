@@ -6,46 +6,109 @@
             <h2 class="admin-products-add">Adicionar Produto</h2>
             <div id="admin-products-bgc">
                 <form id="admin-products-add-1" action="/admin/produtos/cadastro" method="POST" enctype="multipart/form-data">
-                    <input type="text" name="title" id="title" placeholder="Produto">
+
+                    <% if (locals.errors) { %>
+                        <p class="alert-form"> Existem campos no formulário que devem ser preenchidos </p>
+                    <% } %>
+
+                    <input type="text" name="title" id="title" placeholder="Produto" value="<%= locals.old ? old.title : '' %>">
+                    <% if (locals.errors && errors.title) { %>
+                        <p class="alert-form"> <%= errors.title %> </p>
+                    <% } %>
+                    
                     <label for="image">Foto do produto</label>
                     <input type="file" name="image" id="image">
-                    <input type="text" name="brand" id="brand" placeholder="Marca">
-                    <input type="text" name="flavor" id="flavor" placeholder="Sabor">
-                    <input type="text" name="roast" id="roast" placeholder="Torra">
-                    <textarea name="description" id="description" cols="30" rows="10" placeholder="Descrição"></textarea>
-                    <input type="text" name="content" id="content" placeholder="Conteúdo da embalagem">
-                    <input type="text" name="format" id="format" placeholder="Formato do produto">
-                    <input type="text" name="price" id="price" placeholder="Preço">
+                    <% if (locals.fileMessage && locals.fileMessage === "Insira a foto do produto") { %>
+                        <p class="alert-form"> <%= fileMessage %> </p>
+                    <% } %>
+                    
+                    <input type="text" name="brand" id="brand" placeholder="Marca" value="<%= locals.old ? old.brand : '' %>">
+                    <% if (locals.errors && errors.brand) { %>
+                        <p class="alert-form"> <%= errors.brand %> </p>
+                    <% } %>
+                   
+                    <input type="text" name="flavor" id="flavor" placeholder="Sabor" value="<%= locals.old ? old.flavor : '' %>">
+                    <% if (locals.errors && errors.flavor) { %>
+                        <p class="alert-form"> <%= errors.flavor %> </p>
+                    <% } %>
+                   
+                    <input type="text" name="roast" id="roast" placeholder="Torra" value="<%= locals.old ? old.roast : '' %>">
+                    <% if (locals.errors && errors.roast) { %>
+                        <p class="alert-form"> <%= errors.roast %> </p>
+                    <% } %>
+                    
+                    <textarea name="description" id="description" cols="30" rows="10" placeholder="Descrição"><%= locals.old ? old.description : '' %></textarea>
+                    <% if (locals.errors && errors.description) { %>
+                        <p class="alert-form"> <%= errors.description %> </p>
+                    <% } %>
+                   
+                    <input type="text" name="content" id="content" placeholder="Conteúdo da embalagem" value="<%= locals.old ? old.content : '' %>">
+                    <% if (locals.errors && errors.content) { %>
+                        <p class="alert-form"> <%= errors.content %></p>
+                    <% } %>
+                    
+                    <input type="text" name="format" id="format" placeholder="Formato do produto" value="<%= locals.old ? old.format : '' %>">
+                    <% if (locals.errors && errors.format) { %>
+                        <p class="alert-form"> <%= errors.format %></p>
+                    <% } %>
+                    
+                    <input type="text" name="price" id="price" placeholder="Preço" value="<%= locals.old ? old.price : '' %>">
+                    <% if (locals.errors && errors.price) { %>
+                        <p class="alert-form"> <%= errors.price %></p>
+                    <% } %>
+                    
                     <select name="installment">
                         <option disabled selected>Parcelamento</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
+                        <option value="1" <% if (locals.old && old.installment == "1") { %> selected <% } %>>1</option>
+                        <option value="2" <% if (locals.old && old.installment == "2") { %> selected <% } %>>2</option>
+                        <option value="3" <% if (locals.old && old.installment == "3") { %> selected <% } %>>3</option>
                     </select>
-                    <input type="text" name="sku" id="sku" placeholder="Código">
-                    <input type="text" name="quantity" id="quantity" placeholder="Quantidade em estoque">
+                    <% if (locals.errors && errors.installment) { %>
+                        <p class="alert-form"> <%= errors.installment %></p>
+                    <% } %>
+                    
+                    <input type="text" name="sku" id="sku" placeholder="Código" value="<%= locals.old ? old.sku : '' %>">
+                    <% if (locals.errors && errors.sku) { %>
+                        <p class="alert-form"> <%= errors.sku %></p>
+                    <% } %>
+                    
+                    <input type="text" name="quantity" id="quantity" placeholder="Quantidade em estoque" value="<%= locals.old ? old.quantity : '' %>">
+                    <% if (locals.errors && errors.quantity) { %>
+                        <p class="alert-form"> <%= errors.quantity %> </p>
+                    <% } %>
+                   
                     <select name="category">
                         <option disabled selected>Categoria</option>
-                        <option value="Grãos">Grãos</option>
-                        <option value="Moídos">Moídos</option>
-                        <option value="Cápsulas">Cápsulas</option>
-                        <option value="Sachês">Sachês</option>
+                        <option value="Grãos" <% if (locals.old && old.category === "Grãos") { %> selected <% } %>>Grãos</option>
+                        <option value="Moídos" <% if (locals.old && old.category === "Moídos") { %> selected <% } %>>Moídos</option>
+                        <option value="Cápsulas" <% if (locals.old && old.category === "Cápsulas") { %> selected <% } %>>Cápsulas</option>
+                        <option value="Sachês" <% if (locals.old && old.category === "Sachês") { %> selected <% } %>>Sachês</option>
                     </select>
+                    <% if (locals.errors && errors.category) { %>
+                        <p class="alert-form"> <%= errors.category %> </p>
+                    <% } %>
+                    
                     <select name="bestseller">
                         <option disabled selected>Destacar em Mais Vendidos?</option>
                         <option value="true">Sim</option>
                         <option value="false">Não</option>
                     </select>
+                    
                     <select name="newproduct">
                         <option disabled selected>Destacar em Lançamentos?</option>
                         <option value="true">Sim</option>
                         <option value="false">Não</option>
                     </select>
+                    
                     <select name="active">
                         <option disabled selected>Ativar produto?</option>
-                        <option value="true">Sim</option>
-                        <option value="false">Não</option>
+                        <option value="true" <% if (locals.old && old.active == "true") { %> selected <% } %>>Sim</option>
+                        <option value="false" <% if (locals.old && old.active == "false") { %> selected <% } %>>Não</option>
                     </select>
+                    <% if (locals.errors && errors.active) { %>
+                        <p class="alert-form"> <%= errors.active %> </p>
+                    <% } %>
+                    
                     <div class= "admin-product-btn">
                             <button type="submit" class="btn-edit-forms">Adicionar</button>
                     </div>
