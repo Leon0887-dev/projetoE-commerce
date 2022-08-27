@@ -65,6 +65,12 @@ img {
     justify-content: center;
 }
 
+.error-alert {
+    color: rgb(231, 37, 37);
+    letter-spacing: 0.1rem;
+    margin-bottom: 2rem;
+}
+
 /* CSS header */
 
 header {
@@ -102,6 +108,25 @@ header {
 
 .nav-link:hover {
     color: #fff;
+}
+
+#btn-hello-user {
+    background-color: #AF4319;
+    color: #fff;
+}
+
+#btn-logout-user {
+    background-color: #AF4319;
+    color: #fff;
+    padding: 0.2rem 1.5rem;
+    border-radius: 0.2rem;
+}
+
+.divider {
+    height: 1px;
+    margin: 9px 0;
+    overflow: hidden;
+    background-color: #8d8d8d;
 }
 
 #brand {
@@ -603,34 +628,6 @@ div.button {
     background-color: #3F220F;
 }
 
-@media screen and (max-width: 500px){
-    .product {
-        height: 150px;
-    }
-    .product > img {
-        height: 150px;
-        width: 200px;
-    }
-    .product-name, .product-price, .product-offer {
-        margin-bottom: 10px;
-    }
-}
-
-@media screen and (max-width: 900px){
-    .cart {
-        flex-direction: column
-    }
-    .cart-total {
-        margin-left: 0;
-        margin-bottom: 20px;
-    }
-}
-
-@media screen and (max-width: 1220px){
-    .container {
-        max-width: 95%;
-    }
-}
 /* fim css carrinho de compras */
 
 /* CSS cadastro */
@@ -1432,6 +1429,10 @@ label {
         order: 2;
     }
 
+    #btn-hello-user {
+        font-size: 0.9rem;
+    }
+
     #brand {
         order: 1;
         text-align: left;
@@ -1683,6 +1684,10 @@ label {
 
 /* Iniciando CSS para dispositivos com largura mínima de 1024px */
 @media (min-width:1024px) {
+
+    #btn-hello-user {
+        font-size: 1rem;
+    }
 
     /* CSS about */
 
