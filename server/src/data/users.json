@@ -68,4 +68,14 @@
     "admin": false,
     "criadoEm": "2022-08-17T23:04:51.265Z",
     "modificadoEm": "2022-08-17T23:04:51.265Z"
+}, {
+    "id": 8,
+    "nome": "vai",
+    "sobrenome": "corinthians",
+    "cpf": "$2b$10$VQjqkRCoXPgcOYZawmYtduw.wNeXGWrSlGG/LnNemQVqKBYeGloYa",
+    "senha": "$2b$10$GNV0Mw1LkUQ77YbQ2eY8cO9hhzLrdhiMNPVE1nNRPWPXIE7usr202",
+    "email": "curintia@email.com",
+    "admin": false,
+    "criadoEm": "2022-08-18T00:48:29.953Z",
+    "modificadoEm": "2022-08-18T00:48:29.953Z"
 }]

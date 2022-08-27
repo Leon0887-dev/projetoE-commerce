@@ -20,7 +20,7 @@ const authController = {
             "utf-8",
         );
         const users = JSON.parse(usersJson);
-        
+        //pegando as informações das views
         const {nome, sobrenome, cpf, email, senha, confirmar_senha} = 
         req.body;
         if (!nome || 
