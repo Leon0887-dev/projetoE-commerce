@@ -1,11 +1,13 @@
 const fs = require ("fs");
 const path = require("path");
+const bcrypt = require("../helpers/bcrypt");
 
 const authController = {
     //Tela para cadastro do usuario 
     register: (req, res) => {
         return res.render("userRegister", {
             title: "criarConta",
+            user: req.cookies.user
         });
     },
     //Processamento do cadastro do usuario
@@ -18,8 +20,7 @@ const authController = {
         );
         const users = JSON.parse(usersJson);
         
-        const {nome, sobrenome, cpf, email, senha, confirmar_senha} = 
-        req.body;
+        const {nome, sobrenome, cpf, email, senha, confirmar_senha} = req.body;
         if (!nome || 
             !sobrenome || 
             !cpf || 
@@ -27,7 +28,7 @@ const authController = {
             !senha || 
             !confirmar_senha) {
             return res.render("userRegister", {
-                title: "criarConta",
+                title: "Registro",
                 error: {
                     message: "Preencha todos os campos",
                 }
@@ -36,7 +37,7 @@ const authController = {
     
         if (senha !== confirmar_senha){
             return res.render("userRegister", {
-                title: "criarConta",
+                title: "Registro",
                 error: {
                     message: "Senhas Divergentes",
                 }
@@ -48,8 +49,8 @@ const authController = {
             id: newId,
             nome,
             sobrenome,
-            cpf,
-            senha,
+            cpf: bcrypt.generateHash(cpf),
+            senha: bcrypt.generateHash(senha),
             email,
             admin: false,
             criadoEm : new Date(),
@@ -60,43 +61,54 @@ const authController = {
             path.join(__dirname, "..", "data", "users.json"),
             JSON.stringify(users)
         );
-        return res.redirect("/")
+        res.redirect("/")
     },
     //Tela para realizar o login
     login: (req, res) => {
-        console.log(req.session.email)
         return res.render("login", {
-            title: "Login",
-        })
+          title: "login",
+          user: req.cookies.user
+        });
     },
     //Processamento do login
     auth: (req, res) => {
+        res.clearCookie("user");
+
         const usersJson = fs.readFileSync(
             path.join(__dirname, "..", "data", "users.json"),
             "utf-8"
         );
-            const users = JSON.parse(usersJson);
-            const {email, senha} = req.body;
-            const userAuth = users.find(user => {
-                if (user.email === email){
-                    if(user.senha === senha){
-                        return true;
-                    }
-                }
-            });
+        const users = JSON.parse(usersJson);
+
+        const { email, senha } = req.body;
+        const userAuth = users.find((user) => {
+          if (user.email === email) {
+            if (bcrypt.compareHash(senha, user.senha)) {
+              return true;
+            }
+          }
+        });
             if (!userAuth){
                 return res.render("login", {
                     title: "Login",
                     error: {
-                        message: "Email ou senha inválido"
+                        message: "Email e/ou senha inválidos"
                     }
-                })
+                });
             }
-            req.session.email = userAuth.email;
-            res.redirect("/");
+        // Filtra as chaves que o objeto irá ter
+        const user = JSON.parse(JSON.stringify(userAuth, ["id", "nome", "sobrenome"]));
+        
+        req.session.email = userAuth.email;
+        res.cookie("user", user);
+        res.redirect("/");
     },
     //Processamento do deslogar
-    logout: (req, res) => {},
+    logout: (req, res) => {
+        req.session.destroy();
+        res.clearCookie("user");
+        res.redirect("/");
+    },
 };
 
 module.exports = authController;

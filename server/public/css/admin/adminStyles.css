@@ -72,6 +72,12 @@ img {
     margin: 0.5rem auto;
 }
 
+.alert-form {
+    color: #d42a13;
+    font-size: 0.9rem;
+    letter-spacing: 0.1rem;
+}
+
 /* CSS header Admin*/
 
 #header-admin{

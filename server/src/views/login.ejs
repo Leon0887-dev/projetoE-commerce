@@ -6,12 +6,12 @@
     <div class="title-section title-section-login">
       <h2>Login</h2>
       <% if(locals.error){ %>
-        <h2 class="error-alert"><%= error.message %></h2>
+        <p class="error-alert"><%= error.message %></p>
         <% } %>
     </div>
     <form action="/login" method="post">
       <div class="input-field-login">
-        <input type="email" name="username" id="email" placeholder="Digite seu e-mail" required>
+        <input type="email" name="email" id="email" placeholder="Digite seu e-mail" required>
         <div class="underline"></div>
       </div>
       <div class="input-field-login">

@@ -29,12 +29,11 @@ app.use(express.urlencoded({ extended: false }));
 // Inicializando cookieParser
 app.use(cookieParser());
 // Configuração do express-session
-app.use(session({
-    secret: 'Café House',
-    resave: false,
-    saveUninitialized: true,
-    }));
-
+app.use(session({ 
+  secret: "Cafe House",
+  resave: true,
+  saveUninitialized: true 
+}));
     
     
 app.use("/produtos", productRoute);

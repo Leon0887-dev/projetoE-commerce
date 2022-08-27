@@ -23,13 +23,15 @@ const productController = {
             //Renderizando a página com os produtos da categoria
             return res.render("productListing", {
                 title: "Produtos",
-                products: productResult
+                products: productResult,
+                user: req.cookies.user            
             });
         }
 
         return res.render("productListing", {
             title: "Produtos",
-            products
+            products,
+            user: req.cookies.user            
         });
     },
     show: (req, res) => {
@@ -50,7 +52,8 @@ const productController = {
         if (!productResult) {
             return res.render("error", {
                 title: "Ops!",
-                message: "Produto não encontrado."
+                message: "Produto não encontrado.",
+                user: req.cookies.user            
             });
         };
         // Caso contrário, copiamos as informações de productResult usando spread operator para a variável product
@@ -62,6 +65,7 @@ const productController = {
         return res.render("product", {
             title: "Detalhe do Produto",
             product,
+            user: req.cookies.user            
         });
     },
 };
