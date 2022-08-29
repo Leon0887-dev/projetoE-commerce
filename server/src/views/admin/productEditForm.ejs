@@ -6,38 +6,53 @@
             <h2 class="admin-products-add">Atualizar Produto</h2>
             <div id="admin-products-bgc">
                 <form id="admin-products-add-1" action="/admin/produtos/editar/<%= product.id %>?_method=put" method="POST" enctype="multipart/form-data">
+                    <label for="title">Nome do produto</label>
                     <input type="text" name="title" id="title" value="<%= product.title %>">
                     <label for="image">Foto do produto</label>
                     <input type="file" name="image" id="image">
+                    <label for="brand">Marca do produto</label>
                     <input type="text" name="brand" id="brand" value="<%= product.brand %>">
+                    <label for="flavor">Flavor do produto</label>
                     <input type="text" name="flavor" id="flavor" value="<%= product.flavor %>">
+                    <label for="roast">Torra do produto</label>
                     <input type="text" name="roast" id="roast" value="<%= product.roast %>">
+                    <label for="description">Descrição do produto</label>
                     <textarea name="description" id="description" cols="30" rows="10"><%= product.description %></textarea>
+                    <label for="content">Conteúdo do produto</label>
                     <input type="text" name="content" id="content" value="<%= product.content %>">
+                    <label for="format">Formato do produto</label>
                     <input type="text" name="format" id="format" value="<%= product.format %>">
+                    <label for="price">Preço do produto</label>
                     <input type="text" name="price" id="price" value="<%= product.price %>">
+                    <label for="installment">Parcelamento</label>
                     <select name="installment">
                         <option disabled selected>Parcelamento</option>
                         <option value="1" <% if (product.installment == "1") { %> selected <% } %>>1</option>
                         <option value="2" <% if (product.installment == "2") { %> selected <% } %>>2</option>
                         <option value="3" <% if (product.installment == "3") { %> selected <% } %>>3</option>
                     </select>
+                    <label for="sku">Código do produto</label>
                     <input type="text" name="sku" id="sku" value="<%= product.sku %>">
+                    <label for="quantity">Quantidade do produto</label>
                     <input type="text" name="quantity" id="quantity" value="<%= product.quantity %>">
+                    <label for="category">Categoria do produto</label>
                     <select name="category">
                         <option value="Grãos" <% if (product.category === "Grãos") { %> selected <% } %>>Grãos</option>
                         <option value="Moídos" <% if (product.category === "Moídos") { %> selected <% } %>>Moídos</option>
                         <option value="Cápsulas" <% if (product.category === "Cápsulas") { %> selected <% } %>>Cápsulas</option>
                         <option value="Sachês" <% if (product.category === "Sachês") { %> selected <% } %>>Sachês</option>
                     </select>
+                    <label for="bestseller">Produto bestseller?</label>
                     <select name="bestseller">
                         <option value="true" <% if (product.bestseller == "true") { %> selected <% } %>>Sim</option>
                         <option value="false" <% if (product.bestseller == "false") { %> selected <% } %>>Não</option>
                     </select>
+                    <label for="newproduct">Produto novo?</label>
                     <select name="newproduct">
                         <option value="true" <% if (product.newproduct == "true") { %> selected <% } %>>Sim</option>
                         <option value="false" <% if (product.newproduct == "false") { %> selected <% } %>>Não</option>
                     </select>
+                    <label for="active">Produto ativo?</label>
                     <select name="active">
                         <option value="true" <% if (product.active == "true") { %> selected <% } %>>Sim</option>
                         <option value="false" <% if (product.active == "false") { %> selected <% } %>>Não</option>
