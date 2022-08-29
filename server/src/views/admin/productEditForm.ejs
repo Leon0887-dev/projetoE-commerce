@@ -25,8 +25,7 @@
                     <label for="price">Preço do produto</label>
                     <input type="text" name="price" id="price" value="<%= product.price %>">
                     <label for="installment">Parcelamento</label>
-                    <select name="installment">
-                        <option disabled selected>Parcelamento</option>
+                    <select name="installment" id="installment">
                         <option value="1" <% if (product.installment == "1") { %> selected <% } %>>1</option>
                         <option value="2" <% if (product.installment == "2") { %> selected <% } %>>2</option>
                         <option value="3" <% if (product.installment == "3") { %> selected <% } %>>3</option>
@@ -36,24 +35,24 @@
                     <label for="quantity">Quantidade do produto</label>
                     <input type="text" name="quantity" id="quantity" value="<%= product.quantity %>">
                     <label for="category">Categoria do produto</label>
-                    <select name="category">
+                    <select name="category" id="category">
                         <option value="Grãos" <% if (product.category === "Grãos") { %> selected <% } %>>Grãos</option>
                         <option value="Moídos" <% if (product.category === "Moídos") { %> selected <% } %>>Moídos</option>
                         <option value="Cápsulas" <% if (product.category === "Cápsulas") { %> selected <% } %>>Cápsulas</option>
                         <option value="Sachês" <% if (product.category === "Sachês") { %> selected <% } %>>Sachês</option>
                     </select>
                     <label for="bestseller">Produto bestseller?</label>
-                    <select name="bestseller">
+                    <select name="bestseller" id="bestseller">
                         <option value="true" <% if (product.bestseller == "true") { %> selected <% } %>>Sim</option>
                         <option value="false" <% if (product.bestseller == "false") { %> selected <% } %>>Não</option>
                     </select>
                     <label for="newproduct">Produto novo?</label>
-                    <select name="newproduct">
+                    <select name="newproduct" id="newproduct">
                         <option value="true" <% if (product.newproduct == "true") { %> selected <% } %>>Sim</option>
                         <option value="false" <% if (product.newproduct == "false") { %> selected <% } %>>Não</option>
                     </select>
                     <label for="active">Produto ativo?</label>
-                    <select name="active">
+                    <select name="active" id="active">
                         <option value="true" <% if (product.active == "true") { %> selected <% } %>>Sim</option>
                         <option value="false" <% if (product.active == "false") { %> selected <% } %>>Não</option>
                     </select>
