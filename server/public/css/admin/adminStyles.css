@@ -267,3 +267,21 @@ tr:nth-child(even){
 }
 
 /* Fim CSS admin error */
+
+/* CSS admin visualizar produto */
+
+#main-admin-products{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+#main-admin-products p{
+    width: 780px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Fim CSS admin visualizar produto */
