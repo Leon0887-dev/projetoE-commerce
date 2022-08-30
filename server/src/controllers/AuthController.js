@@ -7,8 +7,7 @@ const authController = {
     register: (req, res) => {
         return res.render("userRegister", {
             title: "criarConta",
-            user: req.cookies.user,
-            admin: req.cookies.admin,
+            user: req.cookies.user
         });
     },
     //Processamento do cadastro do usuario
@@ -21,8 +20,7 @@ const authController = {
         );
         const users = JSON.parse(usersJson);
         
-        const {nome, sobrenome, cpf, email, senha, confirmar_senha} = 
-        req.body;
+        const {nome, sobrenome, cpf, email, senha, confirmar_senha} = req.body;
         if (!nome || 
             !sobrenome || 
             !cpf || 
@@ -30,7 +28,7 @@ const authController = {
             !senha || 
             !confirmar_senha) {
             return res.render("userRegister", {
-                title: "criarConta",
+                title: "Registro",
                 error: {
                     message: "Preencha todos os campos",
                 }
@@ -39,7 +37,7 @@ const authController = {
     
         if (senha !== confirmar_senha){
             return res.render("userRegister", {
-                title: "criarConta",
+                title: "Registro",
                 error: {
                     message: "Senhas Divergentes",
                 }
@@ -69,14 +67,12 @@ const authController = {
     login: (req, res) => {
         return res.render("login", {
           title: "login",
-          user: req.cookies.user,
-          admin: req.cookies.admin,
+          user: req.cookies.user
         });
     },
     //Processamento do login
     auth: (req, res) => {
         res.clearCookie("user");
-        res.clearCookie("admin");
 
         const usersJson = fs.readFileSync(
             path.join(__dirname, "..", "data", "users.json"),
@@ -90,32 +86,27 @@ const authController = {
             if (bcrypt.compareHash(senha, user.senha)) {
               return true;
             }
-            // O if de cima é a mesma coisa da linha abaixo
-            // return bcrypt.compareHash(senha, user.senha);
           }
         });
             if (!userAuth){
                 return res.render("login", {
-                    title: "login",
+                    title: "Login",
                     error: {
-                        message: "Email ou senha inválido"
+                        message: "Email e/ou senha inválidos"
                     }
                 });
             }
-              // Filtra as chaves que o objeto irá ter
-    const user = JSON.parse(
-        JSON.stringify(userAuth, ["id", "nome", "sobrenome", "admin"])
-      );
-            req.session.email = userAuth.email;
-            res.cookie("user", user);
-            res.cookie("admin", user.admin);
-            res.redirect("/");
+        // Filtra as chaves que o objeto irá ter
+        const user = JSON.parse(JSON.stringify(userAuth, ["id", "nome", "sobrenome"]));
+        
+        req.session.email = userAuth.email;
+        res.cookie("user", user);
+        res.redirect("/");
     },
     //Processamento do deslogar
     logout: (req, res) => {
         req.session.destroy();
         res.clearCookie("user");
-        res.clearCookie("admin");
         res.redirect("/");
     },
 };
