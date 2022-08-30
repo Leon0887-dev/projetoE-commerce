@@ -1131,9 +1131,7 @@ h4 {
     margin-bottom: 3rem;
     
 }
-.section-forms {
-    margin: 40px 0;
-}
+
 
 
 .link-edit {
@@ -1245,6 +1243,8 @@ label {
 
 .title-personal-data h2{
     font-size: 2rem;
+    text-align: center;
+    margin-bottom: 3rem;
 }
 .forms-panel-user{
     max-width: 700px;
