@@ -267,3 +267,61 @@ tr:nth-child(even){
 }
 
 /* Fim CSS admin error */
+
+/* CSS admin visualizar produto */
+
+#main-admin-products{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+#main-admin-products p{
+    width: 780px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Fim CSS admin visualizar produto */
+
+/* CSS editar produto */
+
+#admin-products-add-1 label{
+    font-weight: bolder;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+#description{
+    border: 1px solid black;
+    text-align: justify;
+}
+
+#installment{
+    border: 1px solid black;
+}
+
+#category{
+    border: 1px solid black;
+}
+
+#bestseller{
+    border: 1px solid black;
+}
+
+#newproduct{
+    border: 1px solid black;
+}
+
+#active{
+    border: 1px solid black;
+}
+
+.btn-edit-forms{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Fim CSS editar produto */

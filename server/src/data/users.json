@@ -70,12 +70,32 @@
     "modificadoEm": "2022-08-17T23:04:51.265Z"
 }, {
     "id": 8,
-    "nome": "vai",
-    "sobrenome": "corinthians",
-    "cpf": "$2b$10$VQjqkRCoXPgcOYZawmYtduw.wNeXGWrSlGG/LnNemQVqKBYeGloYa",
-    "senha": "$2b$10$GNV0Mw1LkUQ77YbQ2eY8cO9hhzLrdhiMNPVE1nNRPWPXIE7usr202",
-    "email": "curintia@email.com",
+    "nome": "Ligia",
+    "sobrenome": "Eimantas",
+    "cpf": "$2b$10$WfWw2WCjvZbcdMm7jKrceOlvsmNIP34ReS9HjQliKQ2KxBSXFjh.a",
+    "senha": "$2b$10$mY9uJnAwe39sdZHUipaVzOAl84ufWi0lv2gZcXVAiDPvlBCEfjdZa",
+    "email": "ligia@email.com",
     "admin": false,
-    "criadoEm": "2022-08-18T00:48:29.953Z",
-    "modificadoEm": "2022-08-18T00:48:29.953Z"
+    "criadoEm": "2022-08-26T18:18:05.338Z",
+    "modificadoEm": "2022-08-26T18:18:05.338Z"
+}, {
+    "id": 9,
+    "nome": "Wellingtton",
+    "sobrenome": "Luz",
+    "cpf": "$2b$10$kylHykfVm4j53uKbAGYYCuKEKfttvX9isjn3wp9eQ6224FidWn2GC",
+    "senha": "$2b$10$F02s/v2Pg5gceZTK2CDhWeCWwro27besgvRQDS9LFlRNE3L6Vm0PS",
+    "email": "well@email.com",
+    "admin": false,
+    "criadoEm": "2022-08-26T23:59:36.281Z",
+    "modificadoEm": "2022-08-26T23:59:36.281Z"
+}, {
+    "id": 10,
+    "nome": "tião",
+    "sobrenome": "carreiro",
+    "cpf": "888.888.888-88",
+    "senha": "$2b$10$KsoEDV1TIj.C0oAulMBgQu0ZRDbePKX5Gcd1mQdiwv0x6WHqLwWUK",
+    "email": "tiao@email.com.br",
+    "admin": false,
+    "criadoEm": "2022-08-30T01:16:29.626Z",
+    "modificadoEm": "2022-08-30T01:16:29.626Z"
 }]

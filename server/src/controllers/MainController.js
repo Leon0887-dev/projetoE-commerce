@@ -10,16 +10,29 @@ const indexController = {
         // Transformando o formato JSON em um array novamente
         products=JSON.parse(products);
 
-        return res.render("index",{title:"Home",products});
+        return res.render("index",{
+            title:"Home",
+            products,
+            user: req.cookies.user
+        });
     },
     about: (req,res)=>{
-        return res.render("about",{title:"Sobre Nós"});
+        return res.render("about",{
+            title:"Sobre Nós",
+            user: req.cookies.user
+        });
     },
     blog: (req,res)=>{
-        return res.render("blog",{title:"Blog"});
+        return res.render("blog",{
+            title:"Blog",
+            user: req.cookies.user
+        });
     },
     contact: (req,res)=>{
-        return res.render("contact",{title:"Contato"});
+        return res.render("contact",{
+            title:"Contato",
+            user: req.cookies.user
+        });
     }
 };
 
