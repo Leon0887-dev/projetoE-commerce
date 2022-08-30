@@ -49,7 +49,7 @@ const authController = {
             id: newId,
             nome,
             sobrenome,
-            cpf: bcrypt.generateHash(cpf),
+            cpf,
             senha: bcrypt.generateHash(senha),
             email,
             admin: false,

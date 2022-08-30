@@ -88,4 +88,14 @@
     "admin": false,
     "criadoEm": "2022-08-26T23:59:36.281Z",
     "modificadoEm": "2022-08-26T23:59:36.281Z"
+}, {
+    "id": 10,
+    "nome": "tião",
+    "sobrenome": "carreiro",
+    "cpf": "888.888.888-88",
+    "senha": "$2b$10$KsoEDV1TIj.C0oAulMBgQu0ZRDbePKX5Gcd1mQdiwv0x6WHqLwWUK",
+    "email": "tiao@email.com.br",
+    "admin": false,
+    "criadoEm": "2022-08-30T01:16:29.626Z",
+    "modificadoEm": "2022-08-30T01:16:29.626Z"
 }]
