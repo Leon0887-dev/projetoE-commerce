@@ -7,8 +7,8 @@
 			<div class="title-section">
 				<h2>Crie sua conta</h2>
 				<% if(locals.error){ %>
-					<h2 class="error-alert"><%= error.message %></h2>
-					<% } %>
+					<p class="error-alert"><%= error.message %></p>
+				<% } %>
 			</div>
 			<form action="/registro" method="post" class="container-form-register">
 				<div class="container-input">
@@ -39,13 +39,6 @@
 						<input type="email" name="email" id="email-id" />
 					</div>
 				</div>
-
-				<!-- <div class="container-input">
-							<label for="confirm-email-id">*Confirme seu e-mail</label>
-							<div>
-								<input type="email" name="confirmEmail" id="confirm-email-id" />
-							</div>
-						</div> -->
 
 				<div class="container-input">
 					<label for="password-id">Senha</label>

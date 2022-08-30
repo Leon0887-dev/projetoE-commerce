@@ -68,4 +68,24 @@
     "admin": false,
     "criadoEm": "2022-08-17T23:04:51.265Z",
     "modificadoEm": "2022-08-17T23:04:51.265Z"
+}, {
+    "id": 8,
+    "nome": "Ligia",
+    "sobrenome": "Eimantas",
+    "cpf": "$2b$10$WfWw2WCjvZbcdMm7jKrceOlvsmNIP34ReS9HjQliKQ2KxBSXFjh.a",
+    "senha": "$2b$10$mY9uJnAwe39sdZHUipaVzOAl84ufWi0lv2gZcXVAiDPvlBCEfjdZa",
+    "email": "ligia@email.com",
+    "admin": false,
+    "criadoEm": "2022-08-26T18:18:05.338Z",
+    "modificadoEm": "2022-08-26T18:18:05.338Z"
+}, {
+    "id": 9,
+    "nome": "Wellingtton",
+    "sobrenome": "Luz",
+    "cpf": "$2b$10$kylHykfVm4j53uKbAGYYCuKEKfttvX9isjn3wp9eQ6224FidWn2GC",
+    "senha": "$2b$10$F02s/v2Pg5gceZTK2CDhWeCWwro27besgvRQDS9LFlRNE3L6Vm0PS",
+    "email": "well@email.com",
+    "admin": false,
+    "criadoEm": "2022-08-26T23:59:36.281Z",
+    "modificadoEm": "2022-08-26T23:59:36.281Z"
 }]

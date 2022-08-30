@@ -65,6 +65,12 @@ img {
     justify-content: center;
 }
 
+.error-alert {
+    color: rgb(231, 37, 37);
+    letter-spacing: 0.1rem;
+    margin-bottom: 2rem;
+}
+
 /* CSS header */
 
 header {
@@ -102,6 +108,25 @@ header {
 
 .nav-link:hover {
     color: #fff;
+}
+
+#btn-hello-user {
+    background-color: #AF4319;
+    color: #fff;
+}
+
+#btn-logout-user {
+    background-color: #AF4319;
+    color: #fff;
+    padding: 0.2rem 1.5rem;
+    border-radius: 0.2rem;
+}
+
+.divider {
+    height: 1px;
+    margin: 9px 0;
+    overflow: hidden;
+    background-color: #8d8d8d;
 }
 
 #brand {
@@ -603,34 +628,6 @@ div.button {
     background-color: #3F220F;
 }
 
-@media screen and (max-width: 500px){
-    .product {
-        height: 150px;
-    }
-    .product > img {
-        height: 150px;
-        width: 200px;
-    }
-    .product-name, .product-price, .product-offer {
-        margin-bottom: 10px;
-    }
-}
-
-@media screen and (max-width: 900px){
-    .cart {
-        flex-direction: column
-    }
-    .cart-total {
-        margin-left: 0;
-        margin-bottom: 20px;
-    }
-}
-
-@media screen and (max-width: 1220px){
-    .container {
-        max-width: 95%;
-    }
-}
 /* fim css carrinho de compras */
 
 /* CSS cadastro */
@@ -1124,15 +1121,17 @@ h4 {
 #main-user,
 #main-myRequests,
 #main-address,
-#main-changePassword,
-#main-personalData {
+#main-changePassword
+ {
     padding: 10rem 0 3rem 0;
-    padding-top: 156px;
 }
 
-.section-forms {
-    margin: 40px 0;
+#main-personalData {
+    padding-top: 13rem;
+    margin-bottom: 3rem;
+    
 }
+
 
 
 .link-edit {
@@ -1152,6 +1151,11 @@ label {
 
 /* CSS painel usuário */
 
+
+.display-panel-user{
+    display: none;
+}
+
 .panel-options-screen {
     display: flex;
     flex-direction: column;
@@ -1162,7 +1166,11 @@ label {
 }
 
 .img-user{
-   margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   margin-bottom: 15px;
+
 }
 
 .img-user .img{
@@ -1178,18 +1186,11 @@ label {
 }
 
 
-
-
-
-.img-user-login{
-    margin-top: 30px;
-}
-
-
 .img-user-login a,
 .img a{
     color: #19180A;
 }
+
 
 .img-user-login a:hover,
 .img a:hover{
@@ -1235,6 +1236,22 @@ label {
 .personal-data--info>h6 {
     color: #19180A;
 
+}
+.title-personal-data{
+    margin-bottom: 1.5rem;
+}
+
+.title-personal-data h2{
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.forms-panel-user{
+    max-width: 700px;
+}
+
+.forms-panel-user form{
+    padding: 0 1rem;
 }
 
 .personal-data--info>p {
@@ -1432,6 +1449,10 @@ label {
         order: 2;
     }
 
+    #btn-hello-user {
+        font-size: 0.9rem;
+    }
+
     #brand {
         order: 1;
         text-align: left;
@@ -1561,11 +1582,22 @@ label {
     #main-myRequests,
     #main-address,
     #main-changePassword,
-    #main-personalData,
-    #main-car {
+    #main-car
+     {
         padding: 13rem 0 3rem 0;
     }
+    
 
+    .display-panel-user{
+        display: block;
+    }
+
+    .title-personal-data{
+        text-align: center;
+    }
+    .title-personal-data h2{
+        font-size: 2.5rem;
+    }
     .form-center {
         display: flex;
         flex-direction: column;
@@ -1594,6 +1626,24 @@ label {
 
     .panel-options-screen {
         flex-direction: row;
+    }
+
+    .img{
+        flex-direction: row;
+    }
+
+    .img-user .img{
+        width: 80px;
+        height: 80px;
+    }
+
+    .img-user-login{
+        padding: 0 10px;
+    }
+
+    .img-user-login a{
+        padding: 3px;
+        word-break: break-word;
     }
 
     .list-item a {
@@ -1683,6 +1733,10 @@ label {
 
 /* Iniciando CSS para dispositivos com largura mínima de 1024px */
 @media (min-width:1024px) {
+
+    #btn-hello-user {
+        font-size: 1rem;
+    }
 
     /* CSS about */
 

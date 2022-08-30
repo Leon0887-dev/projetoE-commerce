@@ -1,19 +1,19 @@
 <%- include("./partials/head")%>
 <%- include("./partials/header")%>
 
-<main id="main-myRequests">
-  <section class="container-md">
-
-    <div class="user-list-products card">
-      <div class="card-header">
-        <h3 class="card-title"> Lista de pedidos</h3>
+<main id="main-myRequests" class="container-md user-panel">
+  <section class="row">
+    <%- include('./partials/userPanelControl')%>
+    <div class="col-md-9 forms-panel-user">
+      <div class="user-list-products card">
+        <div class="card-header">
+          <h3 class="card-title"> Lista de pedidos</h3>
+        </div>
+        <div class="card-body">
+          <p class="card-text">Você não possui pedidos</p>
+          <a href="#">encontre produtos de seu interesse</a>
+        </div>
       </div>
-      <div class="card-body">
-        <p class="card-text">Você não possui pedidos</p>
-        <a href="#">encontre produtos de seu interesse</a>
-      </div>
-
-
     </div>
   </section>
 

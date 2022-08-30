@@ -238,4 +238,24 @@
     "active": "true",
     "createdIn": "2022-08-09T18:02:48.681Z",
     "modifiedIn": "2022-08-09T18:05:34.809Z"
+}, {
+    "id": 13,
+    "title": "Novo item 5",
+    "brand": "Ofner",
+    "flavor": "Notas de cacau e mel",
+    "roast": "Clara",
+    "description": "Produto incrivelmente aromático e perfumado. De dar água na boca.",
+    "content": "1 pacote e uma barra de chocolate",
+    "format": "Granulado",
+    "price": "79,90",
+    "installment": "3",
+    "image": "1660949507034capsula_cafe05.jpg",
+    "sku": "OFNER987",
+    "quantity": "35",
+    "category": "Grãos",
+    "bestseller": "true",
+    "newproduct": "true",
+    "active": "true",
+    "createdIn": "2022-08-19T22:51:47.075Z",
+    "modifiedIn": "2022-08-19T22:51:47.075Z"
 }]
