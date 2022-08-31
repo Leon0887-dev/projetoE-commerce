@@ -1,8 +1,23 @@
+const fs = require ("fs");
+const path = require("path");
+
 const userPanelController = {
     index: (req,res)=>{
+        const usersJson = fs.readFileSync(
+            //Caminho do arquivo
+            path.join(__dirname, "..", "data", "users.json"),
+            //Formato de leitura
+            "utf-8",
+        );
+        const users = JSON.parse(usersJson);
+        
+        const personalUser = users.find((user)=>{
+            if (user.id === req.cookies.user.id) return user;
+        })
+        
         return res.render("userPanel",{
             title:"Minha Conta",
-            user: req.cookies.user
+            user: personalUser,
         });
     },
     myRequests: (req,res)=>{
@@ -18,9 +33,22 @@ const userPanelController = {
         });
     },
     myPersonalData: (req,res)=>{
+
+        const usersJson = fs.readFileSync(
+            //Caminho do arquivo
+            path.join(__dirname, "..", "data", "users.json"),
+            //Formato de leitura
+            "utf-8",
+        );
+        const users = JSON.parse(usersJson);
+        
+        const personalUser = users.find((user)=>{
+            if (user.id === req.cookies.user.id) return user;
+        })
+        
         return res.render("personalData",{
             title:"Meus Dados",
-            user: req.cookies.user
+            user: personalUser,
         });
     },
     changePassword: (req,res)=>{
