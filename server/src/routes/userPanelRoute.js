@@ -4,7 +4,7 @@ const userPanelController = require("../controllers/UserPanelController");
 
 router.get("/",userPanelController.index);
 router.get("/pedidos",userPanelController.myRequests);
-router.get("/enderecos",userPanelController.myAddresses);
+router.get("/endereco",userPanelController.myAddresses);
 router.get("/dados",userPanelController.myPersonalData);
 router.get("/senha",userPanelController.changePassword);
 
