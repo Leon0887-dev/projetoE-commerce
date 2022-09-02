@@ -1220,6 +1220,11 @@ label {
     font-size: 18px;
 }
 
+.list-link form button {
+    margin-left: 10px;
+    background-color: transparent;
+}
+
 .user-list-products,
 .user-personal-data {
     margin-bottom: 30px;
