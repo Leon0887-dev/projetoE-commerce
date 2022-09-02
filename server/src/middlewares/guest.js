@@ -4,10 +4,9 @@ const guestMiddleware = (req, res, next) => {
     // Se está não está autenticado vai para a próxima função
     if (!isAuth) {
       next();
-    }
-    // Se não redireciona para a página principal
-    else {
+    }else{
       res.redirect("/");
     }
   };
+  
   module.exports = guestMiddleware;
