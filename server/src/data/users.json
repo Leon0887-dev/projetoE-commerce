@@ -98,4 +98,44 @@
     "admin": false,
     "criadoEm": "2022-08-30T01:16:29.626Z",
     "modificadoEm": "2022-08-30T01:16:29.626Z"
+}, {
+    "id": 11,
+    "nome": "jubilenio",
+    "sobrenome": "silva",
+    "cpf": "442.541.020-38",
+    "senha": "$2b$10$/WDbxEL2TGGCgrtvypabnuKG18bGEx82/rW9H769XxQi9VTGgrCEu",
+    "email": "jublenio@123.com",
+    "admin": false,
+    "criadoEm": "2022-08-31T23:44:06.164Z",
+    "modificadoEm": "2022-08-31T23:44:06.164Z"
+}, {
+    "id": 12,
+    "nome": "Antonio",
+    "sobrenome": "Soares",
+    "cpf": "000.000.000-00",
+    "senha": "$2b$10$ogV8fAQLAN388qWp.mLGkOJa21BpGCWdf/9KCqyoDYfh9YDv.ImR6",
+    "email": "antonio@email.com",
+    "admin": false,
+    "criadoEm": "2022-09-02T18:34:29.779Z",
+    "modificadoEm": "2022-09-02T18:34:29.779Z"
+}, {
+    "id": 13,
+    "nome": "Larissa",
+    "sobrenome": "Nunes",
+    "cpf": "123.456.789-00",
+    "senha": "$2b$10$zhnBFaI6FLfA6.9Y3bvtR.k8kwRT/UvOnwzXyTgNLSpgYBwLXRo/S",
+    "email": "larissa@email.com",
+    "admin": false,
+    "criadoEm": "2022-09-02T18:49:22.892Z",
+    "modificadoEm": "2022-09-02T18:49:22.892Z"
+}, {
+    "id": 14,
+    "nome": "Paulo",
+    "sobrenome": "André Moraes",
+    "cpf": "123.456.789-00",
+    "senha": "$2b$10$2dTo3kCeAIR4qcY8BS0w3u6SWP0sADrqZXSh2Ax48g3x4jKPq1GTe",
+    "email": "paulo@email.com",
+    "admin": false,
+    "criadoEm": "2022-09-02T19:57:20.959Z",
+    "modificadoEm": "2022-09-02T19:57:20.959Z"
 }]

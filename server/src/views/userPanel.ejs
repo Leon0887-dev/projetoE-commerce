@@ -9,7 +9,7 @@
             <img src="/img/TikTok.png" alt="" />
           </div>
           <div class="img-user-login">
-            <a href="#">Olá, faça seu login ou cadastre-se</a>
+            <h3> Olá <%= user.nome %> <%= user.sobrenome %></h3>
           </div>
         </div>
         <ul class="user-options--list">
@@ -152,7 +152,9 @@
               </i>
             </div>
             <div class="list-link">
-              <a href="/">Sair</a>
+              <form action="/logout" method="POST">
+                <button type="submit">Sair</button>
+              </form>
             </div>
           </li>
         </ul>
@@ -167,15 +169,15 @@
               <div class="col-md-6">
                 <div class="personal-data--info">
                   <h6>Nome completo</h6>
-                  <p>leon guilherme</p>
+                  <p><%= user.nome %> <%= user.sobrenome%> </p>
                 </div>
                 <div class="personal-data--info">
                   <h6>E-mail</h6>
-                  <p>digitalhouse@123.com</p>
+                  <p><%= user.email %> </p>
                 </div>
                 <div class="personal-data--info">
                   <h6>CPF</h6>
-                  <p>000.000.000-00</p>
+                  <p><%= user.cpf %> </p>
                 </div>
               </div>
               <div class="col-md-6">
