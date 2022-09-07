@@ -1,3 +1,5 @@
+
+
 const senha = document.querySelector('.senha');
 const imagemAberta = document.querySelector('.imagemAberta');
 
