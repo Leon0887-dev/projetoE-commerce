@@ -1,20 +1,19 @@
-<%- include("./partials/head")%>
-<%- include("./partials/header")%>
+<%- include("./partials/head")%> <%- include("./partials/header")%>
 
 <main id="main-personalData" class="container-md user-panel">
   <div class="title-personal-data">
     <h2>Meus Dados</h2>
   </div>
-  <div class=" row">
+  <div class="row">
     <%- include('./partials/userPanelControl')%>
     <div class="row col-md-9 forms-panel-user">
-      
       <div class="img-user d-flex align-items-start">
         <div class="img">
-          <img   src="/img/TikTok.png" alt="imagem de perfil">
+          <img src="/img/TikTok.png" alt="imagem de perfil" />
         </div>
+        <!-- <input name="foto" type="file" /> -->
         <div class="img-edit">
-           <i
+          <i
             ><svg
               xmlns="http://www.w3.org/2000/svg"
               width="12"
@@ -30,62 +29,78 @@
           <a href="#">Editar foto</a>
         </div>
       </div>
-      <form action="POST" >
+      <form action="POST">
         <div class="container-input col mb-3">
           <label for="myEmail">E-mail*</label>
-          <input type="email"  id="myEmail" placeholder="jose.silva@email.com">
-      
+          <input type="email" id="myEmail" placeholder="jose.silva@email.com" />
         </div>
         <div class="container-input mb-3">
-          <label for="fullName" >Nome completo*</label>
-          <input type="text" class="form-control" id="fullName" placeholder="jose da siva">
-      
+          <label for="fullName">Nome completo*</label>
+          <input
+            type="text"
+            class="form-control"
+            id="fullName"
+            placeholder="jose da siva"
+          />
         </div>
-        <div class="container-input  mb-3">
+        <div class="container-input mb-3">
           <label for="myCpf">CPF</label>
-          <input type="text"  id="myCpf" placeholder="123.456.789-1011">
-      
+          <input type="text" id="myCpf" placeholder="123.456.789-1011" />
         </div>
         <div class="container-input col-md-12">
-          <label for="
-          indemnification">RG</label>
-          <input type="text"  id="
-                indemnification" placeholder="837">
-      
+          <label
+            for="
+          indemnification"
+            >RG</label
+          >
+          <input
+            type="text"
+            id="
+                indemnification"
+            placeholder="837"
+          />
         </div>
         <div class="container-input col-md-12">
           <label for="birthDate">Data de nascimento</label>
-          <input type="date" id="birthDate" placeholder="dd/mm/aaa">
-      
+          <input type="date" id="birthDate" placeholder="dd/mm/aaa" />
         </div>
         <div class="container-input col-md-12">
-          <label for="fone" >Telefone</label>
-          <input type="text" id="fone" placeholder="(11) 3333-5555">
-      
+          <label for="fone">Telefone</label>
+          <input type="text" id="fone" placeholder="(11) 3333-5555" />
         </div>
-        <div class="container-input col-md-12 ">
+        <div class="container-input col-md-12">
           <label for="fone">Telefone celular</label>
-          <input type="text"  id="foneCel" placeholder="(81) 99797-4444">
-      
+          <input type="text" id="foneCel" placeholder="(81) 99797-4444" />
         </div>
         <div class="container-input col-md-12">
           <label for="selectd-genre">Gênero</label>
-          <select  name="genre" id="selectd-genre">
+          <select name="genre" id="selectd-genre">
             <option selected value="1"></option>
             <option value="2">Feminino</option>
             <option value="3">Masculino</option>
           </select>
-      
         </div>
         <div class="form-check col-md mt-3 ps-5">
-          <input type="checkbox" class="form-check-input" id="checked" checked>
-          <label for="checked" class="form-check-label">Desejo receber e-mails promocionais</label>
+          <input
+            type="checkbox"
+            class="form-check-input"
+            id="checked"
+            checked
+          />
+          <label for="checked" class="form-check-label"
+            >Desejo receber e-mails promocionais</label
+          >
         </div>
         <div class="save-btn">
-          <input type="submit" value="Salvar alterações" class="btn-edit-forms">
+          <input
+            type="submit"
+            value="Salvar alterações"
+            class="btn-edit-forms"
+          />
         </div>
       </form>
     </div>
   </div>
 
-<%- include("./partials/footer")%>
+  <%- include("./partials/footer")%>
+</main>

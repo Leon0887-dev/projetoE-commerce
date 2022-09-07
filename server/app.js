@@ -5,6 +5,8 @@ const path = require("path");
 const methodOverride = require("method-override");
 const session = require('express-session');
 const cookieParser = require("cookie-parser");
+const multer = require('multer');
+const upload = multer({ dest: 'uploads/' });
 
 const mainRoute = require("./src/routes/mainRoute");
 const productRoute = require("./src/routes/productRoute");
@@ -34,6 +36,12 @@ app.use(session({
   resave: true,
   saveUninitialized: true 
 }));
+// Configuramos o upload como um middleware que
+// espera um arquivo cujo a chave é "foto"
+app.post('/area-do-cliente', upload.single('foto'), (req, res) => {
+  const { email, cpf } = req.body;
+  res.json({ email, cpf });
+});
     
     
 app.use("/produtos", productRoute);
