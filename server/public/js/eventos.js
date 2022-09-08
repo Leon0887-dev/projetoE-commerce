@@ -1,4 +1,4 @@
-
+const imagem = require('../public/img/naoVerSenha.png');
 
 const senha = document.querySelector('.senha');
 const imagemAberta = document.querySelector('.imagemAberta');
