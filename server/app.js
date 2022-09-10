@@ -16,9 +16,6 @@ const carrinhoRoute = require("./src/routes/carrinhoRoute");
 const authRoute = require("./src/routes/authRoute");
 const adminRoute = require("./src/routes/admin/adminRoute");
 
-//Teste DB - APAGAR DEPOIS
-const testDbController = require("./src/controllers/TesteDbController");
-
 // Configurando pasta estática para acesso externo (onde ficam as imagens e css)
 app.use(express.static(path.join(__dirname, "public")));
 // Configurando a view engine para ejs
@@ -45,9 +42,6 @@ app.post('/area-do-cliente', upload.single('foto'), (req, res) => {
   const { email, cpf } = req.body;
   res.json({ email, cpf });
 });
-    
-//Teste DB - APAGAR DEPOIS
-app.use("/teste-bd",testDbController.index);
     
 app.use("/produtos", productRoute);
 app.use("/checkout", checkoutRoute);

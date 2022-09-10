@@ -1,7 +1,5 @@
 const db = require("../config/sequelize");
 const { DataTypes } = require("sequelize");
-const Order = require("./Order");
-const User = require("./User");
 
 const UserAddress = db.define("UserAddress", 
         {
@@ -56,19 +54,5 @@ const UserAddress = db.define("UserAddress",
             tableName: "user_addresses",
         }
     );
-
-    //Colocar código no último arquivo (relacionado à ordem alfabética) do relacionamento
-    User.hasMany(UserAddress,{
-        foreignKey: "user_id",
-    });
-    UserAddress.belongsTo(User,{
-        foreignKey: "user_id",
-    });
-    Order.hasOne(UserAddress,{
-        foreignKey: "user_address_id",
-    });
-    UserAddress.belongsTo(Order,{
-        foreignKey: "user_address_id",
-    });           
-  
-  module.exports = UserAddress;
+    
+module.exports = UserAddress;

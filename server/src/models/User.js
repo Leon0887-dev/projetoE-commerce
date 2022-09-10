@@ -1,6 +1,9 @@
 const db = require("../config/sequelize");
 const { DataTypes } = require("sequelize");
 const ImageUser = require("./ImageUser");
+const Order = require("./Order");
+const UserAddress = require("./UserAddress");
+
 
 const User = db.define("User", 
         {
@@ -56,9 +59,27 @@ const User = db.define("User",
 
     User.hasOne(ImageUser,{
         foreignKey: "user_id",
+        constraints: false,
     });
     ImageUser.belongsTo(User,{
         foreignKey: "user_id",
+        constraints: false,
     });   
+    User.hasMany(Order,{
+        foreignKey: "user_id",
+        constraints: false,
+    });
+    Order.belongsTo(User,{
+        foreignKey: "user_id",
+        constraints: false,
+    });
+    User.hasMany(UserAddress,{
+        foreignKey: "user_id",
+        constraints: false,
+    });
+    UserAddress.belongsTo(User,{
+        foreignKey: "user_id",
+        constraints: false,
+    });          
   
 module.exports = User;

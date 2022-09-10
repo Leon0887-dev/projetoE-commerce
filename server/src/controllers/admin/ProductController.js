@@ -1,4 +1,4 @@
-const Product = require("../../models/admin/Product");
+const Product = require("../../models_json/admin/Product");
 // Importando o express validator através da desestruturação, pegando o validationResult
 const {validationResult} = require('express-validator');
 

@@ -1,5 +1,7 @@
 const db = require("../config/sequelize");
 const { DataTypes } = require("sequelize");
+const AdminUser = require("./AdminUser");
+const Brand = require("./Brand");
 
 const Product = db.define("Product", 
         {
@@ -74,5 +76,22 @@ const Product = db.define("Product",
             tableName: "products",
         }
     );
+
+    AdminUser.hasMany(Product,{
+        foreignKey: "admin_user_id",
+        constraints: false,
+    });
+    Product.belongsTo(AdminUser,{
+        foreignKey: "admin_user_id",
+        constraints: false,
+    });
+    Brand.hasMany(Product,{
+        foreignKey: "brand_id",
+        constraints: false,
+    });
+    Product.belongsTo(Brand,{
+        foreignKey: "brand_id",
+        constraints: false,
+    });
   
-  module.exports = Product;
+module.exports = Product;

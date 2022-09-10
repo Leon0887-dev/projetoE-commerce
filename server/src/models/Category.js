@@ -1,5 +1,6 @@
 const db = require("../config/sequelize");
 const { DataTypes } = require("sequelize");
+const AdminUser = require("./AdminUser");
 
 const Category = db.define("Category", 
         {
@@ -22,5 +23,14 @@ const Category = db.define("Category",
             tableName: "categories",
         }
     );
+
+    AdminUser.hasMany(Category,{
+        foreignKey: "admin_user_id",
+        constraints: false,
+    });
+    Category.belongsTo(AdminUser,{
+        foreignKey: "admin_user_id",
+        constraints: false,
+    });
   
-  module.exports = Category;
+module.exports = Category;

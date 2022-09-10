@@ -1,5 +1,6 @@
 const db = require("../config/sequelize");
 const { DataTypes } = require("sequelize");
+const AdminUser = require("./AdminUser");
 
 const Brand = db.define("Brand", 
         {
@@ -22,5 +23,14 @@ const Brand = db.define("Brand",
             tableName: "brands",
         }
     );
+
+    AdminUser.hasMany(Brand,{
+        foreignKey: "admin_user_id",
+        constraints: false,
+    });
+    Brand.belongsTo(AdminUser,{
+        foreignKey: "admin_user_id",
+        constraints: false,
+    });
   
-  module.exports = Brand;
+module.exports = Brand;

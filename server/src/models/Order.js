@@ -1,6 +1,6 @@
 const db = require("../config/sequelize");
 const { DataTypes } = require("sequelize");
-const UserAddress = require("./UserAddress");
+const UserAddress = require("../models/UserAddress");
 
 const Order = db.define("Order", 
         {
@@ -38,5 +38,14 @@ const Order = db.define("Order",
             tableName: "orders",
         }
     );
+
+    Order.belongsTo(UserAddress,{
+        foreignKey: "user_address_id",
+        constraints: false,
+    });
+    UserAddress.hasOne(Order,{
+        foreignKey: "user_address_id",
+        constraints: false,
+    }); 
 
 module.exports = Order;
