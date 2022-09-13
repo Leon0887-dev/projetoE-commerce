@@ -43,7 +43,6 @@ app.post('/area-do-cliente', upload.single('foto'), (req, res) => {
   res.json({ email, cpf });
 });
     
-    
 app.use("/produtos", productRoute);
 app.use("/checkout", checkoutRoute);
 app.use("/area-do-cliente", userPanelRoute);
@@ -51,6 +50,7 @@ app.use("/carrinho", carrinhoRoute);
 app.use("/admin", adminRoute);
 app.use("/", authRoute);
 app.use("/", mainRoute);
+
 
 app.use((req,res)=>{
     return res.status(404).render("notFound", {title: "Página não encontrada"});
