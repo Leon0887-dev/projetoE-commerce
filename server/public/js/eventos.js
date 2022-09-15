@@ -4,10 +4,10 @@ const imagemAberta = document.querySelector('.imagemAberta');
 imagemAberta.addEventListener('click', function () {
     if (senha.type === 'password') {
         senha.type = 'text';
-        imagemAberta.src = '/img/naoVerSenha.png';
+        imagemAberta.src = '/img/aberto.svg';
     } else {
         senha.type = 'password';
-        imagemAberta.src = '/img/verSenha.png';
+        imagemAberta.src = '/img/fechado.svg';
     }
 });
 
