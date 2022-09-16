@@ -20,10 +20,10 @@
                             <!-- Trazendo os produtos cadastrados -->
                             <% for(let product of products){ %>
                                 <tr>
-                                    <td><%= product.title %></td>
+                                    <td><%= product.name %></td>
                                     <td><%= product.sku %></td>
                                     <td><%= product.quantity %></td>
-                                    <td><%= product.category %></td>
+                                    <td><%= product.Categories[0].name %></td>
                                     <% if(product.active){ %>
                                         <td>Ativo</td>
                                     <% }else{ %>

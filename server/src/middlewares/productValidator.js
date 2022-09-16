@@ -1,7 +1,7 @@
 const {check} = require('express-validator');
 
 const productValidator = [
-  check('title').notEmpty().withMessage('Insira o nome do produto'),
+  check('name').notEmpty().withMessage('Insira o nome do produto'),
   check('brand').notEmpty().withMessage('Insira a marca do produto'),
   check('flavor').notEmpty().withMessage('Insira o sabor do produto'),
   check('roast').notEmpty().withMessage('Insira o tipo de torra do produto'),
