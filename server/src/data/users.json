@@ -1,3 +1,4 @@
+
 [{
     "id": 1,
     "nome": "Zé",
@@ -8,7 +9,8 @@
     "admin": true,
     "criadoEm": "2021-09-13T00:55:49.130Z",
     "modificadoEm": "2021-09-30T00:40:53.344Z"
-}, {
+  },
+  {
     "id": 2,
     "nome": "Lucia",
     "sobrenome": "Donalds",
@@ -18,7 +20,8 @@
     "admin": false,
     "criadoEm": "2021-09-13T00:55:49.130Z",
     "modificadoEm": "2021-09-30T00:40:53.344Z"
-}, {
+  },
+  {
     "id": 3,
     "nome": "Bruno",
     "sobrenome": "Sanches",
@@ -28,7 +31,8 @@
     "admin": false,
     "criadoEm": "2022-08-10T01:06:34.520Z",
     "modificadoEm": "2022-08-10T01:06:34.520Z"
-}, {
+  },
+  {
     "id": 4,
     "nome": "Bruno",
     "sobrenome": "Sanches",
@@ -38,7 +42,8 @@
     "admin": false,
     "criadoEm": "2022-08-10T02:33:04.895Z",
     "modificadoEm": "2022-08-10T02:33:04.895Z"
-}, {
+  },
+  {
     "id": 5,
     "nome": "Ligia",
     "sobrenome": "Pretel",
@@ -48,7 +53,8 @@
     "admin": false,
     "criadoEm": "2022-08-11T00:50:16.948Z",
     "modificadoEm": "2022-08-11T00:50:16.948Z"
-}, {
+  },
+  {
     "id": 6,
     "nome": "Bruno",
     "sobrenome": "Sanches",
@@ -58,7 +64,8 @@
     "admin": false,
     "criadoEm": "2022-08-17T00:34:44.124Z",
     "modificadoEm": "2022-08-17T00:34:44.124Z"
-}, {
+  },
+  {
     "id": 7,
     "nome": "carla",
     "sobrenome": "abreu",
@@ -68,7 +75,8 @@
     "admin": false,
     "criadoEm": "2022-08-17T23:04:51.265Z",
     "modificadoEm": "2022-08-17T23:04:51.265Z"
-}, {
+  },
+  {
     "id": 8,
     "nome": "Ligia",
     "sobrenome": "Eimantas",
@@ -78,7 +86,8 @@
     "admin": false,
     "criadoEm": "2022-08-26T18:18:05.338Z",
     "modificadoEm": "2022-08-26T18:18:05.338Z"
-}, {
+  },
+  {
     "id": 9,
     "nome": "Wellingtton",
     "sobrenome": "Luz",
@@ -88,7 +97,8 @@
     "admin": false,
     "criadoEm": "2022-08-26T23:59:36.281Z",
     "modificadoEm": "2022-08-26T23:59:36.281Z"
-}, {
+  },
+  {
     "id": 10,
     "nome": "tião",
     "sobrenome": "carreiro",
@@ -98,44 +108,17 @@
     "admin": false,
     "criadoEm": "2022-08-30T01:16:29.626Z",
     "modificadoEm": "2022-08-30T01:16:29.626Z"
-}, {
+  },
+  {
     "id": 11,
     "nome": "jubilenio",
-    "sobrenome": "silva",
+    "sobrenome": "Santos da silva",
     "cpf": "442.541.020-38",
-    "senha": "$2b$10$/WDbxEL2TGGCgrtvypabnuKG18bGEx82/rW9H769XxQi9VTGgrCEu",
+    "enderecos": [],
+    "senha": "$2b$10$Wfb3KnfjJMQmXxUV.m2d4e2DEk5Qk11hrSVMCsdfB5x/YY7VOfERm",
     "email": "jublenio@123.com",
     "admin": false,
-    "criadoEm": "2022-08-31T23:44:06.164Z",
-    "modificadoEm": "2022-08-31T23:44:06.164Z"
-}, {
-    "id": 12,
-    "nome": "Antonio",
-    "sobrenome": "Soares",
-    "cpf": "000.000.000-00",
-    "senha": "$2b$10$ogV8fAQLAN388qWp.mLGkOJa21BpGCWdf/9KCqyoDYfh9YDv.ImR6",
-    "email": "antonio@email.com",
-    "admin": false,
-    "criadoEm": "2022-09-02T18:34:29.779Z",
-    "modificadoEm": "2022-09-02T18:34:29.779Z"
-}, {
-    "id": 13,
-    "nome": "Larissa",
-    "sobrenome": "Nunes",
-    "cpf": "123.456.789-00",
-    "senha": "$2b$10$zhnBFaI6FLfA6.9Y3bvtR.k8kwRT/UvOnwzXyTgNLSpgYBwLXRo/S",
-    "email": "larissa@email.com",
-    "admin": false,
-    "criadoEm": "2022-09-02T18:49:22.892Z",
-    "modificadoEm": "2022-09-02T18:49:22.892Z"
-}, {
-    "id": 14,
-    "nome": "Paulo",
-    "sobrenome": "André Moraes",
-    "cpf": "123.456.789-00",
-    "senha": "$2b$10$2dTo3kCeAIR4qcY8BS0w3u6SWP0sADrqZXSh2Ax48g3x4jKPq1GTe",
-    "email": "paulo@email.com",
-    "admin": false,
-    "criadoEm": "2022-09-02T19:57:20.959Z",
-    "modificadoEm": "2022-09-02T19:57:20.959Z"
-}]
+    "criadoEm": "2022-09-02T21:28:48.516Z",
+    "modificadoEm": "2022-09-02T21:28:48.516Z"
+  }
+]

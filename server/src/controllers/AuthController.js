@@ -51,6 +51,7 @@ const authController = {
             nome,
             sobrenome,
             cpf,
+            enderecos: [],
             senha: bcrypt.generateHash(senha),
             email,
             admin: false,

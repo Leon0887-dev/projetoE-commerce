@@ -9,18 +9,18 @@
   <section class="row">
     <%- include('./partials/userPanelControl')%>
       <div class="col-md-9 forms-panel-user">
-        <form action="POST" class="row">
+        <form action="/area-do-cliente/endereco" method="post" class="row">
           <div class="form-check col-md-12 mb-3 ms-3">
             <input type="checkbox" class="form-check-input" id="checked" checked>
             <label for="checked" class="form-check-label">Selecionar como endereço de entrega principal</label>
           </div>
           <div class="container-input col-md-12">
-            <label for="adress-name">Nome do endereço*</label>
-            <input type="text"  id="adress-name" placeholder="minha casa">
+            <label for="adress-name">Apelido*</label>
+            <input type="text" name="apelido" id="adress-name" placeholder="minha casa">
           </div>
           <div class="container-input col-md-7">
             <label for="adress-cep">CEP*</label>
-            <input type="text"  id="adress-cep" placeholder="55533-123">
+            <input type="text" name="cep" id="adress-cep" placeholder="55533-123">
         
           </div>
           <div class="col-md-4 align-self-center mb-3 ms-2">
@@ -28,12 +28,12 @@
           </div>
           <div class="container-input col-md-12 ">
             <label for="adress">Endereço(rua,avenida,quadra,lote)*</label>
-            <input type="text"  id="adress" placeholder="rua joao de maia">
+            <input type="text" name="endereco" id="adress" placeholder="rua joao de maia">
         
           </div>
           <div class="container-input col-md-8 ">
             <label for="adress-number">Informe o número</label>
-            <input type="text" id="adress-number" placeholder="">
+            <input type="text" name="numero" id="adress-number" placeholder="">
         
           </div>
           <div class="container-input col-md-12 ">
@@ -45,22 +45,22 @@
           </div>
           <div class="container-input col-md-12 mb-3">
             <label for="adress-complement" >Complemento</label>
-            <input type="text"  id="adress-complement" placeholder="número da casa">
+            <input type="text" name="complemento" id="adress-complement" placeholder="número da casa">
         
           </div>
           <div class="container-input ">
             <label for="adress-district">Bairro</label>
-            <input type="text"  id="adress-district" placeholder="casa caiada">
+            <input type="text" name="bairro"  id="adress-district" placeholder="casa caiada">
         
           </div>
           <div class="container-input ">
             <label for="adress-city" >Cidade</label>
-            <input type="text"  id="adress-city" placeholder="paulista">
+            <input type="text" name="cidade" id="adress-city" placeholder="paulista">
         
           </div>
           <div class="container-input">
             <label for="adress-state">Estado</label>
-            <input type="text" class="form-control" id="adress-state" placeholder="pernambuco">
+            <input type="text" name="estado" class="form-control" id="adress-state" placeholder="pernambuco">
         
           </div>
           <div class="form-check mb-3 ms-3">
@@ -69,11 +69,11 @@
           </div>
           <div class="container-input">
             <label for="adress-recipient">Destinatário</label>
-            <input type="text"  id="adress-recipient" placeholder="">
+            <input type="text" name="destinatario" id="adress-recipient" placeholder="">
         
           </div>
           <div class="save-btn">
-            <input type="button" class="btn-edit-forms" value="Salvar alterações">
+            <button type="submit" class="btn-edit-forms">Salvar alterações</button>
           </div>
         </form>
       </div>
