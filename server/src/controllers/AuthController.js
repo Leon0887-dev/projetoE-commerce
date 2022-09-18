@@ -4,7 +4,8 @@ const bcrypt = require("../helpers/bcrypt");
 
 const authController = {
     //Tela para cadastro do usuario 
-    register: (req, res) => {
+    register: 
+    (req, res) => {
         return res.render("userRegister", {
             title: "criarConta",
             user: req.cookies.user
