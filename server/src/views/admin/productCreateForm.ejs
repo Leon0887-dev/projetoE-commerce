@@ -11,9 +11,9 @@
                         <p class="alert-form"> Existem campos no formulário que devem ser preenchidos </p>
                     <% } %>
 
-                    <input type="text" name="title" id="title" placeholder="Produto" value="<%= locals.old ? old.title : '' %>">
-                    <% if (locals.errors && errors.title) { %>
-                        <p class="alert-form"> <%= errors.title %> </p>
+                    <input type="text" name="name" id="name" placeholder="Produto" value="<%= locals.old ? old.name : '' %>">
+                    <% if (locals.errors && errors.name) { %>
+                        <p class="alert-form"> <%= errors.name %> </p>
                     <% } %>
                     
                     <label for="image">Foto do produto</label>
@@ -22,7 +22,12 @@
                         <p class="alert-form"> <%= fileMessage %> </p>
                     <% } %>
                     
-                    <input type="text" name="brand" id="brand" placeholder="Marca" value="<%= locals.old ? old.brand : '' %>">
+                    <select name="brand">
+                        <option disabled selected>Marca</option>
+                        <% brands.forEach(item=>{ %>
+                            <option value="<%= item.id %>" <% if (locals.old && old.brand == item.id) { %> selected <% } %>> <%= item.name %> </option>
+                        <% }) %>
+                    </select>
                     <% if (locals.errors && errors.brand) { %>
                         <p class="alert-form"> <%= errors.brand %> </p>
                     <% } %>
@@ -79,31 +84,18 @@
                    
                     <select name="category">
                         <option disabled selected>Categoria</option>
-                        <option value="Grãos" <% if (locals.old && old.category === "Grãos") { %> selected <% } %>>Grãos</option>
-                        <option value="Moídos" <% if (locals.old && old.category === "Moídos") { %> selected <% } %>>Moídos</option>
-                        <option value="Cápsulas" <% if (locals.old && old.category === "Cápsulas") { %> selected <% } %>>Cápsulas</option>
-                        <option value="Sachês" <% if (locals.old && old.category === "Sachês") { %> selected <% } %>>Sachês</option>
+                        <% categories.forEach(item=>{ %>
+                            <option value="<%= item.id %>" <% if (locals.old && old.category == item.id) { %> selected <% } %>> <%= item.name %> </option>
+                        <% }) %>
                     </select>
                     <% if (locals.errors && errors.category) { %>
                         <p class="alert-form"> <%= errors.category %> </p>
                     <% } %>
-                    
-                    <select name="bestseller">
-                        <option disabled selected>Destacar em Mais Vendidos?</option>
-                        <option value="true">Sim</option>
-                        <option value="false">Não</option>
-                    </select>
-                    
-                    <select name="newproduct">
-                        <option disabled selected>Destacar em Lançamentos?</option>
-                        <option value="true">Sim</option>
-                        <option value="false">Não</option>
-                    </select>
-                    
+                                      
                     <select name="active">
                         <option disabled selected>Ativar produto?</option>
-                        <option value="true" <% if (locals.old && old.active == "true") { %> selected <% } %>>Sim</option>
-                        <option value="false" <% if (locals.old && old.active == "false") { %> selected <% } %>>Não</option>
+                        <option value="1" <% if (locals.old && old.active == "1") { %> selected <% } %>>Sim</option>
+                        <option value="0" <% if (locals.old && old.active == "0") { %> selected <% } %>>Não</option>
                     </select>
                     <% if (locals.errors && errors.active) { %>
                         <p class="alert-form"> <%= errors.active %> </p>

@@ -490,6 +490,17 @@ footer .social-media-title {
     transform: scaleX(1);
 }
 
+#imagemAberta {
+    position : absolute;
+    top: 50%;
+    right: 10px;
+    color: #555;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
 .input-field-login input {
     outline: none;
     font-size: 0.9rem;
@@ -1218,6 +1229,11 @@ label {
 .list-link a {
     color: #19180A;
     font-size: 18px;
+}
+
+.list-link form button {
+    margin-left: 10px;
+    background-color: transparent;
 }
 
 .user-list-products,

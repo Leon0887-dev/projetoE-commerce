@@ -28,8 +28,7 @@
 				<div class="container-input">
 					<label form="cpf-id">CPF</label>
 					<div>
-						<input type="text" name="cpf" \ pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" \
-							title="Digite um CPF no formato: xxx.xxx.xxx-xx">
+						<input type="text" name="cpf" id="cpf" placeholder="000.000.000-00" autocomplete="off" maxlength="14">
 					</div>
 				</div>
 
@@ -56,11 +55,12 @@
 
 				<div class="container-checkbox">
 					<div class="container-checkbox">
-						<input type="checkbox" name="agree" id="agree-id" required />
+						<input type="checkbox" name="agree" id="agree-id" required checked/>
 						<label for="agree-id">Li e concordo com os termos</label>
 					</div>
 					<div class="container-checkbox">
 						<input type="checkbox" name="newsletter" id="newsletter-id" />
+						<!-- <input name="foto" type="file" /> -->
 						<label for="newsletter-id">Deseja receber notícias por e-mail?</label>
 					</div>
 				</div>
