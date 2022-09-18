@@ -15,7 +15,7 @@ const userPanelRoute = require("./src/routes/userPanelRoute");
 const carrinhoRoute = require("./src/routes/carrinhoRoute");
 const authRoute = require("./src/routes/authRoute");
 const adminRoute = require("./src/routes/admin/adminRoute");
-
+const userRoute = require("./src/routes/admin/userRoute");
 // Configurando pasta estática para acesso externo (onde ficam as imagens e css)
 app.use(express.static(path.join(__dirname, "public")));
 // Configurando a view engine para ejs
@@ -48,6 +48,7 @@ app.use("/checkout", checkoutRoute);
 app.use("/area-do-cliente", userPanelRoute);
 app.use("/carrinho", carrinhoRoute);
 app.use("/admin", adminRoute);
+app.use("/user", userRoute);
 app.use("/", authRoute);
 app.use("/", mainRoute);
 
