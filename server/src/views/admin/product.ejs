@@ -16,9 +16,11 @@
             <p><%= product.sku %> </p>
             <p><%= product.quantity %> </p>
             <p><%= product.Categories[0].name %> </p>
-            <p><%= product.bestSeller %> </p>
-            <p><%= product.newProduct %> </p>
-            <p><%= product.active %> </p>
+            <% if(product.active){ %>
+                <p>Ativo</p>
+            <% }else{ %>
+                <p>Inativo</p>
+            <% } %>
             
             <img src="/img/<%= product.ImageProducts[0].name %>" alt="">
 

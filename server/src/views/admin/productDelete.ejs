@@ -5,9 +5,9 @@
     <main id="main-admin-products">
         <% if(locals.product){ %>
 
-            <h2 class="admin-products-add">Tem certeza que desejar deletar o produto abaixo?</h2>
-            <p><%= product.title %> </p>
-            <p><%= product.brand %> </p>
+            <h2 class="admin-products-add">Tem certeza que desejar inativar o produto abaixo?</h2>
+            <p><%= product.name %> </p>
+            <p><%= product.Brand.name %> </p>
             <p><%= product.flavor %> </p>
             <p><%= product.roast %> </p>
             <p><%= product.description %> </p>
@@ -17,11 +17,13 @@
             <p><%= product.installment %> </p>
             <p><%= product.sku %> </p>
             <p><%= product.quantity %> </p>
-            <p><%= product.category %> </p>
-            <p><%= product.bestSeller %> </p>
-            <p><%= product.newProduct %> </p>
-            <p><%= product.active %> </p>
-            <img src="/img/<%= product.image %> " alt="">
+            <p><%= product.Categories[0].name %> </p>
+            <% if(product.active){ %>
+                <p>Ativo</p>
+            <% }else{ %>
+                <p>Inativo</p>
+            <% } %>
+            <img src="/img/<%= product.ImageProducts[0].name %> " alt="">
 
             <form action="/admin/produtos/deletar/<%= product.id %>?_method=delete" method="post">
                 <a href="/admin/produtos"><button class="btn-edit-forms" type="button">Não</button></a>
