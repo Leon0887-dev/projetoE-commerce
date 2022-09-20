@@ -1,8 +1,8 @@
 const Sequelize = require("sequelize");
 const configDB = require("../../config/database");
 const db = new Sequelize(configDB);
-const users = require("../../models/User.js");
-const bcrypt = require("../../helpers/bcrypt");
+
+
 
 const authController = {
   index: async (req, res) => {
