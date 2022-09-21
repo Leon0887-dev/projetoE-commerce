@@ -16,13 +16,21 @@ const productController = {
 
             //Armazenando chave da query string
             const category = req.query.categoria;
-    
-            const products = await Product.findAll({
+
+            //Recebendo a paginação via query string, se não vier página, por padrão será 1
+            let { pagina=1 } = req.query; 
+                        
+            const {count: total, rows: products} = await Product.findAndCountAll({
                 where: {
                     active: 1,
                 },
+                limit: 8,
+                offset: (pagina-1)*8,
                 include: ImageProduct,
             });
+            
+            //Math.ceil() - arredonda um número para cima, para o próximo valor inteiro - Ex.: 1.3 -> 2 
+            let totalPages = Math.ceil(total/8);
 
             const brands = await Brand.findAll({
                 order: [
@@ -68,11 +76,13 @@ const productController = {
                 products,
                 brands,
                 categories,
+                totalPages,
                 user: req.cookies.user            
             });
 
         }catch(error){
-            return res.render("/error", {
+            console.log(error);
+            return res.render("error", {
                 title: "Ops!",
                 message: "Erro na exibição dos produtos."
             });
