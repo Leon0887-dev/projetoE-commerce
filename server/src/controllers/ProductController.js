@@ -2,37 +2,70 @@ const fs = require('fs');
 const path = require('path');
 const productsJson = path.join("src", "data", "products.json");
 
+const Product = require("../models/Product");
+const Category = require("../models/Category");
+const CategoryProduct = require("../models/CategoryProduct");
+const Brand = require("../models/Brand");
+const ImageProduct = require("../models/ImageProduct");
+const ProductImage = require("../models/ProductImage");
+
 const productController = {
-    index: (req, res) => {
+    index: async (req, res) => {
 
-        //Armazenando chave da query string
-        const category = req.query.categoria;
+        try{
 
-        // Lendo arquivo json
-        let products = fs.readFileSync(productsJson, {
-            enconding: 'utf-8'
-        })
-        // Transformando o formato JSON em um array novamente
-        products = JSON.parse(products);
+            //Armazenando chave da query string
+            const category = req.query.categoria;
+    
+            const products = await Product.findAll({
+                where: {
+                    active: 1,
+                },
+                include: ImageProduct,
+            });
 
-        //Verificando se existe alguma categoria
-        if (category) {
-            //Filtrando por categoria
-            const productResult = products.filter((product) => product.category == category);
+            const brands = await Brand.findAll({
+                order: [
+                    ["name","ASC"],
+                ]
+            });
 
-            //Renderizando a página com os produtos da categoria
+            const categories = await Category.findAll({
+                order: [
+                    ["name","ASC"],
+                ]
+            });
+    
+            //Verificando se existe alguma categoria
+            if (category) {
+                //Filtrando por categoria
+                const productResult = products.filter((product) => product.category == category);
+    
+                //Renderizando a página com os produtos da categoria
+                return res.render("productListing", {
+                    title: "Produtos",
+                    products: productResult,
+                    brands,
+                    categories,
+                    user: req.cookies.user            
+                });
+            }
+    
             return res.render("productListing", {
                 title: "Produtos",
-                products: productResult,
+                products,
+                brands,
+                categories,
                 user: req.cookies.user            
+            });
+
+        }catch(error){
+            return res.render("/error", {
+                title: "Ops!",
+                message: "Erro na exibição dos produtos."
             });
         }
 
-        return res.render("productListing", {
-            title: "Produtos",
-            products,
-            user: req.cookies.user            
-        });
     },
     show: (req, res) => {
 
