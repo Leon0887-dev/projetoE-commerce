@@ -1,20 +1,46 @@
-const fs = require('fs');
-const path = require('path');
-const productsJson = path.join("src","data","products.json");
+const Product = require("../models/Product");
+const ImageProduct = require("../models/ImageProduct");
+const ProductImage = require("../models/ProductImage");
 
 const indexController = {
-    index: (req,res)=>{
+    index: async (req,res)=>{
 
-        // Lendo arquivo json
-        let products = fs.readFileSync(productsJson,{enconding:'utf-8'})
-        // Transformando o formato JSON em um array novamente
-        products=JSON.parse(products);
+        try{
 
-        return res.render("index",{
-            title:"Home",
-            products,
-            user: req.cookies.user
-        });
+            const bestSellerProducts = await Product.findAll({
+                where: {
+                    active: 1,
+                },
+                limit: 4,
+                include: ImageProduct,
+            });
+
+            const newestProducts = await Product.findAll({
+                where: {
+                    active: 1,
+                },
+                limit: 4,
+                order: [
+                    ["created_at","DESC"],
+                ],                
+                include: ImageProduct,
+            },
+            );
+
+            return res.render("index",{
+                title:"Home",
+                bestSellerProducts,
+                newestProducts,
+                user: req.cookies.user
+            });
+
+        }catch(error){
+            return res.render("/error", {
+                title: "Ops!",
+                message: "Erro na exibição da página."
+            });
+        }
+
     },
     about: (req,res)=>{
         return res.render("about",{
