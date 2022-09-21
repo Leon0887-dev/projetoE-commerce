@@ -38,8 +38,20 @@ const productController = {
     
             //Verificando se existe alguma categoria
             if (category) {
-                //Filtrando por categoria
-                const productResult = products.filter((product) => product.category == category);
+
+                const productResult = await Product.findAll({
+                    where: {
+                        active: 1,
+                    },
+                    include: [
+                        { model: ImageProduct },
+                        { model: Category,
+                            where: {
+                                name: category,
+                            }
+                        },
+                    ],
+                });
     
                 //Renderizando a página com os produtos da categoria
                 return res.render("productListing", {
