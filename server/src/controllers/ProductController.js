@@ -67,6 +67,7 @@ const productController = {
                     products: productResult,
                     brands,
                     categories,
+                    totalPages,
                     user: req.cookies.user            
                 });
             }
