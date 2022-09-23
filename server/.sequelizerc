@@ -5,4 +5,6 @@ module.exports = {
   config: path.resolve("src", "config", "database.js"),
   //Caminho da pasta models
   "models-path": path.resolve("src", "models"),
+  "seders-path": path.resolve("src", "seders"),
+  "migrations-path": path.resolve("src", "database", "migrations"),
 };

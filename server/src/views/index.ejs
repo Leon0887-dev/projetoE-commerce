@@ -85,20 +85,18 @@
     <div class="title-section">
       <h2>Mais vendidos</h2>
     </div>
-    <% if(products.length>0){%>
+    <% if(bestSellerProducts.length>0){%>
           
       <ul class="product-list">
 
-        <% for(let product of products) { %>
-          
-          <% if (product.bestseller==="true") { %>       
+        <% for(let product of bestSellerProducts) { %>    
 
             <li class="best-sellers-item col-10 col-md-6 col-lg-3">
               <a href="/produtos/<%= product.id %> ">
                 <div class="product-img">
-                  <img src="/img/<%= product.image %>" alt="">
+                  <img src="/img/<%= product.ImageProducts[0].name %>" alt="">
                 </div>
-                <h4 class="product-list-title underline-hover"><%= product.title %></h4>
+                <h4 class="product-list-title underline-hover"><%= product.name %></h4>
                 <p class="product-list-features"><%= product.flavor %></p>
                 <p class="product-list-features">Torra <%= product.roast %></p>
                 <p class="product-list-price">R$ <%= product.price %></p>
@@ -107,11 +105,8 @@
                 <button type="button" class="btn-edit-forms col-12">Adicionar à sacola</button>
               </a>
             </li>
-          
-          <% } %> <!-- Fechando if -->
 
-        <% } %> <!-- Fechando for -->
-
+        <% } %>
       </ul>
 
     <% }else{ %> 
@@ -124,20 +119,18 @@
     <div class="title-section">
       <h2>Lançamentos</h2>
     </div>
-    <% if(products.length>0){%>
+    <% if(newestProducts.length>0){%>
 
         <ul class="product-list">
 
-        <% for(let product of products) { %>
-            
-          <% if (product.newproduct==="true") { %>  
-
+        <% for(let product of newestProducts) { %>       
+           
             <li class="new-products-item col-10 col-md-6 col-lg-3">
               <a href="/produtos/<%= product.id %>">
                 <div class="product-img">
-                  <img src="/img/<%= product.image %>" alt="">
+                  <img src="/img/<%= product.ImageProducts[0].name %>" alt="">
                 </div>
-                <h4 class="product-list-title underline-hover"><%= product.title %></h4>
+                <h4 class="product-list-title underline-hover"><%= product.name %></h4>
                 <p class="product-list-features"><%= product.flavor %></p>
                 <p class="product-list-features">Torra <%= product.roast %></p>
                 <p class="product-list-price">R$ <%= product.price %> </p>
@@ -147,9 +140,7 @@
               </a>
             </li>
 
-          <% } %> <!-- Fechando if -->
-
-        <% } %> <!-- Fechando for -->
+        <% } %>
         
       </ul>
 

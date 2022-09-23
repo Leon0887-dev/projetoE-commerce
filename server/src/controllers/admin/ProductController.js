@@ -147,15 +147,15 @@ const productController = {
             });
     
             //Inserindo imagem na tabela
-            const imageUser = await ImageProduct.create({
+            const _imageProduct = await ImageProduct.create({
                 name: image,
                 created_at: new Date(),
                 updated_at: new Date(),
                 admin_user_id: 1,
             });
 
-            //Fazendo vínculos das tabelas
-            await product.addImageProduct(imageUser, { });
+            //Fazendo vínculos das tabelas - será criada uma relação na tabela intermediária
+            await product.addImageProduct(_imageProduct, { });
 
             const _category = await Category.findByPk(category);
 
@@ -170,66 +170,179 @@ const productController = {
             });
         }
     },
-    edit:(req,res)=>{
-        const {id} = req.params;
-        //Acessando o método findById do model
-        const product = Product.findById(id);
-        //Verificando se existe algum produto, se não existir, renderiza a view error
-        if(!product){
+    edit:async (req,res)=>{
+
+        try{
+
+            const {id} = req.params;
+            
+            //Acessando o método findByPk do model
+            const product = await Product.findByPk(id,{
+                include: [
+                    { model: Category },
+                    { model: Brand },
+                    { model: ImageProduct },
+                ]
+            });
+
+            //Incluindo listagem de marcas e categorias para serem renderizadas no select
+            const brands = await Brand.findAll();
+    
+            const categories = await Category.findAll();
+            
+            //Verificando se existe algum produto, se não existir, renderiza a view error
+            if(!product){
+                return res.render("admin/error", {
+                    title: "Ops!",
+                    message: "Produto não encontrado."
+                });
+            }
+           
+            return res.render("admin/productEditForm", {
+                title: "Edição de Produto",
+                product,
+                brands,
+                categories
+            });
+
+        }catch(error){
             return res.render("admin/error", {
                 title: "Ops!",
                 message: "Produto não encontrado."
             });
-        }
-        return res.render("admin/productEditForm", {
-            title: "Edição de Produto",
-            product
-        });
-    },
-    update:(req,res)=>{
-        const {id} = req.params;
-
-        //Recebendo os campos do formulário
-        const { title, brand, flavor, roast, description, content, format, price, installment, sku, quantity, category, bestseller, newproduct, active } = req.body;
-
-        let image;
-        if(req.file){
-            image = req.file.filename;
         }
         
-        //Acessando o método update do model, passando como parâmetro o id + os dados recebidos no formulário
-        const products = Product.update(id,{ title, brand, flavor, roast, description, content, format, price, installment, image, sku, quantity, category, bestseller, newproduct, active });
-
-		res.send(products);
     },
-    delete:(req,res)=>{
-        const {id} = req.params;
-        //Acessando o método findById do model
-        const product = Product.findById(id);
-        //Verificando se existe algum produto, se não existir, renderiza a view error
-        if(!product){
+    update: async (req,res)=>{
+
+        try{
+
+            const {id} = req.params;
+
+            //Recebendo os campos do formulário
+            const { name, brand, flavor, roast, description, content, format, price, installment, sku, quantity, category, active } = req.body;
+        
+            //Acessando o método update do model, passando como parâmetro o id + os dados recebidos no formulário
+            const product = await Product.update({ 
+                name, 
+                brand, 
+                flavor, 
+                roast, 
+                description, 
+                content, 
+                format, 
+                price, 
+                installment, 
+                sku, 
+                quantity, 
+                active, 
+                updated_at: new Date(),
+                brand_id: brand,
+                admin_user_id: 1
+            },{
+                where: {id}
+            });
+
+            //Atualizando imagem na tabela
+            if(req.file){
+
+                const image = req.file.filename;
+
+                const _imageProduct = await ImageProduct.update({
+                    name: image,
+                    updated_at: new Date(),
+                    admin_user_id: 1,
+                },{
+                    where: {
+                        product_id: id,
+                    }
+                });
+
+            }
+
+            const _category = await CategoryProduct.update({
+                category_id: category,
+            },{
+                where: {
+                    product_id: id
+                }
+            });
+
+            res.redirect("/admin/produtos");
+
+        }catch(error){
+            return res.render("admin/error", {
+                title: "Ops!",
+                message: "Erro ao atualizar o produto."
+            });
+        }
+
+        
+    },
+    delete: async (req,res)=>{
+
+        try{
+
+            const {id} = req.params;
+
+            //Acessando o método findByPk do model
+            const product = await Product.findByPk(id,{
+                include: [
+                    { model: Category },
+                    { model: Brand },
+                    { model: ImageProduct },
+                ]
+            });
+           
+            //Verificando se existe algum produto, se não existir, renderiza a view error
+            if(!product){
+                return res.render("admin/error", {
+                    title: "Ops!",
+                    message: "Produto não encontrado."
+                });
+            }
+
+            return res.render("admin/productDelete", {
+                title: "Deletar Produto",
+                product
+            });
+
+        }catch(error){
             return res.render("admin/error", {
                 title: "Ops!",
                 message: "Produto não encontrado."
             });
         }
-        return res.render("admin/productDelete", {
-            title: "Deletar Produto",
-            product
-        });
     },
-    destroy:(req,res)=>{
-        const {id} = req.params;
-		const products = Product.delete(id);
+    destroy: async (req,res)=>{
 
-        if(!products){
+        try{
+
+            const {id} = req.params;
+            const product = await Product.update({
+                active: 0,
+                updated_at: new Date(),
+                admin_user_id: 1
+            },{
+                where: {id}
+            }
+            );
+    
+            if(!product){
+                return res.render("admin/error", {
+                    title: "Ops!",
+                    message: "Produto não encontrado."
+                });
+            }
+    
+            res.redirect("/admin/produtos");
+
+        }catch(error){
             return res.render("admin/error", {
                 title: "Ops!",
-                message: "Produto não encontrado."
+                message: "Erro ao inativar o produto."
             });
         }
-
-        return res.redirect("/admin/produtos");
 
     }
 };

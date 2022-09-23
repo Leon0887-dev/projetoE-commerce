@@ -13,17 +13,16 @@
         <div>
             <label for="filter-category">Filtrar:</label>
             <select name="filter-category" id="filter-category">
-                <option value="" selected disabled>Categoria</option>
-                <option value="grains">Grãos</option>
-                <option value="grounds">Moídos</option>
-                <option value="capsules">Cápsulas</option>
-                <option value="sachets">Sachês</option>
+                <option disabled selected>Categoria</option>
+                <% categories.forEach(item=>{ %>
+                    <option value="<%= item.id %>"> <%= item.name %> </option>
+                <% }) %>
             </select>
             <select name="filter-brand" id="filter-brand">
-                <option value="" selected disabled>Marca</option>
-                <option value="">Bravo Café</option>
-                <option value="">Buti Coffee</option>
-                <option value="">Moka</option>
+                <option disabled selected>Marca</option>
+                <% brands.forEach(item=>{ %>
+                    <option value="<%= item.id %>"> <%= item.name %> </option>
+                <% }) %>
             </select>
         </div>
         <div>
@@ -48,9 +47,9 @@
             <li class="product-listing-item col-10 col-md-6 col-lg-3">
               <a href="/produtos/<%= product.id %>">
                 <div class="product-img">
-                  <img src="/img/<%= product.image %>" alt="">
+                  <img src="/img/<%= product.ImageProducts[0].name %>" alt="">
                 </div>
-                <h4 class="product-list-title underline-hover"><%= product.title %></h4>
+                <h4 class="product-list-title underline-hover"><%= product.name %></h4>
                 <p class="product-list-features"><%= product.flavor %></p>
                 <p class="product-list-features"><%= product.roast %></p>
                 <p class="product-list-price">R$ <%= product.price %></p>
@@ -63,6 +62,15 @@
           <% }) %>
 
           </ul>
+
+          <nav aria-label="Page navigation example" class="d-flex justify-content-center mb-5">
+            <ul class="pagination">
+              <% for( let i = 1; i <= totalPages; i++ ) { %>
+                <li class="page-item"><a class="page-link" href="?pagina=<%= i %>"><%= i %></a></li>
+              <% } %>  
+            </ul>
+          </nav>
+
     </section>
 
 <%- include("./partials/footer")%>    
