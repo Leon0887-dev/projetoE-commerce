@@ -257,14 +257,3 @@ VALUES
     (1, 4, 6),
     (1, 4, 7),
     (1, 4, 8);
-
-/*    
--- Lista pedidos concatenado com pedidos-produtos e produtos
-SELECT * FROM orders 
-INNER JOIN orders_products ON orders.id = orders_products.order_id
-INNER JOIN products ON products.id = orders_products.product_id;
-
--- Lista usuarios concatenado com pedidos
-SELECT * FROM users
-INNER JOIN orders ON users.id = orders.user_id;
-*/
