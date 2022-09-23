@@ -108,11 +108,7 @@ const productController = {
                 user: req.cookies.user
             });
         };
-        // Caso contrário, copiamos as informações de productResult usando spread operator para a variável product
-        // const product = {
-        //     ...productResult,
-        // };
-
+       
         // Por fim, retorno a view passando as informações do produto
         return res.render("product", {
             title: "Detalhe do Produto",
