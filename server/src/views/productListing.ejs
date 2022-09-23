@@ -56,7 +56,7 @@
                   <h4 class="product-list-title underline-hover"><%= product.name %></h4>
                   <p class="product-list-features"><%= product.flavor %></p>
                   <p class="product-list-features"><%= product.roast %></p>
-                  <p class="product-list-price">R$ <%= product.price %></p>
+                  <p class="product-list-price">R$ <%= product.price.replace(".",",") %></p>
                 </a>
                 <a href="">
                   <button type="button" class="btn-edit-forms col-12">Adicionar à sacola</button>

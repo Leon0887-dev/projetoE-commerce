@@ -7,32 +7,33 @@
 
         <section id="product-picture">
           <div class="picture-border">
-            <img src="/img/<%= product.image %>" alt="<%= product.title %>">
+            <img src="/img/<%= product.ImageProducts[0].name %>" alt="<%= product.name %>">
           </div>
         </section>
         <div id="container-details-product">       
           <section id="identification">
-          <h1 class="product-name"><%= product.title %></h1>
+          <h1 class="product-name"><%= product.name %></h1>
           <div class="bg-product-features">
-            <h6>Marca: <%= product.brand %></h6>
+            <h6>Marca: <%= product.Brand.name %></h6>
             <h6>Formato: <%= product.format %></h6>
             <h6>Ref: <%= product.sku %> </h6>
           </div>
           </section>
-          <section id="about">
-          <h1 class="price">R$ <%= product.price %></h1>
-          <h6 class="price-options">10x 2,99 sem juros</h6>
-          <form id="delivery" action="">
-            <label for="shipping">Calcular frete</label>
-            <input type="number" name="shipping" id="shipping" placeholder="00000-000">
-          </form>
-          <a href="" class="center">
-            <button type="button" class="btn-edit-forms">Adicionar à sacola</button>
-          </a>
-          <h4 class="description">Descrição</h4>
-          <p class="description2"><%= product.description %></p>
-          <h4 class="content">Conteúdo</h4>
-          <p class="content2"><%= product.content %></p>
+          <section id="about">            
+            <h1 class="price">R$ <%= product.price.replace(".",",") %></h1>
+            <% let result =  product.price/product.installment %>
+            <h6 class="price-options"><%= product.installment %>x de <%= result %> sem juros</h6>
+            <form id="delivery" action="">
+              <label for="shipping">Calcular frete</label>
+              <input type="number" name="shipping" id="shipping" placeholder="00000-000">
+            </form>
+            <a href="" class="center">
+              <button type="button" class="btn-edit-forms">Adicionar à sacola</button>
+            </a>
+            <h4 class="description">Descrição</h4>
+            <p class="description2"><%= product.description %></p>
+            <h4 class="content">Conteúdo</h4>
+            <p class="content2"><%= product.content %></p>
           </section>
         </div>
     </div>

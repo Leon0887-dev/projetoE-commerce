@@ -21,6 +21,7 @@ const productController = {
             //Recebendo a paginação via query string, se não vier página, por padrão será 1
             let { pagina = 1 } = req.query;
 
+            //Armazenando a configuração do include em uma variável, e checando nas linhas abaixo se estamos recebendo categoria e marca via query string, para adicionar mais modelos ao include
             const include = [{
                 model: ImageProduct
             }]
@@ -67,8 +68,6 @@ const productController = {
                 ]
             });
 
-            console.log(products);
-
             return res.render("productListing", {
                 title: "Produtos",
                 products,
@@ -87,24 +86,22 @@ const productController = {
         }
 
     },
-    show: (req, res) => {
+    show: async (req, res) => {
 
         //Pegando o id que virá via url - GET
-        const {
-            id
-        } = req.params;
-
-        // Lendo arquivo json
-        let products = fs.readFileSync(productsJson, {
-            enconding: 'utf-8'
-        })
-        // Transformando o formato JSON em um array novamente
-        products = JSON.parse(products);
+        const {id} = req.params;        
 
         //Verificando se o id existe
-        const productResult = products.find((product) => product.id === parseInt(id));
+        const product = await Product.findByPk(id,{
+            include: [
+                { model: Category },
+                { model: Brand },
+                { model: ImageProduct },
+            ]
+        });
+        
         // Se não existir, renderiza a view error mostrando a mensagem 
-        if (!productResult) {
+        if (!product) {
             return res.render("error", {
                 title: "Ops!",
                 message: "Produto não encontrado.",
@@ -112,9 +109,9 @@ const productController = {
             });
         };
         // Caso contrário, copiamos as informações de productResult usando spread operator para a variável product
-        const product = {
-            ...productResult,
-        };
+        // const product = {
+        //     ...productResult,
+        // };
 
         // Por fim, retorno a view passando as informações do produto
         return res.render("product", {
