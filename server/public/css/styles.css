@@ -341,9 +341,11 @@ footer .social-media-title {
 
 .product-list-title {
     padding-top: 1rem;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     letter-spacing: 0.05rem;
     color: #707070;
+    min-height: 3.8rem;
+    text-transform: uppercase;
 }
 
 .product-list-features {

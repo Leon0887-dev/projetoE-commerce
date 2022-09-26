@@ -223,8 +223,8 @@ VALUES
     ("1660949507034capsula_cafe05.jpg", "2022-09-01 15:00:00", "2022-09-01 15:00:00", 2),
     ("1660067991337capsula_cafe04.png", "2022-09-01 15:00:00", "2022-09-01 15:00:00", 2),
     ("img_produto3.jpg", "2022-09-01 15:00:00", "2022-09-01 15:00:00", 2),
-    ("img_produto4.jpg.jpg", "2022-09-01 15:00:00", "2022-09-01 15:00:00", 2),
-    ("img_produto5.jpg.jpg", "2022-09-01 15:00:00", "2022-09-01 15:00:00", 2),
+    ("img_produto4.jpg", "2022-09-01 15:00:00", "2022-09-01 15:00:00", 2),
+    ("img_produto5.jpg", "2022-09-01 15:00:00", "2022-09-01 15:00:00", 2),
     ("img_produto6.jpg", "2022-09-01 15:00:00", "2022-09-01 15:00:00", 2);
 
 -- Insere dados em products_images - Tabela intermediária
@@ -257,14 +257,3 @@ VALUES
     (1, 4, 6),
     (1, 4, 7),
     (1, 4, 8);
-
-/*    
--- Lista pedidos concatenado com pedidos-produtos e produtos
-SELECT * FROM orders 
-INNER JOIN orders_products ON orders.id = orders_products.order_id
-INNER JOIN products ON products.id = orders_products.product_id;
-
--- Lista usuarios concatenado com pedidos
-SELECT * FROM users
-INNER JOIN orders ON users.id = orders.user_id;
-*/

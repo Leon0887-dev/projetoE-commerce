@@ -11,19 +11,22 @@
     </section>
     <section id="filter-bar-tablet-desktop">
         <div>
+          <form action="/produtos" method="GET">
             <label for="filter-category">Filtrar:</label>
-            <select name="filter-category" id="filter-category">
+            <select name="categoria" id="filter-category">
                 <option disabled selected>Categoria</option>
                 <% categories.forEach(item=>{ %>
-                    <option value="<%= item.id %>"> <%= item.name %> </option>
+                    <option value="<%= item.name %>"> <%= item.name %> </option>
                 <% }) %>
             </select>
-            <select name="filter-brand" id="filter-brand">
+            <select name="marca" id="filter-brand">
                 <option disabled selected>Marca</option>
                 <% brands.forEach(item=>{ %>
-                    <option value="<%= item.id %>"> <%= item.name %> </option>
+                    <option value="<%= item.name %>"> <%= item.name %> </option>
                 <% }) %>
             </select>
+            <button type="submit">Ok</button>
+          </form>
         </div>
         <div>
             <label for="filter-order">Ordenar:</label>
@@ -40,28 +43,35 @@
         <div class="title-section">
             <h2>Produtos</h2>
         </div>
-        <ul class="product-list">
+        <% if(products.length>0){%>
+          <ul class="product-list">
 
-          <% products.forEach(product => { %>
+            <% products.forEach(product => { %>
 
-            <li class="product-listing-item col-10 col-md-6 col-lg-3">
-              <a href="/produtos/<%= product.id %>">
-                <div class="product-img">
-                  <img src="/img/<%= product.ImageProducts[0].name %>" alt="">
-                </div>
-                <h4 class="product-list-title underline-hover"><%= product.name %></h4>
-                <p class="product-list-features"><%= product.flavor %></p>
-                <p class="product-list-features"><%= product.roast %></p>
-                <p class="product-list-price">R$ <%= product.price %></p>
-              </a>
-              <a href="">
-                <button type="button" class="btn-edit-forms col-12">Adicionar à sacola</button>
-              </a>
-            </li>
-           
-          <% }) %>
+              <li class="product-listing-item col-10 col-md-6 col-lg-3">
+                <a href="/produtos/<%= product.id %>">
+                  <div class="product-img">
+                    <img src="/img/<%= product.ImageProducts[0].name %>" alt="">
+                  </div>
+                  <h4 class="product-list-title underline-hover"><%= product.name %></h4>
+                  <p class="product-list-features"><%= product.flavor %></p>
+                  <p class="product-list-features"><%= product.roast %></p>
+                  <p class="product-list-price">R$ <%= product.price.replace(".",",") %></p>
+                </a>
+                <a href="/carrinho">
+                  <button type="button" class="btn-edit-forms col-12">Adicionar à sacola</button>
+                </a>
+              </li>
+            
+            <% }) %>
 
-          </ul>
+            </ul>
+
+          <% }else{ %> 
+
+            <h3>Nenhum produto encontrado.</h3>
+      
+          <% } %> 
 
           <nav aria-label="Page navigation example" class="d-flex justify-content-center mb-5">
             <ul class="pagination">
