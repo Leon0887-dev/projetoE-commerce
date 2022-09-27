@@ -8,6 +8,7 @@ const CategoryProduct = require("../models/CategoryProduct");
 const Brand = require("../models/Brand");
 const ImageProduct = require("../models/ImageProduct");
 const ProductImage = require("../models/ProductImage");
+const { Op } = require('sequelize');
 
 const productController = {
     index: async (req, res) => {
@@ -17,6 +18,7 @@ const productController = {
             //Armazenando chave da query string
             const category = req.query.categoria;
             const brand = req.query.marca;
+            const search = req.query.search;
 
             //Recebendo a paginação via query string, se não vier página, por padrão será 1
             let { pagina = 1 } = req.query;
@@ -43,11 +45,16 @@ const productController = {
                         }
                 })
             }
-
+            const whereProduct = {
+                active: 1,
+            }
+            if(search){
+                whereProduct.name = {
+                    [Op.like]: `%${search}%`
+                }
+            }
             const { count: total, rows: products } = await Product.findAndCountAll({
-                where: {
-                    active: 1,
-                },
+                where: whereProduct,
                 limit: 8,
                 offset: (pagina - 1) * 8,
                 include,
