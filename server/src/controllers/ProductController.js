@@ -51,7 +51,7 @@ const productController = {
             }
             /* se o produto está ativo, faz essa condição */
             /* busca pelo nome, mas o like ajuda a procurar apenas um pedaço do nome, e não o nome inteiro */
-            /* falta criar busca por categoria e também deixar o histórico de busca do usuário */
+            /* consertar a parte do coffee++ */
             if(search){
                 whereProduct.name = {
                     [Op.like]: `%${search}%`
