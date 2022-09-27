@@ -45,9 +45,13 @@ const productController = {
                         }
                 })
             }
+            /* armazena em variável se caso o produto está ativo */
             const whereProduct = {
                 active: 1,
             }
+            /* se o produto está ativo, faz essa condição */
+            /* busca pelo nome, mas o like ajuda a procurar apenas um pedaço do nome, e não o nome inteiro */
+            /* falta criar busca por categoria e também deixar o histórico de busca do usuário */
             if(search){
                 whereProduct.name = {
                     [Op.like]: `%${search}%`
