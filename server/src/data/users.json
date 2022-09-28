@@ -1,4 +1,3 @@
-
 [{
     "id": 1,
     "nome": "Zé",
@@ -9,8 +8,7 @@
     "admin": true,
     "criadoEm": "2021-09-13T00:55:49.130Z",
     "modificadoEm": "2021-09-30T00:40:53.344Z"
-  },
-  {
+}, {
     "id": 2,
     "nome": "Lucia",
     "sobrenome": "Donalds",
@@ -20,8 +18,7 @@
     "admin": false,
     "criadoEm": "2021-09-13T00:55:49.130Z",
     "modificadoEm": "2021-09-30T00:40:53.344Z"
-  },
-  {
+}, {
     "id": 3,
     "nome": "Bruno",
     "sobrenome": "Sanches",
@@ -31,8 +28,7 @@
     "admin": false,
     "criadoEm": "2022-08-10T01:06:34.520Z",
     "modificadoEm": "2022-08-10T01:06:34.520Z"
-  },
-  {
+}, {
     "id": 4,
     "nome": "Bruno",
     "sobrenome": "Sanches",
@@ -42,8 +38,7 @@
     "admin": false,
     "criadoEm": "2022-08-10T02:33:04.895Z",
     "modificadoEm": "2022-08-10T02:33:04.895Z"
-  },
-  {
+}, {
     "id": 5,
     "nome": "Ligia",
     "sobrenome": "Pretel",
@@ -53,8 +48,7 @@
     "admin": false,
     "criadoEm": "2022-08-11T00:50:16.948Z",
     "modificadoEm": "2022-08-11T00:50:16.948Z"
-  },
-  {
+}, {
     "id": 6,
     "nome": "Bruno",
     "sobrenome": "Sanches",
@@ -64,8 +58,7 @@
     "admin": false,
     "criadoEm": "2022-08-17T00:34:44.124Z",
     "modificadoEm": "2022-08-17T00:34:44.124Z"
-  },
-  {
+}, {
     "id": 7,
     "nome": "carla",
     "sobrenome": "abreu",
@@ -75,8 +68,7 @@
     "admin": false,
     "criadoEm": "2022-08-17T23:04:51.265Z",
     "modificadoEm": "2022-08-17T23:04:51.265Z"
-  },
-  {
+}, {
     "id": 8,
     "nome": "Ligia",
     "sobrenome": "Eimantas",
@@ -86,8 +78,7 @@
     "admin": false,
     "criadoEm": "2022-08-26T18:18:05.338Z",
     "modificadoEm": "2022-08-26T18:18:05.338Z"
-  },
-  {
+}, {
     "id": 9,
     "nome": "Wellingtton",
     "sobrenome": "Luz",
@@ -97,8 +88,7 @@
     "admin": false,
     "criadoEm": "2022-08-26T23:59:36.281Z",
     "modificadoEm": "2022-08-26T23:59:36.281Z"
-  },
-  {
+}, {
     "id": 10,
     "nome": "tião",
     "sobrenome": "carreiro",
@@ -108,8 +98,7 @@
     "admin": false,
     "criadoEm": "2022-08-30T01:16:29.626Z",
     "modificadoEm": "2022-08-30T01:16:29.626Z"
-  },
-  {
+}, {
     "id": 11,
     "nome": "jubilenio",
     "sobrenome": "Santos da silva",
@@ -120,5 +109,70 @@
     "admin": false,
     "criadoEm": "2022-09-02T21:28:48.516Z",
     "modificadoEm": "2022-09-02T21:28:48.516Z"
-  }
-]
+}, {
+    "id": 12,
+    "nome": "bruno",
+    "sobrenome": "sanches",
+    "cpf": "111.111.111-11",
+    "enderecos": [],
+    "senha": "$2b$10$bWOBEAvZ.7Z76K9UpGQ67eegSLrEpWfnQzxY9PThZx.sJK8H/cStq",
+    "email": "bsan.designgrafico@gmail.com",
+    "admin": false,
+    "criadoEm": "2022-09-21T01:45:26.270Z",
+    "modificadoEm": "2022-09-21T01:45:26.270Z"
+}, {
+    "id": 13,
+    "nome": "dad",
+    "sobrenome": "aseee",
+    "cpf": "112.121.231-33",
+    "enderecos": [],
+    "senha": "$2b$10$BsZkvx/wQekdhdkXPlptreMxY.Ek9ZL7Z5RLYQMU.ukoAsrUHoXIy",
+    "email": "bsa@gmail.com",
+    "admin": false,
+    "criadoEm": "2022-09-21T01:47:20.914Z",
+    "modificadoEm": "2022-09-21T01:47:20.914Z"
+}, {
+    "id": 14,
+    "nome": "paulo ",
+    "sobrenome": "santos",
+    "cpf": "123.123.123-44",
+    "enderecos": [],
+    "senha": "$2b$10$NmwE5I45AVSzh4tbriloyu.J6qpl3T75kXKv4U8kxsKigZGHHAiYa",
+    "email": "paulo@gmail.com",
+    "admin": false,
+    "criadoEm": "2022-09-23T00:27:34.964Z",
+    "modificadoEm": "2022-09-23T00:27:34.964Z"
+}, {
+    "id": 15,
+    "nome": "marlon",
+    "sobrenome": "santos",
+    "cpf": "888.888.888-88",
+    "enderecos": [],
+    "senha": "$2b$10$7Gbh6Z5suY8Tvwe.Bg8R0uAG0RlPbGA0Rb7WdbcGYZT5VD.JYAJaO",
+    "email": "marlon@email.com",
+    "admin": false,
+    "criadoEm": "2022-09-23T02:01:45.291Z",
+    "modificadoEm": "2022-09-23T02:01:45.291Z"
+}, {
+    "id": 16,
+    "nome": "ada",
+    "sobrenome": "buseli",
+    "cpf": "445.645.645-45",
+    "enderecos": [],
+    "senha": "$2b$10$bdYVjjsX6DcCcHausuV6C.p7UE19PwcvsrDslHDB88uJm0PPQsjHe",
+    "email": "ada@gmail.com",
+    "admin": false,
+    "criadoEm": "2022-09-25T23:17:46.896Z",
+    "modificadoEm": "2022-09-25T23:17:46.896Z"
+}, {
+    "id": 17,
+    "nome": "anonimos",
+    "sobrenome": "sharks",
+    "cpf": "456.456.456-45",
+    "enderecos": [],
+    "senha": "$2b$10$o21pTE0Sn.qBOoGCWHcYEemAUaKt0AsQ/Qq0OuniUsO/IKG8COE.K",
+    "email": "an@email.com",
+    "admin": false,
+    "criadoEm": "2022-09-25T23:19:20.859Z",
+    "modificadoEm": "2022-09-25T23:19:20.859Z"
+}]

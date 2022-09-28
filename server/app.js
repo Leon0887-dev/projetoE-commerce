@@ -7,6 +7,7 @@ const session = require('express-session');
 const cookieParser = require("cookie-parser");
 const multer = require('multer');
 const upload = multer({ dest: 'uploads/' });
+const bodyParser = require ('body-parser');
 
 const mainRoute = require("./src/routes/mainRoute");
 const productRoute = require("./src/routes/productRoute");
@@ -16,6 +17,9 @@ const carrinhoRoute = require("./src/routes/carrinhoRoute");
 const authRoute = require("./src/routes/authRoute");
 const adminRoute = require("./src/routes/admin/adminRoute");
 const userRoute = require("./src/routes/admin/userRoute");
+
+app.use(bodyParser.urlencoded({ extended: false}))
+app.use(bodyParser.json());
 // Configurando pasta estática para acesso externo (onde ficam as imagens e css)
 app.use(express.static(path.join(__dirname, "public")));
 // Configurando a view engine para ejs

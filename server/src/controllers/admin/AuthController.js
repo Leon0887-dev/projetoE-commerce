@@ -1,6 +1,7 @@
 const Sequelize = require("sequelize");
 const configDB = require("../../config/database");
 const db = new Sequelize(configDB);
+const bcrypt = require("../../helpers/bcrypt");
 
 
 
@@ -23,7 +24,10 @@ const authController = {
     }
   },
   show: async (req, res) => {
-    const { id } = req.params;
+
+    const {
+      id
+    } = req.params;
     try {
       const users = await db.query(`SELECT * FROM users WHERE id = ${id}`, {
         type: Sequelize.QueryTypes.SELECT,
@@ -49,34 +53,131 @@ const authController = {
     }
   },
   store: async (req, res) => {
-    const { first_name, last_name, email, birthdate } = req.body;
+    const {
+      nome,
+      sobrenome,
+      email,
+      cpf,
+      senha,
+      confirmar_senha
+    } = req.body;
     try {
+      if (!nome ||
+        !sobrenome ||
+        !cpf ||
+        !email ||
+        !senha ||
+        !confirmar_senha) {
+        return res.render("userRegister", {
+          title: "Registro",
+          error: {
+            message: "Preencha todos os campos",
+          }
+        });
+      }
+
+      if (senha !== confirmar_senha) {
+        return res.render("userRegister", {
+          title: "Registro",
+          error: {
+            message: "Senhas Divergentes",
+          }
+        });
+      }
       const users = await db.query(
-        "INSERT INTO users (first_name, last_name, email, birthdate) VALUES (:first_name, :last_name, :email,  :birthdate )",
-        {
+        "INSERT INTO users (first_name, last_name, email, cpf, password, created_at, active,  updated_at ) VALUES (:nome, :sobrenome, :email, :cpf, :senha, :created_at, :active,  :updated_at)", {
           replacements: {
-            first_name,
-            last_name,
+            nome,
+            sobrenome,
             email,
-            birthdate,
-            
+            cpf,
+            senha: bcrypt.generateHash(senha),
+            active: 1,
+            created_at: new Date(),
+            updated_at: new Date(),
           },
           type: Sequelize.QueryTypes.INSERT,
         }
       );
-      res.status(201).json({
-        message: "Usuário cadastrado com sucesso!",
-      });
+
+      res.redirect("/")
+
     } catch (error) {
-      console.log(error);
-      res.status(400).json({
-        message: "Erro ao criar usuário",
+      return res.render("userRegister", {
+        title: "Registro",
+        error: {
+          message: "Erro na criação da conta",
+        }
+      });
+
+    }
+  },
+  //Tela para realizar o login
+  //   login: async (req, res) => {
+  //     console.log('esta aqui')
+  //     return res.render("login", {
+  //       title: "login",
+  //       user: req.cookies.user
+  //     });
+  // },
+  //Processamento do login
+  auth: async (req, res) => {
+    try {
+      res.clearCookie("user");
+      const {
+        email,
+        senha
+      } = req.body;
+      const user = await db.query(`SELECT * FROM users WHERE email = :email`, {
+        replacements: {
+          email,
+        },
+        type: Sequelize.QueryTypes.SELECT,
+      });
+
+      if (user.length < 0) {
+        return res.render("login", {
+          title: "Login",
+          error: {
+            message: "Email e/ou senha inválidos"
+          }
+        });
+      }
+
+      if (user[0].email === email) {
+        if (bcrypt.compareHash(senha, user[0].password)) {
+          req.session.email = user[0].email;
+          res.cookie("user", user[0]);
+          res.redirect("/")
+        }
+      }
+
+    } catch (error) {
+      return res.render("login", {
+        title: "Login",
+        error: {
+          message: "Email e/ou senha inválidos"
+        }
       });
     }
   },
+
+  logout: (req, res) => {
+    req.session.destroy();
+    res.clearCookie("user");
+    res.redirect("/");
+  },
+
   update: async (req, res) => {
-    const { first_name, last_name, email, birthdate } = req.body;
-    const { id } = req.params;
+    const {
+      first_name,
+      last_name,
+      email,
+      birthdate
+    } = req.body;
+    const {
+      id
+    } = req.params;
     try {
       if (!first_name && !last_name && !email && !birthdate) {
         throw Error("Nenhum dado para atualizar");
@@ -97,7 +198,7 @@ const authController = {
         if (first_name || last_name || email) query += ", ";
         query += "birthdate = :birthdate";
       }
-      
+
       query += " WHERE id = :id";
       const users = await db.query(
         query,
@@ -109,7 +210,7 @@ const authController = {
             email,
             birthdate,
             id,
-           
+
           },
           type: Sequelize.QueryTypes.UPDATE,
         }
@@ -125,7 +226,9 @@ const authController = {
   },
 
   destroy: async (req, res) => {
-    const { id } = req.params;
+    const {
+      id
+    } = req.params;
     try {
       const users = await db.query("DELETE FROM users WHERE id = :id", {
         replacements: {
