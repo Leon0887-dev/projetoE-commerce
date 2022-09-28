@@ -32,6 +32,16 @@ img {
     transition: all 0.2s ease-in 0.1s;
 }
 
+.btn-delete {
+    background-color: #a90101;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 0.8rem;
+    letter-spacing: 0.2rem;
+    transition: all 0.2s ease-in 0.1s;
+}
+
 .btn-edit{
     align-self: center;
 }
@@ -49,6 +59,10 @@ img {
 
 .btn-edit-forms:hover, .btn-edit-login:hover {
     background-color: #AF4319;
+}
+
+.btn-delete:hover {
+    background-color: #c90202;
 }
 
 .title-section {
@@ -88,6 +102,15 @@ img {
     font-size: 1.5rem;
     letter-spacing: 0.1rem;
     padding: 1rem;
+}
+
+#header-admin p{
+    margin: 0;
+}
+
+#btn-hello-user {
+    background-color: #AF4319;
+    color: #fff;
 }
 
 /*Fim CSS header Admin*/
@@ -191,16 +214,20 @@ img {
 
 
 .admin-products-title{
-    color: #707070;
-    padding: 120px 0 0 0;
-    text-align: center;
+    color: #772014;
+    padding: 50px 0 0 0;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
 }
 
 
 .admin-products-add{
-    color: #707070;
-    padding: 20px 0;
-    text-align: center;
+    color: #772014;
+    padding: 4rem 0 1rem 0;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
 }
 
 
@@ -208,9 +235,7 @@ img {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    padding: 10px
+    width: 400px;
 }
 
 #admin-products-add-1 input{
@@ -255,7 +280,7 @@ tr:nth-child(even){
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 13rem 0 2rem 0;    
+    padding-bottom: 2rem;    
     text-align: center;
     color: #772014;
     letter-spacing: 0.1rem;
@@ -279,7 +304,6 @@ tr:nth-child(even){
 }
 
 #main-admin-products p{
-    width: 780px;
     text-align: center;
     margin-bottom: 20px;
 }
@@ -290,8 +314,6 @@ tr:nth-child(even){
 
 #admin-products-add-1 label{
     font-weight: bolder;
-    margin-bottom: 20px;
-    margin-top: 20px;
 }
 
 #description{

@@ -1,0 +1,36 @@
+<%- include("./partials/head")%>
+<%- include("./partials/header")%>
+
+<body>
+    <main id="main-admin-products">
+            <h2 class="admin-products-add">Tem certeza que desejar inativar o usuário abaixo?</h2>
+            <div id="admin-products-bgc">
+                <% if(locals.user){ %>
+                    <form id="admin-products-add-1">                                     
+                        <div class="form-group">
+                            <label for="first_name">Nome</label>
+                            <input type="text" class="form-control" name="first_name" id="first_name" value="<%= user.first_name %>">                        
+                        </div>
+
+                        <div class="form-group">
+                            <label for="last_name">Sobrenome</label>
+                            <input type="text" class="form-control" name="last_name" id="last_name" value="<%= user.last_name %>">                    
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" class="form-control" name="email" id="email" value="<%= user.email %>">                     
+                        </div>                    
+                    </form>
+
+                    <form action="/admin/usuarios/deletar/<%= user.id %>?_method=delete" method="POST">
+                        <a href="/admin/usuarios"><button class="btn-edit-forms" type="button">Não</button></a>
+                        <button class="btn-edit-forms" type="submit">Sim</button>
+                    </form>
+                <% }else{ %>
+                    <h2>
+                <% } %>
+            </div>            
+    </main>
+<%- include("./partials/scriptBootstrap")%>
+</body>

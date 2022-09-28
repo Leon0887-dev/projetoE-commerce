@@ -1,0 +1,32 @@
+<%- include("./partials/head")%>
+<%- include("./partials/header")%>
+
+<body>
+    <main id="main-admin-products">
+            <h2 class="admin-products-add">Edição de Usuário Admin</h2>
+            <div id="admin-products-bgc">
+                <form id="admin-products-add-1" action="/admin/usuarios/editar/<%= user.id %>?_method=put" method="POST">                 
+                    
+                    <div class="form-group">
+                        <label for="first_name">Nome</label>
+                        <input type="text" class="form-control" name="first_name" id="first_name" value="<%= user.first_name %>">                        
+                    </div>
+
+                    <div class="form-group">
+                        <label for="last_name">Sobrenome</label>
+                        <input type="text" class="form-control" name="last_name" id="last_name" value="<%= user.last_name %>">                    
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" class="form-control" name="email" id="email" value="<%= user.email %>">                     
+                    </div>                    
+                                        
+                    <div class= "admin-product-btn text-center">
+                            <button type="submit" class="btn-edit-forms">Atualizar</button>
+                    </div>
+                </form>
+            </div>            
+    </main>
+<%- include("./partials/scriptBootstrap")%>
+</body>
