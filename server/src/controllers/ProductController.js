@@ -1,7 +1,3 @@
-const fs = require('fs');
-const path = require('path');
-const productsJson = path.join("src", "data", "products.json");
-
 const Product = require("../models/Product");
 const Category = require("../models/Category");
 const CategoryProduct = require("../models/CategoryProduct");
@@ -78,7 +74,6 @@ const productController = {
             });
 
         } catch (error) {
-            console.log(error);
             return res.render("error", {
                 title: "Ops!",
                 message: "Erro na exibição dos produtos."
@@ -88,33 +83,43 @@ const productController = {
     },
     show: async (req, res) => {
 
-        //Pegando o id que virá via url - GET
-        const {id} = req.params;        
+        try{
 
-        //Verificando se o id existe
-        const product = await Product.findByPk(id,{
-            include: [
-                { model: Category },
-                { model: Brand },
-                { model: ImageProduct },
-            ]
-        });
-        
-        // Se não existir, renderiza a view error mostrando a mensagem 
-        if (!product) {
-            return res.render("error", {
-                title: "Ops!",
-                message: "Produto não encontrado.",
+            //Pegando o id que virá via url - GET
+            const {id} = req.params;        
+    
+            //Verificando se o id existe
+            const product = await Product.findByPk(id,{
+                include: [
+                    { model: Category },
+                    { model: Brand },
+                    { model: ImageProduct },
+                ]
+            });
+            
+            // Se não existir, renderiza a view error mostrando a mensagem 
+            if (!product) {
+                return res.render("error", {
+                    title: "Ops!",
+                    message: "Produto não encontrado.",
+                    user: req.cookies.user
+                });
+            };
+           
+            // Por fim, retorno a view passando as informações do produto
+            return res.render("product", {
+                title: "Detalhe do Produto",
+                product,
                 user: req.cookies.user
             });
-        };
-       
-        // Por fim, retorno a view passando as informações do produto
-        return res.render("product", {
-            title: "Detalhe do Produto",
-            product,
-            user: req.cookies.user
-        });
+
+        }catch(error){
+                return res.render("error", {
+                    title: "Ops!",
+                    message: "Erro na exibição do produto.",
+                    user: req.cookies.user
+                });
+        }
     },
 };
 

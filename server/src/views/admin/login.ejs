@@ -1,5 +1,9 @@
 <%- include("./partials/head")%>
-<%- include("./partials/header")%>
+<header>
+  <div id="header-admin">
+      <p>CAFÉ HOUSE | SISTEMA DE GESTÃO</p>
+  </div>
+</header>
 
 <body>
     <main id="container-main-admin">
@@ -7,9 +11,13 @@
         <div class="title-section title-section-login">
           <h2>Login Admin</h2>
         </div>
-        <form action="">
+        <% if(locals.error){ %>
+          <p class="alert-form"><%= error.message %></p>
+          <% } %>
+      </div>
+        <form action="/admin/login" method="POST">
           <div class="input-field-admin">
-            <input type="email" name="username" id="username" placeholder="Digite seu e-mail" required>
+            <input type="email" name="email" id="email" placeholder="Digite seu e-mail" required>
             <div class="underline"></div>
           </div>
           <div class="input-field-admin">

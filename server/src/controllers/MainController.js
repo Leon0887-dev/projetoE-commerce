@@ -35,7 +35,7 @@ const indexController = {
             });
 
         }catch(error){
-            return res.render("/error", {
+            return res.render("error", {
                 title: "Ops!",
                 message: "Erro na exibição da página."
             });

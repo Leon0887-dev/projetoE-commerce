@@ -18,17 +18,18 @@ const productController = {
                 include: Category,
             });
 
-            // console.log(JSON.stringify(products));
             return res.render("admin/products", { 
                 title: "Produtos",
-                products
+                products,
+                adminUser: req.cookies.adminUser
             });
 
         }catch(error){
 
             return res.render("admin/error", {
                 title: "Ops!",
-                message: "Erro na exibição dos produtos."
+                message: "Erro na exibição dos produtos.",
+                adminUser: req.cookies.adminUser
             });
 
         }
@@ -50,19 +51,22 @@ const productController = {
             if(!product){
                 return res.render("admin/error", {
                     title: "Ops!",
-                    message: "Produto não encontrado."
+                    message: "Produto não encontrado.",
+                    adminUser: req.cookies.adminUser
                 });
             }
 
             return res.render("admin/product", {
                 title: "Detalhe do Produto",
-                product
+                product,
+                adminUser: req.cookies.adminUser
             });
 
         }catch(error){
             return res.render("admin/error", {
                 title: "Ops!",
-                message: "Produto não encontrado."
+                message: "Produto não encontrado.",
+                adminUser: req.cookies.adminUser
             });
         }
     },
@@ -78,12 +82,14 @@ const productController = {
                 title:"Cadastro de Produto",
                 brands,
                 categories,
+                adminUser: req.cookies.adminUser
             });
 
         }catch(error){
             return res.render("admin/error", {
                 title: "Ops!",
-                message: "Erro ao carregar a página."
+                message: "Erro ao carregar a página.",
+                adminUser: req.cookies.adminUser
             });
         }
     },
@@ -119,6 +125,7 @@ const productController = {
                     old: req.body,
                     brands,
                     categories,
+                    adminUser: req.cookies.adminUser
                 });
             }
     
@@ -143,7 +150,7 @@ const productController = {
                 created_at: new Date(),
                 updated_at: new Date(),
                 brand_id: brand,
-                admin_user_id: 1, //dado será pego via cookies/session
+                admin_user_id: req.cookies.adminUser.id, //dado será pego via cookies/session
             });
     
             //Inserindo imagem na tabela
@@ -151,7 +158,7 @@ const productController = {
                 name: image,
                 created_at: new Date(),
                 updated_at: new Date(),
-                admin_user_id: 1,
+                admin_user_id: req.cookies.adminUser.id,
             });
 
             //Fazendo vínculos das tabelas - será criada uma relação na tabela intermediária
@@ -166,7 +173,8 @@ const productController = {
         }catch(error){
              return res.render("admin/error", {
                 title: "Ops!",
-                message: "Erro ao cadastrar o produto."
+                message: "Erro ao cadastrar o produto.",
+                adminUser: req.cookies.adminUser
             });
         }
     },
@@ -194,7 +202,8 @@ const productController = {
             if(!product){
                 return res.render("admin/error", {
                     title: "Ops!",
-                    message: "Produto não encontrado."
+                    message: "Produto não encontrado.",
+                    adminUser: req.cookies.adminUser
                 });
             }
            
@@ -202,13 +211,15 @@ const productController = {
                 title: "Edição de Produto",
                 product,
                 brands,
-                categories
+                categories,
+                adminUser: req.cookies.adminUser
             });
 
         }catch(error){
             return res.render("admin/error", {
                 title: "Ops!",
-                message: "Produto não encontrado."
+                message: "Produto não encontrado.",
+                adminUser: req.cookies.adminUser
             });
         }
         
@@ -238,7 +249,7 @@ const productController = {
                 active, 
                 updated_at: new Date(),
                 brand_id: brand,
-                admin_user_id: 1
+                admin_user_id: req.cookies.adminUser.id
             },{
                 where: {id}
             });
@@ -251,7 +262,7 @@ const productController = {
                 const _imageProduct = await ImageProduct.update({
                     name: image,
                     updated_at: new Date(),
-                    admin_user_id: 1,
+                    admin_user_id: req.cookies.adminUser.id,
                 },{
                     where: {
                         product_id: id,
@@ -273,7 +284,8 @@ const productController = {
         }catch(error){
             return res.render("admin/error", {
                 title: "Ops!",
-                message: "Erro ao atualizar o produto."
+                message: "Erro ao atualizar o produto.",
+                adminUser: req.cookies.adminUser
             });
         }
 
@@ -298,19 +310,22 @@ const productController = {
             if(!product){
                 return res.render("admin/error", {
                     title: "Ops!",
-                    message: "Produto não encontrado."
+                    message: "Produto não encontrado.",
+                    adminUser: req.cookies.adminUser
                 });
             }
 
             return res.render("admin/productDelete", {
                 title: "Deletar Produto",
-                product
+                product,
+                adminUser: req.cookies.adminUser
             });
 
         }catch(error){
             return res.render("admin/error", {
                 title: "Ops!",
-                message: "Produto não encontrado."
+                message: "Produto não encontrado.",
+                adminUser: req.cookies.adminUser
             });
         }
     },
@@ -322,7 +337,7 @@ const productController = {
             const product = await Product.update({
                 active: 0,
                 updated_at: new Date(),
-                admin_user_id: 1
+                admin_user_id: req.cookies.adminUser.id
             },{
                 where: {id}
             }
@@ -331,7 +346,8 @@ const productController = {
             if(!product){
                 return res.render("admin/error", {
                     title: "Ops!",
-                    message: "Produto não encontrado."
+                    message: "Produto não encontrado.",
+                    adminUser: req.cookies.adminUser
                 });
             }
     
@@ -340,7 +356,8 @@ const productController = {
         }catch(error){
             return res.render("admin/error", {
                 title: "Ops!",
-                message: "Erro ao inativar o produto."
+                message: "Erro ao inativar o produto.",
+                adminUser: req.cookies.adminUser
             });
         }
 

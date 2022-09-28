@@ -1,0 +1,47 @@
+<%- include("./partials/head")%>
+<%- include("./partials/header")%>
+
+<body>
+    <main id="main-admin-products">
+            <h1 class="admin-products-title">Listagem de Usuários Admin</h1>
+            <a href="/admin/usuarios/cadastro">
+                <button class="btn-edit-forms mt-5">Cadastrar usuário</button>
+            </a>
+            <div id="admin-products-list">
+                <% if(adminUsers.length>0){ %>
+                    <table class="table-admin-products">
+                        <thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th>Sobrenome</th>
+                                <th>E-mail</th>
+                                <th>Status</th>
+                                <th>Ação</th>
+                        </thead>
+                        <tbody>
+                            <% for(let user of adminUsers){ %>
+                                <tr>
+                                    <td><%= user.first_name %></td>
+                                    <td><%= user.last_name %></td>
+                                    <td><%= user.email %></td>
+                                    <% if(user.active){ %>
+                                        <td>Ativo</td>
+                                    <% }else{ %>
+                                        <td>Inativo</td>
+                                    <% } %>
+                                    <td class="admin-products-actions">
+                                        <a href="/admin/usuarios/editar/<%= user.id %>"><button class="btn-edit-forms my-0 mx-2">Editar</button></a>
+                                        <a href="/admin/usuarios/deletar/<%= user.id %>"><button class="btn-delete my-0 mx-2">Excluir</button></a>
+                                    </td>
+                                </tr>
+                            <% } %>                         
+                        </tbody>
+                    </table>
+                <% }else{ %>
+                    <h2>Nenhum usuário encontrado.</h2>
+                <% } %>
+
+            </div>
+    </main>
+<%- include("./partials/scriptBootstrap")%>
+</body>

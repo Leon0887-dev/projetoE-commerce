@@ -3,7 +3,10 @@
 
 <body>
     <main id="main-admin-products">
-            <h1 class="admin-products-title">Painel do Administrador</h1>
+            <h1 class="admin-products-title">Listagem de Produtos</h1>
+            <a href="/admin/produtos/cadastro">
+                <button class="btn-edit-forms mt-5">Cadastrar novo produto</button>
+            </a>
             <div id="admin-products-list">
                 <% if(products.length>0){ %>
                     <table class="table-admin-products">
@@ -30,9 +33,15 @@
                                         <td>Inativo</td>
                                     <% } %>
                                     <td class="admin-products-actions">
-                                        <a href="/admin/produtos/<%= product.id %>">Visualizar</a>
-                                        <a href="/admin/produtos/editar/<%= product.id %>">Editar</a>
-                                        <a href="/admin/produtos/deletar/<%= product.id %>">Excluir</a>
+                                        <a href="/admin/produtos/<%= product.id %>">
+                                            <button class="btn-edit-forms my-0 mx-2">Visualizar</button>
+                                        </a>
+                                        <a href="/admin/produtos/editar/<%= product.id %>">
+                                            <button class="btn-edit-forms my-0 mx-2">Editar</button>
+                                        </a>
+                                        <a href="/admin/produtos/deletar/<%= product.id %>">
+                                            <button class="btn-delete my-0 mx-2">Excluir</button>
+                                        </a>
                                     </td>
                                 </tr>
                             <% } %>                         
@@ -44,4 +53,5 @@
 
             </div>
     </main>
+<%- include("./partials/scriptBootstrap")%>
 </body>
