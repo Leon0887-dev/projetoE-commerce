@@ -1,9 +1,34 @@
 <%- include("./partials/head")%>
 <%- include("./partials/header")%>
-
-<main id="main-contact">
-    
-</main>
+  
+    <main>
+        <section id="about-company">
+            <div class="title-section col-12">
+                <h2>Contato</h2>
+            </div>
+            <div class="text-about-company col-lg-6 col-xl-5">           
+                <p>A Café House busca a excelência quando o assunto é café ou atendimento ao cliente. Sinta-se à vontade para conversar com a gente, adoramos te escutar e prosear, ter uns daqueles papos gostosos que merecem até uma xícara de café para acompanhar.</p>    
+                                   
+                <p>Preencha o formulário e entraremos em contato com você em breve.</p>
+            </div>
+            <div class="col-lg-6 col-xl-5" id="bg-contact">
+                <form action="" method="POST">
+                    <div class="container-input">
+                        <input type="text" name="name" id="name" placeholder="Nome" required>
+                    </div>
+                    <div class="container-input">
+                      <input type="email" name="email" id="email" placeholder="E-mail" required>
+                    </div> 
+                    <div class="container-input">
+                        <input type="text" name="telefone" id="telefone" placeholder="Telefone" required>
+                    </div>               
+                    <textarea class="container-input" name="message" id="message" cols="30" rows="6" placeholder="Mensagem"></textarea>                   
+                    <div class="btn-edit text-center">
+                      <button type= "submit" class="btn-edit-forms">Enviar</button>
+                    </div>
+                  </form>
+            </div>
+        </section>
 
 
 <%- include("./partials/footer")%>
