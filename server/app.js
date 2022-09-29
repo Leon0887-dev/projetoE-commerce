@@ -16,7 +16,6 @@ const userPanelRoute = require("./src/routes/userPanelRoute");
 const carrinhoRoute = require("./src/routes/carrinhoRoute");
 const authRoute = require("./src/routes/authRoute");
 const adminRoute = require("./src/routes/admin/adminRoute");
-const userRoute = require("./src/routes/admin/userRoute");
 
 app.use(bodyParser.urlencoded({ extended: false}))
 app.use(bodyParser.json());
@@ -52,7 +51,6 @@ app.use("/checkout", checkoutRoute);
 app.use("/area-do-cliente", userPanelRoute);
 app.use("/carrinho", carrinhoRoute);
 app.use("/admin", adminRoute);
-app.use("/user", userRoute);
 app.use("/", authRoute);
 app.use("/", mainRoute);
 

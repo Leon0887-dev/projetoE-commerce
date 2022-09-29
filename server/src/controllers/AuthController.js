@@ -1,5 +1,6 @@
-const fs = require ("fs");
-const path = require("path");
+const Sequelize = require("sequelize");
+const configDB = require("../config/database");
+const db = new Sequelize(configDB);
 const bcrypt = require("../helpers/bcrypt");
 
 const authController = {
@@ -12,99 +13,117 @@ const authController = {
         });
     },
     //Processamento do cadastro do usuario
-    create: (req, res) => {
-        const usersJson = fs.readFileSync(
-            //Caminho do arquivo
-            path.join(__dirname, "..", "data", "users.json"),
-            //Formato de leitura
-            "utf-8",
-        );
-        const users = JSON.parse(usersJson);
+    store: async (req, res) => {
         
-        const {nome, sobrenome, cpf, email, senha, confirmar_senha} = req.body;
-        if (!nome || 
-            !sobrenome || 
-            !cpf || 
-            !email || 
-            !senha || 
-            !confirmar_senha) {
-            return res.render("userRegister", {
-                title: "Registro",
-                error: {
-                    message: "Preencha todos os campos",
-                }
-            });
-        }
+        try {
+
+            const {
+              nome,
+              sobrenome,
+              email,
+              cpf,
+              senha,
+              confirmar_senha
+            } = req.body;
+
+            if (!nome ||
+                !sobrenome ||
+                !cpf ||
+                !email ||
+                !senha ||
+                !confirmar_senha) {
+                    return res.render("userRegister", {
+                    title: "Registro",
+                    error: {
+                        message: "Preencha todos os campos",
+                    }
+                    });
+            }
     
-        if (senha !== confirmar_senha){
+          if (senha !== confirmar_senha) {
             return res.render("userRegister", {
-                title: "Registro",
-                error: {
-                    message: "Senhas Divergentes",
-                }
+              title: "Registro",
+              error: {
+                message: "Senhas Divergentes",
+              }
             });
+          }
+
+          const users = await db.query(
+            "INSERT INTO users (first_name, last_name, email, cpf, password, created_at, active,  updated_at ) VALUES (:nome, :sobrenome, :email, :cpf, :senha, :created_at, :active,  :updated_at)", {
+              replacements: {
+                nome,
+                sobrenome,
+                email,
+                cpf,
+                senha: bcrypt.generateHash(senha),
+                active: 1,
+                created_at: new Date(),
+                updated_at: new Date(),
+              },
+              type: Sequelize.QueryTypes.INSERT,
+            }
+          );
+    
+          res.redirect("/")
+    
+        } catch (error) {
+          return res.render("userRegister", {
+            title: "Registro",
+            error: {
+              message: "Erro na criação da conta",
+            }
+          });    
         }
-        //Objeto com dados do novo usuario
-        const newId = users[users.length -1].id +1;
-        const newUser = {
-            id: newId,
-            nome,
-            sobrenome,
-            cpf,
-            enderecos: [],
-            senha: bcrypt.generateHash(senha),
-            email,
-            admin: false,
-            criadoEm : new Date(),
-            modificadoEm: new Date(),
-        };
-        users.push(newUser);
-        fs.writeFileSync(
-            path.join(__dirname, "..", "data", "users.json"),
-            JSON.stringify(users)
-        );
-        res.redirect("/")
-    },
+      },
     //Tela para realizar o login
     login: (req, res) => {
         return res.render("login", {
-          title: "login",
+          title: "Login",
           user: req.cookies.user
         });
     },
     //Processamento do login
-    auth: (req, res) => {
-        res.clearCookie("user");
-
-        const usersJson = fs.readFileSync(
-            path.join(__dirname, "..", "data", "users.json"),
-            "utf-8"
-        );
-        const users = JSON.parse(usersJson);
-
-        const { email, senha } = req.body;
-        const userAuth = users.find((user) => {
-          if (user.email === email) {
-            if (bcrypt.compareHash(senha, user.senha)) {
-              return true;
+    auth: async (req, res) => {
+        try {
+          res.clearCookie("user");
+          const {
+            email,
+            senha
+          } = req.body;
+          const user = await db.query(`SELECT * FROM users WHERE email = :email`, {
+            replacements: {
+              email,
+            },
+            type: Sequelize.QueryTypes.SELECT,
+          });
+    
+          if (user.length < 0) {
+            return res.render("login", {
+              title: "Login",
+              error: {
+                message: "Email e/ou senha inválidos"
+              }
+            });
+          }
+    
+          if (user[0].email === email) {
+            if (bcrypt.compareHash(senha, user[0].password)) {
+              req.session.email = user[0].email;
+              res.cookie("user", user[0]);
+              res.redirect("/")
             }
           }
-        });
-            if (!userAuth){
-                return res.render("login", {
-                    title: "Login",
-                    error: {
-                        message: "Email e/ou senha inválidos"
-                    }
-                });
+    
+        } catch (error) {
+          return res.render("login", {
+            title: "Login",
+            error: {
+              message: "Email e/ou senha inválidos"
             }
-        // Filtra as chaves que o objeto irá ter
-        const user = JSON.parse(JSON.stringify(userAuth, ["id", "nome", "sobrenome"]));
-        
-        req.session.email = userAuth.email;
-        res.cookie("user", user);
-        res.redirect("/");
-    },
+          });
+        }
+      },
     //Processamento do deslogar
     logout: (req, res) => {
         req.session.destroy();
