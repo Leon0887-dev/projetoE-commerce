@@ -6,53 +6,53 @@
             <h2 class="admin-products-add">Atualizar Produto</h2>
             <div id="admin-products-bgc">
                 <form id="admin-products-add-1" action="/admin/produtos/editar/<%= product.id %>?_method=put" method="POST" enctype="multipart/form-data">
-                    <label for="name">Nome do produto</label>
-                    <input type="text" name="name" id="name" value="<%= product.name %>">
-                    <label for="image">Foto do produto</label>
-                    <input type="file" name="image" id="image">                    
-                    <label for="brand">Marca do produto</label>
-                    <select name="brand" id="brand">
+                    <label class="form-label" for="name">Nome do produto</label>
+                    <input class="form-control" type="text" name="name" id="name" value="<%= product.name %>">
+                    <label class="form-label" for="image">Foto do produto</label>
+                    <input class="form-control" type="file" name="image" id="image">                    
+                    <label class="form-label" for="brand">Marca do produto</label>
+                    <select class="form-select" name="brand" id="brand">
                         <option disabled>Selecione a marca</option>
                         <% brands.forEach(item=>{ %>
                             <option value="<%= item.id %>" <% if (product.brand_id == item.id) { %> selected <% } %>> <%= item.name %> </option>
                         <% }) %>
                     </select>
-                    <label for="flavor">Sabor do produto</label>
-                    <input type="text" name="flavor" id="flavor" value="<%= product.flavor %>">
-                    <label for="roast">Torra do produto</label>
-                    <input type="text" name="roast" id="roast" value="<%= product.roast %>">
-                    <label for="description">Descrição do produto</label>
-                    <textarea name="description" id="description" cols="30" rows="10"><%= product.description %></textarea>
-                    <label for="content">Conteúdo do produto</label>
-                    <input type="text" name="content" id="content" value="<%= product.content %>">
-                    <label for="format">Formato do produto</label>
-                    <input type="text" name="format" id="format" value="<%= product.format %>">
-                    <label for="price">Preço do produto</label>
-                    <input type="text" name="price" id="price" value="<%= product.price %>">
-                    <label for="installment">Parcelamento</label>
-                    <select name="installment" id="installment">
+                    <label class="form-label" for="flavor">Sabor do produto</label>
+                    <input class="form-control" type="text" name="flavor" id="flavor" value="<%= product.flavor %>">
+                    <label class="form-label" for="roast">Torra do produto</label>
+                    <input class="form-control" type="text" name="roast" id="roast" value="<%= product.roast %>">
+                    <label class="form-label" for="description">Descrição do produto</label>
+                    <textarea class="form-control" name="description" id="description" cols="30" rows="10"><%= product.description %></textarea>
+                    <label class="form-label" for="content">Conteúdo do produto</label>
+                    <input class="form-control" type="text" name="content" id="content" value="<%= product.content %>">
+                    <label class="form-label" for="format">Formato do produto</label>
+                    <input class="form-control" type="text" name="format" id="format" value="<%= product.format %>">
+                    <label class="form-label" for="price">Preço do produto</label>
+                    <input class="form-control" type="text" name="price" id="price" value="<%= product.price %>">
+                    <label class="form-label" for="installment">Parcelamento</label>
+                    <select class="form-select" name="installment" id="installment">
                         <option value="1" <% if (product.installment == "1") { %> selected <% } %>>1</option>
                         <option value="2" <% if (product.installment == "2") { %> selected <% } %>>2</option>
                         <option value="3" <% if (product.installment == "3") { %> selected <% } %>>3</option>
                     </select>
-                    <label for="sku">Código do produto</label>
-                    <input type="text" name="sku" id="sku" value="<%= product.sku %>">
-                    <label for="quantity">Quantidade do produto</label>
-                    <input type="text" name="quantity" id="quantity" value="<%= product.quantity %>">
-                    <label for="category">Categoria do produto</label>
-                    <select name="category" id="category">
+                    <label class="form-label" for="sku">Código do produto</label>
+                    <input class="form-control" type="text" name="sku" id="sku" value="<%= product.sku %>">
+                    <label class="form-label" for="quantity">Quantidade do produto</label>
+                    <input class="form-control" type="text" name="quantity" id="quantity" value="<%= product.quantity %>">
+                    <label class="form-label" for="category">Categoria do produto</label>
+                    <select class="form-select" name="category" id="category">
                         <option disabled>Selecione a categoria</option>
                         <% categories.forEach(item=>{ %>
                             <option value="<%= item.id %>" <% if (product.Categories[0].id == item.id) { %> selected <% } %>> <%= item.name %> </option>
                         <% }) %>
                     </select>
-                    <label for="active">Produto ativo?</label>
-                    <select name="active" id="active">
+                    <label class="form-label" for="active">Produto ativo?</label>
+                    <select class="form-select" name="active" id="active">
                         <option value="1" <% if (product.active == 1) { %> selected <% } %>>Sim</option>
                         <option value="0" <% if (product.active == 0) { %> selected <% } %>>Não</option>
                     </select>
                     <div class= "admin-product-btn">
-                            <button type="submit" class="btn-edit-forms">Adicionar</button>
+                            <button type="submit" class="btn-edit-forms">Atualizar</button>
                     </div>
                 </form>
             </div>            

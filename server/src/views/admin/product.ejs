@@ -4,26 +4,67 @@
 <body>
     <main id="main-admin-products">
             <h2 class="admin-products-add">Detalhe do Produto</h2>
-            <p><%= product.name %> </p>
-            <p><%= product.Brand.name %> </p>
-            <p><%= product.flavor %> </p>
-            <p><%= product.roast %> </p>
-            <p><%= product.description %> </p>
-            <p><%= product.content %> </p>
-            <p><%= product.format %> </p>
-            <p><%= product.price %> </p>
-            <p><%= product.installment %> </p>
-            <p><%= product.sku %> </p>
-            <p><%= product.quantity %> </p>
-            <p><%= product.Categories[0].name %> </p>
-            <% if(product.active){ %>
-                <p>Ativo</p>
-            <% }else{ %>
-                <p>Inativo</p>
-            <% } %>
-            
-            <img src="/img/<%= product.ImageProducts[0].name %>" alt="">
-
+            <div class="w-50 mb-5">
+                <div class="detail-product-img m-2">
+                    <img src="/img/<%= product.ImageProducts[0].name %>" alt="">
+                </div>
+                <div class="detail-product m-2">
+                    <p class="m-0 fw-bold">Nome</p>
+                    <p class="m-0"><%= product.name %> </p>
+                </div>
+                <div class="detail-product m-2">
+                    <p class="m-0 fw-bold">Marca</p>
+                    <p class="m-0"><%= product.Brand.name %> </p>
+                </div>
+                <div class="detail-product m-2">
+                    <p class="m-0 fw-bold">Sabor</p>
+                    <p class="m-0"><%= product.flavor %> </p>
+                </div>
+                <div class="detail-product m-2">
+                    <p class="m-0 fw-bold">Torra</p>
+                    <p class="m-0"><%= product.roast %> </p>
+                </div>
+                <div class="detail-product m-2">
+                    <p class="m-0 fw-bold">Descrição</p>
+                    <p class="m-0"><%= product.description %> </p>
+                </div>
+                <div class="detail-product m-2">
+                    <p class="m-0 fw-bold">Conteúdo da Embalagem</p>
+                    <p class="m-0"><%= product.content %> </p>
+                </div>
+                <div class="detail-product m-2">
+                    <p class="m-0 fw-bold">Formato do produto</p>
+                    <p class="m-0"><%= product.format %> </p>
+                </div>
+                <div class="detail-product m-2">
+                    <p class="m-0 fw-bold">Preço</p>
+                    <p class="m-0"><%= product.price %> </p>
+                </div>
+                <div class="detail-product m-2">
+                    <p class="m-0 fw-bold">Parcelas</p>
+                    <p class="m-0"><%= product.installment %> </p>
+                </div>
+                <div class="detail-product m-2">
+                    <p class="m-0 fw-bold">Código</p>
+                    <p class="m-0"><%= product.sku %> </p>
+                </div>
+                <div class="detail-product m-2">
+                    <p class="m-0 fw-bold">Quantidade em Estoque</p>
+                    <p class="m-0"><%= product.quantity %> </p>
+                </div>
+                <div class="detail-product m-2">
+                    <p class="m-0 fw-bold">Categoria</p>
+                    <p class="m-0"><%= product.Categories[0].name %> </p>
+                </div>
+                <div class="detail-product m-2">
+                    <p class="m-0 fw-bold">Status</p>
+                    <% if(product.active){ %>
+                        <p class="m-0">Ativo</p>
+                    <% }else{ %>
+                        <p class="m-0">Inativo</p>
+                    <% } %>
+                </div> 
+            </div>
     </main>
 <%- include("./partials/scriptBootstrap")%>
 </body>

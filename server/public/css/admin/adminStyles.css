@@ -259,6 +259,15 @@ img {
     border-collapse: collapse;
 }
 
+.detail-product-img {
+    display: flex;
+    justify-content: center;
+}
+
+.detail-product-img img {
+    height: 300px;
+}
+
 thead{
     background-color: #3F220F;
     color: white;
