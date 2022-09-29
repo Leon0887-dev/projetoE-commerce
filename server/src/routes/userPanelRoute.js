@@ -2,11 +2,11 @@ const express = require("express");
 const router = express.Router();
 const userPanelController = require("../controllers/UserPanelController");
 
-router.get("/",userPanelController.index);
-router.get("/pedidos",userPanelController.myRequests);
-router.get("/dados",userPanelController.myPersonalData);
-router.get("/endereco",userPanelController.myAddresses);
-router.post("/endereco",userPanelController.createMyAddresses);
-router.get("/senha",userPanelController.changePassword);
+router.get("/:id",userPanelController.show);
+router.get("/pedidos/:id",userPanelController.myRequests);
+router.get("/dados/:id",userPanelController.myPersonalData);
+router.get("/endereco/:id",userPanelController.myAddresses);
+router.post("/endereco/:id",userPanelController.createMyAddresses);
+router.get("/senha/:id",userPanelController.changePassword);
 
 module.exports = router;

@@ -20,7 +20,7 @@
         </i>
       </div>
       <div class="list-link">
-        <a href="/area-do-cliente">Minha Conta</a>
+        <a href="/area-do-cliente/<%= user.id %> ">Minha Conta</a>
       </div>
     </li>
     <li class="list-item border">
@@ -44,7 +44,7 @@
         </i>
       </div>
       <div class="list-link">
-        <a href="/area-do-cliente/pedidos">Meus pedidos</a>
+        <a href="/area-do-cliente/pedidos/<%= user.id %> ">Meus pedidos</a>
       </div>
     </li>
     <li class="list-item border">
@@ -68,7 +68,7 @@
         </i>
       </div>
       <div class="list-link">
-        <a href="/area-do-cliente/endereco"> Endereços</a>
+        <a href="/area-do-cliente/endereco/<%= user.id %> "> Endereços</a>
       </div>
     </li>
     <li class="list-item border">
@@ -89,7 +89,7 @@
         </i>
       </div>
       <div class="list-link">
-        <a href="/area-do-cliente/senha">Alterar Senha</a>
+        <a href="/area-do-cliente/senha/<%= user.id %> ">Alterar Senha</a>
       </div>
     </li>
     <li class="list-item border">
@@ -113,7 +113,7 @@
         </i>
       </div>
       <div class="list-link">
-        <a href="/area-do-cliente/dados">Meus Dados</a>
+        <a href="/area-do-cliente/dados/<%= user.id %> ">Meus Dados</a>
       </div>
     </li>
     <li class="list-item border">

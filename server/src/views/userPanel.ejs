@@ -9,7 +9,7 @@
             <img src="/img/TikTok.png" alt="" />
           </div>
           <div class="img-user-login">
-            <h3> Olá <%= user.nome %> <%= user.sobrenome %></h3>
+            <h3> Olá, <%= user.first_name%> <%= user.last_name %></h3>
           </div>
         </div>
         <ul class="user-options--list">
@@ -33,7 +33,7 @@
               </i>
             </div>
             <div class="list-link">
-              <a href="/area-do-cliente">Minha Conta</a>
+              <a href="/area-do-cliente/<%= user.id %> ">Minha Conta</a>
             </div>
           </li>
           <li class="list-item border">
@@ -57,7 +57,7 @@
               </i>
             </div>
             <div class="list-link">
-              <a href="/area-do-cliente/pedidos">Meus pedidos</a>
+              <a href="/area-do-cliente/pedidos/<%= user.id %> ">Meus pedidos</a>
             </div>
           </li>
           <li class="list-item border">
@@ -81,7 +81,7 @@
               </i>
             </div>
             <div class="list-link">
-              <a href="/area-do-cliente/endereco"> Endereços</a>
+              <a href="/area-do-cliente/endereco/<%= user.id %> "> Endereços</a>
             </div>
           </li>
           <li class="list-item border">
@@ -102,7 +102,7 @@
               </i>
             </div>
             <div class="list-link">
-              <a href="/area-do-cliente/senha">Alterar Senha</a>
+              <a href="/area-do-cliente/senha/<%= user.id %> ">Alterar Senha</a>
             </div>
           </li>
           <li class="list-item border">
@@ -126,7 +126,7 @@
               </i>
             </div>
             <div class="list-link">
-              <a href="/area-do-cliente/dados">Meus Dados</a>
+              <a href="/area-do-cliente/dados/<%= user.id %> ">Meus Dados</a>
             </div>
           </li>
           <li class="list-item border">
@@ -169,7 +169,7 @@
               <div class="col-md-6">
                 <div class="personal-data--info">
                   <h6>Nome completo</h6>
-                  <p><%= user.nome %> <%= user.sobrenome%> </p>
+                  <p><%= user.first_name %> <%= user.last_name%> </p>
                 </div>
                 <div class="personal-data--info">
                   <h6>E-mail</h6>
@@ -183,16 +183,20 @@
               <div class="col-md-6">
                 <div class="personal-data--info">
                   <h6>Data de nascimento</h6>
-                  <p>-</p>
+                  <%if(user.birthdate){%>
+                    <p><%= user.birthdate %> </p>
+                  <%}else{%>
+                    <p>-</p>
+                  <%}%>
                 </div>
                 <div class="personal-data--info">
-                  <h6>Telefone celular</h6>
-                  <p>-</p>
-                </div>
-                <div class="personal-data--info">
-                  <h6>Telefone fixo</h6>
-                  <p>-</p>
-                </div>
+                  <h6>Telefone</h6>
+                  <%if(user.phone){%>
+                    <p><%= user.phone %> </p>
+                  <%}else{%>
+                    <p>-</p>
+                  <%}%>
+                </div>                
               </div>
             </div>
 
