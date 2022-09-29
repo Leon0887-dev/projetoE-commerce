@@ -615,6 +615,7 @@ div.button {
 .cart-total {
     flex: 0.25;
     margin-left: 20px;
+    margin-right: 60px;
     padding: 20px;
     height: 240px;
     border: 1px solid silver;
@@ -1390,6 +1391,16 @@ label {
 
 #error-page-text {
     padding: 3rem 0 2rem 0;
+}
+
+#error-search {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem 1rem 2rem 1rem;
+    text-align: center;
+    color: #772014;
+    letter-spacing: 0.1rem;
 }
 
 /* Fim CSS not-found */

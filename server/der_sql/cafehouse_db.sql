@@ -201,7 +201,12 @@ VALUES
     ("Café com Leite em Sachê - Bravo", "Frutado, caramelo e chocolate", "Média", "O Café Filtrado Gourmet em cápsula TRES 3 Corações com origem do Cerrado Mineiro e da Mogiana Paulista é cultivado entre 800 e 1.000 metros de altitude. Este café filtrado em sachê apresenta baixa acidez e sabores frutados, de caramelo e chocolate. ", "10 sachês com 20g cada", "Sachês", 15.90, 1, "SACH2100", 32, "1", "2022-08-05 15:00:00", "2022-08-05 15:00:00", 1, 2),
     ("Cappucino Classic - Butti", "Cacau e canela", "Clara", "A linha de Cappuccinos Sachês é mais uma facilidade para você, que adora aproveitar os sabores da vida. Possui embalagens práticas, perfeitas para preparar a qualquer hora e lugar. Embalado em Sachês com 20g. Classic – Elaborado à base de café, leite, cacau e canela. Seu sabor, textura aveludada e cremosidade, distinguem-no dos demais.", "10 sachês com 20g cada", "Sachês", 22.90, 1, "SACH270000", 50, "1", "2022-07-05 15:00:00", "2022-07-05 15:00:00", 2, 2),
 	("Café Torrado e Moído - Orfeu", "Nozes e caramelo", "Média", "O resultado é um café que além de possuir sabores e aromas marcantes, também se diferencia pelo propósito de difundir boas práticas em toda a sua cadeia produtiva. Produzido para os apaixonados por cafés especiais!", "1 embalagem de 250g de café extraforte moído", "Torrado e moído", 25.90, 1, "COM7712", 47, "1", "2022-08-06 15:00:00", "2022-08-06 15:00:00", 5, 2),
-    ("Café Torrado e Moído - Orfeu", "Frutas cítricas", "Média", "O resultado é um café que além de possuir sabores e aromas marcantes, também se diferencia pelo propósito de difundir boas práticas em toda a sua cadeia produtiva. Produzido para os apaixonados por cafés especiais!", "1 embalagem de 250g de café extraforte moído", "Torrado e moído", 35.90, 1, "COM0258", 12, "1", "2022-08-08 15:00:00", "2022-08-08 15:00:00", 5, 2);
+    ("Café Torrado e Moído - Orfeu", "Frutas cítricas", "Média", "O resultado é um café que além de possuir sabores e aromas marcantes, também se diferencia pelo propósito de difundir boas práticas em toda a sua cadeia produtiva. Produzido para os apaixonados por cafés especiais!", "1 embalagem de 250g de café extraforte moído", "Torrado e moído", 35.90, 1, "COM0258", 12, "1", "2022-08-08 15:00:00", "2022-08-08 15:00:00", 5, 2),
+    ("Café em Cápsula - Bravo", "Frutas secas e avelã", "Média", "O resultado é um café que além de possuir sabores e aromas marcantes, também se diferencia pelo propósito de difundir boas práticas em toda a sua cadeia produtiva. Produzido para os apaixonados por cafés especiais!", "1 Cartucho com 10 Cápsulas de 7,5g cada", "Cápsulas de alumínio", 38.90, 1, "CAP8870", 52, "1", "2022-09-26 15:00:00", "2022-09-26 15:00:00", 1, 2),
+    ("Café em Cápsula - Bravo", "Frutas cítricas e nozes", "Média", "O resultado é um café que além de possuir sabores e aromas marcantes, também se diferencia pelo propósito de difundir boas práticas em toda a sua cadeia produtiva. Produzido para os apaixonados por cafés especiais!", "1 Cartucho com 10 Cápsulas de 7,5g cada", "Cápsulas de alumínio", 28.90, 1, "CAP8875", 65, "1", "2022-09-26 15:00:00", "2022-09-26 15:00:00", 1, 2),
+	("Café em Cápsula - Bravo", "Malte, baunilha e amoras", "Média", "O resultado é um café que além de possuir sabores e aromas marcantes, também se diferencia pelo propósito de difundir boas práticas em toda a sua cadeia produtiva. Produzido para os apaixonados por cafés especiais!", "1 Cartucho com 10 Cápsulas de 7,5g cada", "Cápsulas de alumínio", 41.90, 1, "CAP8880", 87, "1", "2022-09-26 15:00:00", "2022-09-26 15:00:00", 1, 2),
+	("Café em Cápsula - Bravo", "Frutas vermelhas e amêndoas", "Média", "O resultado é um café que além de possuir sabores e aromas marcantes, também se diferencia pelo propósito de difundir boas práticas em toda a sua cadeia produtiva. Produzido para os apaixonados por cafés especiais!", "1 Cartucho com 10 Cápsulas de 7,5g cada", "Cápsulas de alumínio", 44.90, 1, "CAP8885", 47, "1", "2022-09-26 15:00:00", "2022-09-26 15:00:00", 1, 2);
+
     
 -- Insere dados em categories_products
 INSERT INTO categories_products (category_id, product_id)
@@ -213,19 +218,29 @@ VALUES
     (4, 5 ),
     (4, 6 ),
     (2, 7 ),
-    (2, 8 );
+    (2, 8 ),
+    (3, 9 ),
+    (3, 10 ),
+    (3, 11 ),
+    (3, 12 );
+
     
 -- Insere dados em images_products
 INSERT INTO images_products (name, created_at, updated_at, admin_user_id)
 VALUES 
 	("img_produto.jpg", "2022-09-01 15:00:00", "2022-09-01 15:00:00", 1),
 	("img_produto2.jpg", "2022-09-01 15:00:00", "2022-09-01 15:00:00", 1),
-    ("1660949507034capsula_cafe05.jpg", "2022-09-01 15:00:00", "2022-09-01 15:00:00", 2),
-    ("1660067991337capsula_cafe04.png", "2022-09-01 15:00:00", "2022-09-01 15:00:00", 2),
+    ("img_produto14.jpg", "2022-09-01 15:00:00", "2022-09-01 15:00:00", 2),
+    ("img_produto15.png", "2022-09-01 15:00:00", "2022-09-01 15:00:00", 2),
     ("img_produto3.jpg", "2022-09-01 15:00:00", "2022-09-01 15:00:00", 2),
     ("img_produto4.jpg", "2022-09-01 15:00:00", "2022-09-01 15:00:00", 2),
-    ("img_produto5.jpg", "2022-09-01 15:00:00", "2022-09-01 15:00:00", 2),
-    ("img_produto6.jpg", "2022-09-01 15:00:00", "2022-09-01 15:00:00", 2);
+    ("img_produto21.jpeg", "2022-09-01 15:00:00", "2022-09-01 15:00:00", 2),
+    ("img_produto22.jpeg", "2022-09-01 15:00:00", "2022-09-01 15:00:00", 2),
+	("img_produto10.jpg", "2022-09-26 15:00:00", "2022-09-26 15:00:00", 1),
+	("img_produto11.jpg", "2022-09-26 15:00:00", "2022-09-26 15:00:00", 1),
+	("img_produto12.jpg", "2022-09-26 15:00:00", "2022-09-26 15:00:00", 1),
+	("img_produto13.jpg", "2022-09-26 15:00:00", "2022-09-26 15:00:00", 1);
+
 
 -- Insere dados em products_images - Tabela intermediária
 INSERT INTO products_images (image_product_id, product_id)
@@ -237,7 +252,12 @@ VALUES
     (5, 5 ),
     (6, 6 ),
     (7, 7 ),
-    (8, 8 );
+    (8, 8 ),
+    (9, 9 ),
+    (10, 10 ),
+    (11, 11 ),
+    (12, 12 );
+
     
 -- Insere dados em orders
 INSERT INTO orders (status, total_price, created_at, updated_at, user_id, user_address_id)
