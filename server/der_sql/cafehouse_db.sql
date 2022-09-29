@@ -152,14 +152,14 @@ CREATE TABLE orders_products (
 -- Insere dados em admin_users
 INSERT INTO admin_users (first_name, last_name, email, password, active, created_at, updated_at)
 VALUES 
-	("Ligia", "Pretel Eimantas", "ligia@email.com", "123", "1", "2022-09-07 21:29:00", "2022-09-07 15:01:00"),
-	("Bruno", "Sanches", "bruno@email.com", "123", "1", "2022-09-07 21:29:00", "2022-09-07 15:01:00");
+	("Ligia", "Pretel Eimantas", "ligia@email.com", "$2b$10$fhuTQEJgZE8ra9v7PO998.WpthVs.jchxV1Uh2LwO8MaPUiR7VGmi", "1", "2022-09-07 21:29:00", "2022-09-07 15:01:00"),
+	("Bruno", "Sanches", "bruno@email.com", "$2b$10$fhuTQEJgZE8ra9v7PO998.WpthVs.jchxV1Uh2LwO8MaPUiR7VGmi", "1", "2022-09-07 21:29:00", "2022-09-07 15:01:00");
     
 -- Insere dados em users
 INSERT INTO users (first_name, last_name, email, password, birthdate, phone, cpf, active, created_at, updated_at)
 VALUES 
-	("Ana", "Silva Soares", "ana@email.com", "123", "2000-03-25", "(11)99758-4142", "111.222.555-88", "1", "2022-09-07 15:00:00", "2022-09-07 15:00:00"),
-	("Alan", "Souza", "alan@email.com", "123", "1970-05-12", "(41)97241-2035", "333.444.555-99", "1", "2022-09-07 15:00:00", "2022-09-07 15:00:00");
+	("Ana", "Silva Soares", "ana@email.com", "$2b$10$fhuTQEJgZE8ra9v7PO998.WpthVs.jchxV1Uh2LwO8MaPUiR7VGmi", "2000-03-25", "(11)99758-4142", "111.222.555-88", "1", "2022-09-07 15:00:00", "2022-09-07 15:00:00"),
+	("Alan", "Souza", "alan@email.com", "$2b$10$fhuTQEJgZE8ra9v7PO998.WpthVs.jchxV1Uh2LwO8MaPUiR7VGmi", "1970-05-12", "(41)97241-2035", "333.444.555-99", "1", "2022-09-07 15:00:00", "2022-09-07 15:00:00");
     
 -- Insere dados em user_addresses
 INSERT INTO user_addresses (recipient, address_nickname, zipcode, address, number, complement, district, city, state, reference, user_id)
