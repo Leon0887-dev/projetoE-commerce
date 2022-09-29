@@ -3,6 +3,8 @@ const router = express.Router();
 const upload = require('../../helpers/multer');
 const productController = require("../../controllers/admin/ProductController");
 const adminAuthController = require("../../controllers/admin/AdminAuthController");
+const brandController = require("../../controllers/admin/BrandController");
+const categoryController = require("../../controllers/admin/CategoryController");
 const productValidator = require("../../middlewares/productValidator");
 const adminUserValidator = require("../../middlewares/adminUserValidator");
 
@@ -26,5 +28,9 @@ router.get("/usuarios", adminAuthController.index);
 router.get("/login", adminAuthController.login);
 router.post("/login", adminAuthController.auth);
 router.post("/logout", adminAuthController.logout);
+
+router.get("/marcas", brandController.index);
+
+router.get("/categorias", categoryController.index);
 
 module.exports = router;

@@ -255,6 +255,7 @@ img {
 }
 
 #admin-products-list .table-admin-products{
+    min-width: 500px;
     border-collapse: collapse;
 }
 

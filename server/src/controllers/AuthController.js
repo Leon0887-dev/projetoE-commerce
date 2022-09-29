@@ -64,7 +64,7 @@ const authController = {
               type: Sequelize.QueryTypes.INSERT,
             }
           );
-    
+
           res.redirect("/")
     
         } catch (error) {

@@ -1,0 +1,33 @@
+<%- include("./partials/head")%>
+<%- include("./partials/header")%>
+
+<body>
+    <main id="main-admin-products">
+            <h1 class="admin-products-title">Listagem de Categorias</h1>
+            <a href="/admin/categorias">
+                <button class="btn-edit-forms mt-5">Cadastrar categoria</button>
+            </a>
+            <div id="admin-products-list">
+                <% if(categories.length>0){ %>
+                    <table class="table-admin-products">
+                        <thead>
+                            <tr>
+                                <th>Categorias</th>  
+                            </tr>                                                          
+                        </thead>
+                        <tbody>
+                            <% for(let category of categories){ %>
+                                <tr>
+                                    <td><%= category.name %></td>                                    
+                                </tr>
+                            <% } %>                         
+                        </tbody>
+                    </table>
+                <% }else{ %>
+                    <h2>Nenhuma categoria encontrada.</h2>
+                <% } %>
+
+            </div>
+    </main>
+<%- include("./partials/scriptBootstrap")%>
+</body>
